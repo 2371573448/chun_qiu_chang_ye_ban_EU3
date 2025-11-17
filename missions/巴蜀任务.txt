@@ -1,0 +1,195 @@
+#开拓北道
+
+kaituobeidao = {
+	
+	type = country
+
+	allow = {
+		tag = SGU
+		239 = { empty = yes }
+		239 = { any_neighbor_province = { owned_by = this } }
+	}
+	abort = {
+			239 = { empty = no }
+			not = { owns = 239 }
+	}
+	success = {
+	  	230 = { owned_by = this }
+		239 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+	  	230 = { add_core = this }
+		239 = { add_core = this }
+	}
+}
+
+
+#开拓西部
+
+kaituoxibu = {
+	
+	type = country
+
+	allow = {
+		tag = BAG
+		249 = { empty = yes }
+		249 = { any_neighbor_province = { owned_by = this } }
+	}
+	abort = {
+			249 = { empty = no }
+			not = { owns = 249 }
+	}
+	success = {
+	  	249 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+	  	249 = { add_core = this }
+	}
+}
+#巴蜀合并
+bashuhebing = {
+	
+	type = country
+
+	allow = {
+		tag = SGU
+		OR = {
+			any_owned_province  = {
+			region = bajun
+			}
+			any_owned_province  = {
+			any_neighbor_province = { region = bajun }
+			}
+		}
+		Not = { owns = 245 }
+		year = 2246
+		NOT = { year = 2543 }
+	}
+	abort = {
+		any_country = { 
+	    		NOT = { tag = this }
+	    		OR = { 
+				owns = 250
+				owns = 246
+				owns = 245
+				owns = 248 
+				owns = 247
+				owns = 244
+			}
+	    		OR = {
+	    			alliance_with = this
+				vassal_of = this
+                                                            }
+        		}
+	}
+	success = {
+		owns = 250
+	 	owns = 246
+		owns = 245
+		owns = 248
+		owns = 247
+		owns = 244
+		owns = 253	
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 250
+	 	add_temp_claim = 246
+		add_temp_claim = 245
+		add_temp_claim = 248
+		add_temp_claim = 247
+		add_temp_claim = 244
+		add_temp_claim = 253
+	}
+	abort_effect = {
+		remove_temp_claim = 250
+	 	remove_temp_claim = 246
+		remove_temp_claim = 245
+		remove_temp_claim = 248
+		remove_temp_claim = 247
+		remove_temp_claim = 244
+		remove_temp_claim = 253
+	  	prestige = -0.05
+	}
+	effect = {
+		add_core = 250
+	 	add_core = 248
+		add_core = 247
+		add_core = 245
+		add_core = 244
+		add_core = 246
+		add_core = 253
+	}
+}
+
+#氐羌蜀韵
+shixiangshuyun = {
+	type = country
+	allow = {
+		OR = {
+			tag = SGU
+			tag = BAG
+		}
+		not = {
+			exists = JUU
+		}
+		not = {
+			has_global_flag = shixiangshuyun
+		}
+	}
+	abort = { 
+		exists = JUU
+	}
+	success = {
+		controls = 230
+		controls = 231
+		controls = 239
+		controls = 249
+		controls = 1179
+		controls = 1262
+	}
+	chance = { 
+		factor = 2000
+	}
+	immediate = {
+		add_temp_claim = 230
+		add_temp_claim = 231
+		add_temp_claim = 239
+		add_temp_claim = 249
+		add_temp_claim = 1179
+		add_temp_claim = 1262
+	}
+	effect = {
+		set_global_flag = shixiangshuyun
+		230 = { secede_province = JUU add_core = JUU }
+		231 = { secede_province = JUU add_core = JUU }
+		239 = { secede_province = JUU add_core = JUU }
+		249 = { secede_province = JUU add_core = JUU }
+		1179 = { secede_province = JUU add_core = JUU }
+		1262 = { secede_province = JUU add_core = JUU }
+		THIS = {
+			vassalize = JUU
+		}
+		JUU = {
+			capital = 230
+		}
+	  	prestige = 0.2
+		treasury = 300
+	}
+}

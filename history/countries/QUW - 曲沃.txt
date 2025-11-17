@@ -1,0 +1,18 @@
+government =fengjian
+aristocracy_plutocracy = -2
+centralization_decentralization = -2
+innovative_narrowminded = -2
+mercantilism_freetrade = 0
+offensive_defensive = -3
+land_naval = -1
+quality_quantity = 0
+serfdom_freesubjects = -3
+technology_group = chinese
+religion = liyuejiaohua 
+primary_culture = shanxi
+capital = 75
+			daimyo = yes
+
+1953.1.1={monarch={name="³ÉÊ¦" dynasty="¼§" adm=7 dip=7 mil=7}}
+1968.1.1={monarch={name="÷­" dynasty="¼§" adm=5 dip=5 mil=6}}
+1983.1.1={monarch={name="³Æ" dynasty="¼§" adm=6 dip=5 mil=7}}

@@ -1,0 +1,16 @@
+1827.1.1 = { discovered_by = PAP } 
+owner = QIA
+controller = QIA
+culture = xirong
+religion = animism
+capital = "½ð³Ç"
+trade_goods = grain
+hre = no
+base_tax = 3
+manpower = 0
+citysize = 16000
+fort1 = yes
+add_core = QIA
+cot = no
+
+2222.1.1 = { citysize = 20000 }

@@ -1,0 +1,22 @@
+government = fengjian
+aristocracy_plutocracy = -3
+centralization_decentralization = 2
+innovative_narrowminded = 2
+mercantilism_freetrade = 3
+offensive_defensive = 0
+land_naval = 1
+quality_quantity = 0
+serfdom_freesubjects = -1
+technology_group = dongyi1
+religion = ancestor
+primary_culture = gouwu
+capital = 432
+1928.1.1 = {
+	monarch = {
+		name = "Ëæ»ú"
+		dynasty = "×Ó"
+		adm = 7
+		dip = 7
+		mil = 7
+	}
+}

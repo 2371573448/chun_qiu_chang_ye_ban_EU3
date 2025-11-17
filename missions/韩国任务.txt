@@ -1,0 +1,398 @@
+#征服郑国
+
+HAN_annex_ZGO = {
+	
+	type = country
+
+	allow = {
+		tag = HAN
+		exists = ZGO
+		year = 2253
+		any_neighbor_country = { tag = ZGO }
+	}
+	abort = {
+		any_country = { 
+	    		NOT = { tag = this }
+	    		OR = { 
+				owns = 369
+				owns = 357
+				owns = 356
+				owns = 355
+				owns = 380
+			}
+	    		OR = {
+	    			alliance_with = this
+				vassal_of = this
+        		}
+		}
+	}
+	success = {
+		owns = 369
+		owns = 357
+		owns = 355
+		owns = 380
+	}
+	chance = {
+		factor = 500
+	}
+	immediate = {
+	  	add_temp_claim = 369
+		add_temp_claim = 355
+	  	add_temp_claim = 357
+		add_temp_claim = 356
+		add_temp_claim = 380
+	}
+	abort_effect = {
+	  	remove_temp_claim = 369
+		remove_temp_claim = 355
+		remove_temp_claim = 357
+	  	remove_temp_claim = 356
+	  	remove_temp_claim = 380
+	}
+	effect = {
+		add_accepted_culture = zhongyuan
+	  	prestige = 0.05
+	 	add_core = 369
+		add_core = 355
+		add_core = 357
+	 	add_core = 356
+	 	add_core = 380
+	 	add_core = 378
+	 	add_core = 368
+	 	add_core = 373
+	 	add_core = 374
+	 	add_core = 377
+	 	add_core = 1030
+		add_core = 1026
+		add_core = 1027
+	 	add_core = 1028
+	 	add_core = 1022
+	 	add_core = 1035
+	 	add_core = 1020
+	 	add_core = 1019
+	 	add_core = 1021	
+		capital = 356
+		
+	}
+}
+
+#征服周王
+
+HAN_annex_PAP = {
+	
+	type = country
+
+	allow = {
+		tag = HAN
+		exists = PAP
+		any_neighbor_country = { tag = PAP }
+                                      
+	}
+	abort = {
+	}
+	success = {
+		not = { exists = PAP }
+		owns = 351
+		owns = 352
+		owns = 353
+	}
+	chance = {
+		factor = 1000
+	}
+	immediate = {
+	  	add_temp_claim = 351
+		add_temp_claim = 352
+	  	add_temp_claim = 353
+	}
+	abort_effect = {
+	  	remove_temp_claim = 353
+		remove_temp_claim = 352
+		remove_temp_claim = 351
+	  	prestige = -0.05
+	}
+	effect = {
+		add_accepted_culture = zhongyuan
+	  	prestige = 0.05
+		add_core = 353
+		add_core = 352
+	 	add_core = 351	
+	}
+}
+#征服南阳
+
+HAN_annex_nanyang = {
+	
+	type = country
+
+	allow = {
+		tag = HAN
+		NOT = { owns = 384 }
+		year = 2253
+	}
+	abort = {
+
+	}
+	success = {  
+		owns = 384
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+		add_temp_claim = 384	 
+
+	}
+	abort_effect = {
+	}
+	effect = {
+		add_accepted_culture = zhongyuan
+		nanyang = { add_core = HAN }
+	}
+}
+
+#征服中行上党
+annex_ZXSshangdang = { 
+	type = country
+	allow = { 
+		OR = { 
+			tag = HAN
+			tag = ZHI
+		}
+		is_lesser_in_union = no
+		is_subject = no
+		exists = ZXS
+		ZXS = { 
+			owns = 84
+			neighbour = this
+			not = { 
+				vassal_of = THIS
+			}
+		}
+                                        year = 2247
+	}
+	abort = { 
+		or = { 
+			and = { 
+				not = { 
+					exists = ZXS
+				}
+				not = { 
+					owns = 84
+				}
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 84
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+		add_temp_claim = 84
+		add_temp_claim = 1108
+		add_temp_claim = 1109
+		add_temp_claim = 82
+		add_temp_claim = 85
+	}
+	abort_effect = { 
+		remove_temp_claim = 84
+		remove_temp_claim = 1108
+		remove_temp_claim = 1109
+		remove_temp_claim = 82
+		remove_temp_claim = 85
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 84
+		add_core = 1108
+		add_core = 1109
+		add_core = 82 
+		add_core = 85
+	}
+}
+
+#收复韩氏封邑
+annex_WEIhan = { 
+	type = country
+	allow = { 
+		OR = { 
+			tag = HAN
+		}
+		is_lesser_in_union = no
+		is_subject = no
+		exists = WEI
+                                        year = 2265
+		WEI = { 
+			owns = 74
+			neighbour = this
+			not = { 
+				vassal_of = THIS
+			}
+		}
+
+	}
+	abort = { 
+		or = { 
+			and = { 
+				not = { 
+					exists = WEI
+				}
+				not = { 
+					owns = 74
+				}
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 74
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 74
+		add_temp_claim = 1055
+		add_temp_claim = 1056
+		add_temp_claim = 1057
+	}
+	abort_effect = { 
+		remove_temp_claim = 74
+		remove_temp_claim = 1055
+		remove_temp_claim = 1056
+		remove_temp_claim = 1057
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 74
+		add_core = 1055
+		add_core = 1056
+		add_core = 1057
+	}
+}
+
+#征服伊洛之戎
+HANannex_YLR = { 
+	type = country
+	allow = { 
+		OR = { 
+			tag = HAN
+		}
+		is_lesser_in_union = no
+		is_subject = no
+		exists = YLR
+		YLR = { 
+			owns = 373
+			neighbour = this
+			not = { 
+				vassal_of = THIS
+			}
+		}
+                                        year = 2247
+	}
+	abort = { 
+		or = { 
+			and = { 
+				not = { 
+					exists = YLR
+				}
+				not = { 
+					owns = 373
+				}
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 373
+		owns = 1027
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 373
+		add_temp_claim = 1027
+	}
+	abort_effect = { 
+		remove_temp_claim = 373
+		remove_temp_claim = 1027
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 373
+		add_core = 1027
+	}
+}
+
+#征服应国
+HANannex_YIN = { 
+	type = country
+	allow = { 
+		OR = { 
+			tag = HAN
+		}
+		is_lesser_in_union = no
+		is_subject = no
+		exists = YIN
+		YIN = { 
+			owns = 376
+			neighbour = this
+			not = { 
+				vassal_of = THIS
+			}
+		}
+                                        year = 2247
+	}
+	abort = { 
+		or = { 
+			and = { 
+				not = { 
+					exists = YIN
+				}
+				not = { 
+					owns = 376
+				}
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 376
+		owns = 1029
+		owns = 377
+		owns = 1026
+		owns = 1028
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 376
+		add_temp_claim = 1029
+		add_temp_claim = 377
+		add_temp_claim = 1026
+		add_temp_claim = 1028
+	}
+	abort_effect = { 
+		remove_temp_claim = 376
+		remove_temp_claim = 1029
+		remove_temp_claim = 377
+		remove_temp_claim = 1026
+		remove_temp_claim = 1028
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 376
+		add_core = 1029
+		add_core = 377
+		add_core = 1026
+		add_core = 1028
+	}
+}

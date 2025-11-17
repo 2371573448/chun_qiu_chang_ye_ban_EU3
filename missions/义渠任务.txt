@@ -1,0 +1,90 @@
+#征服乌氏
+YQU_annex_WUS = { 
+	type = country
+	allow = { 
+		tag = YQU
+		is_lesser_in_union = no
+		is_subject = no
+		exists = WUS
+		WUS = { 
+			owns = 165
+			neighbour = this
+			not = { 
+				vassal_of = YQU
+			}
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		owns = 164
+		owns = 165
+		owns = 168
+		owns = 188
+	}
+	chance = { 
+		factor = 200
+	}
+	immediate = { 
+		add_temp_claim = 164
+		add_temp_claim = 165
+		add_temp_claim = 168
+		add_temp_claim = 188
+	}
+	abort_effect = { 
+		remove_temp_claim = 164
+		remove_temp_claim = 165
+		remove_temp_claim = 168
+		remove_temp_claim = 188
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 164
+		add_core = 165
+		add_core = 168
+		add_core = 188
+	}
+}
+#征服豲
+YQU_annex_HUR = { 
+	type = country
+	allow = { 
+		tag = YQU
+		is_lesser_in_union = no
+		is_subject = no
+		exists = HUR
+		HUR = { 
+			owns = 170
+			neighbour = this
+			not = { 
+				vassal_of = YQU
+			}
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		owns = 170
+		owns = 181
+		owns = 183
+	}
+	chance = { 
+		factor = 200
+	}
+	immediate = { 
+		add_temp_claim = 170
+		add_temp_claim = 181
+		add_temp_claim = 183
+	}
+	abort_effect = { 
+		remove_temp_claim = 170
+		remove_temp_claim = 181
+		remove_temp_claim = 183
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 170
+		add_core = 181
+		add_core = 183
+	}
+}

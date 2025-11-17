@@ -1,0 +1,6 @@
+vassal={
+	first=YON
+	second=YGN
+	start_date=1928.1.1
+	end_date=2470.1.1
+}

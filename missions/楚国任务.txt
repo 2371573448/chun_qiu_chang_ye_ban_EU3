@@ -1,0 +1,1946 @@
+#附庸陈国
+client_chen = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = CHE
+		CHE = { 
+			is_subject = no
+			is_lesser_in_union = no
+		}
+		num_of_cities = 12
+		year = 1940
+	}
+	abort = { 
+		or = { 
+			is_lesser_in_union = yes
+			is_subject = yes
+			CHE = { 
+				is_lesser_in_union = yes
+			}
+		}
+	}
+	success = { 
+		CHE = { 
+			vassal_of = this
+		}
+	}
+	chance = { 
+		factor = 75
+	}
+	immediate = { 
+		casus_belli = { 
+			type = cb_vassalize_mission
+			months = 240
+			target = CHE
+		}
+	}
+	abort_effect = { 
+		remove_casus_belli = { 
+			type = cb_vassalize_mission
+			target = CHE
+		}
+	}
+	effect = { 
+		prestige = 0.15
+	}
+}
+
+#吞并申国
+annex_SHE = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			not = { 
+				owns = 1072
+			}
+			not = { 
+				owns = 1073
+			}
+			not = { 
+				owns = 1074
+			}
+			not = { 
+				owns = 1075
+			}
+		}
+		exists = SHE
+		SHE = {
+			owns = 382
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1910
+	}
+	abort = { 
+		or = {
+			and = {
+				not = { exists = SHE }
+				not = { owns = 1072 }
+				not = { owns = 1073 }
+				not = { owns = 1074 }
+				not = { owns = 1075 }
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 1072
+		owns = 1073
+		owns = 1074
+		owns = 1075
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 1072
+		add_temp_claim = 1073
+		add_temp_claim = 1074
+		add_temp_claim = 1075
+	}
+	abort_effect = { 
+		remove_temp_claim = 1072
+		remove_temp_claim = 1073
+		remove_temp_claim = 1074
+		remove_temp_claim = 1075
+		prestige = -0.05
+	}
+	effect = { 
+		add_accepted_culture = zhongyuan
+		add_core = 1072
+		add_core = 1073
+		add_core = 1074
+		add_core = 1075
+	}
+}
+
+#吞并申国2
+annex_SHE2 = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			not = { 
+				owns = 382
+			}
+			not = { 
+				owns = 387
+			}
+			not = { 
+				owns = 390
+			}
+		}
+		CHU = {
+				owns = 1072
+		  		owns = 1073
+				owns = 1074
+				owns = 1075
+		}
+		exists = SHE
+		SHE = {
+			owns = 382
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1910
+	}
+	abort = { 
+		or = {
+			and = {
+				not = { exists = SHE }
+				not = { owns = 382 }
+				not = { owns = 387 }
+				not = { owns = 390 }
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 1076
+		owns = 1077
+		owns = 382
+		owns = 387
+		owns = 390
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 1076
+		add_temp_claim = 1077
+		add_temp_claim = 382
+		add_temp_claim = 387
+		add_temp_claim = 390
+	}
+	abort_effect = { 
+		remove_temp_claim = 1076
+		remove_temp_claim = 1077
+		remove_temp_claim = 382
+		remove_temp_claim = 387
+		remove_temp_claim = 390
+		prestige = -0.05
+	}
+	effect = { 
+		add_accepted_culture = zhongyuan
+		add_core = 1076
+		add_core = 1077
+		add_core = 382
+		add_core = 387
+		add_core = 390
+	}
+}
+
+
+#征服息国
+annex_XIG = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = XIG
+		or = { 
+			not = { 
+				owns = 400
+			}
+			not = { 
+				owns = 401
+			}
+		}
+		XIG = {
+			owns = 400
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1918
+
+	}
+	abort = { 
+		or = {
+			and = {
+				not = { exists = XIG }
+				not = { owns = 400 }
+				not = { owns = 401 }
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 400
+		owns = 401
+		owns = 1011
+		owns = 1012
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 400
+		add_temp_claim = 401
+		add_temp_claim = 1011
+		add_temp_claim = 1012
+	}
+	abort_effect = { 
+		remove_temp_claim = 400
+		remove_temp_claim = 401
+		remove_temp_claim = 1011
+		remove_temp_claim = 1012
+	}
+	effect = { 
+		add_core = 400
+		add_core = 401
+		add_core = 1011
+		add_core = 1012
+	}
+}
+
+#征服东西不羹
+annex_XBGDBG = { 
+	type = country
+	allow = { 
+	   	or = {
+	    		tag = CHU
+	   	}
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			exists = XBG
+			exists = DBG
+		}
+		or = { 
+			375 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			374 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			370 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+		}
+		or = { 
+			not = { 
+				owns = 375
+			}
+			not = { 
+				owns = 374
+			}
+			not = { 
+				owns = 370
+			}
+		}
+		year = 2000
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			and = {
+				not = { exists = XBG }
+				not = { owns = 374 }
+				not = { owns = 375 }
+			}
+			and = {
+				not = { exists = DBG }
+				not = { owns = 370 }
+			}
+		}
+	}
+	success = { 
+		owns = 375
+		owns = 374
+		owns = 370
+		owns = 1025
+		owns = 1070
+		owns = 1069
+		owns = 1071
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		treasury = 50
+		add_temp_claim = 375
+		add_temp_claim = 370
+		add_temp_claim = 374
+		add_temp_claim = 1025
+		add_temp_claim = 1070
+		add_temp_claim = 1071
+		add_temp_claim = 1069
+	}
+	abort_effect = { 
+		remove_temp_claim = 375
+		remove_temp_claim = 370
+		remove_temp_claim = 374
+		remove_temp_claim = 1025
+		remove_temp_claim = 1070
+		remove_temp_claim = 1069
+		remove_temp_claim = 1071
+	}
+	effect = { 
+		add_core = 375
+		add_core = 370
+		add_core = 374
+		add_core = 1025
+		add_core = 1070
+		add_core = 1069
+		add_core = 1071
+	}
+}
+
+#附庸随国
+annex_SUI = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			not = { 
+				owns = 413
+			}
+			not = { 
+				owns = 468
+			}
+		}
+		exists = SUI
+		SUI = {
+			owns = 413
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 2038
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { exists = SUI }
+				not = { owns = 413 }
+			}
+		}
+	}
+	success = { 
+		SUI = { 
+			vassal_of = this
+		}
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+		casus_belli = { 
+			type = cb_vassalize_mission
+			months = 240
+			target = SUI
+		}
+	}
+	abort_effect = { 
+		remove_casus_belli = { 
+			type = cb_vassalize_mission
+			target = SUI
+		}
+	}
+	effect = { 
+		prestige = 0.15
+	}
+}
+
+#征服江国
+annex_JAG = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		not = { 
+			owns = 391
+		}
+		exists = JAG
+		JAG = {
+			owns = 391
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1975
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = JAG
+				}
+				not = { 
+					owns = 391
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 391
+		owns = 1014
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 391
+		add_temp_claim = 1014
+	}
+	abort_effect = { 
+		remove_temp_claim = 391
+		remove_temp_claim = 1014
+	}
+	effect = { 
+		add_core = 391
+		add_core = 1014
+	}
+}
+
+#征服黄国
+annex_HUA = { 
+	type = country
+	allow = { 
+		not = { tag = CHU }
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = HUA
+		or = { 
+			not = { 
+				owns = 386
+			}
+			not = { 
+				owns = 479
+			}
+		}
+		HUA = {
+			owns = 386
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1950
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = HUA
+				}
+				not = { 
+					owns = 386
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 386
+		owns = 479
+		owns = 1205
+		owns = 1206
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 479
+		add_temp_claim = 386
+		add_temp_claim = 1205
+		add_temp_claim = 1206
+	}
+	abort_effect = { 
+		remove_temp_claim = 479
+		remove_temp_claim = 386
+		remove_temp_claim = 1205
+		remove_temp_claim = 1206
+	}
+	effect = { 
+		add_core = 479
+		add_core = 386
+		add_core = 1205
+		add_core = 1206
+	}
+}
+
+#征服贰国
+annex_EGU = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		not = { 
+			owns = 472
+		}
+		exists = EGU
+		EGU = {
+			owns = 472
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1976
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = EGU
+				}
+				not = { 
+					owns = 472
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 472
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 472
+	}
+	abort_effect = { 
+		remove_temp_claim = 472
+	}
+	effect = { 
+		add_core = 472
+	}
+}
+
+#征服夔国
+annex_KUI = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			not = { 
+				owns = 464
+			}
+			not = { 
+				owns = 474
+			}
+		}
+		exists = KUI
+		KUI = {
+			owns = 464
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1964
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = KUI
+				}
+				not = { 
+					owns = 464
+				}
+				not = { 
+					owns = 474
+				}
+			}
+		}
+	}
+	success = { 
+		not = { 
+			exists = KUI
+		}
+		owns = 464
+		owns = 474
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 464
+		add_temp_claim = 474
+	}
+	abort_effect = { 
+		remove_temp_claim = 464
+		remove_temp_claim = 474
+		prestige = -0.05
+	}
+	effect = { 
+		army_tradition = 0.05
+		add_core = 464
+		add_core = 474
+	}
+}
+
+#吞并邓国
+annex_DEG = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = DEG
+		or = { 
+			not = { 
+				owns = 461
+			}
+			not = { 
+				owns = 383
+			}
+		}
+		DEG = {
+			owns = 461
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1920
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = DEG
+				}
+				not = { 
+					owns = 461
+				}
+				not = { 
+					owns = 383
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 461
+		owns = 383
+		owns = 1078
+		owns = 1079
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 461
+		add_temp_claim = 383
+		add_temp_claim = 1078
+		add_temp_claim = 1079
+	}
+	abort_effect = { 
+		remove_temp_claim = 461
+		remove_temp_claim = 383
+		remove_temp_claim = 1078
+		remove_temp_claim = 1079
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 461
+		add_core = 383
+		add_core = 1078
+		add_core = 1079
+	}
+}
+
+#吞并州国
+annex_ZOU = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = ZOU
+		or = { 
+			not = { 
+				owns = 484
+			}
+			not = { 
+				owns = 473
+			}
+		}
+		DEG = {
+			owns = 473
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1899
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = ZOU
+				}
+				not = { 
+					owns = 484
+				}
+				not = { 
+					owns = 473
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 484
+		owns = 473
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 484
+		add_temp_claim = 473
+	}
+	abort_effect = { 
+		remove_temp_claim = 484
+		remove_temp_claim = 473
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 484
+		add_core = 473
+	}
+}
+
+#征服绞国
+annex_JIO = { 
+	type = country
+	allow = { 
+		tag = CHU
+		exists = JIO
+		is_subject = no
+		is_lesser_in_union = no
+		not = { 
+			owns = 459
+		}
+		JIO = {
+			owns = 459
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1898
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = JIO
+				}
+				not = { 
+					owns = 459
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 459
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 459
+	}
+	abort_effect = { 
+		remove_temp_claim = 459
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 459
+	}
+}
+
+#吞并轸国
+annex_HEN = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		exists = HEN
+		or = { 
+			not = { 
+				owns = 485
+			}
+			not = { 
+				owns = 471
+			}
+		}
+		HEN = {
+			owns = 471
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1943
+		
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = HEN
+				}
+				not = { 
+					owns = 471
+				}
+				not = { 
+					owns = 485
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 485
+		owns = 471
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 485
+		add_temp_claim = 471
+	}
+	abort_effect = { 
+		remove_temp_claim = 485
+		remove_temp_claim = 471
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 485
+		add_core = 471
+	}
+}
+
+#征服郧国
+annex_YUN = { 
+	type = country
+	allow = { 
+		tag = CHU
+		exists = YUN
+		is_subject = no
+		is_lesser_in_union = no
+		not = { 
+			owns = 470
+		}
+		YUN = {
+			owns = 470
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		year = 1898
+		NOT = { year = 2148 }
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+			AND = { 
+				not = { 
+					exists = YUN
+				}
+				not = { 
+					owns = 470
+				}
+			}
+		}
+	}
+	success = { 
+		owns = 470
+	}
+	chance = { 
+		factor = 100
+	}
+	immediate = { 
+		add_temp_claim = 470
+	}
+	abort_effect = { 
+		remove_temp_claim = 470
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 470
+	}
+}
+
+#开发南蛮
+kaifananman = { 
+	type = country
+	allow = { 
+		tag = CHU
+		493 = { 
+			empty = yes
+		}
+		493 = { 
+			any_neighbor_province = { 
+				owned_by = this
+			}
+		}
+		year = 2100
+		NOT = { year = 2350 }
+	}
+	abort = { 
+		493 = { 
+			empty = no
+		}
+		not = { 
+			owns = 493
+		}
+	}
+	success = { 
+		493 = { 
+			owned_by = this
+		}
+	}
+	chance = { 
+		factor = 50
+	}
+	immediate = { }
+	abort_effect = { }
+	effect = { 
+		493 = { 
+			add_core = this
+		}
+	}
+}
+
+#成为霸主
+Dominate_the_central_plains_chu = { 
+	type = country
+	allow = { 
+		any_country = { 
+			is_emperor = yes
+		}
+		tag = CHU
+		is_emperor = no
+		is_subject = no
+		is_lesser_in_union = no
+		religion_group = christian
+	}
+	abort = { 
+		is_subject = yes
+	}
+	success = { 
+		is_emperor = yes
+	}
+	chance = { 
+		factor = 50
+	}
+	immediate = { }
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		relation = { 
+			who = PAP
+			value = 100
+		}
+		prestige = 0.5
+		stability = 3
+		land_tech = 0.99
+		naval_tech = 0.99
+		trade_tech = 0.99
+		production_tech = 0.99
+		government_tech = 0.99
+		add_imperial_influence = 40
+	}
+}
+
+#征服越国
+annex_YGO = { 
+	type = country
+	allow = { 
+		tag = CHU
+		year = 2300
+		or = { 
+			not = { 
+				owns = 438
+			}
+			not = { 
+				owns = 434
+			}
+		}
+		YGO = {
+			owns = 434
+			owns = 438
+			neighbour = this
+			not = { vassal_of = CHU }
+		}
+		is_subject = no
+		is_lesser_in_union = no
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+		}
+	}
+	success = { 
+		owns = 438
+		owns = 434
+	}
+	chance = { 
+		factor = 50
+	}
+	immediate = { 
+		add_temp_claim = 438
+		add_temp_claim = 434
+	}
+	abort_effect = { 
+		remove_temp_claim = 438
+		remove_temp_claim = 434
+	}
+	effect = { 
+		add_core = 438
+		add_core = 434
+		badboy = -5
+	}
+}
+
+#平定群蛮
+pingdingqunman = { 
+	type = country
+	allow = { 
+		tag = CHU
+		is_subject = no
+		is_lesser_in_union = no
+		or = { 
+			not = { 
+				owns = 480
+			}
+			not = { 
+				owns = 226
+			}
+			not = { 
+				owns = 225
+			}
+			not = { 
+				owns = 224
+			}
+			not = { 
+				owns = 223
+			}
+		}
+		or = { 
+			480 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			226 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			225 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			224 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+			223 = { 
+				any_neighbor_province = { 
+					owned_by = this
+				}
+			}
+		}
+		year = 1980
+		NOT = { year = 2230 }
+	}
+	abort = { 
+		or = { 
+			is_subject = yes
+			is_lesser_in_union = yes
+		}
+	}
+	success = { 
+		owns = 480
+		owns = 226
+		owns = 225
+		owns = 224
+		owns = 223
+	}
+	chance = { 
+		factor = 75
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		prestige = 0.20
+		badboy = -2
+	}
+}
+
+#征服衡山
+CHUannex_hengshan = {
+	
+	type = country
+
+	allow = {	
+		any_owned_province  = {
+			any_neighbor_province = { region = hengshan2 }
+		}
+		OR = {
+			NOT = { owns = 402 }
+			NOT = { owns = 412 }
+			NOT = { owns = 415 }
+			NOT = { owns = 418 }
+			NOT = { owns = 422 }
+			NOT = { owns = 478 }
+			NOT = { owns = 479 }
+		}
+		year = 2255
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 402
+    		owns = 412
+    		owns = 415
+    		owns = 418
+    		owns = 422
+    		owns = 478
+    		owns = 479
+	}
+	chance = {
+		factor = 200
+	}
+	immediate = {
+	 	add_temp_claim = 478
+	 	add_temp_claim = 402
+	 	add_temp_claim = 479
+	 	add_temp_claim = 422
+	 	add_temp_claim = 412
+	 	add_temp_claim = 415
+	 	add_temp_claim = 418
+	 	add_temp_claim = 426
+	 	add_temp_claim = 478
+	 	add_temp_claim = 476
+	 	add_temp_claim = 1205
+	 	add_temp_claim = 1206
+	 	add_temp_claim = 1207
+	 	add_temp_claim = 1208
+	 	add_temp_claim = 1209
+	 	add_temp_claim = 1210
+	}
+	abort_effect = {
+	 	remove_temp_claim = 478
+	 	remove_temp_claim = 402
+	 	remove_temp_claim = 479
+	 	remove_temp_claim = 422
+	 	remove_temp_claim = 412
+	 	remove_temp_claim = 415
+	 	remove_temp_claim = 418
+	 	remove_temp_claim = 426
+	 	remove_temp_claim = 478
+	 	remove_temp_claim = 476
+	 	remove_temp_claim = 1205
+	 	remove_temp_claim = 1206
+	 	remove_temp_claim = 1207
+	 	remove_temp_claim = 1208
+	 	remove_temp_claim = 1209
+	 	remove_temp_claim = 1210
+	  	prestige = -0.05
+	}
+	effect = {
+		hengshan2 = { add_core = this }
+		add_core =475
+	}
+}
+#征服丹阳
+CHUannex_danyang = {
+	
+	type = country
+
+	allow = {	
+		any_owned_province  = {
+			any_neighbor_province = { region = danyang }
+		}
+		OR = {
+			NOT = { owns = 428 }
+			NOT = { owns = 444 }
+			NOT = { owns = 445 }
+			NOT = { owns = 447 }
+			NOT = { owns = 448 }
+			NOT = { owns = 455 }
+		}
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 428
+    		owns = 444
+    		owns = 445
+    		owns = 447
+    		owns = 448
+    		owns = 455
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+	 	add_temp_claim = 428
+	 	add_temp_claim = 444
+	 	add_temp_claim = 445
+	 	add_temp_claim = 446
+	 	add_temp_claim = 447
+	 	add_temp_claim = 448
+	 	add_temp_claim = 455
+	 	add_temp_claim = 456
+	 	add_temp_claim = 457
+	}
+	abort_effect = {
+	 	remove_temp_claim = 428
+	 	remove_temp_claim = 444
+	 	remove_temp_claim = 445
+	 	remove_temp_claim = 446
+	 	remove_temp_claim = 447
+	 	remove_temp_claim = 455
+	 	remove_temp_claim = 456
+	 	remove_temp_claim = 457
+	  	prestige = -0.05
+	}
+	effect = {
+		danyang = { add_core = this }
+	}
+}
+
+#征服九江
+zhengfujiujiang = {
+	
+	type = country
+
+	allow = {	
+		any_owned_province  = {
+		any_neighbor_province = { region = jiujiang }
+		}
+                                        OR = {
+                                        NOT = { owns = 407 }
+                                        NOT = { owns = 414 }
+                                        NOT = { owns = 416 }
+                                        NOT = { owns = 417 }
+                                        NOT = { owns = 420 }
+                                        }
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 407 
+    		owns = 414
+		owns = 416
+		owns = 417
+		owns = 420   				 
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+	 	add_temp_claim = 407
+	 	add_temp_claim = 411
+	 	add_temp_claim = 414
+	 	add_temp_claim = 416
+	 	add_temp_claim = 417
+	 	add_temp_claim = 420
+	}
+	abort_effect = {
+	 	remove_temp_claim = 407
+	 	remove_temp_claim = 411
+	 	remove_temp_claim = 414
+	 	remove_temp_claim = 416
+	 	remove_temp_claim = 417
+	 	remove_temp_claim = 420
+	  	prestige = -0.05
+	}
+	effect = {
+		jiujiang = { add_core = this }
+	}
+}
+#南蛮王任务
+zhiminqianzhong = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = { 
+			not = { 
+				owns = 252
+			}
+			not = { 
+				owns = 483
+			}
+			not = { 
+				owns = 487
+			}
+			not = { 
+				owns = 488
+			}
+			not = { 
+				owns = 490
+			}
+			not = { 
+				owns = 491
+			}
+			not = { 
+				owns = 503
+			}
+		}
+		or = { 
+			owns = 252
+			owns = 483
+			owns = 487
+			owns = 488
+			owns = 490
+			owns = 491
+			owns = 503
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = { 
+		owns = 252
+		owns = 483
+		owns = 487
+		owns = 488
+		owns = 490
+		owns = 491
+		owns = 503
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		qianzhong = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminchangsha = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = { 
+			not = { 
+				owns = 486
+			}
+			not = { 
+				owns = 489
+			}
+			not = { 
+				owns = 492
+			}
+			not = { 
+				owns = 493
+			}
+			not = { 
+				owns = 494
+			}
+			not = { 
+				owns = 495
+			}
+			not = { 
+				owns = 496
+			}
+			not = { 
+				owns = 497
+			}
+			not = { 
+				owns = 504
+			}
+			not = { 
+				owns = 505
+			}
+			not = { 
+				owns = 508
+			}
+			not = { 
+				owns = 509
+			}
+			not = { 
+				owns = 534
+			}
+			not = { 
+				owns = 537
+			}
+		}
+		or = { 
+			owns = 486
+			owns = 489
+			owns = 492
+			owns = 493
+			owns = 494
+			owns = 495
+			owns = 496
+			owns = 497
+			owns = 504
+			owns = 505
+			owns = 508
+			owns = 509
+			owns = 534
+			owns = 537
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 486
+		owns = 489
+		owns = 492
+		owns = 493
+		owns = 494
+		owns = 495
+		owns = 496
+		owns = 497
+		owns = 504
+		owns = 505
+		owns = 508
+		owns = 509
+		owns = 534
+		owns = 537
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		changsha = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminlujiang = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = { 
+			not = { 
+				owns = 498
+			}
+			not = { 
+				owns = 499
+			}
+			not = { 
+				owns = 500
+			}
+			not = { 
+				owns = 501
+			}
+			not = { 
+				owns = 502
+			}
+			not = { 
+				owns = 506
+			}
+			not = { 
+				owns = 507
+			}
+			not = { 
+				owns = 510
+			}
+			not = { 
+				owns = 511
+			}
+			not = { 
+				owns = 512
+			}
+			not = { 
+				owns = 513
+			}
+			not = { 
+				owns = 514
+			}
+		}
+		or = {
+			owns = 498
+			owns = 499
+			owns = 500
+			owns = 501
+			owns = 502
+			owns = 506
+			owns = 507
+			owns = 510
+			owns = 511
+			owns = 512
+			owns = 513
+			owns = 514
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 498
+		owns = 499
+		owns = 500
+		owns = 501
+		owns = 502
+		owns = 506
+		owns = 507
+		owns = 510
+		owns = 511
+		owns = 512
+		owns = 513
+		owns = 514
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		lujiang = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminminzhong = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = {
+			not = { 
+				owns = 515
+			}
+			not = { 
+				owns = 516
+			}
+			not = { 
+				owns = 517
+			}
+			not = { 
+				owns = 518
+			}
+			not = { 
+				owns = 519
+			}
+			not = { 
+				owns = 520
+			}
+			not = { 
+				owns = 521
+			}
+			not = { 
+				owns = 522
+			}
+			not = { 
+				owns = 523
+			}
+			not = { 
+				owns = 524
+			}
+		}
+		any_owned_province  = {
+			any_neighbor_province = { region = minzhong }
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 515
+		owns = 516
+		owns = 517
+		owns = 518
+		owns = 519
+		owns = 520
+		owns = 521
+		owns = 522
+		owns = 523
+		owns = 524
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		minzhong = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminnanhai = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = { 
+			not = { 
+				owns =527
+			}
+			not = { 
+				owns = 528
+			}
+			not = { 
+				owns = 530
+			}
+			not = { 
+				owns = 531
+			}
+			not = { 
+				owns = 535
+			}
+			not = { 
+				owns = 536
+			}
+		}
+		any_owned_province  = {
+			any_neighbor_province = { region = nanhai }
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 527
+		owns = 528
+		owns = 530
+		owns = 531
+		owns = 535
+		owns = 536
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		nanhai = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminguilin = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = {
+			not = { 
+				owns = 529
+			}
+			not = { 
+				owns = 532
+			}
+			not = { 
+				owns = 533
+			}
+			not = { 
+				owns = 538
+			}
+			not = { 
+				owns = 539
+			}
+			not = { 
+				owns = 540
+			}
+			not = { 
+				owns = 543
+			}
+			not = { 
+				owns = 544
+			}
+			not = { 
+				owns = 545
+			}
+			not = { 
+				owns = 546
+			}
+		}
+		any_owned_province  = {
+			any_neighbor_province = { region = guilin }
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 529
+		owns = 532
+		owns = 533
+		owns = 538
+		owns = 539
+		owns = 540
+		owns = 543
+		owns = 544
+		owns = 545
+		owns = 546
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		guilin = { add_core = this base_tax = 1 citysize = 5000 }
+	}
+}
+zhiminjiaozhi = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = {
+			not = { 
+				owns = 571
+			}
+			not = { 
+				owns = 572
+			}
+			not = { 
+				owns = 573
+			}
+		}
+		any_owned_province  = {
+			any_neighbor_province = { region = jiaozhi }
+		}
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 571
+		owns = 572
+		owns = 573
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		land_naval = 1
+		colonists = 10
+		jiaozhi = { add_core = this base_tax = 1 citysize = 5000 }
+		set_country_flag = nanmanwang
+		country_event = 21212
+	}
+}
+zhiminhainan = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = {
+			not = { 
+				owns = 541
+			}
+			not = { 
+				owns = 542
+			}
+		}
+		has_country_flag = nanmanwang
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 541
+		owns = 542
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 541
+		add_core = 542
+	}
+}
+zhimintaiwan = { 
+	type = country
+	allow = { 
+		is_subject = no
+		is_lesser_in_union = no
+		year = 2260
+		not = { year = 2260 }
+		or = {
+			not = { 
+				owns = 525
+			}
+			not = { 
+				owns = 526
+			}
+		}
+		has_country_flag = nanmanwang
+		idea = vice_roys
+	}
+	abort = { 
+	}
+	success = {
+		owns = 525
+		owns = 526
+	}
+	chance = { 
+		factor = 10000
+	}
+	immediate = { 
+	}
+	abort_effect = { 
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 525
+		add_core = 526
+	}
+}

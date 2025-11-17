@@ -1,0 +1,341 @@
+country_event = { 
+	id = 62001
+	major = yes
+	trigger = { 
+		monthly_income = 458
+		OR = { 
+			has_global_flag = zhanguokaishi
+			capital_scope = { 
+				hre = no
+			}
+		}
+		NOT = { 
+			has_global_flag = liyuebenghuai1
+		}
+		NOT = { 
+			has_country_modifier = chengwang
+		}
+		OR = { 
+			religion = liyuebadao
+			religion = fajia
+			has_global_flag = zhanguokaishi
+		}
+		OR = { 
+			num_of_cities = 45
+			num_of_vassals = 6
+			army = 100
+		}
+		OR = { 
+			num_of_monopolys = 3
+			num_of_cots = 3
+			monthly_income = 375
+		}
+	}
+	mean_time_to_happen = { 
+		months = 60
+	}
+	title = "EVTNAME62001"
+	desc = "EVTDESC62001"
+	option = { 
+		name = "EVTOPTA62001"
+		set_global_flag = liyuebenghuai1
+		prestige = 0.25
+		badboy = 2
+		any_owned = {
+			hre = no
+		}
+		add_country_modifier = { 
+			name = "chengwang"
+			duration = -1
+		}
+		ai_chance =
+		{
+			factor = 75
+		}
+	}
+	option = { 
+		name = "EVTOPTB62001"
+		prestige = -0.05
+		badboy = -1
+		add_country_modifier = { 
+			name = "jujuechengwang"
+			duration = 1825
+		}
+		ai_chance =
+		{
+			factor = 25
+		}
+	}
+}
+
+country_event = { 
+	id = 62002
+	major = yes
+	trigger = { 
+		monthly_income = 458
+		OR = { 
+			has_global_flag = zhanguokaishi
+			capital_scope = { 
+				hre = no
+			}
+		}
+		has_global_flag = liyuebenghuai1
+		NOT = { 
+			has_global_flag = liyuebenghuai2
+		}
+		NOT = { 
+			has_country_modifier = chengwang
+		}
+		OR = { 
+			religion = liyuebadao
+			religion = fajia
+			has_global_flag = zhanguokaishi
+		}
+		OR = { 
+			num_of_cities = 42
+			num_of_vassals = 5
+			army = 100
+		}
+		OR = { 
+			num_of_monopolys = 3
+			num_of_cots = 3
+			monthly_income = 370
+		}
+	}
+	mean_time_to_happen = { 
+		months = 60
+	}
+	title = "EVTNAME62001"
+	desc = "EVTDESC62001"
+	option = { 
+		name = "EVTOPTA62001"
+		set_global_flag = liyuebenghuai2
+		prestige = 0.25
+		badboy = 2
+		any_owned = {
+			hre = no
+		}
+		add_country_modifier = { 
+			name = "chengwang"
+			duration = -1
+		}
+		ai_chance =
+		{
+			factor = 75
+		}
+	}
+	option = { 
+		name = "EVTOPTB62001"
+		prestige = -0.05
+		badboy = -1
+		add_country_modifier = { 
+			name = "jujuechengwang"
+			duration = 1825
+		}
+		ai_chance =
+		{
+			factor = 25
+		}
+	}
+}
+
+country_event = { 
+	id = 62003
+	major = yes
+	trigger = { 
+		monthly_income = 458
+		OR = { 
+			has_global_flag = zhanguokaishi
+			capital_scope = { 
+				hre = no
+			}
+		}
+		has_global_flag = liyuebenghuai2
+		NOT = { 
+			has_global_flag = liyuebenghuai3
+		}
+		NOT = { 
+			has_country_modifier = chengwang
+		}
+		OR = { 
+			religion = liyuebadao
+			religion = fajia
+			has_global_flag = zhanguokaishi
+		}
+		OR = { 
+			num_of_cities = 40
+			num_of_vassals = 5
+			army = 100
+		}
+		OR = { 
+			num_of_monopolys = 3
+			num_of_cots = 3
+			monthly_income = 370
+		}
+	}
+	mean_time_to_happen = { 
+		months = 48
+	}
+	title = "EVTNAME62001"
+	desc = "EVTDESC62001"
+	option = { 
+		name = "EVTOPTA62001"
+		set_global_flag = liyuebenghuai3
+		prestige = 0.25
+		badboy = 2
+		any_owned = {
+			hre = no
+		}
+		add_country_modifier = { 
+			name = "chengwang"
+			duration = -1
+		}
+		ai_chance =
+		{
+			factor = 75
+		}
+	}
+	option = { 
+		name = "EVTOPTB62001"
+		prestige = -0.05
+		badboy = -1
+		add_country_modifier = { 
+			name = "jujuechengwang"
+			duration = 1825
+		}
+		ai_chance =
+		{
+			factor = 25
+		}
+	}
+}
+
+country_event = { 
+	id = 62004
+	major = yes
+	trigger = { 
+		monthly_income = 458
+		OR = { 
+			has_global_flag = zhanguokaishi
+			capital_scope = { 
+				hre = no
+			}
+		}
+		has_global_flag = liyuebenghuai3
+		NOT = { 
+			has_global_flag = liyuebenghuai4
+		}
+		NOT = { 
+			has_country_modifier = chengwang
+		}
+		OR = { 
+			religion = liyuebadao
+			religion = fajia
+			has_global_flag = zhanguokaishi
+		}
+		OR = { 
+			num_of_cities = 35
+			num_of_vassals = 4
+			army = 100
+		}
+		OR = { 
+			num_of_monopolys = 3
+			num_of_cots = 3
+			monthly_income = 360
+		}
+	}
+	mean_time_to_happen = { 
+		months = 48
+	}
+	title = "EVTNAME62001"
+	desc = "EVTDESC62001"
+	option = { 
+		name = "EVTOPTA62001"
+		set_global_flag = liyuebenghuai4
+		prestige = 0.25
+		badboy = 2
+		add_country_modifier = { 
+			name = "chengwang"
+			duration = -1
+		}
+		dismantle_hre = yes
+		any_country = { 
+			limit = { 
+				has_country_modifier = rival_for_by
+			}
+			remove_country_modifier = rival_for_by
+		}
+		ai_chance = { 
+			factor = 90
+		}
+	}
+	option = { 
+		name = "EVTOPTB62001"
+		prestige = -0.05
+		badboy = -1
+		add_country_modifier = { 
+			name = "jujuechengwang"
+			duration = 1825
+		}
+		ai_chance = { 
+			factor = 10
+		}
+	}
+}
+
+country_event = { 
+	id = 62005
+	major = yes
+	trigger = { 
+		monthly_income = 458
+		OR = { 
+			has_global_flag = zhanguokaishi
+			capital_scope = { 
+				hre = no
+			}
+		}
+		has_global_flag = liyuebenghuai4
+		NOT = { 
+			has_country_modifier = chengwang
+		}
+		OR = { 
+			num_of_cities = 30
+			num_of_vassals = 4
+			army = 80
+		}
+		OR = { 
+			num_of_monopolys = 2
+			num_of_cots = 2
+			monthly_income = 350
+		}
+	}
+	mean_time_to_happen = { 
+		months = 48
+	}
+	title = "EVTNAME62001"
+	desc = "EVTDESC62005"
+	option = { 
+		name = "EVTOPTA62001"
+		prestige = 0.10
+		add_country_modifier = { 
+			name = "chengwang"
+			duration = -1
+		}
+		ai_chance =
+		{
+			factor = 80
+		}
+	}
+	option = { 
+		name = "EVTOPTB62001"
+		prestige = -0.10
+		add_country_modifier = { 
+			name = "jujuechengwang"
+			duration = 1825
+		}
+		ai_chance =
+		{
+			factor = 20
+		}
+	}
+}

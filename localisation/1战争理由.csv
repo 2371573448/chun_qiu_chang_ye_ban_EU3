@@ -1,0 +1,82 @@
+;;;;;;;;;;x
+cb_horde_vs_civ;蛮夷侵扰;;;;;;;;;;X
+cb_horde_vs_civ_desc;彼蛮夷，虎狼之心，窥伺我中原!;;;;;;;;;;X
+cb_dishonored_call;背盟;;;;;;;;;;X
+cb_dishonored_call_desc;他们背弃了与我国的盟约. ;;;;;;;;;;X
+cb_insult;外交侮辱;;;;;;;;;;X
+cb_insult_desc;他们侮辱了我国! ;;;;;;;;;;X
+cb_core;收复失地;;;;;;;;;;X
+cb_core_desc;他们非法占有我国领土. ;;;;;;;;;;X
+cb_imperial_ban;收复中原故土;;;;;;;;;;X
+cb_imperial_ban_desc;他们非法占有了帝国领土. ;;;;;;;;;;X
+cb_conquest;使命;;;;;;;;;;X
+cb_zhulu;逐鹿中原;;;;;;;;;;X
+cb_zhulu_desc;周失其鹿，天下共逐之;;;;;;;;;;X
+cb_conquest_desc;我们有征服特定省份的任务. ;;;;;;;;;;X
+cb_horde_conquest;劫掠;;;;;;;;;;X
+cb_horde_conquest_desc;劫掠中原富裕之地!;;;;;;;;;;X
+cb_restore_personal_union;尊王攘夷;;;;;;;;;;X
+cb_restore_personal_union_desc;尊王攘夷. ;;;;;;;;;;X
+cb_restore_personal_union2;蛮夷猾夏;;;;;;;;;;X
+cb_restore_personal_union2_desc;蛮夷猾夏. ;;;;;;;;;;X
+cb_fabricated_claims;支持细作;;;;;;;;;;X
+cb_fabricated_claims_desc;支持细作. ;;;;;;;;;;X
+cb_trade_league;讨逆;;;;;;;;;;X
+cb_trade_league_desc;讨逆! ;;;;;;;;;;X
+jap_civil_war;不奉天子;;;;;;;;;;X
+jap_civil_war_desc;不奉天子!;;;;;;;;;;X
+cb_nationalist;问鼎中原;;;;;;;;;;X
+cb_nationalist_desc;问鼎中原;;;;;;;;;;X
+cb_super_badboy;吊民伐罪;;;;;;;;;;X
+cb_super_badboy_desc;吊民伐罪;;;;;;;;;;X
+cb_tianxiazhiba_claims;天下制霸;;;;;;;;;;X
+cb_tianxiazhiba_claims_desc;天下制霸;;;;;;;;;;X
+cb_ganshe;干涉战争;;;;;;;;;;X
+cb_ganshe_desc;此国国君来位不正;;;;;;;;;;X
+cb_imperial;兼并;;;;;;;;;;X
+cb_imperial_desc;天子宁有种耶 兵强马壮者为之耳！;;;;;;;;;;X
+cb_vassalize_pretend_to_bazhu;讨伐不服;;;;;;;;;;X
+cb_vassalize_pretend_to_bazhu_desc;讨伐不服;;;;;;;;;;X
+cb_insult_zb;争霸;;;;;;;;;;X
+cb_insult_zb_desc;中原霸业非尔所独有;;;;;;;;;;X
+cb_insult_mbng;讨伐不庭;;;;;;;;;;X
+cb_insult_mbng_desc;讨伐不庭;;;;;;;;;;X
+cb_tianxiazhiba;天下制霸;;;;;;;;;;X
+cb_tianxiazhiba_desc;天下制霸;;;;;;;;;;X
+ALL_COUNTRIES;所有的中原国家和蛮夷国家;;;;;;;;;;X
+ALL_PROVS;所有省份;;;;;;;;;;X
+TXZB_COUNTRIES;所有蛮夷濮越国家;;;;;;;;;;X
+IMPERIAL_WAR_NAME;$ORDER$$FIRST$“兼弱并昧”侵$SECOND$之战;;;;;;;;;;X
+GANSE_WAR_NAME;$ORDER$$FIRST$“讨逆诛暴”讨$SECOND$之战;;;;;;;;;;X
+TXZB_WAR_NAME;$ORDER$$FIRST$“天下制霸”侵$SECOND$之战;;;;;;;;;;X
+ZHULU_WAR_NAME;$ORDER$$FIRST$“逐鹿中原”侵$SECOND$之战;;;;;;;;;;X
+TRADE_WAR_NAME;$ORDER$$FIRST$“开市通商”讨$SECOND$之战;;;;;;;;;;X
+BA_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 支持细作战争;;;;;;;;;;X
+JAPANESE_CB_NAME;$ORDER$$FIRST$“敌王所忾”讨$SECOND$之战;;;;;;;;;;X
+NATION_WAR_NAME;$ORDER$$FIRST$“问鼎中原”侵$SECOND$之战;;;;;;;;;;X
+PRIMITIVE_WAR_NAME;$ORDER$$FIRST$“开疆辟土”侵$SECOND$之战;;;;;;;;;;X
+CRUSADE_WAR_NAME;$ORDER$$FIRST$ $CRUSADE_NAME$ 进攻 $SECOND_NAME$;;;;;;;;;;X
+CORE_WAR_NAME;$ORDER$$FIRST$“收复故地”复$PROVINCE$之战;;;;;;;;;;X
+FINANCIAL_WAR_NAME;$FIRST$讨$SECOND$之战;;;;;;;;;;X
+SPY_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 间谍战争;;;;;;;;;;X
+VASSAL_WAR_NAME;$ORDER$$FIRST$“拨乱反正”征$SECOND$之战;;;;;;;;;;X
+DOF_WAR_NAME;$ORDER$ 保卫 $FIRST_RELIGION$ 战争;;;;;;;;;;X
+HRE_DEFENSE_WAR_NAME;$ORDER$ 中原干涉战争;;;;;;;;;;X
+INTERVENTION_WAR_NAME;$ORDER$$FIRST$“报怨雪耻”讨$SECOND$之战;;;;;;;;;;X
+INSULT_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 荣誉战争;;;;;;;;;;X
+THRONE_WAR_NAME;$ORDER$$FIRST$ 夺取$SECOND$王位战争;;;;;;;;;;X
+COLONIAL_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 移民战争;;;;;;;;;;X
+UNION_WAR_NAME;$ORDER$$FIRST$“尊王攘夷”伐$SECOND$之战;;;;;;;;;;X
+UNION_WAR_NAME2;$ORDER$$FIRST$“蛮夷猾夏”侵$SECOND$之战;;;;;;;;;;X
+LIBERATION_WAR_NAME;$ORDER$$FIRST$“兴灭继绝”伐$SECOND$之战;;;;;;;;;;X
+HERETIC_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 宗教战争;;;;;;;;;;X
+BORDER_WAR_NAME;$ORDER$$FIRST$“保境安民”征$SECOND$;;;;;;;;;;X
+EXCOM_WAR_NAME;$ORDER$$FIRST$-$SECOND$ 教籍战争;;;;;;;;;;X
+BAN_WAR_NAME;$ORDER$$FIRST$“重整河山”复$PROVINCE$之战;;;;;;;;;;X
+CONFORMANCE_WAR_NAME;$ORDER$中原-$SECOND$ 改宗战争;;;;;;;;;;X
+PUNITIVE_WAR_NAME;$ORDER$$FIRST$“吊民伐罪”讨$SECOND$之战;;;;;;;;;;X
+CONQUEST_WAR_NAME;$ORDER$$FIRST$“奉辞伐罪”征$SECOND_NAME$之战;;;;;;;;;;X
+VASSAL_MISSION_WAR_NAME;$ORDER$$FIRST$“附庸臣属”征$SECOND_NAME$之战;;;;;;;;;;X
+NORMAL_WAR_NAME;$ORDER$$FIRST$寇$SECOND$之战;;;;;;;;;;X
+AGRESSION_WAR_NAME;$ORDER$$FIRST$寇$SECOND$之战;;;;;;;;;;X
+REVOLUTION_WAR_NAME;$ORDER$$FIRST$“揭竿而起”反$SECOND$之战;;;;;;;;;;X

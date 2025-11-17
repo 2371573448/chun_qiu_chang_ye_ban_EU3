@@ -1,0 +1,9 @@
+culture = dahe
+religion = animism
+trade_goods = salt
+hre = no
+base_tax = 5
+manpower = 0
+native_size = 213
+native_ferocity = 5
+native_hostileness = 8

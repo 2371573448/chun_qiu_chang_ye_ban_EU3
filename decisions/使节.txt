@@ -1,0 +1,22 @@
+cultural_decisions = { 
+	goumaishijie = {
+		potential = { 
+			ai = no
+		}
+		allow = {
+			treasury = 75
+		}
+		effect = {
+			treasury = -75
+			diplomats = 2
+			any_country = { 
+				limit = { 
+					tag = THIS
+					advisor = artist
+					idea = sea_hawks
+				}
+				diplomats = 1
+			}
+		}
+	}
+}

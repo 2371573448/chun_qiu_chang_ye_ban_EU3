@@ -1,0 +1,3378 @@
+#封狼居胥
+fenglangjuxu = { 
+	type = country
+	allow = { 
+		tag =XNU
+		not = { tag =XNU }
+		exists = XNU
+		XNU = {
+			neighbour = this
+			not = { vassal_of = this }
+		}
+		NOT = { owns = 787 }
+		not = {
+			has_global_flag = yifenglangjuxu
+		}
+		or = {
+			any_owned_province  = { region = donghu }
+			any_owned_province  = { region = xiongnu }
+			any_owned_province  = { region = yueshi }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		XNU = { 
+			capital_scope = { 
+				controlled_by = THIS
+			}
+		}
+	}
+	chance = { 
+		factor = 200
+	}
+	effect = { 
+		prestige = 1
+		treasury = 500
+		add_country_modifier = { 
+			name = "fenglangjuxu"
+			duration = -1
+		}
+		define_general = {
+			name = "霍去病"
+			shock = 12
+			fire = 12
+			siege = 12
+			manuever = 12
+			rank = 20
+		}
+		XNU = { white_peace = THIS }
+		XNU = { government = tribal_despotism }
+		this = {
+			vassalize = XNU
+		}
+		create_alliance = XNU
+		set_global_flag = yifenglangjuxu
+	}
+}
+#发展殖民地
+build_colony_to_city = {
+	type = our_provinces
+	allow = {
+		this = { war = no }
+		is_colony = yes
+		owner = {
+			colonists = 1
+			monthly_income = 0.1
+		}
+	}
+	abort = {
+		NOT = { owned_by = THIS }
+	}
+	success = {
+		is_colony = false
+		owned_by = THIS
+	}
+	chance = {
+		factor = 2
+                modifier = {
+			factor = 500
+			idea = vice_roys
+                }
+                modifier = {
+			factor = 500
+			tag = WUG
+                }
+	}
+	effect = {
+		base_tax = 3
+		add_core = THIS
+	}	
+}
+
+#吞并邻居小国
+annex_minor_mission = {
+	type = neighbor_provinces
+	allow = {
+		this = {
+			nomad = no
+			war = no
+		}
+		owner = {
+			num_of_cities = 1
+			NOT = { num_of_cities = 6 }
+			NOT = { relation = { who = THIS value = 0 } }
+		}
+		has_discovered = THIS
+	}
+	abort = {
+		owner = { NOT = { num_of_cities = 1 } }
+	}
+	success = {
+		owned_by = THIS
+	}
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 1.5
+			culture = THIS
+		}
+		modifier = {
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = {
+			factor = 1.5
+			this = { MIL = 6 }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { truce_with = THIS }
+		}
+		modifier = {
+			factor = 0.66
+			this = { NOT = { MIL = 5 } }
+		}		
+	}
+	immediate = {
+		owner = {
+			any_owned = { 
+				set_province_flag = tunbingxiaoguobiaoji
+				add_temp_claim = THIS
+			}
+		}
+	}
+	abort_effect = {
+		owner = {
+			any_owned = { 
+				clr_province_flag = tunbingxiaoguobiaoji
+				remove_temp_claim = THIS
+			}
+		}
+	}
+	effect = {
+		this = {
+			any_owned = { 
+				limit = { 
+					has_province_flag = tunbingxiaoguobiaoji
+				}
+				clr_province_flag = tunbingxiaoguobiaoji
+				remove_temp_claim = THIS
+				add_core = THIS
+				badboy = -1
+			}
+		}
+	}
+}
+
+#夺取港口
+conquer_a_port = { 
+	type = neighbor_provinces
+	allow = { 
+		this = { 
+			nomad = no
+			NOT = { 
+				total_num_of_ports = 1
+			}
+			war = no
+		}
+		port = yes
+		has_discovered = THIS
+		NOT = { 
+			owned_by = PAP
+		}
+		is_capital = no
+	}
+	abort = { 
+		this = { 
+			total_num_of_ports = 1
+		}
+	}
+	success = { 
+		owned_by = THIS
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			culture = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					MIL = 5
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			owner = { 
+				truce_with = THIS
+			}
+		}
+	}
+	immediate = { 
+		add_temp_claim = THIS
+	}
+	abort_effect = { 
+		remove_temp_claim = THIS
+	}
+	effect = { 
+		navy_tradition = 0.05
+		province_event = 504
+	}
+}
+
+#攻击邻国
+conquer_neighbour = { 
+	type = neighbor_provinces
+	allow = { 
+		THIS = { 
+			nomad = no
+		}
+		NOT = { 
+			is_core = THIS
+		}
+		is_colony = no
+		NOT = { 
+			owner = { 
+				relation = { 
+					who = THIS
+					value = 0
+				}
+			}
+		}
+		NOT = { 
+			owner = { 
+				infantry = THIS
+			}
+		}
+		NOT = { 
+			owner = { 
+				vassal_of = THIS
+			}
+		}
+		owner = { 
+			is_subject = no
+		}
+		has_discovered = THIS
+		is_capital = no
+	}
+	abort = { 
+		owner = { 
+			not = { 
+				neighbour = this
+			}
+		}
+	}
+	success = { 
+		owned_by = THIS
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 0.75
+			culture_group = THIS
+		}
+		modifier = { 
+			factor = 0.25
+			religion = THIS
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				MIL = 5
+			}
+		}
+		modifier = { 
+			factor = 0.1
+			owner = { 
+				truce_with = THIS
+			}
+		}
+	}
+	immediate = { 
+		add_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				random = { 
+					chance = 50
+					add_temp_claim = THIS
+					set_province_flag = gongjilinguobiaoji
+				}
+			}
+		}
+	}
+	abort_effect = { 
+		remove_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				clr_province_flag = gongjilinguobiaoji
+				remove_temp_claim = THIS
+			}
+		}
+	}
+	effect = { 
+		add_core = THIS
+		this = {
+			any_owned = { 
+				limit = { 
+					has_province_flag = gongjilinguobiaoji
+				}
+				clr_province_flag = gongjilinguobiaoji
+				remove_temp_claim = THIS
+				add_core = THIS
+			}
+		}
+	}
+}
+
+#收复核心
+conquer_core = { 
+	# Checked for all provinces bordering the country, with the country in the parent scope.
+	type = neighbor_provinces
+	allow = { 
+		THIS = { 
+			nomad = no
+		}
+		is_core = THIS
+		is_colony = no
+		NOT = { 
+			owner = { 
+				vassal_of = THIS
+			}
+		}
+		NOT = { 
+			owner = { 
+				junior_union_with = THIS
+			}
+		}
+		owner = { 
+			is_subject = no
+		}
+		owner = { 
+			war = no
+		}
+		has_discovered = THIS
+	}
+	abort = { 
+		not = { 
+			is_core = this
+		}
+	}
+	success = { 
+		owned_by = THIS
+	}
+	chance = { 
+		factor = 5
+		modifier = { 
+			factor = 1.5
+			culture = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					MIL = 5
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			owner = { 
+				truce_with = THIS
+			}
+		}
+	}
+	immediate = {
+		any_neighbor_province = { 
+			set_province_flag = shoufuhexinbiaoji
+			add_temp_claim = THIS
+		}
+	}
+	abort_effect = {
+		any_neighbor_province = { 
+			clr_province_flag = shoufuhexinbiaoji
+			remove_temp_claim = THIS
+		}
+	}
+	# The effect always has country scope (for the country that gets the mission)
+	effect = { 
+		prestige = 0.1
+		this = {
+			any_owned = { 
+				limit = { 
+					has_province_flag = shoufuhexinbiaoji
+				}
+				clr_province_flag = shoufuhexinbiaoji
+				remove_temp_claim = THIS
+				add_core = THIS
+			}
+		}
+	}
+}
+
+#保护同宗
+protect_religious_minority = { 
+	type = neighbor_provinces
+	allow = { 
+		this = { 
+			nomad = no
+			war = no
+		}
+		NOT = { has_global_flag = zhanguokaishi }
+		religion = THIS
+		owner = { 
+			NOT = { 
+				religion = THIS
+			}
+		}
+		NOT = { 
+			owner = { 
+				alliance_with = THIS
+			}
+		}
+		has_discovered = THIS
+	}
+	abort = { 
+		OR = { 
+			NOT = { 
+				religion = THIS
+			}
+			owner = { 
+				alliance_with = THIS
+			}
+			owner = { 
+				religion = THIS
+			}
+		}
+	}
+	success = { 
+		owned_by = THIS
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			culture = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 1
+			this = { 
+				NOT = { 
+					MIL = 5
+				}
+			}
+		}
+		modifier = { 
+			factor = 1
+			owner = { 
+				truce_with = THIS
+			}
+		}
+	}
+	immediate = { 
+		add_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				set_province_flag = baohutongzongbiaoji
+				add_temp_claim = THIS
+			}
+		}
+	}
+	abort_effect = { 
+		remove_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				clr_province_flag = baohutongzongbiaoji
+				remove_temp_claim = THIS
+			}
+		}
+	}
+	effect = { 
+		add_core = THIS
+		infamy = -1
+		this = {
+			any_owned = { 
+				limit = { 
+					has_province_flag = baohutongzongbiaoji
+					religion = THIS
+				}
+				add_core = THIS
+			}
+			any_owned = { 
+				limit = { 
+					has_province_flag = baohutongzongbiaoji
+				}
+				clr_province_flag = baohutongzongbiaoji
+			}
+		}
+	}
+}
+
+#保护同文化
+protect_cultural_minority = { 
+	type = neighbor_provinces
+	allow = { 
+		this = { 
+			nomad = no
+			war = no
+		}
+		culture = THIS
+		owner = { 
+			NOT = { 
+				primary_culture = THIS
+			}
+		}
+		NOT = { 
+			owner = { 
+				alliance_with = THIS
+			}
+		}
+		has_discovered = THIS
+		OR = { 
+			owner = { 
+				hre = no
+			}
+			THIS = { 
+				hre = no
+			}
+		}
+		OR = { 
+			NOT = { 
+				owned_by = PAP
+			}
+			is_capital = no
+		}
+	}
+	abort = { 
+		OR = { 
+			NOT = { 
+				culture = THIS
+			}
+			owner = { 
+				alliance_with = THIS
+			}
+			owner = { 
+				primary_culture = THIS
+			}
+		}
+	}
+	success = { 
+		owned_by = THIS
+	}
+	chance = { 
+		factor = 1.5
+		modifier = { 
+			factor = 1.5
+			culture = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 1
+			this = { 
+				NOT = { 
+					MIL = 5
+				}
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			owner = { 
+				truce_with = THIS
+			}
+		}
+	}
+	immediate = { 
+		add_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				set_province_flag = baohutongwenhuabiaoji
+				add_temp_claim = THIS
+			}
+		}
+	}
+	abort_effect = { 
+		remove_temp_claim = THIS
+		owner = {
+			any_owned = { 
+				clr_province_flag = baohutongwenhuabiaoji
+				remove_temp_claim = THIS
+			}
+		}
+	}
+	effect = { 
+		add_core = THIS
+		badboy = -2
+		this = {
+			any_owned = { 
+				limit = { 
+					has_province_flag = baohutongwenhuabiaoji
+					culture = THIS
+				}
+				add_core = THIS
+			}
+			any_owned = { 
+				limit = { 
+					has_province_flag = baohutongwenhuabiaoji
+				}
+				clr_province_flag = baohutongwenhuabiaoji
+			}
+		}
+	}
+}
+
+#打击高声望敌人
+attack_prestigous_rival = { 
+	type = rival_countries
+	allow = { 
+		prestige = THIS
+		# they got more prestige than us.
+		neighbour = THIS
+		# neighbour with us.
+		# we're strong enough.. and they are no small ones..
+		THIS = { 
+			num_of_cities = 5
+			war = no
+			is_lesser_in_union = no
+		}
+		num_of_cities = 5
+		NOT = { 
+			nomad = yes
+		}
+		# not vs nomads!
+		NOT = { 
+			alliance_with = THIS
+		}
+		NOT = { 
+			is_subject = yes
+		}
+		this = { 
+			NOT = { 
+				is_subject = yes
+			}
+		}
+	}
+	abort = { 
+		or = { 
+			this = { 
+				or = { 
+					is_subject = yes
+					is_lesser_in_union = yes
+				}
+			}
+			not = { 
+				num_of_cities = 1
+			}
+		}
+	}
+	success = { 
+		war_with = THIS
+	}
+	chance = { 
+		factor = 2
+		modifier = { 
+			factor = 1.5
+			THIS = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					DIP = 5
+				}
+			}
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_conquest
+			months = 120
+			target = THIS
+		}
+	}
+	abort_effect = {
+		this_remove_casus_belli = {
+			type = cb_conquest
+			target = THIS
+		}
+	}
+	effect = { 
+		any_owned = { 
+			limit = { 
+				any_neighbor_province = { 
+					owned_by = THIS
+				}
+				NOT = { 
+					is_core = THIS
+				}
+			}
+			add_core = THIS
+		}
+		prestige = 0.05
+	}
+}
+
+#打击脆弱的敌人
+attack_weaker_rival = { 
+	type = rival_countries
+	allow = { 
+		# we're strong enough.. and they are no small ones..
+		THIS = { 
+			nomad = no
+			is_lesser_in_union = no
+			num_of_cities = 5
+			war = no
+		}
+		NOT = { 
+			infantry = THIS
+		}
+		neighbour = THIS
+		# neighbour with us.
+		war = yes
+		num_of_cities = 5
+		NOT = { 
+			alliance_with = THIS
+		}
+		NOT = { 
+			is_subject = yes
+		}
+		this = { 
+			NOT = { 
+				is_subject = yes
+			}
+		}
+	}
+	abort = { 
+		or = { 
+			this = { 
+				or = { 
+					is_lesser_in_union = yes
+					is_subject = yes
+				}
+			}
+			war = no
+		}
+	}
+	success = { 
+		war_with = THIS
+	}
+	chance = { 
+		factor = 2
+		modifier = { 
+			factor = 1.5
+			THIS = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					DIP = 5
+				}
+			}
+		}
+	}
+	immediate = {
+		add_casus_belli = {
+			type = cb_conquest
+			months = 120
+			target = THIS
+		}
+	}
+	abort_effect = {
+		this_remove_casus_belli = {
+			type = cb_conquest
+			target = THIS
+		}
+	}
+	effect = { 
+		any_owned = { 
+			limit = { 
+				any_neighbor_province = { 
+					owned_by = THIS
+				}
+				NOT = { 
+					is_core = THIS
+				}
+			}
+			add_core = THIS
+		}
+		prestige = 0.01
+	}
+}
+
+#夺取铜矿
+get_control_of_copper = {
+	type = country
+	allow = {
+		NOT = { copper = 1 }
+		NOT = { has_country_flag = duoqutongkuangxianliang }
+	}
+	abort = {
+	}
+	success = {
+		copper = 1
+	}
+	chance = {
+		factor = 1
+                                        modifier = { 
+			factor = 500
+			tag = WEN
+		}
+	}
+	immediate = {
+		add_country_modifier = { 
+			name = "duoqutongkuang"
+			duration = 365
+		}
+		manpower = 10
+	}
+	abort_effect = {
+		stability = -3
+	}
+	effect = {
+		prestige = 0.10
+		years_of_income = 10
+		set_country_flag = duoqutongkuangxianliang
+	}
+}
+
+#建设要塞1
+improve_key_defensive_position_hard = { 
+	type = our_provinces
+	allow = { 
+		has_building = fort4
+		NOT = { 
+			has_building = college
+		}
+		NOT = { 
+			has_building = arsenal
+		}
+		NOT = { 
+			has_building = naval_arsenal
+		}
+		NOT = { 
+			has_building = mint
+		}
+		NOT = { 
+			has_building = post_office
+		}
+		NOT = { 
+			has_building = fort6
+		}
+		owner = { 
+			land_tech = 68
+		}
+		owner = { 
+			war = no
+		}
+		any_neighbor_province = { 
+			NOT = { 
+				owned_by = THIS
+			}
+		}
+	}
+	abort = { 
+		NOT = { 
+			owned_by = THIS
+		}
+	}
+	success = { 
+		has_building = fort6
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					casus_belli = yes
+				}
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = { 
+			factor = 1.5
+			base_tax = 7
+		}
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					NOT = { 
+						religion_group = this
+					}
+				}
+			}
+		}
+	}
+	abort_effect = {
+		stability = -1
+	}
+	effect = { 
+		army_tradition = 0.05
+		land_tech = 0.2
+		define_general = {
+			name = "神将"
+			shock = 6
+			fire = 6
+			siege = 6
+			manuever = 6
+			rank = 0
+		}
+	}
+}
+
+#建设要塞2
+improve_key_defensive_position_small = { 
+	type = our_provinces
+	allow = { 
+		has_building = fort1
+		NOT = { 
+			has_building = fort2
+		}
+		owner = { 
+			land_tech = 16
+		}
+		owner = { 
+			war = no
+		}
+		any_neighbor_province = { 
+			NOT = { 
+				owned_by = THIS
+			}
+		}
+	}
+	abort = { 
+		NOT = { 
+			owned_by = THIS
+		}
+	}
+	success = { 
+		has_building = fort2
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					casus_belli = yes
+				}
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = { 
+			factor = 1.5
+			base_tax = 5
+		}
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					NOT = { 
+						religion_group = this
+					}
+				}
+			}
+		}
+	}
+	abort_effect = {
+		stability = -1
+	}
+	effect = { 
+		army_tradition = 0.05
+		land_tech = 0.2
+		base_tax = 3
+	}
+}
+
+#建设要塞3
+improve_key_defensive_position_medium = { 
+	type = our_provinces
+	allow = { 
+		has_building = fort2
+		NOT = { 
+			has_building = fort4
+		}
+		owner = { 
+			land_tech = 41
+		}
+		owner = { 
+			war = no
+		}
+		any_neighbor_province = { 
+			NOT = { 
+				owned_by = THIS
+			}
+		}
+	}
+	abort = { 
+		NOT = { 
+			owned_by = THIS
+		}
+	}
+	success = { 
+		has_building = fort4
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					casus_belli = yes
+				}
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = { 
+			factor = 1.5
+			base_tax = 5
+		}
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					NOT = { 
+						religion_group = this
+					}
+				}
+			}
+		}
+	}
+	abort_effect = {
+		stability = -1
+	}
+	effect = { 
+		army_tradition = 0.05
+		land_tech = 0.2
+		change_manpower = 3
+	}
+}
+#修建伐木场
+build_refinery = {
+	type = our_provinces
+	allow = {
+		owner = {
+			trade_tech = 11
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		OR = {
+			trade_goods = slaves
+			trade_goods = ivory
+		}
+		is_core = yes
+	}
+	abort = {
+		OR = {
+			has_building = wharf
+			has_building = textile
+			has_building = weapons
+			has_building = fine_arts_academy
+			has_building = university
+			NOT = {	owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = refinery
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 100
+			idea = colonial_ventures
+		}		
+	}
+	effect = {
+		treasury = 400
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#修建港口
+build_wharf = {
+	type = our_provinces
+	allow = {
+		owner = {
+			naval_tech = 12
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		OR = {
+			trade_goods = fish
+			trade_goods = tobacco
+		}
+		is_core = yes
+	}
+	abort = {
+		OR = {
+			has_building = refinery
+			has_building = textile
+			has_building = weapons
+			has_building = fine_arts_academy
+			has_building = university
+			NOT = {	owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = wharf
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 100
+			idea = grand_army
+		}		
+	}
+	effect = {
+		treasury = 350
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#修建牧场
+build_weapons = {
+	type = our_provinces
+	allow = {
+		owner = {
+			land_tech = 8
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		OR = {
+			trade_goods = spices
+			trade_goods = fur
+		}
+		is_core = yes
+	}
+	abort = {
+		OR = {
+			has_building = refinery
+			has_building = textile
+			has_building = wharf
+			has_building = fine_arts_academy
+			has_building = university
+			NOT = {	owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = weapons
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 1.5
+			idea = glorious_arms
+		}		
+	}
+	effect = {
+		treasury = 300
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#修建矿井
+build_textile = {
+	type = our_provinces
+	allow = {
+		owner = {
+			production_tech = 12
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		OR = {
+			trade_goods = copper
+			trade_goods = iron
+		}
+		is_core = yes
+	}
+	abort = {
+		OR = {
+			has_building = refinery
+			has_building = weapons
+			has_building = wharf
+			has_building = fine_arts_academy
+			has_building = university
+			NOT = {	owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = textile
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 50
+			idea = colonial_ventures
+		}		
+	}
+	effect = {
+		treasury = 300
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#修建守藏室
+build_fine_arts_academy = {
+	type = our_provinces
+	allow = {
+		owner = {
+			government_tech = 9
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		trade_goods = cloth
+		is_core = yes
+	}
+	abort = {
+		OR = {
+			has_building = refinery
+			has_building = weapons
+			has_building = wharf
+			has_building = textile
+			has_building = university
+			NOT = { owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = fine_arts_academy
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 50
+			idea = ecumenism
+		}		
+	}
+	effect = {
+		treasury = 350
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#修建煮盐所
+build_university = {
+	type = our_provinces
+	allow = {
+		owner = {
+			government_tech = 12
+			monthly_income = 4
+			war = no
+		}
+		NOT = { has_building = refinery }
+		NOT = { has_building = wharf }
+		NOT = { has_building = textile }
+		NOT = { has_building = weapons }
+		NOT = { has_building = fine_arts_academy }
+		NOT = { has_building = university }
+		is_core = yes
+		trade_goods = salt
+	}
+	abort = {
+		OR = {
+			has_building = refinery
+			has_building = weapons
+			has_building = wharf
+			has_building = textile
+			has_building = fine_arts_academy
+			NOT = {	owned_by = THIS }
+		}
+	}
+	success = {
+		has_building = university
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			base_tax = 5
+		}
+                modifier = {
+			factor = 50
+			idea = colonial_ventures
+                }
+	}
+	effect = {
+		treasury = 300
+		years_of_income = 0.1
+		base_tax = 3
+	}	
+}
+
+#组建陆军
+construct_army = { 
+	type = country
+	allow = { 
+		NOT = { 
+			army_size_percentage = 0.5
+		}
+		is_emperor = no
+	}
+	abort = { }
+	success = { 
+		army_size_percentage = 0.75
+	}
+	chance = { 
+		factor = 2
+		modifier = { 
+			factor = 2.0
+			war = yes
+		}
+		modifier = { 
+			factor = 1.5
+			NOT = { 
+				army_size_percentage = 0.4
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			NOT = { 
+				army_size_percentage = 0.2
+			}
+		}
+	}
+	# The effect always has country scope (for the country that gets the mission)
+	effect = { 
+		army_tradition = 0.05
+		prestige = 0.05
+		years_of_income = 0.5
+		manpower = 0.5
+	}
+}
+
+#组建水军
+construct_navy = { 
+	type = our_provinces
+	allow = { 
+		port = yes
+		is_core = this
+		owner = { 
+			not = { 
+				navy_size_percentage = 0.5
+			}
+			naval_tech = 24
+		}
+	}
+	abort = { 
+		NOT = { 
+			owner = { 
+				any_owned_province = { 
+					port = yes
+					is_core = this
+				}
+			}
+		}
+	}
+	success = { 
+		owner = { 
+			navy_size_percentage = 0.75
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			owner = { 
+				war = yes
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			owner = { 
+				NOT = { 
+					navy_size_percentage = 0.4
+				}
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			owner = { 
+				NOT = { 
+					navy_size_percentage = 0.2
+				}
+			}
+		}
+	}
+	# The effect always has country scope (for the country that gets the mission)
+	effect = { 
+		navy_tradition = 0.05
+		prestige = 0.05
+		any_country = { 
+			limit = { 
+				any_owned_province = { 
+					port = yes
+				}
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				months = 1
+				target = THIS
+			}
+		}
+	}
+}
+
+#巩固防御
+fortify_province = { 
+	type = our_provinces
+	allow = { 
+		NOT = { 
+			has_building = fort1
+		}
+		owner = { 
+			land_tech = 3
+		}
+		owner = { 
+			war = no
+		}
+		is_colony = no
+	}
+	abort = { 
+		NOT = { 
+			owned_by = THIS
+		}
+	}
+	success = { 
+		has_building = fort1
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					casus_belli = yes
+				}
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_capital = yes
+		}
+		modifier = { 
+			factor = 1.5
+			base_tax = 5
+		}
+		modifier = { 
+			factor = 2.0
+			any_neighbor_province = { 
+				owner = { 
+					NOT = { 
+						religion_group = this
+					}
+				}
+			}
+		}
+	}
+	abort_effect = {
+		stability = -1
+	}
+	effect = { 
+		army_tradition = 0.01
+		land_tech = 0.2
+		citysize = 5000
+	}
+}
+
+#扩张陆军
+rival_army = { 
+	type = rival_countries
+	allow = { 
+		army = THIS
+		not = { 
+			alliance_with = this
+		}
+	}
+	abort = { 
+		OR = { 
+			alliance_with = this
+			vassal_of = THIS
+			junior_union_with = THIS
+			overlord_of = THIS
+		}
+	}
+	success = { 
+		NOT = { 
+			army = THIS
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			THIS = { 
+				MIL = 6
+			}
+		}
+	}
+	effect = { 
+		THIS = { 
+			army_tradition = 0.05
+		}
+		add_casus_belli = {
+			type = cb_imperial
+			months = 1
+			target = THIS
+		}
+	}
+}
+
+#扩张水军
+rival_navy = { 
+	type = rival_countries
+	allow = { 
+		navy = THIS
+		not = { 
+			alliance_with = this
+		}
+		not = { 
+			vassal_of = THIS
+		}
+		not = { 
+			junior_union_with = THIS
+		}
+		not = { 
+			overlord_of = THIS
+		}
+		num_of_ports = 1
+		THIS = { 
+			naval_tech = 24
+			NOT = { 
+				technology_group = nomad_group
+			}
+			any_owned_province = { 
+				port = yes
+				is_core = yes
+			}
+		}
+	}
+	abort = { 
+		OR = { 
+			THIS = { 
+				NOT = { 
+					num_of_ports = 1
+				}
+			}
+			alliance_with = this
+			vassal_of = THIS
+			junior_union_with = THIS
+			overlord_of = THIS
+		}
+	}
+	success = { 
+		NOT = { 
+			navy = THIS
+		}
+	}
+	chance = { 
+		factor = 0.5
+		modifier = { 
+			factor = 0.75
+			THIS = { 
+				MIL = 6
+			}
+		}
+	}
+	effect = { 
+		THIS = { 
+			navy_tradition = 0.05
+		}
+		add_casus_belli = {
+			type = cb_imperial
+			months = 1
+			target = THIS
+		}
+	}
+}
+
+#恢复威望
+recover_abysmal_prestige = {
+	type = country
+	allow = {
+		NOT = { prestige = -0.5 }
+	}
+	abort = {
+	}
+	success = {
+		prestige  = -0.25
+	}
+	chance = {
+		factor = 1
+		
+		modifier = {
+			factor = 2
+			ADM = 6
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			idea = naval_glory
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			idea = glorious_arms
+		}
+		modifier = {
+			factor = 3
+			idea = patron_of_art
+		}
+	
+	}
+	immediate = {
+		add_country_modifier = { 
+			name = "weiwangrenwu"
+			duration = -1
+		}
+	}
+	abort_effect = {
+		remove_country_modifier = weiwangrenwu
+	}
+	effect = {
+		stability = 1
+		prestige = 0.1
+		remove_country_modifier = weiwangrenwu
+	}
+	
+}
+
+#提高威望
+improve_prestige = {
+	type = country
+	allow = {
+		prestige = -0.25
+		NOT = { prestige = 0 }
+	}
+	abort = {
+	}
+	success = {
+		prestige  = 0.1
+	}
+	chance = {
+		factor = 1
+		
+		modifier = {
+			factor = 2
+			ADM = 6
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			idea = naval_glory
+		}
+		modifier = {
+			factor = 2
+			war = yes
+			idea = glorious_arms
+		}
+		modifier = {
+			factor = 3
+			idea = patron_of_art
+		}
+	
+	}
+	immediate = {
+		add_country_modifier = { 
+			name = "weiwangrenwu"
+			duration = -1
+		}
+	}
+	abort_effect = {
+		remove_country_modifier = weiwangrenwu
+	}
+	effect = {
+		stability = 1
+		prestige = 0.1
+		remove_country_modifier = weiwangrenwu
+	}
+}
+
+#结盟
+get_an_alliance_mission = { 
+	type = neighbor_countries
+	allow = { 
+		this = { 
+			NOT = { 
+				num_of_allies = 2
+			}
+		}
+		NOT = { 
+			num_of_allies = 2
+		}
+		not = { 
+			is_threat = this
+		}
+		war = no
+		relation = { 
+			who = THIS
+			value = 50
+		}
+		NOT = { 
+			alliance_with = THIS
+		}
+		NOT = { 
+			is_subject = yes
+		}
+		this = { 
+			NOT = { 
+				is_subject = yes
+			}
+		}
+	}
+	abort = { 
+		OR = { 
+			war_with = THIS
+			this = { 
+				num_of_allies = 3
+			}
+			not = { 
+				num_of_cities = 1
+			}
+		}
+	}
+	success = { 
+		alliance_with = THIS
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				DIP = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					DIP = 5
+				}
+			}
+		}
+		modifier = { 
+			factor = 2.0
+			num_of_cities = 10
+		}
+	}
+	effect = { 
+		THIS = { 
+			prestige = 0.03
+		}
+		random = { 
+			chance = 20
+			set_country_flag = jiemengrenwubeifuyong
+			this = {
+				country_event = 502
+			}
+		}
+	}
+}
+
+#提高关系
+improve_relations_mission = { 
+	type = neighbor_countries
+	allow = { 
+		war = no
+		religion_group = THIS
+		NOT = { 
+			war_with = THIS
+		}
+		NOT = { 
+			relation = { 
+				who = THIS
+				value = 100
+			}
+		}
+		relation = { 
+			who = THIS
+			value = 0
+		}
+	}
+	abort = { 
+		or = { 
+			war_with = THIS
+			not = { 
+				num_of_cities = 1
+			}
+		}
+	}
+	success = { 
+		relation = { 
+			who = THIS
+			value = 100
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				DIP = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					DIP = 5
+				}
+			}
+		}
+	}
+	effect = { 
+		create_alliance = this
+		THIS = { 
+			prestige = 0.05
+		}
+	}
+}
+
+#合并附庸
+generic_annex_vassal_mission = { 
+	type = neighbor_provinces
+	allow = { 
+		this = { 
+			war = no
+		}
+		owner = { 
+			nomad = no
+			is_subject = yes
+			vassal_of = THIS
+			not = { 
+				num_of_cities = this
+			}
+			not = { 
+				tag = PAP
+			}
+			religion_group = this
+		}
+		not = { 
+			is_core = THIS
+		}
+	}
+	abort = { 
+		owner = { 
+			or = { 
+				not = { 
+					religion_group = this
+				}
+				not = { 
+					num_of_cities = 1
+				}
+				not = { 
+					vassal_of = this
+				}
+			}
+		}
+	}
+	success = { 
+		owned_by = this
+	}
+	chance = { 
+		factor = 2
+		modifier = { 
+			factor = 3
+			this = { 
+				DIP = 6
+			}
+		}
+		modifier = { 
+			factor = 5
+			this = { 
+				DIP = 8
+			}
+		}
+	}
+	immediate = { 
+		set_province_flag = annex_vassal_mission_target
+		owner = { 
+			any_owned = { 
+				set_province_flag = annex_vassal_mission_target
+			}
+		}
+	}
+	abort_effect = { 
+		owner = { 
+			any_owned = { 
+				clr_province_flag = annex_vassal_mission_target
+			}
+		}
+	}
+	effect = { 
+		THIS = { 
+			any_owned = { 
+				limit = { 
+					has_province_flag = annex_vassal_mission_target
+					NOT = { 
+						is_core = THIS
+					}
+				}
+				add_core = THIS
+				clr_province_flag = annex_vassal_mission_target
+			}
+		}
+		THIS = { 
+			any_owned = { 
+				limit = { 
+					has_province_flag = annex_vassal_mission_target
+					NOT = { 
+						is_core = THIS
+					}
+				}
+				add_core = THIS
+				clr_province_flag = annex_vassal_mission_target
+			}
+		}
+		THIS = { 
+			any_owned = { 
+				limit = { 
+					has_province_flag = annex_vassal_mission_target
+					NOT = { 
+						is_core = THIS
+					}
+				}
+				add_core = THIS
+				clr_province_flag = annex_vassal_mission_target
+			}
+		}
+		THIS = { 
+			any_owned = { 
+				limit = { 
+					has_province_flag = annex_vassal_mission_target
+					NOT = { 
+						is_core = THIS
+					}
+				}
+				add_core = THIS
+				clr_province_flag = annex_vassal_mission_target
+			}
+		}
+	}
+}
+
+#提高名誉
+improve_reputation_mission = { 
+	type = country
+	allow = { 
+		infamy = 0.7
+		ai = no
+		NOT = { 
+			infamy = 0.9
+		}
+	}
+	abort = { 
+		infamy = 1.0
+	}
+	success = { 
+		NOT = { 
+			infamy = 0.5
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			DIP = 6
+		}
+		modifier = { 
+			factor = 1.5
+			DIP = 8
+		}
+	}
+	effect = { 
+		badboy = -100
+		define_advisor = { 
+			type = diplomat
+			skill = 4
+		}
+	}
+}
+
+#附庸任务
+vassalize_mission = {
+	type = neighbor_countries
+
+	allow = {
+		NOT = { government = steppe_horde }
+		regency = no
+		this = { 
+			is_subject = no 
+			NOT = { government = steppe_horde }
+			num_of_cities = 6
+		}
+		NOT = { num_of_cities = 10 }
+		religion_group = THIS
+		is_subject = no 
+		NOT = {  
+			war_with = THIS
+		}
+	}
+	abort = {
+		OR = {
+			NOT = { num_of_cities = 1 }	#exists wont work, as we dont know the tag.
+			and = {
+				is_subject = yes
+				not = { vassal_of = this }
+			}
+		}
+	}
+
+	success = {
+		vassal_of = THIS
+	}
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { num_of_cities = 3 }
+		}
+		modifier = {
+			factor = 1.5
+			THIS = { num_of_cities = 10 }
+		}
+		modifier = { 
+			factor = 10
+			THIS = { has_country_modifier = campaign_to_bazhu }
+		}
+	}
+	
+	immediate = {
+		add_casus_belli = {
+			type = cb_vassalize_mission
+			months = 120
+			target = THIS
+		}
+	}
+	abort_effect = {
+		this_remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = THIS
+		}
+	}
+
+	effect = {
+		THIS = { infamy = -1 }
+		relation = { 
+			who = THIS
+			value = 500
+		}
+		create_alliance = this
+		this_remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = THIS
+		}
+	}	
+}
+
+#改善敌对关系
+improve_relations_with_rival = { 
+	type = rival_countries
+	allow = { 
+		war = no
+		this = { 
+			infamy = 10
+		}
+		NOT = { 
+			relation = { 
+				who = THIS
+				value = 0
+			}
+		}
+	}
+	abort = { 
+		not = { 
+			num_of_cities = 1
+		}
+	}
+	success = { 
+		relation = { 
+			who = THIS
+			value = 0
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			religion = THIS
+		}
+		modifier = { 
+			factor = 1.5
+			this = { 
+				DIP = 6
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			this = { 
+				NOT = { 
+					DIP = 5
+				}
+			}
+		}
+	}
+	effect = { 
+		THIS = { 
+			infamy = -1
+		}
+		stability = 1
+	}
+}
+
+#封锁敌人港口
+blockade_enemy_coast = { 
+	type = enemy_provinces
+	allow = { 
+		THIS = { 
+			naval_tech = 24
+			num_of_ports = 1
+			big_ship = 1
+			NOT = { 
+				last_mission = blockade_enemy_coast
+			}
+		}
+		controlled_by = owner
+		has_siege = no
+		port = yes
+		is_blockaded = no
+	}
+	abort = { 
+		OR = { 
+			NOT = { 
+				controlled_by = owner
+			}
+			NOT = { 
+				has_siege = no
+			}
+			owner = { 
+				NOT = { 
+					war_with = THIS
+				}
+			}
+			THIS = { 
+				NOT = { 
+					num_of_ports = 1
+					big_ship = 1
+				}
+			}
+		}
+	}
+	success = { 
+		is_blockaded = yes
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 0
+			NOT = { 
+				continent = THIS
+			}
+		}
+	}
+	effect = { 
+		owner = { treasury = -100 }
+		treasury = 100
+	}
+}
+
+#打破封锁
+break_blockade = { 
+	type = our_provinces
+	allow = { 
+		port = yes
+		is_blockaded = yes
+		controlled_by = owner
+		THIS = { 
+			big_ship = 1
+		}
+	}
+	abort = { 
+		OR = { 
+			NOT = { 
+				controlled_by = owner
+			}
+			NOT = { 
+				THIS = { 
+					big_ship = 1
+				}
+			}
+		}
+	}
+	success = { 
+		NOT = { 
+			is_blockaded = yes
+		}
+	}
+	chance = { 
+		factor = 1
+	}
+	effect = { 
+		navy_tradition = 0.04
+		naval_tech = 0.5
+	}
+}
+
+#夺回被占领省份
+retake_occupied_mission = { 
+	type = our_provinces
+	allow = { 
+		NOT = { 
+			controlled_by = THIS
+		}
+		has_siege = yes
+	}
+	abort = { }
+	success = { 
+		controlled_by = THIS
+		has_siege = no
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			THIS = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_core = THIS
+		}
+	}
+	effect = { 
+		army_tradition = 0.02
+		manpower = 0.1
+		multiply_citysize = 0.8
+	}
+}
+
+#保护首都
+not_lose_capital_in_war = { 
+	type = war_countries
+	allow = { 
+		war_with = THIS
+		THIS = { 
+			capital_scope = { 
+				controlled_by = THIS
+			}
+		}
+		infantry = THIS
+		neighbour = THIS
+	}
+	abort = { 
+		NOT = { 
+			THIS = { 
+				capital_scope = { 
+					controlled_by = THIS
+				}
+			}
+		}
+	}
+	success = { 
+		NOT = { 
+			war_with = THIS
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			MIL = 6
+		}
+	}
+	immediate = {
+		add_country_modifier = { 
+			name = "baohushoudu"
+			duration = 3650
+		}
+	}
+	abort_effect = {
+		remove_country_modifier = baohushoudu
+	}
+	effect = { 
+		remove_country_modifier = baohushoudu
+		THIS = { 
+			war_exhaustion = -3
+		}
+	}
+}
+
+#解除包围
+lift_siege_mission = { 
+	type = our_provinces
+	allow = { 
+		controlled_by = THIS
+		has_siege = yes
+		owner = { 
+			NOT = { 
+				last_mission = lift_siege_mission
+			}
+		}
+	}
+	abort = { 
+		NOT = { 
+			controlled_by = THIS
+		}
+	}
+	success = { 
+		controlled_by = THIS
+		has_siege = no
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 1.5
+			THIS = { 
+				MIL = 6
+			}
+		}
+		modifier = { 
+			factor = 1.5
+			is_core = THIS
+		}
+	}
+	effect = { 
+		war_exhaustion = -0.25
+		province_event = 505
+	}
+}
+
+#积累少量财富
+get_minor_cash_reserve = { 
+	type = country
+	allow = { 
+		NOT = { 
+			years_of_income = 0.10
+		}
+		not = { 
+			number_of_loans = 1
+		}
+	}
+	abort = { 
+		number_of_loans = 1
+	}
+	success = { 
+		years_of_income = 0.20
+	}
+	chance = { 
+		factor = 1
+		# Base weight
+	}
+	effect = { 
+		treasury = 100
+		years_of_income = 0.10
+	}
+}
+
+#积累大量财富
+amass_wealth = { 
+	type = country
+	allow = { 
+		NOT = { 
+			years_of_income = 0.30
+		}
+		monthly_income = 100
+		treasury = 300
+		war = no
+		not = { 
+			number_of_loans = 1
+		}
+	}
+	abort = { 
+		or = { 
+			NOT = { 
+				treasury = 200
+			}
+			number_of_loans = 1
+		}
+	}
+	success = { 
+		years_of_income = 0.50
+	}
+	chance = { 
+		factor = 1
+		# Base weight
+		modifier = { 
+			factor = 2.0
+			NOT = { 
+				mercantilism_freetrade = -2
+			}
+		}
+		modifier = { 
+			factor = 0.5
+			mercantilism_freetrade = 2
+		}
+		modifier = { 
+			factor = 1.5
+			aristocracy_plutocracy = 2
+		}
+		modifier = { 
+			factor = 0.75
+			NOT = { 
+				aristocracy_plutocracy = -2
+			}
+		}
+	}
+	effect = { 
+		prestige = 0.1
+		treasury = 500
+		years_of_income = 0.20
+	}
+}
+
+#恢复稳定度
+recover_negative_stability = { 
+	type = country
+	allow = { 
+		war = no
+		NOT = { 
+			stability = 0
+		}
+	}
+	abort = { }
+	success = { 
+		stability = 0
+	}
+	chance = { 
+		factor = 2
+		# Base weight
+		modifier = { 
+			factor = 2.0
+			ADM = 5
+		}
+		modifier = { 
+			factor = 2.0
+			not = { 
+				stability = -2
+			}
+		}
+	}
+	effect = { 
+		prestige = 0.05
+		stability = 3
+	}
+}
+
+#偿还贷款
+improve_economical_mismanagement = { 
+	type = country
+	allow = { 
+		number_of_loans = 1
+		is_bankrupt = no
+	}
+	abort = { 
+		is_bankrupt = yes
+	}
+	success = { 
+		NOT = { 
+			number_of_loans = 1
+		}
+	}
+	chance = { 
+		factor = 50
+		# Base weight
+                modifier = { 
+			factor = 150
+			idea = national_trade_policy
+		}
+	}
+	effect = { 
+		inflation = -1
+		any_country = { 
+			limit = {
+				tag = this
+				not = { year = 2000 }
+			}
+			inflation = -0.5
+		}
+	}
+}
+
+#减少通货膨胀
+reduce_inflation = { 
+	type = country
+	allow = { 
+		war = no
+		inflation = 5
+		not = { 
+			inflation = 50
+		}
+	}
+	abort = { }
+	success = { 
+		NOT = { 
+			inflation = 3
+		}
+	}
+	chance = { 
+		factor = 1
+		# Base weight
+		modifier = { 
+			factor = 2.0
+			ADM = 5
+		}
+	}
+	effect = { 
+		stability = 1
+		inflation = -2
+	}
+}
+
+#降低厌战
+recover_from_warexhaustion = { 
+	type = country
+	allow = { 
+		war_exhaustion = 5
+		war = no
+	}
+	abort = { 
+		war = yes
+	}
+	success = { 
+		NOT = { 
+			war_exhaustion = 1
+		}
+		war = no
+	}
+	chance = { 
+		factor = 1
+		# Base weight
+	}
+	effect = { 
+		stability = 1
+		manpower = 0.3
+	}
+}
+
+#回复人力
+buildup_manpower_reserves = { 
+	type = country
+	allow = { 
+		max_manpower = 5
+		NOT = { 
+			manpower_percentage = 0.50
+		}
+		war = no
+	}
+	abort = { 
+		war = yes
+	}
+	success = { 
+		manpower_percentage = 0.8
+	}
+	chance = { 
+		factor = 1
+		# Base weight
+	}
+	effect = { 
+		prestige = 0.1
+		war_exhaustion = -2
+		years_of_income = 0.50
+	}
+}
+
+#获得选侯支持
+xiaobazhuzhichi = { 
+	type = elector_countries
+	allow = { 
+		any_country = { 
+			is_emperor = yes
+		}
+		NOT = { 
+			has_global_flag = zhanguokaishi
+		}
+		this = {
+			num_of_cities = 8
+			capital_scope = { hre = yes }
+			government = monarchy
+			religion_group = christian
+		}
+		NOT = { 
+			preferred_emperor = THIS
+		}
+		is_subject = no
+	}
+	abort = {
+		OR = {
+			elector = no
+			female = yes
+			NOT = {
+				this = {
+					capital_scope = { hre = yes }
+					government = monarchy
+					religion_group = christian
+				}
+			}
+		}
+	}
+	success = { 
+		preferred_emperor = THIS
+		relation = { 
+			who = THIS
+			value = 150
+		}
+	}
+	chance = { 
+		factor = 0.5
+		modifier = {
+			factor = 2.5
+			dip = 8
+		}
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+	}
+	effect = { 
+		create_alliance = this
+		prestige = 0.1
+		badboy = -5
+	}
+}
+
+#诸国来朝
+zhuguolaichao = { 
+	type = country
+	allow = { 
+		has_country_modifier = qianshengdaguo
+		not = { 
+			num_of_vassals = 5
+		}
+		num_of_vassals = 1
+		war = no
+	}
+	abort = { }
+	success = { 
+		num_of_vassals = 6
+	}
+	chance = { 
+		factor = 1
+	}
+	effect = { 
+		prestige = 0.15
+		stability = 1
+		any_country = { 
+			limit = { 
+				is_subject = yes
+				vassal_of = THIS
+			}
+			stability = 6
+			legitimacy = 100
+			badboy = -100
+			prestige = 200
+			war_exhaustion = -30
+		}
+	}
+}
+
+#改善和霸主关系
+improve_relations_with_bazhu = { 
+	type = country
+	allow = { 
+		any_country = { 
+			is_emperor = yes
+		}
+		NOT = { 
+			has_global_flag = zhanguokaishi
+		}
+		is_emperor = no
+		NOT = { num_of_cities = 18 }
+		emperor = { 
+			not = { 
+				war_with = this
+			}
+			not = { 
+				relation = { 
+					who = this
+					value = 50
+				}
+			}
+		}
+	}
+	abort = { 
+		or = { 
+			is_emperor = yes
+			emperor = { 
+				war_with = this
+			}
+		}
+	}
+	success = { 
+		emperor = { 
+			relation = { 
+				who = this
+				value = 100
+			}
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 0
+			has_country_modifier = campaign_to_bazhu
+		}
+	}
+	effect = { 
+		prestige = 0.1
+		emperor = { 
+			create_alliance = this
+			relation = { 
+				who = this
+				value = 25
+			}
+		}
+	}
+}
+
+#成为霸主
+become_emperor = { 
+	type = country
+	allow = { 
+		any_country = { 
+			is_emperor = yes
+		}
+		any_owned_province = { 
+			hre = yes
+		}
+		is_emperor = no
+		is_subject = no
+		is_lesser_in_union = no
+		government = monarchy
+		religion_group = christian
+		regency = no
+		not = { 
+			tag = PAP
+		}
+		num_of_cities = 10
+	}
+	abort = { 
+		regency = yes
+	}
+	success = { 
+		is_emperor = yes
+	}
+	chance = { 
+		factor = 1
+	}
+	effect = { 
+		prestige = 0.5
+		stability = 3
+		land_tech = 0.99
+		naval_tech = 0.99
+		trade_tech = 0.99
+		production_tech = 0.99
+		government_tech = 0.99
+		add_imperial_influence = 40
+	}
+}
+
+#击败叛军
+defeat_rebels_mission = { 
+	type = country
+	allow = { 
+		war = no
+		num_of_revolts = 3
+	}
+	abort = { 
+		war = yes
+	}
+	success = { 
+		NOT = { 
+			num_of_revolts = 1
+		}
+	}
+	chance = { 
+		factor = 1
+		modifier = { 
+			factor = 2.0
+			revolt_percentage = 0.25
+		}
+		modifier = { 
+			factor = 2.0
+			revolt_percentage = 0.5
+		}
+		modifier = { 
+			factor = 2.0
+			revolt_percentage = 0.7
+		}
+	}
+	effect = { 
+		stability = 2
+		legitimacy = 30
+		prestige = 20
+	}
+}
+#开拓巨鹿
+kaituojulu = {
+	
+	type = country
+
+	allow = {
+		ai = no
+		OR = {
+			any_owned_province  = {
+			region = julu
+			}
+			any_owned_province  = {
+			any_neighbor_province = { region = julu }
+			}
+		}
+		year = 2147
+		NOT = { year = 2543 }
+                                        OR = {
+                                        NOT = { owns = 274 }
+                                        NOT = { owns = 122 }
+                                        NOT = { owns = 106 }
+                                        NOT = { owns = 107 }
+                                        NOT = { owns = 108 }
+                                        NOT = { owns = 103 }
+                                        NOT = { owns = 104 }
+                                        NOT = { owns = 102 }
+                                        NOT = { owns = 109 }
+                                        }
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 274
+    		owns = 122
+    		owns = 106
+    		owns = 107
+    		owns = 108
+    		owns = 103
+    		owns = 104
+    		owns = 102
+    		owns = 109
+	}
+	chance = {
+		factor = 50
+	}
+	immediate = {
+	 	add_temp_claim = 274
+	 	add_temp_claim = 122
+	 	add_temp_claim = 106
+	 	add_temp_claim = 107
+	 	add_temp_claim = 108
+	 	add_temp_claim = 103
+	 	add_temp_claim = 104
+	 	add_temp_claim = 102
+	 	add_temp_claim = 109
+	}
+	abort_effect = {
+	 	remove_temp_claim = 274
+	 	remove_temp_claim = 122
+	 	remove_temp_claim = 106
+	 	remove_temp_claim = 107
+	 	remove_temp_claim = 108
+	 	remove_temp_claim = 103
+	 	remove_temp_claim = 104
+	 	remove_temp_claim = 102
+	 	remove_temp_claim = 109
+	  	prestige = -0.05
+	}
+	effect = {
+		julu = { add_core = this }
+	}
+}
+
+#征服东海郡
+
+zhengfudonghai = {
+	
+	type = country
+
+	allow = {
+		
+		OR = {
+			any_owned_province  = {
+			region = donghai
+			}
+			any_owned_province  = {
+			any_neighbor_province = { region = donghai }
+			}
+		}
+		
+		year = 2246
+
+                                        OR = {
+                                        NOT = { owns = 908 }
+                                        NOT = { owns = 909 }
+                                        NOT = { owns = 910 }
+                                        NOT = { owns = 991 }
+                                        NOT = { owns = 992 }
+                                        NOT = { owns = 995 }
+                                        }
+	}
+	abort = {
+
+	}
+	success = {  
+    		owns = 908    
+    		owns = 909 
+    		owns = 910 
+    		owns = 991 
+    		owns = 992 
+    		owns = 995
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+		add_temp_claim = 301	 
+		add_temp_claim = 305
+	 	add_temp_claim = 319
+	 	add_temp_claim = 329
+	 	add_temp_claim = 330
+	 	add_temp_claim = 331
+	 	add_temp_claim = 334
+	 	add_temp_claim = 336
+	 	add_temp_claim = 337
+	 	add_temp_claim = 343
+	 	add_temp_claim = 908
+	 	add_temp_claim = 909
+	 	add_temp_claim = 910
+	 	add_temp_claim = 991
+	 	add_temp_claim = 992
+	 	add_temp_claim = 995
+	}
+	abort_effect = {
+	}
+	effect = {
+		donghai = { add_core = this }
+	}
+}
+
+#征服衡山
+zhengfuhengshan = {
+	
+	type = country
+
+	allow = {
+		any_owned_province  = {
+		region = hengshan2
+		}
+		any_owned_province  = {
+		any_neighbor_province = { region = hengshan2 }
+		}
+		year = 1946
+		NOT = { year = 2543 }
+                                        OR = {
+                                        NOT = { owns = 386 }
+                                        NOT = { owns = 402 }
+                                        NOT = { owns = 479 }
+                                        NOT = { owns = 422 }
+                                        NOT = { owns = 412 }
+                                        NOT = { owns = 415 }
+                                        NOT = { owns = 418 }
+                                        NOT = { owns = 426 }
+                                        NOT = { owns = 478 }
+                                        NOT = { owns = 476 }
+                                        }
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 386
+    		owns = 402
+    		owns = 479
+    		owns = 422
+    		owns = 412
+    		owns = 415
+    		owns = 418
+    		owns = 426
+    		owns = 478
+    		owns = 476
+	}
+	chance = {
+		factor = 25
+	}
+	immediate = {
+	 	add_temp_claim = 386
+	 	add_temp_claim = 402
+	 	add_temp_claim = 479
+	 	add_temp_claim = 422
+	 	add_temp_claim = 412
+	 	add_temp_claim = 415
+	 	add_temp_claim = 418
+	 	add_temp_claim = 426
+	 	add_temp_claim = 478
+	 	add_temp_claim = 476
+	 	add_temp_claim = 1205
+	 	add_temp_claim = 1206
+	 	add_temp_claim = 1207
+	 	add_temp_claim = 1208
+	 	add_temp_claim = 1209
+	 	add_temp_claim = 1210
+	}
+	abort_effect = {
+	 	remove_temp_claim = 386
+	 	remove_temp_claim = 402
+	 	remove_temp_claim = 479
+	 	remove_temp_claim = 422
+	 	remove_temp_claim = 412
+	 	remove_temp_claim = 415
+	 	remove_temp_claim = 418
+	 	remove_temp_claim = 426
+	 	remove_temp_claim = 478
+	 	remove_temp_claim = 476
+	 	remove_temp_claim = 1205
+	 	remove_temp_claim = 1206
+	 	remove_temp_claim = 1207
+	 	remove_temp_claim = 1208
+	 	remove_temp_claim = 1209
+	 	remove_temp_claim = 1210
+	  	prestige = -0.05
+	}
+	effect = {
+		hengshan2 = { add_core = this }
+	}
+}
+#征服薛郡
+zhengfuxuejun = {
+	
+	type = country
+
+	allow = {
+		any_owned_province  = {
+		region = xuejun
+		}
+		any_owned_province  = {
+		any_neighbor_province = { region = xuejun }
+		}
+                                        OR = {
+                                        NOT = { owns = 315 }
+                                        NOT = { owns = 322 }
+                                        NOT = { owns = 303 }
+                                        NOT = { owns = 309 }
+                                        NOT = { owns = 304 }
+                                        }
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 315
+    		owns = 322
+    		owns = 303
+    		owns = 309
+    		owns = 304
+	}
+	chance = {
+		factor = 500
+	}
+	immediate = {
+	 	add_temp_claim = 315
+	 	add_temp_claim = 322
+	 	add_temp_claim = 303
+	 	add_temp_claim = 304
+	 	add_temp_claim = 310
+	 	add_temp_claim = 293
+	 	add_temp_claim = 295
+	 	add_temp_claim = 318
+	 	add_temp_claim = 307
+	 	add_temp_claim = 296
+	 	add_temp_claim = 299
+	}
+	abort_effect = {
+	 	remove_temp_claim = 315
+	 	remove_temp_claim = 322
+	 	remove_temp_claim = 303
+	 	remove_temp_claim = 304
+	 	remove_temp_claim = 310
+	 	remove_temp_claim = 293
+	 	remove_temp_claim = 295
+	 	remove_temp_claim = 318
+	 	remove_temp_claim = 307
+	 	remove_temp_claim = 296
+	 	remove_temp_claim = 299
+	  	prestige = -0.05
+	}
+	effect = {
+		xuejun = { add_core = this }
+	}
+}
+
+#征服范氏太原
+annex_FAStaiyuan = { 
+	type = country
+	allow = { 
+		OR = { 
+			tag = WEI
+			tag = HAN
+			tag = ZHO
+			tag = ZHI
+		}
+		is_lesser_in_union = no
+		is_subject = no
+		exists = FAS
+                                        year = 2500
+		FAS = { 
+			owns = 62
+			neighbour = this
+			not = { 
+				vassal_of = THIS
+			}
+		}
+
+	}
+	abort = { 
+		or = { 
+			and = { 
+				not = { 
+					exists = FAS
+				}
+				not = { 
+					owns = 62
+				}
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = { 
+		owns = 62
+	}
+	chance = { 
+		factor = 500
+	}
+	immediate = { 
+		add_temp_claim = 62
+		add_temp_claim = 1091
+		add_temp_claim = 1092
+		add_temp_claim = 1093
+		add_temp_claim = 1094
+		add_temp_claim = 1095
+	}
+	abort_effect = { 
+		remove_temp_claim = 62
+		remove_temp_claim =  1091
+		remove_temp_claim =  1092
+		remove_temp_claim =  1093
+		remove_temp_claim =  1094
+		remove_temp_claim =  1095
+		prestige = -0.05
+	}
+	effect = { 
+		add_core = 62
+		add_core = 1091
+		add_core = 1092
+		add_core = 1093 
+		add_core = 1094
+		add_core = 1095 
+	}
+}
+
+#收复河东
+
+shoufuhedongJIN = {
+	
+	type = country
+
+	allow = {
+		OR = { 
+			tag = WEI
+			tag = HAN
+			tag = ZHO
+			tag = ZXS
+                                                            tag = FAS
+                                                            tag = ZHI
+		}
+		or = {
+		  	NOT = { owns = 73 }
+		 	NOT = { owns = 79 }
+			NOT = { owns = 77 }
+			NOT = { owns = 72 }
+			NOT = { owns = 75 }
+		}
+	  	or = { 
+	    		73 = { any_neighbor_province = { owned_by = this } }
+	    		79 = { any_neighbor_province = { owned_by = this } }
+			77 = { any_neighbor_province = { owned_by = this } }
+	  	}
+                                        year = 2300
+	}
+	abort = {
+	}
+	success = {
+		owns = 73
+		owns = 79
+		owns = 77
+		owns = 72
+		owns = 75
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+	  	add_temp_claim = 73
+	  	add_temp_claim = 79
+		add_temp_claim = 77
+	  	add_temp_claim = 72
+		add_temp_claim = 75
+	}
+	abort_effect = {
+		remove_temp_claim = 73
+	  	remove_temp_claim = 79
+		remove_temp_claim = 77
+	  	remove_temp_claim = 72
+		remove_temp_claim = 75
+	}
+	effect = {
+	 	add_core = 73
+		add_core = 79
+	 	add_core = 77
+		add_core = 72
+	 	add_core = 75
+                                       hedong = { add_core = this }
+		prestige = 0.1
+	}
+}

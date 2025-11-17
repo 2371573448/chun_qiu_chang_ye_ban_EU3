@@ -1,0 +1,518 @@
+[systemsettings.cpp:180]: System memory:   2048MB
+[systemsettings.cpp:182]: CPU speed:       3600MHz
+[systemsettings.cpp:189]: Number of processors: 8
+[systemsettings.cpp:200]: CPU type: x86
+[systemsettings.cpp:232]: OS: Unknown     Build: 9200
+[graphicssettings.cpp:130]: Graphic Adapters: 
+[graphicssettings.cpp:135]: 	0: Intel(R) UHD Graphics 630
+[graphicssettings.cpp:152]: Checking for multi-sampling support:
+[graphicssettings.cpp:163]: 	2 samples supported.
+[graphicssettings.cpp:163]: 	4 samples supported.
+[graphicssettings.cpp:163]: 	8 samples supported.
+[graphicssettings.cpp:163]: 	16 samples supported.
+[graphicssettings.cpp:178]: Using Adapter [0]:
+[graphicssettings.cpp:184]: Succeeded to create a device [D3DCREATE_HARDWARE_VERTEXPROCESSING].
+[graphicssettings.cpp:226]: Graphics device: Intel(R) UHD Graphics 630
+[graphicssettings.cpp:227]: Graphics driver: igdumdim32.dll
+[graphicssettings.cpp:232]:  Driver version: 2127
+[graphicssettings.cpp:249]: 
+
+
+Dumping all gfx info:
+DeviceIdentifier:	{D7B78E66-D888-11CF-BC7B-F1A6ACC2D235}
+VendorId:	32902
+DeviceId:	39880
+SubSysId:	-2037116861
+Revision:	3
+DriverVersion.HighPart:	2031616
+DriverVersion.LowPart:	6621263
+
+
+[graphicssettings.cpp:299]: Instancing supported.
+[graphicssettings.cpp:317]: Video memory amount: 1342MB
+[graphicssettings.cpp:320]: Support for T&L found.
+[graphicssettings.cpp:323]: MaxSimultaneousTextures: 8
+[graphicssettings.cpp:324]: MaxVertexBlendMatrices: 4
+[graphicssettings.cpp:325]: MaxVertexBlendMatrixIndex: 8
+[graphicssettings.cpp:327]: MaxSimultaneousTextures: 8
+[graphicssettings.cpp:328]: MaxTextureBlendStages: 8
+[graphicssettings.cpp:329]: Support for Anisotropic filtering found.
+[graphicssettings.cpp:332]: 	Max Anisotropic filtering: 16
+[graphicssettings.cpp:333]: 	Anisotropic filtering set to: 0
+[graphicssettings.cpp:337]: Vertex Shader version: 3.0
+[graphicssettings.cpp:342]: Pixel Shader version: 3.0
+[main.cpp:240]: Eu3 Version Aug  3 2012 : 15:02:37
+[main.cpp:296]: Collecting files (GAME_REPLACE)
+[main.cpp:318]: Blobing files
+[main.cpp:324]: localisation\0快捷菜单.csv
+[main.cpp:324]: localisation\1专属任务.csv
+[main.cpp:324]: localisation\1九州鼎.csv
+[main.cpp:324]: localisation\1人口相关.csv
+[main.cpp:324]: localisation\1修正.csv
+[main.cpp:324]: localisation\1兵种.csv
+[main.cpp:324]: localisation\1决议.csv
+[main.cpp:324]: localisation\1剧本.csv
+[main.cpp:324]: localisation\1历史事件.csv
+[main.cpp:324]: localisation\1叛军.csv
+[main.cpp:324]: localisation\1君主性格事件.csv
+[main.cpp:324]: localisation\1君主顾问.csv
+[main.cpp:324]: localisation\1国家.csv
+[main.cpp:324]: localisation\1国家天赋.csv
+[main.cpp:324]: localisation\1国策理念.csv
+[main.cpp:324]: localisation\1国策理念事件.csv
+[main.cpp:324]: localisation\1宗教相关.csv
+[main.cpp:324]: localisation\1建筑.csv
+[main.cpp:324]: localisation\1弭兵征贡.csv
+[main.cpp:324]: localisation\1恶名事件.csv
+[main.cpp:324]: localisation\1战争理由.csv
+[main.cpp:324]: localisation\1战争相关.csv
+[main.cpp:324]: localisation\1改革体系.csv
+[main.cpp:324]: localisation\1政体.csv
+[main.cpp:324]: localisation\1文化科技.csv
+[main.cpp:324]: localisation\1新随机事件.csv
+[main.cpp:324]: localisation\1晋国派系.csv
+[main.cpp:324]: localisation\1殖民与蛮族侵袭.csv
+[main.cpp:324]: localisation\1殷商相关.csv
+[main.cpp:324]: localisation\1物产.csv
+[main.cpp:324]: localisation\1省份地区.csv
+[main.cpp:324]: localisation\1秦国相关.csv
+[main.cpp:324]: localisation\1继承正统.csv
+[main.cpp:324]: localisation\1载入贴士.csv
+[main.cpp:324]: localisation\1通用任务.csv
+[main.cpp:324]: localisation\1部落相关.csv
+[main.cpp:324]: localisation\1间谍.csv
+[main.cpp:324]: localisation\1随机事件.csv
+[main.cpp:324]: localisation\1霸主体系.csv
+[main.cpp:324]: localisation\1领地与派系.csv
+[main.cpp:324]: localisation\2nd_inn.csv
+[main.cpp:324]: localisation\DLC.csv
+[main.cpp:324]: localisation\dw_gold.csv
+[main.cpp:324]: localisation\extra.csv
+[main.cpp:324]: localisation\hotfix.csv
+[main.cpp:324]: localisation\httt.csv
+[main.cpp:324]: localisation\in_nomine_text.csv
+[main.cpp:324]: localisation\napoleontext.csv
+[main.cpp:324]: localisation\newtext.csv
+[main.cpp:324]: localisation\rotw.csv
+[main.cpp:324]: localisation\text.csv
+[main.cpp:324]: localisation\text112.csv
+[main.cpp:324]: localisation\v41.csv
+[main.cpp:324]: localisation\v51.csv
+[main.cpp:324]: localisation\兵家派系.csv
+[main.cpp:324]: localisation\千秋朝会.csv
+[main.cpp:324]: localisation\精细化种田.csv
+[main.cpp:324]: localisation\翻译扩展.csv
+[main.cpp:338]: Init Text Database
+[internationalizedtext.cpp:1237]: Create table
+[internationalizedtext.cpp:1239]: Create text database
+[main.cpp:340]: Text Database Done
+[main.cpp:368]: Creating application...
+[main.cpp:424]: Init Application...
+[eu3application.cpp:308]: Initialise Defines
+[eu3application.cpp:315]: App Init
+[eu3application.cpp:337]: Cursors Defines
+[eu3application.cpp:363]: Sound...
+[dxmusic.cpp:40]: Init Music
+[dxmusic.cpp:46]: Graph done 0
+[dxmusic.cpp:52]: Control done 0
+[dxmusic.cpp:58]: Seeking done 0
+[dxmusic.cpp:63]: Event done 0
+[dxmusic.cpp:68]: Music done 0
+[DirectSound.cpp:37]: Init DirectSound
+[DirectSound.cpp:55]: Sound initialised with result 0
+[DirectSound.cpp:65]: Coop Level Set. Result: 0
+[DirectSound.cpp:88]: Sound Init Done
+[eu3application.cpp:390]: Initialise Graphics...
+[graphics.cpp:155]: Direct3D Created
+[graphicssettings.cpp:651]: Usable res: 1024 768 60
+[graphicssettings.cpp:651]: Usable res: 1024 768 75
+[graphicssettings.cpp:651]: Usable res: 1152 864 75
+[graphicssettings.cpp:651]: Usable res: 1152 864 60
+[graphicssettings.cpp:651]: Usable res: 1280 768 60
+[graphicssettings.cpp:651]: Usable res: 1280 800 60
+[graphicssettings.cpp:651]: Usable res: 1280 960 60
+[graphicssettings.cpp:651]: Usable res: 1280 1024 60
+[graphicssettings.cpp:651]: Usable res: 1280 1024 75
+[graphicssettings.cpp:651]: Usable res: 1360 768 60
+[graphicssettings.cpp:651]: Usable res: 1366 768 60
+[graphicssettings.cpp:651]: Usable res: 1400 1050 60
+[graphicssettings.cpp:651]: Usable res: 1440 900 60
+[graphicssettings.cpp:651]: Usable res: 1600 900 60
+[graphicssettings.cpp:651]: Usable res: 1680 1050 60
+[graphicssettings.cpp:651]: Usable res: 1920 1080 60
+[graphics.cpp:256]: Using multisampling: 4
+[graphics.cpp:286]: Creating device with: D3DCREATE_HARDWARE_VERTEXPROCESSING
+	Fullscreen=no
+	Resolution=1400x800
+[graphics.cpp:367]: Done creating device.
+[eu3application.cpp:392]: Graphics Done
+[main.cpp:426]: Run Application...
+[provincemanager.cpp:1524]: Creating province data
+[provincemanager.cpp:1606]: Creating meshes
+[provincemanager.cpp:1665]: vertex declarations done
+[provincemanager.cpp:2061]: REcreating quads
+[provincemanager.cpp:2103]: writing quad mesh 1
+[provincemanager.cpp:2103]: writing quad mesh 4
+[provincemanager.cpp:2103]: writing quad mesh 11
+[provincemanager.cpp:2103]: writing quad mesh 16
+[provincemanager.cpp:2103]: writing quad mesh 18
+[provincemanager.cpp:2103]: writing quad mesh 19
+[provincemanager.cpp:2103]: writing quad mesh 44
+[provincemanager.cpp:2103]: writing quad mesh 46
+[provincemanager.cpp:2103]: writing quad mesh 54
+[provincemanager.cpp:2103]: writing quad mesh 57
+[provincemanager.cpp:2103]: writing quad mesh 59
+[provincemanager.cpp:2103]: writing quad mesh 60
+[provincemanager.cpp:2103]: writing quad mesh 63
+[provincemanager.cpp:2103]: writing quad mesh 93
+[provincemanager.cpp:2103]: writing quad mesh 94
+[provincemanager.cpp:2103]: writing quad mesh 96
+[provincemanager.cpp:2103]: writing quad mesh 100
+[provincemanager.cpp:2103]: writing quad mesh 102
+[provincemanager.cpp:2103]: writing quad mesh 105
+[provincemanager.cpp:2103]: writing quad mesh 106
+[provincemanager.cpp:2103]: writing quad mesh 107
+[provincemanager.cpp:2103]: writing quad mesh 108
+[provincemanager.cpp:2103]: writing quad mesh 109
+[provincemanager.cpp:2103]: writing quad mesh 112
+[provincemanager.cpp:2103]: writing quad mesh 124
+[provincemanager.cpp:2103]: writing quad mesh 135
+[provincemanager.cpp:2103]: writing quad mesh 144
+[provincemanager.cpp:2103]: writing quad mesh 145
+[provincemanager.cpp:2103]: writing quad mesh 146
+[provincemanager.cpp:2103]: writing quad mesh 147
+[provincemanager.cpp:2103]: writing quad mesh 148
+[provincemanager.cpp:2103]: writing quad mesh 150
+[provincemanager.cpp:2103]: writing quad mesh 151
+[provincemanager.cpp:2103]: writing quad mesh 152
+[provincemanager.cpp:2103]: writing quad mesh 153
+[provincemanager.cpp:2103]: writing quad mesh 154
+[provincemanager.cpp:2103]: writing quad mesh 155
+[provincemanager.cpp:2103]: writing quad mesh 156
+[provincemanager.cpp:2103]: writing quad mesh 173
+[provincemanager.cpp:2103]: writing quad mesh 176
+[provincemanager.cpp:2103]: writing quad mesh 177
+[provincemanager.cpp:2103]: writing quad mesh 181
+[provincemanager.cpp:2103]: writing quad mesh 183
+[provincemanager.cpp:2103]: writing quad mesh 185
+[provincemanager.cpp:2103]: writing quad mesh 187
+[provincemanager.cpp:2103]: writing quad mesh 189
+[provincemanager.cpp:2103]: writing quad mesh 190
+[provincemanager.cpp:2103]: writing quad mesh 191
+[provincemanager.cpp:2103]: writing quad mesh 192
+[provincemanager.cpp:2103]: writing quad mesh 193
+[provincemanager.cpp:2103]: writing quad mesh 194
+[provincemanager.cpp:2103]: writing quad mesh 195
+[provincemanager.cpp:2103]: writing quad mesh 196
+[provincemanager.cpp:2103]: writing quad mesh 197
+[provincemanager.cpp:2103]: writing quad mesh 198
+[provincemanager.cpp:2103]: writing quad mesh 199
+[provincemanager.cpp:2103]: writing quad mesh 201
+[provincemanager.cpp:2103]: writing quad mesh 202
+[provincemanager.cpp:2103]: writing quad mesh 203
+[provincemanager.cpp:2103]: writing quad mesh 211
+[provincemanager.cpp:2103]: writing quad mesh 223
+[provincemanager.cpp:2103]: writing quad mesh 234
+[provincemanager.cpp:2103]: writing quad mesh 235
+[provincemanager.cpp:2103]: writing quad mesh 236
+[provincemanager.cpp:2103]: writing quad mesh 237
+[provincemanager.cpp:2103]: writing quad mesh 238
+[provincemanager.cpp:2103]: writing quad mesh 239
+[provincemanager.cpp:2103]: writing quad mesh 240
+[provincemanager.cpp:2103]: writing quad mesh 241
+[provincemanager.cpp:2103]: writing quad mesh 242
+[provincemanager.cpp:2103]: writing quad mesh 243
+[provincemanager.cpp:2103]: writing quad mesh 244
+[provincemanager.cpp:2103]: writing quad mesh 248
+[provincemanager.cpp:2103]: writing quad mesh 255
+[provincemanager.cpp:2103]: writing quad mesh 264
+[provincemanager.cpp:2103]: writing quad mesh 266
+[provincemanager.cpp:2103]: writing quad mesh 268
+[provincemanager.cpp:2103]: writing quad mesh 271
+[provincemanager.cpp:2103]: writing quad mesh 273
+[provincemanager.cpp:2103]: writing quad mesh 274
+[provincemanager.cpp:2103]: writing quad mesh 277
+[provincemanager.cpp:2103]: writing quad mesh 279
+[provincemanager.cpp:2103]: writing quad mesh 280
+[provincemanager.cpp:2103]: writing quad mesh 281
+[provincemanager.cpp:2103]: writing quad mesh 282
+[provincemanager.cpp:2103]: writing quad mesh 283
+[provincemanager.cpp:2103]: writing quad mesh 284
+[provincemanager.cpp:2103]: writing quad mesh 285
+[provincemanager.cpp:2103]: writing quad mesh 286
+[provincemanager.cpp:2103]: writing quad mesh 287
+[provincemanager.cpp:2103]: writing quad mesh 288
+[provincemanager.cpp:2103]: writing quad mesh 289
+[provincemanager.cpp:2103]: writing quad mesh 293
+[provincemanager.cpp:2103]: writing quad mesh 299
+[provincemanager.cpp:2103]: writing quad mesh 312
+[provincemanager.cpp:2103]: writing quad mesh 315
+[provincemanager.cpp:2103]: writing quad mesh 317
+[provincemanager.cpp:2103]: writing quad mesh 318
+[provincemanager.cpp:2103]: writing quad mesh 320
+[provincemanager.cpp:2103]: writing quad mesh 323
+[provincemanager.cpp:2103]: writing quad mesh 324
+[provincemanager.cpp:2103]: writing quad mesh 325
+[provincemanager.cpp:2103]: writing quad mesh 326
+[provincemanager.cpp:2103]: writing quad mesh 327
+[provincemanager.cpp:2103]: writing quad mesh 328
+[provincemanager.cpp:2103]: writing quad mesh 329
+[provincemanager.cpp:2103]: writing quad mesh 330
+[provincemanager.cpp:2103]: writing quad mesh 331
+[provincemanager.cpp:2103]: writing quad mesh 332
+[provincemanager.cpp:2103]: writing quad mesh 337
+[provincemanager.cpp:2103]: writing quad mesh 338
+[provincemanager.cpp:2103]: writing quad mesh 353
+[provincemanager.cpp:2103]: writing quad mesh 357
+[provincemanager.cpp:2103]: writing quad mesh 358
+[provincemanager.cpp:2103]: writing quad mesh 359
+[provincemanager.cpp:2103]: writing quad mesh 361
+[provincemanager.cpp:2103]: writing quad mesh 364
+[provincemanager.cpp:2103]: writing quad mesh 367
+[provincemanager.cpp:2103]: writing quad mesh 368
+[provincemanager.cpp:2103]: writing quad mesh 369
+[provincemanager.cpp:2103]: writing quad mesh 370
+[provincemanager.cpp:2103]: writing quad mesh 371
+[provincemanager.cpp:2103]: writing quad mesh 372
+[provincemanager.cpp:2103]: writing quad mesh 373
+[provincemanager.cpp:2103]: writing quad mesh 374
+[provincemanager.cpp:2103]: writing quad mesh 375
+[provincemanager.cpp:2103]: writing quad mesh 376
+[provincemanager.cpp:2103]: writing quad mesh 379
+[provincemanager.cpp:2103]: writing quad mesh 380
+[provincemanager.cpp:2103]: writing quad mesh 381
+[provincemanager.cpp:2103]: writing quad mesh 382
+[provincemanager.cpp:2103]: writing quad mesh 383
+[provincemanager.cpp:2103]: writing quad mesh 400
+[provincemanager.cpp:2103]: writing quad mesh 407
+[provincemanager.cpp:2103]: writing quad mesh 410
+[provincemanager.cpp:2103]: writing quad mesh 411
+[provincemanager.cpp:2103]: writing quad mesh 412
+[provincemanager.cpp:2103]: writing quad mesh 413
+[provincemanager.cpp:2103]: writing quad mesh 414
+[provincemanager.cpp:2103]: writing quad mesh 415
+[provincemanager.cpp:2103]: writing quad mesh 416
+[provincemanager.cpp:2103]: writing quad mesh 417
+[provincemanager.cpp:2103]: writing quad mesh 418
+[provincemanager.cpp:2103]: writing quad mesh 419
+[provincemanager.cpp:2103]: writing quad mesh 425
+[provincemanager.cpp:2103]: writing quad mesh 426
+[provincemanager.cpp:2103]: writing quad mesh 427
+[provincemanager.cpp:2103]: writing quad mesh 428
+[provincemanager.cpp:2103]: writing quad mesh 441
+[provincemanager.cpp:2103]: writing quad mesh 442
+[provincemanager.cpp:2103]: writing quad mesh 444
+[provincemanager.cpp:2103]: writing quad mesh 447
+[provincemanager.cpp:2103]: writing quad mesh 449
+[provincemanager.cpp:2103]: writing quad mesh 451
+[provincemanager.cpp:2103]: writing quad mesh 455
+[provincemanager.cpp:2103]: writing quad mesh 456
+[provincemanager.cpp:2103]: writing quad mesh 457
+[provincemanager.cpp:2103]: writing quad mesh 458
+[provincemanager.cpp:2103]: writing quad mesh 459
+[provincemanager.cpp:2103]: writing quad mesh 460
+[provincemanager.cpp:2103]: writing quad mesh 461
+[provincemanager.cpp:2103]: writing quad mesh 462
+[provincemanager.cpp:2103]: writing quad mesh 463
+[provincemanager.cpp:2103]: writing quad mesh 464
+[provincemanager.cpp:2103]: writing quad mesh 467
+[provincemanager.cpp:2103]: writing quad mesh 468
+[provincemanager.cpp:2103]: writing quad mesh 470
+[provincemanager.cpp:2103]: writing quad mesh 471
+[provincemanager.cpp:2103]: writing quad mesh 472
+[provincemanager.cpp:2103]: writing quad mesh 473
+[provincemanager.cpp:2103]: writing quad mesh 474
+[provincemanager.cpp:2103]: writing quad mesh 485
+[provincemanager.cpp:2103]: writing quad mesh 487
+[provincemanager.cpp:2103]: writing quad mesh 488
+[provincemanager.cpp:2103]: writing quad mesh 490
+[provincemanager.cpp:2103]: writing quad mesh 492
+[provincemanager.cpp:2103]: writing quad mesh 494
+[provincemanager.cpp:2103]: writing quad mesh 496
+[provincemanager.cpp:2103]: writing quad mesh 498
+[provincemanager.cpp:2103]: writing quad mesh 499
+[provincemanager.cpp:2103]: writing quad mesh 500
+[provincemanager.cpp:2103]: writing quad mesh 501
+[provincemanager.cpp:2103]: writing quad mesh 502
+[provincemanager.cpp:2103]: writing quad mesh 503
+[provincemanager.cpp:2103]: writing quad mesh 504
+[provincemanager.cpp:2103]: writing quad mesh 505
+[provincemanager.cpp:2103]: writing quad mesh 506
+[provincemanager.cpp:2103]: writing quad mesh 507
+[provincemanager.cpp:2103]: writing quad mesh 508
+[provincemanager.cpp:2103]: writing quad mesh 509
+[provincemanager.cpp:2103]: writing quad mesh 510
+[provincemanager.cpp:2103]: writing quad mesh 511
+[provincemanager.cpp:2103]: writing quad mesh 512
+[provincemanager.cpp:2103]: writing quad mesh 513
+[provincemanager.cpp:2103]: writing quad mesh 517
+[provincemanager.cpp:2103]: writing quad mesh 518
+[provincemanager.cpp:2103]: writing quad mesh 528
+[provincemanager.cpp:2103]: writing quad mesh 530
+[provincemanager.cpp:2103]: writing quad mesh 531
+[provincemanager.cpp:2103]: writing quad mesh 536
+[provincemanager.cpp:2103]: writing quad mesh 541
+[provincemanager.cpp:2103]: writing quad mesh 542
+[provincemanager.cpp:2103]: writing quad mesh 543
+[provincemanager.cpp:2103]: writing quad mesh 545
+[provincemanager.cpp:2103]: writing quad mesh 546
+[provincemanager.cpp:2103]: writing quad mesh 547
+[provincemanager.cpp:2103]: writing quad mesh 548
+[provincemanager.cpp:2103]: writing quad mesh 549
+[provincemanager.cpp:2103]: writing quad mesh 550
+[provincemanager.cpp:2103]: writing quad mesh 551
+[provincemanager.cpp:2103]: writing quad mesh 553
+[provincemanager.cpp:2103]: writing quad mesh 554
+[provincemanager.cpp:2103]: writing quad mesh 555
+[provincemanager.cpp:2103]: writing quad mesh 556
+[provincemanager.cpp:2103]: writing quad mesh 562
+[provincemanager.cpp:2103]: writing quad mesh 574
+[provincemanager.cpp:2103]: writing quad mesh 576
+[provincemanager.cpp:2103]: writing quad mesh 578
+[provincemanager.cpp:2103]: writing quad mesh 579
+[provincemanager.cpp:2103]: writing quad mesh 581
+[provincemanager.cpp:2103]: writing quad mesh 582
+[provincemanager.cpp:2103]: writing quad mesh 583
+[provincemanager.cpp:2103]: writing quad mesh 584
+[provincemanager.cpp:2103]: writing quad mesh 585
+[provincemanager.cpp:2103]: writing quad mesh 588
+[provincemanager.cpp:2103]: writing quad mesh 589
+[provincemanager.cpp:2103]: writing quad mesh 590
+[provincemanager.cpp:2103]: writing quad mesh 591
+[provincemanager.cpp:2103]: writing quad mesh 592
+[provincemanager.cpp:2103]: writing quad mesh 593
+[provincemanager.cpp:2103]: writing quad mesh 594
+[provincemanager.cpp:2103]: writing quad mesh 595
+[provincemanager.cpp:2103]: writing quad mesh 596
+[provincemanager.cpp:2103]: writing quad mesh 597
+[provincemanager.cpp:2103]: writing quad mesh 598
+[provincemanager.cpp:2103]: writing quad mesh 599
+[provincemanager.cpp:2103]: writing quad mesh 600
+[provincemanager.cpp:2103]: writing quad mesh 617
+[provincemanager.cpp:2103]: writing quad mesh 620
+[provincemanager.cpp:2103]: writing quad mesh 621
+[provincemanager.cpp:2103]: writing quad mesh 623
+[provincemanager.cpp:2103]: writing quad mesh 625
+[provincemanager.cpp:2103]: writing quad mesh 626
+[provincemanager.cpp:2103]: writing quad mesh 635
+[provincemanager.cpp:2103]: writing quad mesh 637
+[provincemanager.cpp:2103]: writing quad mesh 638
+[provincemanager.cpp:2103]: writing quad mesh 639
+[provincemanager.cpp:2103]: writing quad mesh 640
+[provincemanager.cpp:2103]: writing quad mesh 641
+[provincemanager.cpp:2103]: writing quad mesh 642
+[provincemanager.cpp:2103]: writing quad mesh 643
+[provincemanager.cpp:2103]: writing quad mesh 644
+[provincemanager.cpp:2103]: writing quad mesh 650
+[provincemanager.cpp:2103]: writing quad mesh 652
+[provincemanager.cpp:2103]: writing quad mesh 660
+[provincemanager.cpp:2103]: writing quad mesh 662
+[provincemanager.cpp:2103]: writing quad mesh 664
+[provincemanager.cpp:2103]: writing quad mesh 665
+[provincemanager.cpp:2103]: writing quad mesh 666
+[provincemanager.cpp:2103]: writing quad mesh 668
+[provincemanager.cpp:2103]: writing quad mesh 669
+[provincemanager.cpp:2103]: writing quad mesh 670
+[provincemanager.cpp:2103]: writing quad mesh 672
+[provincemanager.cpp:2103]: writing quad mesh 674
+[provincemanager.cpp:2103]: writing quad mesh 677
+[provincemanager.cpp:2103]: writing quad mesh 679
+[provincemanager.cpp:2103]: writing quad mesh 681
+[provincemanager.cpp:2103]: writing quad mesh 683
+[provincemanager.cpp:2103]: writing quad mesh 685
+[provincemanager.cpp:2103]: writing quad mesh 688
+[provincemanager.cpp:2103]: writing quad mesh 691
+[provincemanager.cpp:2103]: writing quad mesh 695
+[provincemanager.cpp:2103]: writing quad mesh 697
+[provincemanager.cpp:2103]: writing quad mesh 698
+[provincemanager.cpp:2103]: writing quad mesh 706
+[provincemanager.cpp:2103]: writing quad mesh 708
+[provincemanager.cpp:2103]: writing quad mesh 709
+[provincemanager.cpp:2103]: writing quad mesh 710
+[provincemanager.cpp:2103]: writing quad mesh 712
+[provincemanager.cpp:2103]: writing quad mesh 713
+[provincemanager.cpp:2103]: writing quad mesh 730
+[provincemanager.cpp:2103]: writing quad mesh 732
+[provincemanager.cpp:2103]: writing quad mesh 737
+[provincemanager.cpp:2103]: writing quad mesh 738
+[provincemanager.cpp:2103]: writing quad mesh 743
+[provincemanager.cpp:2103]: writing quad mesh 749
+[provincemanager.cpp:2103]: writing quad mesh 750
+[provincemanager.cpp:2103]: writing quad mesh 751
+[provincemanager.cpp:2103]: writing quad mesh 752
+[provincemanager.cpp:2103]: writing quad mesh 753
+[provincemanager.cpp:2103]: writing quad mesh 754
+[provincemanager.cpp:2103]: writing quad mesh 756
+[provincemanager.cpp:2103]: writing quad mesh 758
+[provincemanager.cpp:2103]: writing quad mesh 761
+[provincemanager.cpp:2103]: writing quad mesh 763
+[provincemanager.cpp:2103]: writing quad mesh 766
+[provincemanager.cpp:2103]: writing quad mesh 768
+[provincemanager.cpp:2103]: writing quad mesh 770
+[provincemanager.cpp:2103]: writing quad mesh 772
+[provincemanager.cpp:2103]: writing quad mesh 773
+[provincemanager.cpp:2103]: writing quad mesh 788
+[provincemanager.cpp:2103]: writing quad mesh 799
+[provincemanager.cpp:2103]: writing quad mesh 805
+[provincemanager.cpp:2103]: writing quad mesh 808
+[provincemanager.cpp:2103]: writing quad mesh 810
+[provincemanager.cpp:2103]: writing quad mesh 819
+[provincemanager.cpp:2103]: writing quad mesh 820
+[provincemanager.cpp:2103]: writing quad mesh 822
+[provincemanager.cpp:2103]: writing quad mesh 823
+[provincemanager.cpp:2103]: writing quad mesh 825
+[provincemanager.cpp:2103]: writing quad mesh 833
+[provincemanager.cpp:2103]: writing quad mesh 837
+[provincemanager.cpp:2103]: writing quad mesh 839
+[provincemanager.cpp:2103]: writing quad mesh 844
+[provincemanager.cpp:2103]: writing quad mesh 846
+[provincemanager.cpp:2103]: writing quad mesh 847
+[provincemanager.cpp:2103]: writing quad mesh 856
+[provincemanager.cpp:2103]: writing quad mesh 859
+[provincemanager.cpp:2103]: writing quad mesh 860
+[provincemanager.cpp:2103]: writing quad mesh 867
+[provincemanager.cpp:2103]: writing quad mesh 871
+[provincemanager.cpp:2103]: writing quad mesh 881
+[provincemanager.cpp:2103]: writing quad mesh 883
+[provincemanager.cpp:2103]: writing quad mesh 885
+[provincemanager.cpp:2103]: writing quad mesh 887
+[provincemanager.cpp:2103]: writing quad mesh 893
+[provincemanager.cpp:2103]: writing quad mesh 896
+[provincemanager.cpp:2103]: writing quad mesh 899
+[provincemanager.cpp:2103]: writing quad mesh 902
+[provincemanager.cpp:2103]: writing quad mesh 907
+[provincemanager.cpp:2103]: writing quad mesh 909
+[provincemanager.cpp:2103]: writing quad mesh 913
+[provincemanager.cpp:2103]: writing quad mesh 924
+[provincemanager.cpp:2103]: writing quad mesh 928
+[provincemanager.cpp:2103]: writing quad mesh 932
+[provincemanager.cpp:2103]: writing quad mesh 935
+[provincemanager.cpp:2103]: writing quad mesh 938
+[provincemanager.cpp:2103]: writing quad mesh 939
+[provincemanager.cpp:2103]: writing quad mesh 941
+[provincemanager.cpp:2103]: writing quad mesh 943
+[provincemanager.cpp:2103]: writing quad mesh 949
+[provincemanager.cpp:2103]: writing quad mesh 952
+[provincemanager.cpp:2103]: writing quad mesh 955
+[provincemanager.cpp:2103]: writing quad mesh 957
+[provincemanager.cpp:2103]: writing quad mesh 966
+[provincemanager.cpp:2103]: writing quad mesh 970
+[provincemanager.cpp:2103]: writing quad mesh 974
+[provincemanager.cpp:2103]: writing quad mesh 979
+[provincemanager.cpp:2103]: writing quad mesh 981
+[provincemanager.cpp:2103]: writing quad mesh 983
+[provincemanager.cpp:2103]: writing quad mesh 990
+[provincemanager.cpp:2103]: writing quad mesh 991
+[provincemanager.cpp:2103]: writing quad mesh 994
+[provincemanager.cpp:2103]: writing quad mesh 1013
+[provincemanager.cpp:2103]: writing quad mesh 1016
+[provincemanager.cpp:2103]: writing quad mesh 1020
+[provincemanager.cpp:2103]: writing quad mesh 1025
+[provincemanager.cpp:2103]: writing quad mesh 1029
+[provincemanager.cpp:2103]: writing quad mesh 1032
+[provincemanager.cpp:2103]: writing quad mesh 1041
+[provincemanager.cpp:2103]: writing quad mesh 1043
+[provincemanager.cpp:2103]: writing quad mesh 1045
+[provincemanager.cpp:1755]: done quads
+[provincemanager.cpp:1787]: border adjacencies done
+[provincemanager.cpp:1833]: Create meshes done

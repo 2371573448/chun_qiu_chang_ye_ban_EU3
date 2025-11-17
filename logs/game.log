@@ -1,0 +1,59 @@
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[frontend.cpp:648]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1928.1.1
+	Country: 莱
+
+
+[gamestate.cpp:2203]: ZGO is a 'lucky' nation.31
+[gamestate.cpp:2203]: QIN is a 'lucky' nation.23
+[gamestate.cpp:2203]: WEG is a 'lucky' nation.22
+[gamestate.cpp:2203]: YQU is a 'lucky' nation.21
+[gamestate.cpp:2203]: YGO is a 'lucky' nation.20
+[gamestate.cpp:2203]: YXU is a 'lucky' nation.20
+[gamestate.cpp:2203]: CHE is a 'lucky' nation.19
+[gamestate.cpp:2203]: XIY is a 'lucky' nation.19
+[messagehandler.h:261]: 1 正月, 1928 我们接受了任务攻击 箕氏. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 令支  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 黎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 魏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 铎辰  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 皋落氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 廧咎如氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 郜  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牟  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 遂  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 滕  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 向  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 荡社氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 梁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 乌氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 骊山氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 彭戏氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅津戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 共  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 西不羹  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 应  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 榖  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 卢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 州  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 蒋  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 巢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邗  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邛  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 笮  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 夜郎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牂牁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 伊洛之戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 匈奴  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 朐衍  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 昔阝  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 平周  发生了"君主死亡"事件. 

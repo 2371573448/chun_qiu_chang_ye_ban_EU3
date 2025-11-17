@@ -1,0 +1,12 @@
+#殷商勇士
+
+type = infantry
+unit_type = yinshang2
+
+maneuver = 1
+offensive_fire = 4
+defensive_fire = 3
+offensive_shock = 4
+defensive_shock = 4
+offensive_morale = 5
+defensive_morale = 5

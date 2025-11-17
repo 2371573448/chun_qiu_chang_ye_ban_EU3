@@ -1,0 +1,428 @@
+
+country_event = {
+
+	id = 875
+	
+	is_triggered_only = yes
+	trigger = { 
+		not = { 
+			government = buluoxuanju
+		}
+	}
+	
+	title = "EVTNAME875"
+	desc = "EVTDESC875"
+	
+	option = {
+		name = "EVTOPTA875"	# Current ruler stays
+		ai_chance = { factor = 40 }
+	}
+	option = {
+		name = "EVTOPTB875"	# An administrator type
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			ADM = 5							# 5 + random 0 to 9
+		}
+	}
+	option = {
+		name = "EVTOPTC875"	# A diplomat
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			DIP = 5							# 5 + random 0 to 9
+		}
+	}
+	option = {
+		name = "EVTOPTD875"	# A military man
+		ai_chance = { factor = 20 }
+		define_ruler = {
+			MIL = 5							# 5 + random 0 to 9
+		}
+	}
+	
+}
+
+country_event = {
+
+	id = 876
+	
+	is_triggered_only = yes
+	trigger = { 
+		not = { 
+			government = buluoxuanju
+		}
+	}
+	title = "EVTNAME875"
+	desc = "EVTDESC876"
+	
+	option = {
+		name = "EVTOPTB875"	# An administrator type
+		ai_chance = { factor = 40 }
+		define_ruler = {
+			ADM = 5							# 5 + random 0 to 9
+		}
+	}
+	option = {
+		name = "EVTOPTC875"	# A diplomat
+		ai_chance = { factor = 30 }
+		define_ruler = {
+			DIP = 5							# 5 + random 0 to 9
+		}
+	}
+	option = {
+		name = "EVTOPTD875"	# A military man
+		ai_chance = { factor = 30 }
+		define_ruler = {
+			MIL = 5							# 5 + random 0 to 9
+		}
+	}
+	
+}
+
+country_event = {
+	id = 8750
+	is_triggered_only = yes
+	trigger = { 
+		government = buluoxuanju
+	}
+	title = "EVTNAME875"
+	desc = "EVTDESC875"
+	option = {
+		name = "EVTOPTA8750"
+		any_country = { 
+			limit = { 
+				tag = this
+				not = {
+					check_variable = {
+						which = xuanjuneizheng
+						value = 6
+					}
+				}
+				not = {
+					check_variable = {
+						which = xuanjuwaijiao
+						value = 6
+					}
+				}
+				not = {
+					check_variable = {
+						which = xuanjujunshi
+						value = 6
+					}
+				}
+			}
+			define_ruler = {
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				check_variable = {
+					which = xuanjuneizheng
+					value = 6
+				}
+				not = {
+					check_variable = {
+						which = xuanjuwaijiao
+						value = 6
+					}
+				}
+				not = {
+					check_variable = {
+						which = xuanjujunshi
+						value = 6
+					}
+				}
+			}
+			define_ruler = {
+				ADM = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				not = {
+					check_variable = {
+						which = xuanjuneizheng
+						value = 6
+					}
+				}
+				check_variable = {
+					which = xuanjuwaijiao
+					value = 6
+				}
+				not = {
+					check_variable = {
+						which = xuanjujunshi
+						value = 6
+					}
+				}
+			}
+			define_ruler = {
+				DIP = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				not = {
+					check_variable = {
+						which = xuanjuneizheng
+						value = 6
+					}
+				}
+				not = {
+					check_variable = {
+						which = xuanjuwaijiao
+						value = 6
+					}
+				}
+				check_variable = {
+					which = xuanjujunshi
+					value = 6
+				}
+			}
+			define_ruler = {
+				MIL = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				not = {
+					check_variable = {
+						which = xuanjuneizheng
+						value = 6
+					}
+				}
+				check_variable = {
+					which = xuanjuwaijiao
+					value = 6
+				}
+				check_variable = {
+					which = xuanjujunshi
+					value = 6
+				}
+			}
+			define_ruler = {
+				DIP = 6
+				MIL = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				check_variable = {
+					which = xuanjuneizheng
+					value = 6
+				}
+				not = {
+					check_variable = {
+						which = xuanjuwaijiao
+						value = 6
+					}
+				}
+				check_variable = {
+					which = xuanjujunshi
+					value = 6
+				}
+			}
+			define_ruler = {
+				ADM = 6
+				MIL = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				check_variable = {
+					which = xuanjuneizheng
+					value = 6
+				}
+				check_variable = {
+					which = xuanjuwaijiao
+					value = 6
+				}
+				not = {
+					check_variable = {
+						which = xuanjujunshi
+						value = 6
+					}
+				}
+			}
+			define_ruler = {
+				ADM = 6
+				DIP = 6
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				check_variable = {
+					which = xuanjuneizheng
+					value = 6
+				}
+				check_variable = {
+					which = xuanjuwaijiao
+					value = 6
+				}
+				check_variable = {
+					which = xuanjujunshi
+					value = 6
+				}
+			}
+			define_ruler = {
+				ADM = 6
+				DIP = 6
+				MIL = 6
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB8750"
+		country_event = 8751
+		change_variable = {
+			which = xuanjuneizheng
+			value = 1
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuneizheng
+				value = 1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuwaijiao
+				value = -1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjujunshi
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC8750"
+		country_event = 8751
+		change_variable = {
+			which = xuanjuwaijiao
+			value = 1
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuneizheng
+				value = -1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuwaijiao
+				value = 1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjujunshi
+				value = -1
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD8750"
+		country_event = 8751
+		change_variable = {
+			which = xuanjujunshi
+			value = 1
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuneizheng
+				value = -1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjuwaijiao
+				value = -1
+			}
+		}
+		random = {
+			chance = 50
+			change_variable = {
+				which = xuanjujunshi
+				value = 1
+			}
+		}
+	}
+}
+country_event = {
+
+	id = 8751
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME8751"
+	desc = "EVTDESC8751"
+	
+	option = {
+		name = "EVTOPTA8751"
+		country_event = 8750
+	}
+}
+
+
+#外交吞并
+country_event = {
+
+	id = 877
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME877"
+	desc = "EVTDESC877"
+	
+	immediate = {
+		stability = -1
+	}
+	
+	option = {
+		name = "EVTOPTB877A"
+	}
+}
+
+# 篡位者
+country_event = { 
+	id = 878
+	is_triggered_only = yes
+	trigger = { 
+		num_of_cities = 3
+		NOT = { 
+			idea = press_gangs
+			prestige = 0.30
+		}
+	}
+	title = "EVTNAME878"
+	desc = "EVTDESC878"
+	option = { 
+		name = "EVTOPTB878A"
+		random_owned = { 
+			limit = { 
+				OR = { 
+					is_core = THIS
+					is_capital = yes
+				}
+			}
+			pretender_rebels = 2
+		}
+	}
+}

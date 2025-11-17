@@ -1,0 +1,157 @@
+country_decisions = { 
+	# 戴偃之宋
+	daiyanzhisong = { 
+		potential = { 
+			tag = SON
+			NOT = { 
+				has_country_modifier = daiyanzhisong
+			}
+			NOT = { 
+				has_country_modifier = chongjianyinshang
+			}
+		}
+		allow = { 
+			MIL = 6
+			stability = 3
+			not = { centralization_decentralization = 0 }
+			num_of_cities = 30
+			NOT = { 
+				has_country_modifier = chongjianyinshang
+			}
+			owns = 296
+			owns = 297
+		}
+		effect = { 
+			centralization_decentralization = -3
+			stability = -3
+			prestige = 0.1
+			add_country_modifier = { 
+				name = "daiyanzhisong"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+	# 重建殷商
+	chongjianyinshang = { 
+		potential = { 
+			tag = SON
+			NOT = { 
+				has_country_modifier = daiyanzhisong
+			}
+			NOT = { 
+				has_country_modifier = chongjianyinshang
+			}
+		}
+		allow = { 
+			MIL = 6
+			NOT = { centralization_decentralization = -1 }
+			badboy = 0.8
+			stability = 3
+			NOT = { 
+				has_country_modifier = daiyanzhisong
+			}
+			owns = 296
+			owns = 297
+			owns = 124
+			owns = 302
+		}
+		effect = { 
+			add_country_modifier = { 
+				name = "chongjianyinshang"
+				duration = -1
+			}
+			any_owned = {
+				hre = no
+			}
+			change_tag = YSG
+			unit_type = yinshang2
+			government = yinshangjunzhi
+			remove_country_modifier = rensong
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+	fuguyinshang = {
+		potential = { 
+			tag = YSG
+			NOT = { 
+				has_country_modifier = yinshangxingba
+			}
+			NOT = { 
+				has_country_flag = mil_reform3
+			}
+		}
+		allow = { 
+			ADM = 6
+			idea = naval_glory
+			idea = scientific_revolution
+			innovative_narrowminded = 0
+		}
+		effect = { 
+			unit_type = yinshang2
+			set_country_flag = mil_reform3
+			add_country_modifier = { 
+				name = "yinshangxingba"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+	# 仁宋
+	rensong = { 
+		potential = { 
+			NOT = { 
+				has_country_modifier = rensong
+			}
+			NOT = { 
+				has_country_modifier = chongjianyinshang
+			}
+			tag = SON
+		}
+		allow = { 
+			war = no
+			cultural_tradition = 0.80
+			DIP = 7
+			NOT = { 
+				badboy = 0.5
+			}
+			is_emperor = yes
+		}
+		effect = { 
+			badboy = -1
+			add_country_modifier = { 
+				name = "rensong"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+	daiyanzhiquan = { 
+# 戴偃之宋—是否改为君主集权
+		potential = { 
+			tag = SON
+			has_country_modifier = daiyanzhisong
+			not = { 
+				has_country_flag = daiyanjiquan
+			}
+		}
+		allow = { 
+
+		}
+		effect = { 
+			government = enlightened_despotism
+			set_country_flag = daiyanjiquan
+		}
+		ai_will_do = { 
+			factor = 100
+		}
+	}
+}

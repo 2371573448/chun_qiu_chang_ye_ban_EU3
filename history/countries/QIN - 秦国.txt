@@ -1,0 +1,967 @@
+government = fengjian
+aristocracy_plutocracy = -2
+centralization_decentralization = 2
+innovative_narrowminded = 1
+mercantilism_freetrade = -2
+offensive_defensive = -2
+land_naval = 3
+quality_quantity = -1
+serfdom_freesubjects = -1
+technology_group = chinese
+religion = animism
+primary_culture = guanzhong
+capital = 173
+1921.1.1 = { 
+	monarch = { 
+		name = "开"
+		dynasty = "嬴"
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+}
+1922.1.1 = { 
+	leader = { 
+		name = "公子世父"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 2
+		manuever = 4
+		siege = 1
+		death_date = 1938.1.1
+	}
+}
+1933.1.1 = { 
+	monarch = { 
+		name = "伯"
+		dynasty = "嬴"
+		adm = 7
+		dip = 7
+		mil = 8
+	}
+}
+1978.1.1 = { 
+	leader = { 
+		name = "弗忌"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 2
+		manuever = 1
+		siege = 1
+		death_date = 1998.1.1
+	}
+}
+1983.1.1 = { 
+	monarch = { 
+		name = "仲"
+		dynasty = "嬴"
+		adm = 5
+		dip = 7
+		mil = 8
+	}
+}
+1995.1.1 = { 
+	monarch = { 
+		name = "曼"
+		dynasty = "嬴"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+1995.1.1 = { 
+	# 三庶长之乱
+	aristocracy_plutocracy = -1
+	centralization_decentralization = 3
+}
+2001.1.1 = { 
+	monarch = { 
+		name = "伯"
+		dynasty = "嬴"
+		adm = 7
+		dip = 4
+		mil = 8
+	}
+}
+2004.1.1 = { 
+	# 秦武公诛除三庶长
+	centralization_decentralization = 1
+}
+2020.1.1 = { 
+	capital = 179
+	set_country_flag = qiandupingyang
+	set_country_flag = qianduyongcheng
+}
+2021.1.1 = { 
+	monarch = { 
+		name = "仲"
+		dynasty = "嬴"
+		adm = 5
+		dip = 4
+		mil = 5
+	}
+}
+2023.1.1 = { 
+	monarch = { 
+		name = "叔"
+		dynasty = "嬴"
+		adm = 5
+		dip = 4
+		mil = 7
+	}
+}
+2035.1.1 = { 
+	monarch = { 
+		name = "季"
+		dynasty = "嬴"
+		adm = 4
+		dip = 5
+		mil = 6
+	}
+}
+2039.1.1 = { 
+	monarch = { 
+		name = "任好"
+		dynasty = "嬴"
+		adm = 8
+		dip = 9
+		mil = 7
+	}
+}
+2043.1.1 = { 
+	leader = { 
+		name = "子车针虎"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 4
+		manuever = 1
+		siege = 1
+		death_date = 2068.1.1
+	}
+}
+2044.1.1 = { 
+	# 秦穆公得百里奚于宛，秦始强
+	government = absolute_monarchy
+	religion = liyuejiaohua
+	aristocracy_plutocracy = 1
+	centralization_decentralization = -3
+	innovative_narrowminded = -3
+	mercantilism_freetrade = -3
+	offensive_defensive = -3
+	land_naval = -4
+	quality_quantity = 1
+}
+2046.1.1 = { 
+	leader = { 
+		name = "公孙枝"
+		type = general
+		rank = 1
+		fire = 3
+		shock = 2
+		manuever = 1
+		siege = 1
+		death_date = 2070.1.1
+	}
+}
+2047.1.1 = { 
+	leader = { 
+		name = "子车仲行"
+		type = general
+		rank = 1
+		fire = 3
+		shock = 2
+		manuever = 3
+		siege = 1
+		death_date = 2072.1.1
+	}
+}
+2048.1.1 = { 
+	leader = { 
+		name = "子车奄息"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 1
+		manuever = 3
+		siege = 1
+		death_date = 2073.1.1
+	}
+}
+2050.1.1 = { 
+	set_country_flag = zongfazhidu
+}
+2068.1.1 = { 
+	leader = { 
+		name = "子车针虎"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 4
+		manuever = 1
+		siege = 1
+		death_date = 2078.1.1
+	}
+}
+2068.1.1 = { 
+	leader = { 
+		name = "百里视"
+		type = general
+		rank = 1
+		fire = 3
+		shock = 2
+		manuever = 1
+		siege = 1
+		death_date = 2088.1.1
+	}
+}
+2068.1.1 = { 
+	leader = { 
+		name = "蹇丙"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 4
+		manuever = 4
+		siege = 1
+		death_date = 2073.1.1
+	}
+}
+2068.1.1 = { 
+	leader = { 
+		name = "蹇术"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 2
+		manuever = 4
+		siege = 1
+		death_date = 2083.1.1
+	}
+}
+2069.1.1 = { 
+	# 殽之战，晋全歼秦军，终春秋之世，秦人不得东进。穆公转而攻略西戎
+	land_naval = 4
+	offensive_defensive = -4
+}
+2072.1.1 = { 
+	leader = { 
+		name = "子车仲行"
+		type = general
+		rank = 1
+		fire = 3
+		shock = 2
+		manuever = 3
+		siege = 1
+		death_date = 2078.1.1
+	}
+}
+2073.1.1 = { 
+	leader = { 
+		name = "子车奄息"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 1
+		manuever = 3
+		siege = 1
+		death_date = 2078.1.1
+	}
+}
+2078.1.1 = { 
+	# 秦穆公薨，以忠良为殉，秦由是转衰
+	centralization_decentralization = 0
+	innovative_narrowminded = 2
+	land_naval = -2
+	offensive_defensive = -2
+}
+2078.1.1 = { 
+	monarch = { 
+		name = "莹"
+		dynasty = "嬴"
+		adm = 2
+		dip = 3
+		mil = 7
+	}
+}
+2090.1.1 = { 
+	monarch = { 
+		name = "稻"
+		dynasty = "嬴"
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+2095.1.1 = { 
+	monarch = { 
+		name = "荣"
+		dynasty = "嬴"
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+}
+2100.1.1 = { 
+	set_country_flag = dubizhidu
+	set_country_flag = mil_reform1
+}
+2100.1.1 = { 
+	religion = liyuebadao
+}
+2118.1.1 = { 
+	leader = { 
+		name = "鲍"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 2
+		manuever = 3
+		siege = 1
+		death_date = 2138.1.1
+	}
+}
+2121.1.1 = { 
+	# 麻隧之战，晋大破秦，秦逾衰
+	centralization_decentralization = 1
+	offensive_defensive = -1
+}
+2122.1.1 = { 
+	monarch = { 
+		name = "石"
+		dynasty = "嬴"
+		adm = 6
+		dip = 6
+		mil = 4
+	}
+}
+2128.1.1 = { 
+	leader = { 
+		name = "武"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 2
+		manuever = 2
+		siege = 1
+		death_date = 2153.1.1
+	}
+}
+2128.1.1 = { 
+	leader = { 
+		name = "无地"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 1
+		manuever = 1
+		siege = 1
+		death_date = 2148.1.1
+	}
+}
+2128.1.1 = { 
+	leader = { 
+		name = "詹"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 2
+		manuever = 1
+		siege = 1
+		death_date = 2143.1.1
+	}
+}
+2150.1.1 = { 
+	set_country_flag = shiguanzhidu
+	set_country_flag = tianfuzhidu
+}
+2153.1.1 = { 
+	leader = { 
+		name = "武"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 2
+		manuever = 2
+		siege = 1
+		death_date = 2158.1.1
+	}
+}
+2162.1.1 = { 
+	monarch = { 
+		name = "毕"
+		dynasty = "嬴"
+		adm = 3
+		dip = 5
+		mil = 6
+	}
+}
+2178.1.1 = { 
+	leader = { 
+		name = "子蒲"
+		type = general
+		rank = 1
+		fire = 5
+		shock = 4
+		manuever = 3
+		siege = 1
+		death_date = 2198.1.1
+	}
+}
+2183.1.1 = { 
+	leader = { 
+		name = "子虎"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 2
+		manuever = 1
+		siege = 1
+		death_date = 2203.1.1
+	}
+}
+2198.1.1 = { 
+	monarch = { 
+		name = "惠"
+		dynasty = "嬴"
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}
+2200.1.1 = { 
+	set_country_flag = falvzhidu
+	set_country_flag = mil_reform2
+}
+2208.1.1 = { 
+	monarch = { 
+		name = "悼"
+		dynasty = "嬴"
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+2222.1.1 = { 
+	monarch = { 
+		name = "利"
+		dynasty = "嬴"
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}
+2246.1.1 = { 
+	government = enlightened_despotism
+	centralization_decentralization = 1
+	aristocracy_plutocracy = 1
+	serfdom_freesubjects = -1
+	innovative_narrowminded = 1
+	mercantilism_freetrade = -3
+	offensive_defensive = -3
+	land_naval = -2
+	quality_quantity = 2
+	monarch = { 
+		name = "左"
+		dynasty = "嬴"
+		adm = 7
+		dip = 7
+		mil = 7
+	}
+}
+2247.1.1 = { 
+	monarch = { 
+		name = "利"
+		dynasty = "嬴"
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}
+2250.1.1 = { 
+	set_country_flag = junxianzhidu
+	set_country_flag = sitianzhidu
+}
+2256.1.1 = { 
+	monarch = { 
+		name = "躁"
+		dynasty = "嬴"
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}
+2270.1.1 = { 
+	monarch = { 
+		name = "怀"
+		dynasty = "嬴"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+2274.1.1 = { 
+	# 庶长鼌攻杀怀公，秦国势逾衰
+	centralization_decentralization = 3
+}
+2274.1.1 = { 
+	monarch = { 
+		name = "肃"
+		dynasty = "嬴"
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}
+2279.1.1 = { 
+	capital = 196
+	set_country_flag = qiandujingyang
+}
+2282.1.1 = { 
+	# 河西之战，魏破秦，进占河西，秦军被迫沿黄河筑防
+	offensive_defensive = 3
+	quality_quantity = 2
+}
+2284.1.1 = { 
+	monarch = { 
+		name = "悼子"
+		dynasty = "嬴"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+2290.1.1 = { 
+	# 吴起尽取秦河西，简公被迫改革
+	centralization_decentralization = 2
+	innovative_narrowminded = -1
+	serfdom_freesubjects = 1
+}
+2299.1.1 = { 
+	monarch = { 
+		name = "惠"
+		dynasty = "嬴"
+		adm = 4
+		dip = 5
+		mil = 6
+	}
+}
+2300.1.1 = { 
+	set_country_flag = fengjunzhidu
+}
+2308.1.1 = { 
+	leader = { 
+		name = "菌改"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 2
+		manuever = 3
+		siege = 1
+		death_date = 2323.1.1
+	}
+}
+2311.1.1 = { 
+	leader = { 
+		name = "右主然"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 3
+		manuever = 2
+		siege = 1
+		death_date = 2318.1.1
+	}
+}
+2312.1.1 = { 
+	monarch = { 
+		name = "少"
+		dynasty = "嬴"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}
+2314.1.1 = { 
+	# 献公杀出公继位，开始在国内大力改革
+	monarch = { 
+		name = "连"
+		dynasty = "嬴"
+		adm = 7
+		dip = 5
+		mil = 7
+	}
+}
+2314.1.1 = { 
+	government = enlightened_despotism
+	aristocracy_plutocracy = 1
+	centralization_decentralization = -3
+	innovative_narrowminded = -3
+	mercantilism_freetrade = -3
+	offensive_defensive = -3
+	land_naval = -3
+	quality_quantity = 3
+	serfdom_freesubjects = 3
+}
+2315.1.1 = { 
+	capital = 199
+	set_country_flag = qianduyueyang
+}
+2337.1.1 = { 
+	# 孝公继位，颁求贤令
+	monarch = { 
+		name = "渠梁"
+		dynasty = "嬴"
+		adm = 9
+		dip = 9
+		mil = 8
+	}
+}
+2337.1.1 = { 
+	aristocracy_plutocracy = 5
+}
+2339.1.1 = { 
+	leader = { 
+		name = "卫鞅"
+		type = general
+		rank = 1
+		fire = 5
+		shock = 5
+		manuever = 2
+		siege = 1
+		death_date = 2360.1.1
+	}
+}
+2340.1.1 = { 
+	# 秦孝公任商鞅作《垦草令》，开始第一次变法
+	government = reformed_despotism
+	religion = fajia
+	centralization_decentralization = -4
+	innovative_narrowminded = -5
+	mercantilism_freetrade = -5
+	serfdom_freesubjects = 4
+	offensive_defensive = -4
+	decision = shangyangbianfa3
+}
+2348.1.1 = { 
+	# 孝公迁都咸阳，开始第二次变法
+	capital = 197
+	set_country_flag = qianduxianyang
+	centralization_decentralization = -5
+	offensive_defensive = -5
+	land_naval = -4
+	quality_quantity = 5
+	serfdom_freesubjects = 5
+}
+2350.1.1 = { 
+	set_country_flag = hujizhidu
+}
+2358.1.1 = { 
+	# 西鄙之战，秦再败魏，迫魏惠王献地求和，至此秦得以进占河东，不再受制于三晋
+	land_naval = -5
+}
+2361.1.1 = { 
+	monarch = { 
+		name = "驷"
+		dynasty = "嬴"
+		adm = 7
+		dip = 9
+		mil = 8
+	}
+}
+2363.1.1 = { 
+	leader = { 
+		name = "庶长操"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 1
+		manuever = 2
+		siege = 1
+		death_date = 2373.1.1
+	}
+}
+2378.1.1 = { 
+	leader = { 
+		name = "樗里疾"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 3
+		manuever = 4
+		siege = 1
+		death_date = 2398.1.1
+	}
+}
+2378.1.1 = { 
+	leader = { 
+		name = "司马错"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 3
+		manuever = 5
+		siege = 2
+		death_date = 2403.1.1
+	}
+}
+2380.1.1 = { 
+	leader = { 
+		name = "张若"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 5
+		manuever = 2
+		siege = 1
+		death_date = 2405.1.1
+	}
+}
+2383.1.1 = { 
+	leader = { 
+		name = "魏章"
+		type = general
+		rank = 1
+		fire = 7
+		shock = 2
+		manuever = 2
+		siege = 1
+		death_date = 2388.1.1
+	}
+}
+2386.1.1 = { 
+	leader = { 
+		name = "甘茂"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 4
+		manuever = 2
+		siege = 2
+		death_date = 2393.1.1
+	}
+}
+2388.1.1 = { 
+	monarch = { 
+		name = "荡"
+		dynasty = "嬴"
+		adm = 1
+		dip = 3
+		mil = 7
+	}
+}
+2392.1.1 = { 
+	monarch = { 
+		name = "稷"
+		dynasty = "嬴"
+		adm = 8
+		dip = 8
+		mil = 8
+	}
+}
+2400.1.1 = { 
+	set_country_flag = guanliaozhidu
+}
+2403.1.1 = { 
+	leader = { 
+		name = "司马错"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 3
+		manuever = 5
+		siege = 2
+		death_date = 2423.1.1
+	}
+}
+2405.1.1 = { 
+	leader = { 
+		name = "张若"
+		type = general
+		rank = 1
+		fire = 4
+		shock = 5
+		manuever = 2
+		siege = 1
+		death_date = 2423.1.1
+	}
+}
+2412.1.1 = { 
+	leader = { 
+		name = "白起"
+		type = general
+		rank = 1
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 3
+		death_date = 2437.1.1
+	}
+}
+2437.1.1 = { 
+	leader = { 
+		name = "白起"
+		type = general
+		rank = 1
+		fire = 6
+		shock = 6
+		manuever = 6
+		siege = 3
+		death_date = 2442.1.1
+	}
+}
+2438.1.1 = { 
+	leader = { 
+		name = "王龁"
+		type = general
+		rank = 1
+		fire = 2
+		shock = 3
+		manuever = 3
+		siege = 1
+		death_date = 2453.1.1
+	}
+}
+2439.1.1 = { 
+	leader = { 
+		name = "王陵"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 1
+		manuever = 3
+		siege = 1
+		death_date = 2440.1.1
+	}
+}
+2439.1.1 = { 
+	leader = { 
+		name = "郑安平"
+		type = general
+		rank = 1
+		fire = 1
+		shock = 2
+		manuever = 1
+		siege = 2
+		death_date = 2440.1.1
+	}
+}
+2440.1.1 = { 
+	leader = { 
+		name = "张唐"
+		type = general
+		rank = 1
+		fire = 5
+		shock = 3
+		manuever = 3
+		siege = 1
+		death_date = 2454.1.1
+	}
+}
+2448.1.1 = { 
+	monarch = { 
+		name = "柱"
+		dynasty = "嬴"
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}
+2449.1.1 = { 
+	leader = { 
+		name = "蒙骜"
+		type = general
+		rank = 2
+		fire = 4
+		shock = 4
+		manuever = 4
+		siege = 2
+		death_date = 2461.1.1
+	}
+}
+2449.1.1 = { 
+	monarch = { 
+		name = "楚"
+		dynasty = "嬴"
+		adm = 6
+		dip = 6
+		mil = 4
+	}
+}
+2452.1.1 = { 
+	monarch = { 
+		name = "政"
+		dynasty = "嬴"
+		adm = 8
+		dip = 8
+		mil = 9
+	}
+}
+2460.1.1 = { 
+	leader = { 
+		name = "桓齮"
+		type = general
+		rank = 1
+		fire = 3
+		shock = 3
+		manuever = 4
+		siege = 2
+		death_date = 2465.1.1
+	}
+}
+2460.1.1 = { 
+	leader = { 
+		name = "王翦"
+		type = general
+		rank = 1
+		fire = 6
+		shock = 4
+		manuever = 6
+		siege = 3
+		death_date = 2475.1.1
+	}
+}
+2461.1.1 = { 
+	# 李斯上谏逐客书，拜长史，秦开始灭六国之战
+	government = centralization_empire
+}
+2473.1.1 = { 
+	leader = { 
+		name = "蒙武"
+		type = general
+		rank = 1
+		fire = 6
+		shock = 2
+		manuever = 5
+		siege = 1
+		death_date = 2478.1.1
+	}
+}
+2474.1.1 = { 
+	leader = { 
+		name = "王贲"
+		type = general
+		rank = 1
+		fire = 5
+		shock = 5
+		manuever = 6
+		siege = 3
+		death_date = 2480.1.1
+	}
+}
+#始皇帝道死沙丘，公子胡亥即位
+2488.9.1 = {
+	monarch = { 
+		name = "胡亥"
+		dynasty = "嬴"
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}
+#二世元年四月，赵高干政，用法暴虐
+2489.4.1 = {
+	decision = tianxiadaluan
+}

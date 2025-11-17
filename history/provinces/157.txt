@@ -1,0 +1,28 @@
+1827.1.1 = { discovered_by = PAP } 
+
+owner = QYA
+controller = QYA
+add_core = QYA
+culture = xiongnu
+religion = animism
+capital = "Á®ÏØ"
+trade_goods = fur
+hre = no
+base_tax = 4
+manpower = 0
+citysize = 6000
+1928.1.1 = { 
+	discovered_by = DAI
+}
+1928.1.1 = { 
+	discovered_by = QYA
+}
+1928.1.1 = { 
+	discovered_by = LHU
+}
+1928.1.1 = { 
+	discovered_by = YQU
+}
+1928.1.1 = { 
+	discovered_by = WUS
+}

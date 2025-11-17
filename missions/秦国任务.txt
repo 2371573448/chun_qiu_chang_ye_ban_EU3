@@ -1,0 +1,913 @@
+#征服西申
+annex_XSG = {
+
+	type = country
+
+	allow = {
+		tag = QIN
+		is_subject = no
+		is_lesser_in_union = no
+		or = {
+			NOT = { owns = 192 }
+			NOT = { owns = 206 }
+			NOT = { owns = 1089 }
+		}
+		exists = XSG
+		XSG = {
+			or = {
+				owns = 192
+				owns = 206
+				owns = 1089
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1848
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = XSG }
+				not = { owns = 192 }
+				not = { owns = 206 }
+				not = { owns = 1089 }
+			}
+		}
+	}
+	success = {
+		owns = 192
+		owns = 206
+		owns = 1089
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 192
+	 	add_temp_claim = 206
+	 	add_temp_claim = 1089
+	}
+	abort_effect = {
+	 	remove_temp_claim = 192
+	 	remove_temp_claim = 206
+	 	remove_temp_claim = 1089
+	  	prestige = -0.05
+	}
+	effect = {
+	  	add_core = 192
+	  	add_core = 206
+	  	add_core = 1089
+	}
+}
+
+#征服芮国
+annex_RGO = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or =  {
+	  		not = { owns = 216 }
+		  	not = { owns = 202 }
+		}
+		exists = RGO
+		RGO = {
+			or = {
+				owns = 216
+				owns = 202
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1957
+		NOT = { year = 2207 }
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = RGO }
+				not = { owns = 202 }
+				not = { owns = 216 }
+			}
+		}
+	}
+	success = {
+		owns = 216
+		owns = 202
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 216
+	 	add_temp_claim = 202
+	}
+	abort_effect = {
+	 	remove_temp_claim = 216
+	 	remove_temp_claim = 202
+	  	prestige = -0.05
+	}
+	effect = {
+	  	add_core = 216
+	  	add_core = 202
+	}
+}
+
+#收复岐山
+shoufuqishan = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+	  		not = { owns = 192 }
+		  	not = { owns = 206 }
+			not = { owns = 211 }
+			NOT = { owns = 193 }
+			NOT = { owns = 1089 }
+		}
+	}
+	abort = {
+	}
+	success = {
+		owns = 192
+		owns = 206
+		owns = 211
+		owns = 193
+		owns = 1089
+	}
+	chance = {
+		factor = 100
+		modifier = { 
+			factor = 10000
+			year = 2246
+		}
+	}
+	immediate = {
+	 	add_temp_claim = 192
+	 	add_temp_claim = 206
+		add_temp_claim = 211
+		add_temp_claim = 193
+		add_temp_claim = 1089
+	}
+	abort_effect = {
+		remove_temp_claim = 192
+	 	remove_temp_claim = 206
+		remove_temp_claim = 211
+		remove_temp_claim = 193
+		remove_temp_claim = 1089
+	  	prestige = -0.05
+	}
+	effect = {
+	 	add_core = 192
+		add_core = 206
+		add_core = 211
+	 	add_core = 193
+		add_core = 1089
+		stability = 1
+		prestige = 0.15
+		any_neighbor_country = { relation = { who = QIN value = 25 }}
+	}
+}
+
+#征服荡社氏
+annex_BOG = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+			not = { owns = 197 }
+			not = { owns = 195 }
+			not = { owns = 191 }
+		}
+		exists = BOG
+		BOG = {
+			or = {
+				owns = 191
+				owns = 195
+				owns = 197
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1885
+		
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = BOG }
+				not = { owns = 191 }
+				not = { owns = 195 }
+				not = { owns = 197 }
+			}
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 191
+	 	add_temp_claim = 195
+		add_temp_claim = 197
+	}
+	abort_effect = {
+	 	remove_temp_claim = 197
+		remove_temp_claim = 195
+		remove_temp_claim = 191
+	}
+	success = {
+	 	owns = 197
+		owns = 195
+		owns = 191
+	}
+	effect = {
+	 	add_core = 197
+		add_core = 195
+		add_core = 191
+	}
+}
+
+#征服彭戏氏
+annex_PXS = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+			not = { owns = 203 }
+			not = { owns = 215 }
+			not = { owns = 204 }
+		}
+		exists = PXS
+		PXS = {
+			or = {
+				owns = 203
+				owns = 215
+				owns = 204
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1901
+		
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = PXS }
+				not = { owns = 203 }
+				not = { owns = 215 }
+				not = { owns = 204 }
+			}
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 203
+	 	add_temp_claim = 204
+		add_temp_claim = 215
+	 	add_temp_claim = 1198
+	 	add_temp_claim = 1201
+	}
+	abort_effect = {
+	 	remove_temp_claim = 203
+		remove_temp_claim = 204
+		remove_temp_claim = 215
+		remove_temp_claim = 1198
+		remove_temp_claim = 1201
+	}
+	success = {
+	 	owns = 203
+		owns = 204
+		owns = 215
+		owns = 1198
+		owns = 1201
+	}
+	effect = {
+	 	add_core = 203
+		add_core = 204
+		add_core = 215
+		add_core = 1198
+		add_core = 1201
+	}
+}
+
+#征服骊山氏
+annex_LSS = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+			not = { owns = 198 }
+			not = { owns = 212 }
+			not = { owns = 207 }
+		}
+		exists = LSS
+		LSS = {
+			or = {
+				owns = 198
+				owns = 212
+				owns = 207
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1894
+		
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = LSS }
+				not = { owns = 198 }
+				not = { owns = 212 }
+				not = { owns = 207 }
+			}
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 198
+	 	add_temp_claim = 212
+		add_temp_claim = 207
+	}
+	abort_effect = {
+		remove_temp_claim = 198
+	 	remove_temp_claim = 212
+		remove_temp_claim = 207
+	}
+	success = {
+		owns = 198
+		owns = 212
+		owns = 207
+	}
+	effect = {
+		add_core = 198
+		add_core = 212
+		add_core = 207
+	}
+}
+
+#征服梁国
+annex_LNG = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		not = { owns = 201 }
+		exists = LNG
+		LNG = {
+			owns = 201
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 1957
+		
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = LNG }
+				not = { owns = 201 }
+			}
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 201
+	}
+	abort_effect = {
+		remove_temp_claim = 201
+	}
+	success = {
+		owns = 201
+	}
+	effect = {
+		add_core = 201
+	}
+}
+
+
+#消灭义渠
+Eliminate_yiqu = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		exists = YQU
+	  	YQU = { 
+	    		is_subject = no
+	    		is_lesser_in_union = no
+	    		any_neighbor_country = { tag = this }
+	   	}
+	}
+	abort = {
+	}
+	success = {
+		not = { exists = YQU }
+	}
+	chance = {
+		factor = 25
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		add_accepted_culture = xirong
+	  	badboy = -4
+	  	prestige = 0.25
+	}
+}
+
+#收复河西
+The_conquest_of_hexi = {
+	
+	type = country
+	allow = {
+		tag = QIN
+		year = 2266
+		is_subject = no
+		is_lesser_in_union = no
+	  	any_country = {
+			NOT = { tag = THIS }
+			exists = yes
+			any_owned_province = {
+				region = hexi
+			}
+		}	
+	  	any_country = {
+			any_owned_province = {
+				region = hexi
+				NOT = { owned_by = QIN }
+				is_core = QIN
+			}
+		}
+                                        year = 2280	
+	}
+	abort = {
+	  	or = {
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = {	  
+	  	NOT = {
+	    		any_country = {
+				NOT = { tag = THIS }
+				exists = yes
+				any_owned_province = {
+					region = hexi
+				}
+			}
+		}
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+                                       add_temp_claim = 202
+	 	add_temp_claim = 203
+	 	add_temp_claim = 216
+	 	add_temp_claim = 200
+	 	add_temp_claim = 201
+	 	add_temp_claim = 151
+	}
+	abort_effect = {
+	  	prestige = -0.05
+	}
+	effect = {
+		add_accepted_culture = baidi
+		prestige = 0.10
+		hexi = { add_core = this }
+	}
+}
+
+#征服汉中
+The_conquest_of_hanzhong = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+      		not = { owns = 219 }
+      		not = { owns = 227 }
+		year = 2253
+		NOT = { year = 2397 }
+		NOT = { 
+                                                          any_country = {  
+                                                                                             NOT = { tag = this }
+                                                                     OR = { 
+				owns = 219
+				owns = 177
+				owns = 227
+				owns = 185
+				owns = 1116
+			         }
+	    		         OR = {
+	    			alliance_with = this
+				vassal_of = this
+        		                             }          
+                                                            }
+                                        }
+	}
+	abort = {
+		any_country = { 
+	    		NOT = { tag = this }
+	    		OR = { 
+				owns = 219
+				owns = 177
+				owns = 227
+				owns = 185
+				owns = 1116
+			}
+	    		OR = {
+	    			alliance_with = this
+				vassal_of = this
+        		}
+		}
+	}
+	success = {
+    		owns = 177
+    		owns = 227
+    		owns = 185
+    		owns = 1116
+	}
+	chance = {
+		factor = 1000
+	}
+	immediate = {
+	 	add_temp_claim = 177
+	 	add_temp_claim = 227
+	 	add_temp_claim = 185
+	 	add_temp_claim = 1116
+	}
+	abort_effect = {
+	 	remove_temp_claim = 177
+	 	remove_temp_claim = 227
+	 	remove_temp_claim = 185
+	 	remove_temp_claim = 1116
+	  	prestige = -0.05
+	}
+	effect = {
+		hanzhong = { add_core = this }
+	}
+}
+
+#打击白狄
+blow_BAI = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		exists = BAI
+		neighbour = BAI
+		not = { war_with = BAI }
+	}
+	abort = {
+		
+	}
+	success = {
+		war_with = BAI
+	}
+	chance = {
+		factor = 25
+	}
+	immediate = {
+		
+	}
+	abort_effect = {
+	  	
+	}
+	effect = {
+		prestige = 0.10
+	}
+}
+
+#征服西戎
+
+The_conquest_of_liangzhou = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+      		not = { owns = 170 }
+      		not = { owns = 165 }
+		year = 2147
+		NOT = { year = 2397 }
+	}
+	abort = {
+		any_country = { 
+	    		NOT = { tag = this }
+	    		OR = { 
+				owns = 170
+				owns = 165
+			}
+	    		OR = {
+	    			alliance_with = this
+				vassal_of = this
+        		}
+		}
+	}
+	success = {
+    		owns = 173
+    		owns = 172
+    		owns = 181
+    		owns = 171
+    		owns = 170
+    		owns = 165
+    		owns = 168
+    		owns = 183
+    		owns = 190
+    		owns = 188
+	}
+	chance = {
+		factor = 1000
+	}
+	immediate = {
+	 	add_temp_claim = 173
+	 	add_temp_claim = 172
+	 	add_temp_claim = 181
+	 	add_temp_claim = 171
+	 	add_temp_claim = 170
+	 	add_temp_claim = 165
+	 	add_temp_claim = 168
+	 	add_temp_claim = 183
+	 	add_temp_claim = 190
+	 	add_temp_claim = 188
+	}
+	abort_effect = {
+	 	remove_temp_claim = 173
+	 	remove_temp_claim = 172
+	 	remove_temp_claim = 181
+	 	remove_temp_claim = 171
+	 	remove_temp_claim = 170
+	 	remove_temp_claim = 165
+	 	remove_temp_claim = 168
+	 	remove_temp_claim = 183
+	 	remove_temp_claim = 190
+	 	remove_temp_claim = 188
+	  	prestige = -0.05
+	}
+	effect = {
+		add_accepted_culture = xirong
+		longxi = { add_core = this }
+	}
+}
+#征服巴蜀中的巴
+
+annex_bashu1 = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+			not = { owns = 250 }
+			not = { owns = 246 }
+			not = { owns = 245 }
+			not = { owns = 248 }
+			not = { owns = 247 }
+		}
+		exists = BAG
+		BAG = {
+			or = {
+				owns = 250
+				owns = 245
+		  		owns = 246
+		  		owns = 247
+				owns = 248
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 2253
+		NOT = { year = 2532 }
+	}
+	abort = {
+	  	or = {
+			and = {
+				not = { exists = BAG }
+				not = { owns = 245 }
+				not = { owns = 246 }
+				not = { owns = 247 }
+				not = { owns = 248 }
+				not = { owns = 250 }
+			}
+			is_subject = yes
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 250
+	 	add_temp_claim = 246
+		add_temp_claim = 245
+		add_temp_claim = 248
+		add_temp_claim = 247
+	}
+	abort_effect = {
+		remove_temp_claim = 250
+	 	remove_temp_claim = 246
+		remove_temp_claim = 245
+		remove_temp_claim = 248
+		remove_temp_claim = 247
+	}
+	success = {
+		owns = 250
+	 	owns = 246
+		owns = 245
+		owns = 248
+		owns = 247
+	}
+	effect = {
+		add_core = 250
+	 	add_core = 246
+		add_core = 245
+	 	add_core = 248
+		add_core = 247
+	}
+}
+
+#征服巴蜀中的蜀
+
+annex_bashu2 = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		or = {
+			not = { owns = 234 }
+			not = { owns = 241 }
+			not = { owns = 231 }
+			not = { owns = 240 }
+			not = { owns = 235 }
+			not = { owns = 232 }
+			not = { owns = 233 }
+			not = { owns = 236 }
+		}
+		exists = SGU
+		SGU = {
+			or = {
+				owns = 234
+				owns = 241
+		  		owns = 231
+				owns = 240
+				owns = 235
+		  		owns = 232
+		  		owns = 233
+				owns = 236
+			}
+			neighbour = this
+			not = { vassal_of = QIN }
+		}
+		year = 2253
+		NOT = { year = 2563 }
+	}
+	abort = {
+	  	or = {
+			and = {
+				not = { exists = SGU }
+				not = { owns = 234 }
+				not = { owns = 241 }
+				not = { owns = 231 }
+				not = { owns = 240 }
+				not = { owns = 235 }
+				not = { owns = 232 }
+				not = { owns = 233 }
+				not = { owns = 236 }
+			}
+			is_subject = yes
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 234
+	 	add_temp_claim = 241
+		add_temp_claim = 231
+		add_temp_claim = 240
+		add_temp_claim = 235
+		add_temp_claim = 232
+		add_temp_claim = 233
+		add_temp_claim = 236
+	}
+	abort_effect = {
+		remove_temp_claim = 234
+	 	remove_temp_claim = 241
+		remove_temp_claim = 231
+		remove_temp_claim = 240
+		remove_temp_claim = 235
+		remove_temp_claim = 232
+		remove_temp_claim = 233
+		remove_temp_claim = 236
+	}
+	success = {
+		owns = 234
+	 	owns = 241
+		owns = 231
+		owns = 240
+		owns = 235
+		owns = 232
+		owns = 233
+		owns = 236
+	}
+	effect = {
+		add_core = 234
+	 	add_core = 241
+		add_core = 231
+		add_core = 240
+	 	add_core = 235
+		add_core = 232
+	 	add_core = 233
+		add_core = 236
+	}
+}
+
+
+
+#征服黔中郡
+
+zhengfuqianzhong = {
+	
+	type = country
+
+	allow = {
+		tag = QIN
+		NOT = { owns = 488 }
+    		owns = 248
+    		owns = 232
+		NOT = { year = 2500 }
+		year = 2290
+	}
+	abort = {
+
+	}
+	success = {
+    		owns = 252    
+    		owns = 483
+    		owns = 487
+    		owns = 488
+    		owns = 490
+    		owns = 491
+    		owns = 503
+	}
+	chance = {
+		factor = 300
+	}
+	immediate = {
+	 	add_temp_claim = 252
+	 	add_temp_claim = 483
+	 	add_temp_claim = 487
+	 	add_temp_claim = 488
+	 	add_temp_claim = 490
+	 	add_temp_claim = 491
+	 	add_temp_claim = 503
+	}
+	abort_effect = {
+	 	remove_temp_claim = 252
+	 	remove_temp_claim = 483
+	 	remove_temp_claim = 487
+	 	remove_temp_claim = 488
+	 	remove_temp_claim = 490
+	 	remove_temp_claim = 491
+	 	remove_temp_claim = 503
+	  	prestige = -0.05
+	}
+	effect = {
+		qianzhong = { add_core = QIN }
+	}
+}

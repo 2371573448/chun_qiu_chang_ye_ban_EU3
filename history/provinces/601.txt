@@ -1,0 +1,7 @@
+1827.1.1 = { discovered_by = PAP } 
+1928.1.1 = { 
+	discovered_by = JSG
+}
+2100.1.1 = { discovered_by = QIG }
+2100.1.1 = { discovered_by = WUG }
+2100.1.1 = { discovered_by = HYI }

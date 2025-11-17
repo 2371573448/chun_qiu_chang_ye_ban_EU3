@@ -1,0 +1,239 @@
+country_decisions = { 
+	tianfujueyiQIG = { 
+		potential = { 
+			tag = QIG
+			not = { 
+				has_country_flag = tianfujueyiQIG
+			}
+		}
+		allow = { 
+			officials = 10
+		}
+		effect = { 
+			officials = -10
+			treasury = -200
+			set_country_flag = tianfujueyiQIG
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengQIG"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiJIN = { 
+		potential = { 
+			tag = JIN
+			not = { 
+				has_country_flag = tianfujueyiJIN
+			}
+		}
+		allow = { 
+			diplomats = 10
+		}
+		effect = { 
+			diplomats = -10
+			treasury = -200
+			set_country_flag = tianfujueyiJIN
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengJIN"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiWEG = { 
+		potential = { 
+			tag = WEG
+			not = { 
+				has_country_flag = tianfujueyiWEG
+			}
+		}
+		allow = { 
+			officials = 5
+			missionaries = 5
+		}
+		effect = { 
+			officials = -5
+			missionaries = -5
+			treasury = -100
+			set_country_flag = tianfujueyiWEG
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengWEG"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiZGO = { 
+		potential = { 
+			tag = ZGO
+			not = { 
+				has_country_flag = tianfujueyiZGO
+			}
+		}
+		allow = { 
+			officials = 10
+			merchants = 10
+		}
+		effect = { 
+			officials = -10
+			merchants = -10
+			set_country_flag = tianfujueyiZGO
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengZGO"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiQIN = { 
+		potential = { 
+			tag = QIN
+			not = { 
+				has_country_flag = tianfujueyiQIN
+			}
+		}
+		allow = { 
+			officials = 10
+			army_tradition = 0.50
+		}
+		effect = { 
+			officials = -10
+			army_tradition = -0.30
+			treasury = -300
+			set_country_flag = tianfujueyiQIN
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengQIN"
+				duration = -1
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiCHU = { 
+		potential = { 
+			tag = CHU
+			not = { 
+				has_country_flag = tianfujueyiCHU
+			}
+		}
+		allow = { 
+			officials = 10
+			diplomats = 10
+		}
+		effect = { 
+			officials = -10
+			diplomats = -10
+			treasury = -300
+			set_country_flag = tianfujueyiCHU
+			add_country_modifier = { 
+				name = "tianfujueyixiuzhengCHU"
+				duration = -1
+			}
+			add_country_modifier = { 
+				name = "chengwang"
+				duration = -1
+			}
+			any_country = { 
+				limit = { 
+					neighbour = THIS
+				}
+				add_casus_belli = {
+					type = cb_tianxiazhiba
+					months = 1
+					target = THIS
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiYQU = { 
+		potential = { 
+			tag = YQU
+			not = { 
+				has_country_flag = tianfujueyiCHU
+			}
+		}
+		allow = { 
+			owns = 155
+			owns = 157
+			owns = 158
+			owns = 159
+			owns = 164
+			owns = 165
+			owns = 168
+			owns = 170
+			owns = 171
+			owns = 181
+			owns = 183
+			owns = 188
+			owns = 190
+			owns = 193
+			owns = 211
+			is_core = 155
+			is_core = 157
+			is_core = 158
+			is_core = 159
+			is_core = 164
+			is_core = 165
+			is_core = 168
+			is_core = 170
+			is_core = 171
+			is_core = 181
+			is_core = 183
+			is_core = 188
+			is_core = 190
+			is_core = 193
+			is_core = 211
+			owns = 150
+			owns = 152
+			owns = 186
+			owns = 187
+			owns = 205
+			owns = 213
+			owns = 1088
+			owns = 1115
+			owns = 1203
+			owns = 1204
+			owns = 1261
+			owns = 1272
+			owns = 1278
+		}
+		effect = { 
+			add_core = 150
+			add_core = 152
+			add_core = 186
+			add_core = 187
+			add_core = 205
+			add_core = 213
+			add_core = 1088
+			add_core = 1115
+			add_core = 1203
+			add_core = 1204
+			add_core = 1261
+			add_core = 1272
+			add_core = 1278
+			change_tag = XAY
+			capital = 1275
+			1275 = {
+				base_tax = 5
+				citysize = 15000
+			}
+			government = buluoxuanju
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+}

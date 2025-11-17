@@ -1,0 +1,9 @@
+culture = dudao
+religion = animism
+trade_goods = slaves
+hre = no
+base_tax = 3
+manpower = 0
+native_size = 155
+native_ferocity = 9
+native_hostileness = 5

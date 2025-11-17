@@ -1,0 +1,12 @@
+#殷商陷阵
+
+type = infantry
+unit_type = yinshang2
+
+maneuver = 1
+offensive_fire = 8
+defensive_fire = 8
+offensive_shock = 8
+defensive_shock = 8
+offensive_morale = 8
+defensive_morale = 8
