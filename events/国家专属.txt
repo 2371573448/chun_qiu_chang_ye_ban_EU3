@@ -5057,7 +5057,7 @@ country_event = {
 	}
 }
 country_event = {
-	id = 89510
+	id = 89511
 	trigger = {
 		tag = CHA
 		MIL = 7
@@ -5076,6 +5076,141 @@ country_event = {
 		add_country_modifier = { 
 			name = "CHA_buff3"
 			duration = -1
+		}
+	}
+}
+#ÐÙÅ«aiÌì¸³
+country_event = {
+	id = 89512
+	trigger = {
+		tag = XNU
+		ai = yes
+		OR = {
+			not = {
+				has_country_flag = yexingkuozhang_jishi
+			}
+			had_country_flag = { 
+				flag = yexingkuozhang_jishi
+				days = 3650
+			}
+		}
+		not = { has_country_modifier = XNU_buff4 }
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	title = "EVTNAME89512"
+	desc = "EVTDESC89512"
+	option = {
+		name = "EVTOPTA89512"
+		set_country_flag = yexingkuozhang_jishi
+		treasury = 1000
+		random_owned = {
+			limit = {
+				has_empty_adjacent_province =yes
+			}
+			random_empty_neighbor_province = {
+				secede_province = this
+				infantry = this
+				infantry = this
+				infantry = this
+				infantry = this
+				infantry = this
+				cavalry = this
+				cavalry = this
+				cavalry = this
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_modifier = XNU_buff3
+				not = { has_country_modifier = XNU_buff4 }
+			}
+			remove_country_modifier = XNU_buff3
+			add_country_modifier = { 
+				name = "XNU_buff4"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_modifier = XNU_buff2
+				not = { has_country_modifier = XNU_buff3 }
+				not = { has_country_modifier = XNU_buff4 }
+			}
+			remove_country_modifier = XNU_buff2
+			add_country_modifier = { 
+				name = "XNU_buff3"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_modifier = XNU_buff1
+				not = { has_country_modifier = XNU_buff2 }
+				not = { has_country_modifier = XNU_buff3 }
+				not = { has_country_modifier = XNU_buff4 }
+			}
+			remove_country_modifier = XNU_buff1
+			add_country_modifier = { 
+				name = "XNU_buff2"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				not = { has_country_modifier = XNU_buff1 }
+				not = { has_country_modifier = XNU_buff2 }
+				not = { has_country_modifier = XNU_buff3 }
+				not = { has_country_modifier = XNU_buff4 }
+			}
+			add_country_modifier = { 
+				name = "XNU_buff1"
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = 89513
+	trigger = {
+		not = { tag = XNU }
+		controls = 787
+		not = {
+			has_global_flag = fenglangjuxubiaoji
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	title = "EVTNAME89513"
+	desc = "EVTDESC89513"
+	option = {
+		name = "EVTOPTA89513"
+		set_global_flag = fenglangjuxubiaoji
+		add_country_modifier = { 
+			name = "fenglangjuxu"
+			duration = -1
+		}
+		any_country = { 
+			limit = { 
+				tag = XNU
+			}
+			any_owned = {
+				multiply_citysize = 0
+				add_province_modifier = {
+					name = "quzhiminhua"
+					duration = 3650
+				}
+			}
 		}
 	}
 }

@@ -4,8 +4,11 @@ country_decisions = {
 			government = tribal_despotism
 		}
 		allow = { 
-			NOT = { 
-				centralization_decentralization = 0
+			OR = {
+				idea = patron_of_art
+				NOT = { 
+					centralization_decentralization = 0
+				}
 			}
 			NOT = { 
 				innovative_narrowminded = 0
@@ -101,7 +104,6 @@ country_decisions = {
 			NOT = { 
 				MIL = 6
 			}
-			idea = patron_of_art
 			idea = cabinet
 			government_tech = 36
 		}

@@ -382,6 +382,7 @@ country_event = {
 	id = 1334
 	trigger = { 
 		idea = patron_of_art
+		innovative_narrowminded = -2 #取消事件
 		not = { 
 			innovative_narrowminded = -2
 		}

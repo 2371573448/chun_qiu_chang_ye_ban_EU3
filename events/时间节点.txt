@@ -147,7 +147,7 @@ country_event = {
 		set_global_flag = zhongyuanjiesan
 	}
 }
-#开局重置贸易中心
+#开局行动
 country_event = { 
 	id = 88301
 	major = yes
@@ -165,13 +165,40 @@ country_event = {
 	option = { 
 		name = "EVTOPTA88300"
 		set_global_flag = chongzhimaoyizhongxin
-		#补丁，开局科技
+		#开局科技
 		any_country = {
 			add_country_modifier = { 
 				name = "chushikeji"
 				duration = 7300
 			}
 		}
+		#开局传统
+		any_country = {
+			limit = {
+				capital_scope = { hre = yes }
+			}
+			add_country_modifier = { 
+				name = "chushichuantong_wenhua"
+				duration = 3650
+			}
+		}
+		any_country = {
+			limit = {
+				capital_scope = { hre = no }
+			}
+			add_country_modifier = { 
+				name = "chushichuantong_junshi"
+				duration = 3650
+			}
+		}
+		#开局恶名
+		any_country = {
+			add_country_modifier = { 
+				name = "chushieming"
+				duration = 7300
+			}
+		}
+		#开局重置贸易中心
 		any_country = {
 			any_owned = { 
 				limit = {

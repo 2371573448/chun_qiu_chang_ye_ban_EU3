@@ -166,64 +166,22 @@ country_decisions = {
 			}
 		}
 		allow = { 
-			owns = 155
-			owns = 157
-			owns = 158
-			owns = 159
-			owns = 164
-			owns = 165
-			owns = 168
-			owns = 170
-			owns = 171
-			owns = 181
-			owns = 183
-			owns = 188
-			owns = 190
-			owns = 193
-			owns = 211
-			is_core = 155
-			is_core = 157
-			is_core = 158
-			is_core = 159
-			is_core = 164
-			is_core = 165
-			is_core = 168
-			is_core = 170
-			is_core = 171
-			is_core = 181
-			is_core = 183
-			is_core = 188
-			is_core = 190
-			is_core = 193
-			is_core = 211
-			owns = 150
-			owns = 152
-			owns = 186
-			owns = 187
-			owns = 205
-			owns = 213
-			owns = 1088
-			owns = 1115
-			owns = 1203
-			owns = 1204
-			owns = 1261
-			owns = 1272
-			owns = 1278
+			not = {
+				beidijun = {
+					not = { owned_by = this }
+				}
+				shangjun = {
+					not = { owned_by = this }
+				}
+			}
 		}
 		effect = { 
-			add_core = 150
-			add_core = 152
-			add_core = 186
-			add_core = 187
-			add_core = 205
-			add_core = 213
-			add_core = 1088
-			add_core = 1115
-			add_core = 1203
-			add_core = 1204
-			add_core = 1261
-			add_core = 1272
-			add_core = 1278
+			beidijun = {
+				add_core = this
+			}
+			shangjun = {
+				add_core = this
+			}
 			change_tag = XAY
 			capital = 1275
 			1275 = {
@@ -231,6 +189,267 @@ country_decisions = {
 				citysize = 15000
 			}
 			government = buluoxuanju
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+}
+cultural_decisions = {
+	tianfujueyiCHI1 = { 
+		potential = { 
+			tag = CHI
+			has_country_flag = tianfujueyiCHI1
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI1_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI1_jishi
+					days = 365
+				}
+			}
+		}
+		allow = { 
+		}
+		effect = { 
+			clr_country_flag = tianfujueyiCHI1
+			set_country_flag = tianfujueyiCHI1_jishi
+			any_province = {
+				limit = { 
+					controlled_by = this
+					not = { owned_by = this }
+				}
+				citysize = -300
+				add_province_modifier = {
+					name = "CHI_buff1"
+					duration = 365
+				}
+				controller = {
+					change_variable = {
+						which = CHIrenkou
+						value = 1
+					}
+					manpower = 0.15
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 11
+					}
+				}
+				add_country_modifier = { 
+					name = "CHI_buff6"
+					duration = 365
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 6
+					}
+					not = {
+						check_variable = {
+							which = CHIrenkou
+							value = 11
+						}
+					}
+				}
+				add_country_modifier = { 
+					name = "CHI_buff5"
+					duration = 365
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					not = {
+						check_variable = {
+							which = CHIrenkou
+							value = 6
+						}
+					}
+				}
+				add_country_modifier = { 
+					name = "CHI_buff4"
+					duration = 365
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+}
+province_decisions = { 
+	tianfujueyiCHI1_shengfen = { 
+		potential = { 
+			tag = CHI
+			owner = {
+				check_variable = {
+					which = CHIrenkou
+					value = 1
+				}
+			}
+			not = { has_province_modifier = CHI_buff3 }
+		}
+		allow = { 
+		}
+		effect = { 
+			owner = { clr_country_flag = tianfujueyiCHI2 }
+			set_province_flag = tianfujueyiCHI1
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 32
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -32
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 4800
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 16
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -16
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 2400
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 8
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -8
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 1200
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 4
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -4
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 600
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 2
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -2
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 300
+				}
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					check_variable = {
+						which = CHIrenkou
+						value = 1
+					}
+				}
+				change_variable = {
+					which = CHIrenkou
+					value = -1
+				}
+				any_owned = {
+					limit = { 
+						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					}
+					citysize = 150
+				}
+			}
+			clr_province_flag = tianfujueyiCHI1
+			add_province_modifier = {
+				name = "CHI_buff2"
+				duration = 730
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiCHI2_shengfen = { 
+		potential = { 
+			tag = CHI
+			owner = { has_country_flag = tianfujueyiCHI2 }
+			not = { has_province_modifier = CHI_buff3 }
+		}
+		allow = { 
+		}
+		effect = { 
+			owner = {
+				clr_country_flag = tianfujueyiCHI2
+				treasury  = 300
+				badboy = 1
+				add_country_modifier = { 
+					name = "CHI_buff8"
+					duration = 1095
+				}
+			}
+			citysize = 2000
+			add_province_modifier = {
+				name = "CHI_buff3"
+				duration = 1825
+			}
 		}
 		ai_will_do = { 
 			factor = 1

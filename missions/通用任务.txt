@@ -1747,10 +1747,6 @@ recover_abysmal_prestige = {
 			war = yes
 			idea = glorious_arms
 		}
-		modifier = {
-			factor = 3
-			idea = patron_of_art
-		}
 	
 	}
 	immediate = {
@@ -1798,10 +1794,6 @@ improve_prestige = {
 			factor = 2
 			war = yes
 			idea = glorious_arms
-		}
-		modifier = {
-			factor = 3
-			idea = patron_of_art
 		}
 	
 	}

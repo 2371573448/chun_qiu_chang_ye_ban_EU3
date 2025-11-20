@@ -3794,3 +3794,32 @@ country_event = {
 		name = "EVTOPTA9091"
 	}
 }
+#ÍþÕð»ªÏÄ°ÔÖ÷ÍþÍû
+country_event = {
+
+	id = 9092
+	trigger = { 
+		idea = press_gangs
+		is_emperor = yes
+		OR = {
+			not = {
+				has_country_flag = weizhenhauxia_bazhuweiwang
+			}
+			had_country_flag = { 
+				flag = weizhenhauxia_bazhuweiwang
+				days = 365
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME9092"
+	desc  ="EVTDESC9092"
+	
+	option = {
+		name = "EVTOPTA9092"
+		set_country_flag = weizhenhauxia_bazhuweiwang
+		add_imperial_influence = 2
+	}
+}

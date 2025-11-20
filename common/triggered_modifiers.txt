@@ -163,6 +163,71 @@ panshanxuebu = {
 	cultural_tradition = -0.05
 	badboy = -0.2
 }
+#相融共生
+# 相融共生
+xiangronggongsheng1 = {
+	potential = { 
+		idea = patron_of_art
+		capital_scope = { 
+			hre = no
+		}
+		OR = {
+			government = tribal_federation
+			government = tribal_despotism
+			government = buluoxuanju
+		}
+		stability = 2
+	}
+	trigger = { 
+		stability = 2
+	}
+	global_revolt_risk = -2
+	technology_cost = -0.10
+}
+
+xiangronggongsheng2 = {
+	potential = { 
+		idea = patron_of_art
+		capital_scope = { 
+			hre = no
+		}
+		OR = {
+			government = tribal_federation
+			government = tribal_despotism
+			government = buluoxuanju
+		}
+		stability = 0
+		NOT = { stability = 2 }
+	}
+	trigger = { 
+		stability = 0
+		NOT = { stability = 2 }
+	}
+	global_revolt_risk = -5
+	technology_cost = -0.08
+}
+
+xiangronggongsheng3 = {
+	potential = { 
+		idea = patron_of_art
+		capital_scope = { 
+			hre = no
+		}
+		OR = {
+			government = tribal_federation
+			government = tribal_despotism
+			government = buluoxuanju
+		}
+		stability = -2
+		NOT = { stability = 0 }
+	}
+	trigger = { 
+		stability = -2
+		NOT = { stability = 0 }
+	}
+	global_revolt_risk = -8
+	technology_cost = -0.02
+}
 ###############################################
 #物产开发#
 ###############################################
@@ -4649,9 +4714,9 @@ shangwuchuantong = {
 }
 ###################################
 #维持现有外交关系
-###################################
-waijiaoguanxi_1a = { 
+###################################waijiaoguanxi_1a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 1
 		NOT = { 
 			num_of_allies = 2
@@ -4668,6 +4733,7 @@ waijiaoguanxi_1a = {
 }
 waijiaoguanxi_2a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 2
 		NOT = { 
 			num_of_allies = 3
@@ -4684,6 +4750,7 @@ waijiaoguanxi_2a = {
 }
 waijiaoguanxi_3a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 3
 		NOT = { 
 			num_of_allies = 4
@@ -4700,6 +4767,7 @@ waijiaoguanxi_3a = {
 }
 waijiaoguanxi_4a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 4
 		NOT = { 
 			num_of_allies = 5
@@ -4716,6 +4784,7 @@ waijiaoguanxi_4a = {
 }
 waijiaoguanxi_5a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 5
 		NOT = { 
 			num_of_allies = 6
@@ -4732,6 +4801,7 @@ waijiaoguanxi_5a = {
 }
 waijiaoguanxi_6a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 6
 		NOT = { 
 			num_of_allies = 7
@@ -4748,6 +4818,7 @@ waijiaoguanxi_6a = {
 }
 waijiaoguanxi_7a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 7
 		NOT = { 
 			num_of_allies = 8
@@ -4764,6 +4835,7 @@ waijiaoguanxi_7a = {
 }
 waijiaoguanxi_8a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 8
 		NOT = { 
 			num_of_allies = 9
@@ -4780,6 +4852,7 @@ waijiaoguanxi_8a = {
 }
 waijiaoguanxi_9a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 9
 		NOT = { 
 			num_of_allies = 10
@@ -4796,6 +4869,7 @@ waijiaoguanxi_9a = {
 }
 waijiaoguanxi_10a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 10
 		NOT = { 
 			num_of_allies = 12
@@ -4812,6 +4886,7 @@ waijiaoguanxi_10a = {
 }
 waijiaoguanxi_12a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 12
 		NOT = { 
 			num_of_allies = 14
@@ -4828,6 +4903,7 @@ waijiaoguanxi_12a = {
 }
 waijiaoguanxi_14a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 14
 		NOT = { 
 			num_of_allies = 16
@@ -4844,6 +4920,7 @@ waijiaoguanxi_14a = {
 }
 waijiaoguanxi_16a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 16
 		NOT = { 
 			num_of_allies = 18
@@ -4860,6 +4937,7 @@ waijiaoguanxi_16a = {
 }
 waijiaoguanxi_18a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 18
 		NOT = { 
 			num_of_allies = 20
@@ -4876,6 +4954,7 @@ waijiaoguanxi_18a = {
 }
 waijiaoguanxi_20a = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		num_of_allies = 20
 	}
 	trigger = { 
@@ -4886,6 +4965,7 @@ waijiaoguanxi_20a = {
 }
 waijiaoguanxi_1b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 1
 		NOT = { 
@@ -4903,6 +4983,7 @@ waijiaoguanxi_1b = {
 }
 waijiaoguanxi_2b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 2
 		NOT = { 
@@ -4920,6 +5001,7 @@ waijiaoguanxi_2b = {
 }
 waijiaoguanxi_3b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 3
 		NOT = { 
@@ -4937,6 +5019,7 @@ waijiaoguanxi_3b = {
 }
 waijiaoguanxi_4b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 4
 		NOT = { 
@@ -4954,6 +5037,7 @@ waijiaoguanxi_4b = {
 }
 waijiaoguanxi_5b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 5
 		NOT = { 
@@ -4971,6 +5055,7 @@ waijiaoguanxi_5b = {
 }
 waijiaoguanxi_6b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 6
 		NOT = { 
@@ -4988,6 +5073,7 @@ waijiaoguanxi_6b = {
 }
 waijiaoguanxi_7b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 7
 		NOT = { 
@@ -5005,6 +5091,7 @@ waijiaoguanxi_7b = {
 }
 waijiaoguanxi_8b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 8
 		NOT = { 
@@ -5022,6 +5109,7 @@ waijiaoguanxi_8b = {
 }
 waijiaoguanxi_9b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 9
 		NOT = { 
@@ -5039,6 +5127,7 @@ waijiaoguanxi_9b = {
 }
 waijiaoguanxi_10b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 10
 		NOT = { 
@@ -5056,6 +5145,7 @@ waijiaoguanxi_10b = {
 }
 waijiaoguanxi_12b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 12
 		NOT = { 
@@ -5073,6 +5163,7 @@ waijiaoguanxi_12b = {
 }
 waijiaoguanxi_14b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 14
 		NOT = { 
@@ -5090,6 +5181,7 @@ waijiaoguanxi_14b = {
 }
 waijiaoguanxi_16b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 16
 		NOT = { 
@@ -5107,6 +5199,7 @@ waijiaoguanxi_16b = {
 }
 waijiaoguanxi_18b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 18
 		NOT = { 
@@ -5124,6 +5217,7 @@ waijiaoguanxi_18b = {
 }
 waijiaoguanxi_20b = { 
 	potential = { 
+		not = { idea = sea_hawks }
 		NOT = { government = celestial_empire }
 		num_of_vassals = 20
 	}

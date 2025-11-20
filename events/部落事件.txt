@@ -73,6 +73,47 @@ province_event = {
 			prestige = 0.01
 			war_exhaustion = -0.20
 		}
+		set_province_flag = tianfujueyiCHI_shenfenbiaoji
+		any_country = { 
+			limit = { 
+				tag = this
+				tag = CHI
+			}
+			legitimacy = 0.04
+			prestige = 0.04
+			war_exhaustion = -0.80
+			manpower = 0.5
+			set_country_flag = tianfujueyiCHI1
+			any_province = {
+				limit = { 
+					has_province_flag = tianfujueyiCHI_shenfenbiaoji
+					is_capital = yes
+					controller = {
+						OR = {
+							not = {
+								has_country_flag = tianfujueyiCHI2_jishi
+							}
+							had_country_flag = { 
+								flag = tianfujueyiCHI2_jishi
+								days = 1095
+							}
+						}
+					}
+				}
+				citysize = -2000
+				controller = {
+					set_country_flag = tianfujueyiCHI2
+					set_country_flag = tianfujueyiCHI2_jishi
+				}
+				owner = {
+					add_country_modifier = { 
+						name = "CHI_buff8"
+						duration = 365
+					}
+				}
+			}
+		}
+		clr_province_flag = tianfujueyiCHI_shenfenbiaoji
 	}
 
 	option = {

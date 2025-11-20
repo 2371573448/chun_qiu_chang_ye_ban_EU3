@@ -3805,4 +3805,22 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	introduction_CHI = {
+		potential = {
+			not = { has_country_flag = introduction }
+			tag = CHI
+			ai = no 
+		}
+		allow = {
+			tag =  CHI
+			war = no
+		}
+		effect = {
+			prestige = -0.01
+			set_country_flag = introduction
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

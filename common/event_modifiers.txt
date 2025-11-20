@@ -659,7 +659,10 @@ zhaoboyingzhi = {
 	population_growth = -0.01
 	icon = 2
 }
-
+#去殖民化
+quzhiminhua = {
+	local_colonial_growth = -100
+}
 ##################################################################################################
 # 霸主体系
 ##################################################################################################
@@ -2841,6 +2844,45 @@ XCBW_buff = {
 	badboy_limit = -600
 	prestige = 1	
 }
+#赤狄天赋
+CHI_buff1 = {
+	local_tax_modifier = -0.15
+}
+CHI_buff2 = {
+	local_tax_modifier = 0.10
+	local_revolt_risk = -2
+}
+CHI_buff3 = {
+	local_tax_modifier = 0.30
+	local_revolt_risk = -3
+}
+CHI_buff4 = {
+	global_tax_modifier = 0.20
+}
+CHI_buff5 = {
+	global_tax_modifier = 0.50
+}
+CHI_buff6 = {
+	global_tax_modifier = 0.80
+}
+CHI_buff7 = {
+	global_tax_modifier = -0.30
+}
+CHI_buff8 = {
+	land_morale = 0.3
+}
+XNU_buff1 = {
+	global_tax_modifier = 0.5
+}
+XNU_buff2 = {
+	global_tax_modifier = 1
+}
+XNU_buff3 = {
+	global_tax_modifier = 1.5
+}
+XNU_buff4 = {
+	global_tax_modifier = 2
+}
 #千秋朝会
 juxingchaohui = {
 	global_tax_modifier = 0.20
@@ -2874,11 +2916,8 @@ kaituoliaodongbuff = {
 	land_attrition = -0.10
 }
 fenglangjuxu = {
-	prestige_from_land = 3.0
 	army_tradition = 0.01
-	land_morale = 1
-	land_maintenance_modifier = 0.2
-	stability_cost_modifier = 0.2
+	land_morale = 0.5
 }
 jinmidi = {
 	artillery_cost = -0.10
@@ -3483,4 +3522,15 @@ chushikeji = {
 	trade_tech_investment = 5
 	naval_tech_investment = 5
 	land_tech_investment = 5
+}
+#初始传统
+chushichuantong_wenhua = {
+	cultural_tradition = 0.05
+}
+chushichuantong_junshi = {
+	army_tradition = 0.03
+}
+#初始恶名
+chushieming = {
+	badboy = -0.2
 }

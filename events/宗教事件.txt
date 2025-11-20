@@ -194,10 +194,6 @@ country_event = {
 		}
 		modifier = { 
 			factor = 1.15
-			idea = patron_of_art
-		}
-		modifier = { 
-			factor = 1.15
 			idea = deus_vult
 		}
 		modifier = { 
@@ -333,10 +329,6 @@ country_event = {
 			innovative_narrowminded = 4
 		}
 		modifier = { 
-			factor = 1.25
-			idea = patron_of_art
-		}
-		modifier = { 
 			factor = 0.50
 			idea = deus_vult
 		}
@@ -431,10 +423,6 @@ country_event = {
 		modifier = { 
 			factor = 0.5
 			year = 2260
-		}
-		modifier = { 
-			factor = 0.65
-			idea = patron_of_art
 		}
 		modifier = { 
 			factor = 0.65
@@ -891,12 +879,6 @@ province_event = {
 			factor = 1.25
 			owner = { 
 				idea = deus_vult
-			}
-		}
-		modifier = { 
-			factor = 1.25
-			owner = { 
-				idea = patron_of_art
 			}
 		}
 		modifier = { 
@@ -2234,6 +2216,7 @@ country_event = {
 		}
 		religion = daojia
 		idea = patron_of_art
+		not = { idea = patron_of_art }
 	}
 	mean_time_to_happen = { 
 		months = 300
