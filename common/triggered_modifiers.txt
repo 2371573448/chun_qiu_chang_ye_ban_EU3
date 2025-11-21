@@ -4714,7 +4714,8 @@ shangwuchuantong = {
 }
 ###################################
 #维持现有外交关系
-###################################waijiaoguanxi_1a = { 
+###################################
+waijiaoguanxi_1a = { 
 	potential = { 
 		not = { idea = sea_hawks }
 		num_of_allies = 1
