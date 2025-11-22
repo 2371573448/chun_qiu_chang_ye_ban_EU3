@@ -228,6 +228,26 @@ xiangronggongsheng3 = {
 	global_revolt_risk = -8
 	technology_cost = -0.02
 }
+
+xiangronggongsheng4 = {
+	potential = { 
+		idea = patron_of_art
+		capital_scope = { 
+			hre = no
+		}
+		OR = {
+			government = tribal_federation
+			government = tribal_despotism
+			government = buluoxuanju
+		}
+		NOT = { stability = -2 }
+	}
+	trigger = { 
+		NOT = { stability = -2 }
+	}
+	global_revolt_risk = -10
+	technology_cost = 0.10
+}
 ###############################################
 #物产开发#
 ###############################################

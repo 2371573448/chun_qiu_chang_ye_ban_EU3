@@ -234,7 +234,7 @@ divine_supremacy = {
 	missionaries = 0.5
 	missionary_placement_chance = 0.05
 	}
-#¾øÊ¥ÆúÖÇ 
+#ÏàÈÚ¹²Éú 
 patron_of_art  = {
 	global_revolt_risk = -3
 	}
