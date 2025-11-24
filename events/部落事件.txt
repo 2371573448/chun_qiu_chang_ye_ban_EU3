@@ -72,11 +72,12 @@ province_event = {
 			legitimacy = 0.01
 			prestige = 0.01
 			war_exhaustion = -0.20
+			set_country_flag = tianfujueyiCHI_guojiabiaoji
 		}
 		set_province_flag = tianfujueyiCHI_shenfenbiaoji
 		any_country = { 
 			limit = { 
-				tag = this
+				has_country_flag = tianfujueyiCHI_guojiabiaoji
 				tag = CHI
 			}
 			legitimacy = 0.04
@@ -114,6 +115,9 @@ province_event = {
 			}
 		}
 		clr_province_flag = tianfujueyiCHI_shenfenbiaoji
+		controller = {
+			clr_country_flag = tianfujueyiCHI_guojiabiaoji
+		}
 	}
 
 	option = {
