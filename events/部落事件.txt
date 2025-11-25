@@ -54,6 +54,7 @@ province_event = {
 	is_triggered_only = yes
 	trigger = {
 		controller = {
+			not = { tag = CHI }
 			OR = { 
 				government = tribal_despotism
 				government = tribal_federation
@@ -72,55 +73,43 @@ province_event = {
 			legitimacy = 0.01
 			prestige = 0.01
 			war_exhaustion = -0.20
-			set_country_flag = tianfujueyiCHI_guojiabiaoji
-		}
-		set_province_flag = tianfujueyiCHI_shenfenbiaoji
-		any_country = { 
-			limit = { 
-				has_country_flag = tianfujueyiCHI_guojiabiaoji
-				tag = CHI
-			}
-			legitimacy = 0.04
-			prestige = 0.04
-			war_exhaustion = -0.80
-			manpower = 0.5
-			set_country_flag = tianfujueyiCHI1
-			any_province = {
-				limit = { 
-					has_province_flag = tianfujueyiCHI_shenfenbiaoji
-					is_capital = yes
-					controller = {
-						OR = {
-							not = {
-								has_country_flag = tianfujueyiCHI2_jishi
-							}
-							had_country_flag = { 
-								flag = tianfujueyiCHI2_jishi
-								days = 1095
-							}
-						}
-					}
-				}
-				citysize = -2000
-				controller = {
-					set_country_flag = tianfujueyiCHI2
-					set_country_flag = tianfujueyiCHI2_jishi
-				}
-				owner = {
-					add_country_modifier = { 
-						name = "CHI_buff8"
-						duration = 365
-					}
-				}
-			}
-		}
-		clr_province_flag = tianfujueyiCHI_shenfenbiaoji
-		controller = {
-			clr_country_flag = tianfujueyiCHI_guojiabiaoji
 		}
 	}
 
 	option = {
 		name = "EVTOPTA874"
+	}
+}
+
+province_event = {
+	id = 8740
+	is_triggered_only = yes
+	trigger = {
+		controller = {
+			tag = CHI
+			OR = { 
+				government = tribal_despotism
+				government = tribal_federation
+				government = steppe_horde
+			}
+			num_of_cities = 5
+		}
+		NOT = { controlled_by = owner }
+	}
+	
+	title = "EVTNAME8740"
+	desc = "EVTDESC8740"
+	
+	immediate = {
+		controller = {
+			legitimacy = 0.05
+			prestige = 0.05
+			war_exhaustion = -1
+			manpower = 2
+		}
+	}
+
+	option = {
+		name = "EVTOPTA8740"
 	}
 }

@@ -199,7 +199,26 @@ cultural_decisions = {
 	tianfujueyiCHI1 = { 
 		potential = { 
 			tag = CHI
-			has_country_flag = tianfujueyiCHI1
+		}
+		allow = { 
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI1_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI1_jishi
+					days = 120
+				}
+			}
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI1_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI1_jishi
+					days = 240
+				}
+			}
 			OR = {
 				not = {
 					has_country_flag = tianfujueyiCHI1_jishi
@@ -210,27 +229,25 @@ cultural_decisions = {
 				}
 			}
 		}
-		allow = { 
-		}
 		effect = { 
-			clr_country_flag = tianfujueyiCHI1
 			set_country_flag = tianfujueyiCHI1_jishi
-			any_province = {
-				limit = { 
-					controlled_by = this
-					not = { owned_by = this }
-				}
-				citysize = -300
-				add_province_modifier = {
-					name = "CHI_buff1"
-					duration = 365
-				}
-				controller = {
-					change_variable = {
-						which = CHIrenkou
-						value = 1
+			any_country = { 
+				any_owned = {
+					limit = { 
+						controlled_by = this
+						not = { owned_by = this }
 					}
-					manpower = 0.15
+					citysize = -300
+					add_province_modifier = {
+						name = "CHI_buff1"
+						duration = 365
+					}
+					controller = {
+						change_variable = {
+							which = CHIrenkou
+							value = 1
+						}
+					}
 				}
 			}
 			any_country = { 
@@ -245,6 +262,7 @@ cultural_decisions = {
 					name = "CHI_buff6"
 					duration = 365
 				}
+				badboy = 8
 			}
 			any_country = { 
 				limit = { 
@@ -264,6 +282,7 @@ cultural_decisions = {
 					name = "CHI_buff5"
 					duration = 365
 				}
+				badboy = 5
 			}
 			any_country = { 
 				limit = { 
@@ -279,6 +298,65 @@ cultural_decisions = {
 					name = "CHI_buff4"
 					duration = 365
 				}
+				badboy = 3
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiCHI2 = { 
+		potential = { 
+			tag = CHI
+		}
+		allow = { 
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI2_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI2_jishi
+					days = 365
+				}
+			}
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI2_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI2_jishi
+					days = 730
+				}
+			}
+			OR = {
+				not = {
+					has_country_flag = tianfujueyiCHI2_jishi
+				}
+				had_country_flag = { 
+					flag = tianfujueyiCHI2_jishi
+					days = 1095
+				}
+			}
+		}
+		effect = { 
+			set_country_flag = tianfujueyiCHI2
+			set_country_flag = tianfujueyiCHI2_jishi
+			any_province = {
+				limit = { 
+					is_capital = yes
+					controlled_by = this
+					not = { owned_by = this }
+				}
+				citysize = -2000
+				controller = {
+					badboy = 1
+				}
+				owner = {
+					add_country_modifier = { 
+						name = "CHI_buff7"
+						duration = 365
+					}
+				}
 			}
 		}
 		ai_will_do = { 
@@ -289,135 +367,189 @@ cultural_decisions = {
 province_decisions = { 
 	tianfujueyiCHI1_shengfen = { 
 		potential = { 
-			tag = CHI
+			owner = {
+				tag = CHI
+				check_variable = {
+					which = CHIrenkou
+					value = 1
+				}
+			}
+			not = { has_province_modifier = CHI_buff2 }
+		}
+		allow = { 
+			owner = {
+				check_variable = {
+					which = CHIrenkou
+					value = 100
+				}
+			}
+			owner = {
+				check_variable = {
+					which = CHIrenkou
+					value = 10
+				}
+			}
 			owner = {
 				check_variable = {
 					which = CHIrenkou
 					value = 1
 				}
 			}
-			not = { has_province_modifier = CHI_buff3 }
-		}
-		allow = { 
 		}
 		effect = { 
 			owner = { clr_country_flag = tianfujueyiCHI2 }
-			set_province_flag = tianfujueyiCHI1
+			set_province_flag = tianfujueyiCHI1_shenfenbiaoji
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 32
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 32
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -32
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -32
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 4800
 				}
 			}
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 16
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 16
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -16
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -16
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 2400
 				}
 			}
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 8
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 8
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -8
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -8
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 1200
 				}
 			}
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 4
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 4
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -4
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -4
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 600
 				}
 			}
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 2
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 2
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -2
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -2
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 300
 				}
 			}
 			any_country = { 
 				limit = { 
-					tag = this
-					check_variable = {
-						which = CHIrenkou
-						value = 1
+					tag = CHI
+					capital_scope = {
+						owner = {
+							check_variable = {
+								which = CHIrenkou
+								value = 1
+							}
+						}
 					}
 				}
-				change_variable = {
-					which = CHIrenkou
-					value = -1
+				CHI = {
+					change_variable = {
+						which = CHIrenkou
+						value = -1
+					}
 				}
 				any_owned = {
 					limit = { 
-						has_province_flag = tianfujueyiCHI_shenfenbiaoji
+						has_province_flag = tianfujueyiCHI1_shenfenbiaoji
 					}
 					citysize = 150
 				}
 			}
-			clr_province_flag = tianfujueyiCHI1
+			clr_province_flag = tianfujueyiCHI1_shenfenbiaoji
 			add_province_modifier = {
 				name = "CHI_buff2"
 				duration = 730
@@ -429,8 +561,10 @@ province_decisions = {
 	}
 	tianfujueyiCHI2_shengfen = { 
 		potential = { 
-			tag = CHI
-			owner = { has_country_flag = tianfujueyiCHI2 }
+			owner = {
+				tag = CHI
+				has_country_flag = tianfujueyiCHI2
+			}
 			not = { has_province_modifier = CHI_buff3 }
 		}
 		allow = { 
@@ -439,7 +573,6 @@ province_decisions = {
 			owner = {
 				clr_country_flag = tianfujueyiCHI2
 				treasury  = 300
-				badboy = 1
 				add_country_modifier = { 
 					name = "CHI_buff8"
 					duration = 1095

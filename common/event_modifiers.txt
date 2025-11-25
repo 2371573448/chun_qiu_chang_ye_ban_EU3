@@ -2850,11 +2850,11 @@ CHI_buff1 = {
 }
 CHI_buff2 = {
 	local_tax_modifier = 0.10
-	local_revolt_risk = -2
+	local_revolt_risk = 2
 }
 CHI_buff3 = {
 	local_tax_modifier = 0.30
-	local_revolt_risk = -3
+	local_revolt_risk = 3
 }
 CHI_buff4 = {
 	global_tax_modifier = 0.20
