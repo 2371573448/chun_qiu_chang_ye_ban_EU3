@@ -2857,7 +2857,7 @@ CHI_buff3 = {
 	local_revolt_risk = 3
 }
 CHI_buff4 = {
-	global_tax_modifier = 0.20
+	global_tax_modifier = 0.30
 }
 CHI_buff5 = {
 	global_tax_modifier = 0.50

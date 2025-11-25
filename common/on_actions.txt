@@ -10,6 +10,7 @@ on_battle_lost =  {
 on_siege_won =  {
 	events = {
 		874		#tribes can sack stuff.
+		8740
 	}
 }
 
