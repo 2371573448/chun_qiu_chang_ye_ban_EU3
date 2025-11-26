@@ -564,6 +564,7 @@ religion_decisions = {
 	}
 	hainabaichuan = { 
 		potential = { 
+			not = { tag = XAY }
 			not = { 
 				has_country_modifier = bachubaijia
 			}

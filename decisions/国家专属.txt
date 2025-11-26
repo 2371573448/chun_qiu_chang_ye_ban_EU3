@@ -377,12 +377,12 @@ cultural_decisions = {
 						controlled_by = this
 						not = { owned_by = this }
 						check_variable = {
-							which = CHIrenkou
+							which = CHIrenkou2_shengfen
 							value = 1
 						}
 						not = {
 							check_variable = {
-								which = CHIrenkou
+								which = CHIrenkou2_shengfen
 								value = 2
 							}
 						}
@@ -397,12 +397,12 @@ cultural_decisions = {
 						controlled_by = this
 						not = { owned_by = this }
 						check_variable = {
-							which = CHIrenkou
+							which = CHIrenkou2_shengfen
 							value = 2
 						}
 						not = {
 							check_variable = {
-								which = CHIrenkou
+								which = CHIrenkou2_shengfen
 								value = 3
 							}
 						}
@@ -417,12 +417,12 @@ cultural_decisions = {
 						controlled_by = this
 						not = { owned_by = this }
 						check_variable = {
-							which = CHIrenkou
+							which = CHIrenkou2_shengfen
 							value = 3
 						}
 						not = {
 							check_variable = {
-								which = CHIrenkou
+								which = CHIrenkou2_shengfen
 								value = 4
 							}
 						}
@@ -437,7 +437,7 @@ cultural_decisions = {
 						controlled_by = this
 						not = { owned_by = this }
 						check_variable = {
-							which = CHIrenkou
+							which = CHIrenkou2_shengfen
 							value = 4
 						}
 					}

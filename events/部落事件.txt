@@ -59,6 +59,7 @@ province_event = {
 				government = tribal_despotism
 				government = tribal_federation
 				government = steppe_horde
+				government = buluoxuanju
 			}
 			num_of_cities = 5
 		}
@@ -91,6 +92,7 @@ province_event = {
 				government = tribal_despotism
 				government = tribal_federation
 				government = steppe_horde
+				government = buluoxuanju
 			}
 			num_of_cities = 5
 		}

@@ -248,6 +248,7 @@ country_event = {
 				value = 60
 			}
 		}
+	}
 	mean_time_to_happen = { 
 		months = 1
 	}
@@ -926,6 +927,7 @@ country_event = {
 			has_country_flag = jixiaxuegong
 		}
 		ADM = 7
+	}
 	mean_time_to_happen = { 
 		months = 1
 	}
@@ -1021,6 +1023,7 @@ country_event = {
 		tag = QIG
 		idea = ecumenism
 		has_country_flag = jixiaxuegong
+	}
 	mean_time_to_happen = { 
 		months = 1
 	}
@@ -4959,9 +4962,11 @@ country_event = {
 			controls = 191
 			has_country_flag = XAYtianfu
 		}
-		any_province = {
-			controlled_by = THIS
-			NOT = { has_country_flag = XAYtianfu_shengfenbiaoji }
+		any_country = {
+			any_owned_province = {
+				controlled_by = THIS
+				NOT = { has_province_flag = XAYtianfu_shengfenbiaoji }
+			}
 		}
 	}
 
