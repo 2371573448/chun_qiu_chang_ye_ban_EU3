@@ -5000,7 +5000,7 @@ country_event = {
 		any_province = {
 			limit = {
 				controlled_by = THIS
-				NOT = { has_country_flag = XAYtianfu_shengfenbiaoji }
+				NOT = { has_province_flag = XAYtianfu_shengfenbiaoji }
 				OR = {
 					province_id = 265
 					province_id = 466
@@ -5029,7 +5029,7 @@ country_event = {
 		any_province = {
 			limit = {
 				controlled_by = THIS
-				NOT = { has_country_flag = XAYtianfu_shengfenbiaoji }
+				NOT = { has_province_flag = XAYtianfu_shengfenbiaoji }
 				NOT = {
 					OR = {
 						province_id = 265
