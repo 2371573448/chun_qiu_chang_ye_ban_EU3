@@ -28,9 +28,9 @@ country_decisions = {
 			}
 		}
 		allow = { 
-			technology_group = chinese
 			treasury = 50
 			officials = 2
+			has_country_flag = zhuzaozhigong
 		}
 		effect = { 
 			treasury = -50

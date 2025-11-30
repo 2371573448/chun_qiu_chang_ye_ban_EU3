@@ -5,9 +5,9 @@ technology = {	id = 3	average_year = 1900  	range = 26    	   allowed_ideas = 3 
 technology = {	id = 4	average_year = 1910  	range = 28    	}
 technology = {	id = 5	average_year = 1920  	range = 30    	}
 technology = {	id = 6	average_year = 1930  	range = 32   	}
-technology = {	id = 7	average_year = 1940  	range = 34    	    allowed_ideas = 4  }
+technology = {	id = 7	average_year = 1940  	range = 34    	dock = yes    allowed_ideas = 4  }
 technology = {	id = 8	average_year = 1950  	range = 36                    enable = galley   }
-technology = {	id = 9	average_year = 1960  	range = 38    	      dock = yes      }
+technology = {	id = 9	average_year = 1960  	range = 38    	            }
 technology = {	id = 10	average_year = 1970  	range = 40    	}
 technology = {	id = 11	average_year = 1980  	range = 42   	}
 technology = {	id = 12	average_year = 1990  	range = 44                                              	wharf = yes          }
@@ -15,10 +15,10 @@ technology = {	id = 13	average_year = 2000  	range = 46   	   allowed_ideas = 5 
 technology = {	id = 14	average_year = 2010  	range = 48   	    drydock = yes     }
 technology = {	id = 15	average_year = 2020  	range = 50   	}
 technology = {	id = 16	average_year = 2030  	range = 52  	}
-technology = {	id = 17	average_year = 2040  	range = 54   	}
+technology = {	id = 17	average_year = 2040  	range = 54  shipyard = yes 	}
 technology = {	id = 18	average_year = 2050  	range = 56   	   allowed_ideas = 6  }
 technology = {	id = 19	average_year = 2060  	range = 58   	}
-technology = {	id = 20	average_year = 2070  	range = 60   	    shipyard = yes    }
+technology = {	id = 20	average_year = 2070  	range = 60   	        }
 technology = {	id = 21	average_year = 2080  	range = 62   	}
 technology = {	id = 22	average_year = 2090  	range = 64                  enable = cog    }
 technology = {	id = 23	average_year = 2100  	range = 66                       }

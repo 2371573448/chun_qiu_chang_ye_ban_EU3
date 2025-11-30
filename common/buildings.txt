@@ -396,7 +396,7 @@ customs_house = {#èúÊ¦¸®
 
 # Fortresses
 fort1 = {
-	cost = 90
+	cost = 75
 	time = 18
 	modifier = {
 		fort_level = 1
@@ -408,7 +408,7 @@ fort1 = {
 
 fort2 = {
 	previous = fort1
-	cost = 100
+	cost = 90
 	time = 18
 	modifier = {
 		fort_level = 1

@@ -194,6 +194,32 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	tianfujueyiWUG = { 
+		potential = { 
+			tag = WUG
+			not = { 
+				has_country_flag = tianfujueyiWUG
+			}
+		}
+		allow = { 
+			stability = 1
+		}
+		effect = { 
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+			wuyue_infantry_8 = 447
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 }
 cultural_decisions = {
 	tianfujueyiCHI1 = { 

@@ -2445,12 +2445,12 @@ zhanbu3 = {
 	icon = 1
 }
 zhanbu4 = {
-	legitimacy = -0.05
+	legitimacy = -0.15
 	icon = 1
 }
 zhanbu5 = {
-	global_revolt_risk = -1
-	missionaries = 0.25
+	global_revolt_risk = -3
+	missionaries = -0.5
 	icon = 1
 }
 zhanbu7 = {
@@ -2460,8 +2460,8 @@ zhanbu7 = {
 }
 zhanbu8 = {
 	global_colonial_growth = 0.25
-	tolerance_own = 1
-	tolerance_heretic = 1
+	tolerance_own = 3
+	tolerance_heretic = 3
 	icon = 1
 }
 zhanbu9 = {

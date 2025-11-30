@@ -739,6 +739,7 @@ country_event = {
 	option = { 
 		name = "EVTOPTA5017"
 		stability = 2
+		treasury  = 200
 	}
 }
 country_event = { 
@@ -750,7 +751,7 @@ country_event = {
 	option = { 
 		name = "EVTOPTA5018"
 		any_neighbor_country = { 
-			relation = { who = THIS value = 25 }
+			relation = { who = THIS value = 50 }
 		}
 	}
 }
@@ -998,8 +999,7 @@ country_event = {
 			has_country_flag = zhuzaozhigong
 		}
 		year = 1968
-		production_tech = 18
-		land_tech = 20
+		production_tech = 14
 		counting_house = 3
 	}
 	mean_time_to_happen = { 
@@ -4881,6 +4881,7 @@ country_event = {
 		NOT = { 
 			has_country_flag = CHAtianfu
 		}
+		ai = no
 	}
 
 	mean_time_to_happen = {

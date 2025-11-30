@@ -6,13 +6,13 @@ technology = { id = 4   average_year = 1910				}
 technology = { id = 5   average_year = 1920				tribal_despotism = yes	}
 technology = { id = 6   average_year = 1930				}
 technology = { id = 7   average_year = 1940	embassy = yes		}
-technology = { id = 8   average_year = 1950				}
+technology = { id = 8   average_year = 1950	courthouse = yes		}
 technology = { id = 9   average_year = 1960	                                                                          fine_arts_academy = yes			}
-technology = { id = 10  average_year = 1970	           courthouse = yes	}
+technology = { id = 10  average_year = 1970	           			}
 technology = { id = 11  average_year = 1980				}
 technology = { id = 12  average_year = 1990	university = yes			                                                      }
-technology = { id = 13  average_year = 2000				yuanshuai = yes		}
-technology = { id = 14  average_year = 2010   spy_agency = yes   }
+technology = { id = 13  average_year = 2000	spy_agency = yes			yuanshuai = yes		}
+technology = { id = 14  average_year = 2010      }
 technology = { id = 15  average_year = 2020                      }
 technology = { id = 16  average_year = 2030                           noble_republic = yes  }
 technology = { id = 17  average_year = 2040                          absolute_monarchy =yes }

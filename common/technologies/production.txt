@@ -7,16 +7,16 @@ technology = { id = 5   average_year = 1920       production_efficiency = 0.20  
 technology = { id = 6   average_year = 1930       production_efficiency = 0.20      }
 technology = { id = 7   average_year = 1940       production_efficiency = 0.21      }
 technology = { id = 8   average_year = 1950       production_efficiency = 0.21      }
-technology = { id = 9   average_year = 1960       production_efficiency = 0.21      }
+technology = { id = 9   average_year = 1960       production_efficiency = 0.21	workshop = yes	}
 technology = { id = 10  average_year = 1970       production_efficiency = 0.22      }
 technology = { id = 11  average_year = 1980       production_efficiency = 0.22      }
-technology = { id = 12  average_year = 1990       production_efficiency = 0.23            workshop = yes          textile = yes      }
+technology = { id = 12  average_year = 1990       production_efficiency = 0.23	textile = yes      }
 technology = { id = 13  average_year = 2000       production_efficiency = 0.23      }
-technology = { id = 14  average_year = 2010       production_efficiency = 0.23      }
+technology = { id = 14  average_year = 2010       production_efficiency = 0.23      counting_house = yes	}
 technology = { id = 15  average_year = 2020       production_efficiency = 0.24      }
 technology = { id = 16  average_year = 2030       production_efficiency = 0.24      }
 technology = { id = 17  average_year = 2040       production_efficiency = 0.25      }
-technology = { id = 18  average_year = 2050       production_efficiency = 0.25         counting_house = yes   }
+technology = { id = 18  average_year = 2050       production_efficiency = 0.25      }
 technology = { id = 19  average_year = 2060       production_efficiency = 0.25      }
 technology = { id = 20  average_year = 2070       production_efficiency = 0.26      }
 technology = { id = 21  average_year = 2080       production_efficiency = 0.26      }
