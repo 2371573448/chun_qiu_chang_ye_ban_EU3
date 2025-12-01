@@ -546,7 +546,7 @@ WUG_annex_YNO = {
 		owns = 1167
 	}
 	chance = { 
-		factor = 200
+		factor = 20000
 	}
 	immediate = { 
 		add_temp_claim = 432

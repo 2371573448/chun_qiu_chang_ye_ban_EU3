@@ -2459,7 +2459,6 @@ zhanbu7 = {
 	icon = 1
 }
 zhanbu8 = {
-	global_colonial_growth = 0.25
 	tolerance_own = 3
 	tolerance_heretic = 3
 	icon = 1
