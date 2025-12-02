@@ -572,7 +572,7 @@ WUG_annex_YNO = {
 		add_core = 435
 		add_core = 449
 		add_core = 1167
-		prestige = 50
+		prestige = 0.50
 		treasury = 400
 	}
 }
