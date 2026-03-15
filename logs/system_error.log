@@ -11,7 +11,6 @@ Malformed token: {, near line: 72
 [lexer.cpp:549]: Error on dynamic token: kill_heir, Check if not already used elsewhere.
 [persistent.cpp:39]: Error: "Unexpected token: death_date, near line: 21
 " in file: "history\Countries\xnu - пые╚.txt" near line: 22
-[id.cpp:84]: Failed to create id 89510 41. Already exists in game.
 [id.cpp:84]: Failed to create id 7004 41. Already exists in game.
 [id.cpp:84]: Failed to create id 1523 41. Already exists in game.
 [id.cpp:84]: Failed to create id 290800 41. Already exists in game.

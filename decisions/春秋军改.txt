@@ -150,13 +150,13 @@ country_decisions = {
 			}
 		}
 		allow = { 
-			land_tech = 15
+			land_tech = 10
 			MIL = 6
 			OR = { 
 				spices = 1
 				any_country = { 
 					num_of_cities = 15
-					land_tech = 15
+					land_tech = 10
 					OR = { 
 						unit_type = chinese
 						unit_type = qinguo

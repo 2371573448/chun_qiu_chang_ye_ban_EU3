@@ -6,7 +6,13 @@ country_decisions = {
 			}
 		}
 		allow = { 
-			government_tech = 15
+			OR = {
+				government_tech = 15
+				AND = {
+					tag = QIG
+					government_tech = 10
+				}
+			}
 			capital_scope = { 
 				has_building = shipyard
 			}

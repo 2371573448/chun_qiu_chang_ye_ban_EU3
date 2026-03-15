@@ -18,4 +18,10 @@ alliance = {
 	start_date = 1928.1.1
 	end_date = 1939.1.1
 }
+alliance = {
+	first = PAP
+	second = ZGO
+	start_date = 1928.1.1
+	end_date = 1991.1.1
+}
 

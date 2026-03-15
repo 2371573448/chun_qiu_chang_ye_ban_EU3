@@ -50,3 +50,44 @@ cultural_decisions = {
 		}
 	}
 }
+country_decisions = { 
+	qin_qiandukuai = { 
+		# Ç¨¶¼Û¦
+		potential = { 
+			owns = 356
+			NOT = { capital = 356 }
+			NOT = { 
+				has_country_flag = qiandukuai
+			}
+			tag = ZGO
+		}
+		allow = { 
+			OR = { 
+				AND = { 
+					capital_scope = { 
+						hre = yes
+					}
+					356 = { 
+						hre = yes
+					}
+				}
+				capital_scope = { 
+					hre = no
+				}
+			}
+			is_core = 356
+			war = no
+		}
+		effect = { 
+			capital = 356
+			356 = { 
+				rename_capital = "ÐÂÖ£"
+			}
+			stability = 1
+			set_country_flag = qiandukuai
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+}

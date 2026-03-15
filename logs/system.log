@@ -14,18 +14,18 @@
 [graphicssettings.cpp:184]: Succeeded to create a device [D3DCREATE_HARDWARE_VERTEXPROCESSING].
 [graphicssettings.cpp:226]: Graphics device: Intel(R) UHD Graphics 630
 [graphicssettings.cpp:227]: Graphics driver: igdumdim32.dll
-[graphicssettings.cpp:232]:  Driver version: 2127
+[graphicssettings.cpp:232]:  Driver version: 2115
 [graphicssettings.cpp:249]: 
 
 
 Dumping all gfx info:
-DeviceIdentifier:	{D7B78E66-D888-11CF-BC7B-F1A6ACC2D235}
+DeviceIdentifier:	{D7B78E66-D888-11CF-B07B-F1A6ACC2D235}
 VendorId:	32902
 DeviceId:	39880
 SubSysId:	-2037116861
 Revision:	3
 DriverVersion.HighPart:	2031616
-DriverVersion.LowPart:	6621263
+DriverVersion.LowPart:	6621251
 
 
 [graphicssettings.cpp:299]: Instancing supported.
@@ -354,6 +354,7 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 541
 [provincemanager.cpp:2103]: writing quad mesh 542
 [provincemanager.cpp:2103]: writing quad mesh 543
+[provincemanager.cpp:2103]: writing quad mesh 544
 [provincemanager.cpp:2103]: writing quad mesh 545
 [provincemanager.cpp:2103]: writing quad mesh 546
 [provincemanager.cpp:2103]: writing quad mesh 547
@@ -375,6 +376,7 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 583
 [provincemanager.cpp:2103]: writing quad mesh 584
 [provincemanager.cpp:2103]: writing quad mesh 585
+[provincemanager.cpp:2103]: writing quad mesh 587
 [provincemanager.cpp:2103]: writing quad mesh 588
 [provincemanager.cpp:2103]: writing quad mesh 589
 [provincemanager.cpp:2103]: writing quad mesh 590
@@ -418,6 +420,7 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 677
 [provincemanager.cpp:2103]: writing quad mesh 679
 [provincemanager.cpp:2103]: writing quad mesh 681
+[provincemanager.cpp:2103]: writing quad mesh 682
 [provincemanager.cpp:2103]: writing quad mesh 683
 [provincemanager.cpp:2103]: writing quad mesh 685
 [provincemanager.cpp:2103]: writing quad mesh 688
@@ -431,6 +434,7 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 710
 [provincemanager.cpp:2103]: writing quad mesh 712
 [provincemanager.cpp:2103]: writing quad mesh 713
+[provincemanager.cpp:2103]: writing quad mesh 724
 [provincemanager.cpp:2103]: writing quad mesh 730
 [provincemanager.cpp:2103]: writing quad mesh 732
 [provincemanager.cpp:2103]: writing quad mesh 737
@@ -448,14 +452,18 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 763
 [provincemanager.cpp:2103]: writing quad mesh 766
 [provincemanager.cpp:2103]: writing quad mesh 768
+[provincemanager.cpp:2103]: writing quad mesh 769
 [provincemanager.cpp:2103]: writing quad mesh 770
 [provincemanager.cpp:2103]: writing quad mesh 772
 [provincemanager.cpp:2103]: writing quad mesh 773
 [provincemanager.cpp:2103]: writing quad mesh 788
 [provincemanager.cpp:2103]: writing quad mesh 799
 [provincemanager.cpp:2103]: writing quad mesh 805
+[provincemanager.cpp:2103]: writing quad mesh 807
 [provincemanager.cpp:2103]: writing quad mesh 808
-[provincemanager.cpp:2103]: writing quad mesh 810
+[provincemanager.cpp:2103]: writing quad mesh 809
+[provincemanager.cpp:2103]: writing quad mesh 811
+[provincemanager.cpp:2103]: writing quad mesh 816
 [provincemanager.cpp:2103]: writing quad mesh 819
 [provincemanager.cpp:2103]: writing quad mesh 820
 [provincemanager.cpp:2103]: writing quad mesh 822
@@ -468,6 +476,7 @@ DriverVersion.LowPart:	6621263
 [provincemanager.cpp:2103]: writing quad mesh 846
 [provincemanager.cpp:2103]: writing quad mesh 847
 [provincemanager.cpp:2103]: writing quad mesh 856
+[provincemanager.cpp:2103]: writing quad mesh 857
 [provincemanager.cpp:2103]: writing quad mesh 859
 [provincemanager.cpp:2103]: writing quad mesh 860
 [provincemanager.cpp:2103]: writing quad mesh 867

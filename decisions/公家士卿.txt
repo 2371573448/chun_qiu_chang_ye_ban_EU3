@@ -23,6 +23,7 @@ cultural_decisions = {
 		}
 		allow = {
 			stability = 1
+			idea = vetting
 		}
 		effect = { 
 			aristocracy_plutocracy = -1
@@ -62,7 +63,8 @@ cultural_decisions = {
 			NOT ={ has_country_modifier = zhichishiqing }
 		}
 		allow = {
-			stability = 1
+			stability = 2
+			NOT = { idea = vetting }
 		}
 		effect = { 
 			aristocracy_plutocracy = 1
@@ -101,7 +103,8 @@ cultural_decisions = {
 			has_country_modifier = zhichishiqing
 		}
 		allow = {
-			stability = 2
+			stability = 1
+			idea = vetting
 		}
 		effect = { 
 			aristocracy_plutocracy = -1
@@ -138,6 +141,7 @@ cultural_decisions = {
 		}
 		allow = {
 			stability = 2
+			NOT = { idea = vetting }
 		}
 		effect = { 
 			aristocracy_plutocracy = 1

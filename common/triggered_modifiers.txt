@@ -1265,8 +1265,8 @@ buxichezhan = {
 			has_country_modifier = xichezhan
 		}
 	}
-	artillery_cost = 0.8
-	cavalry_cost = 0.4
+	artillery_cost = 0.4
+	cavalry_cost = 0.2
 	icon = 8
 }
 ####################

@@ -10,7 +10,7 @@ serfdom_freesubjects = -4
 technology_group = chinese
 religion = liyuejiaohua 
 primary_culture = yinyi
-capital = 358
+capital = 356
 
 1920.1.1 = {
 	monarch = {

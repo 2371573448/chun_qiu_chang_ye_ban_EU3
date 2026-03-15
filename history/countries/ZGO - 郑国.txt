@@ -10,7 +10,7 @@ serfdom_freesubjects = -3
 technology_group = chinese
 religion = liyuejiaohua
 primary_culture = zhongyuan
-capital = 356
+capital = 369
 1928.1.1 = { 
 	elector = yes
 }
@@ -25,6 +25,9 @@ capital = 356
 		dip = 7
 		mil = 7
 	}
+}
+1928.1.1 = { 
+	capital = 356
 }
 1943.1.1 = { 
 	leader = { 

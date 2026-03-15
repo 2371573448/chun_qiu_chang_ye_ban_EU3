@@ -5,18 +5,18 @@
 
 		[[ Launching SINGLEPLAYER-game ]]
 	Start-date: 1928.1.1
-	Country: 莱
+	Country: 东胡
 
 
-[gamestate.cpp:2203]: ZGO is a 'lucky' nation.31
-[gamestate.cpp:2203]: QIN is a 'lucky' nation.23
-[gamestate.cpp:2203]: WEG is a 'lucky' nation.22
+[gamestate.cpp:2203]: ZGO is a 'lucky' nation.39
+[gamestate.cpp:2203]: CHU is a 'lucky' nation.27
+[gamestate.cpp:2203]: SHE is a 'lucky' nation.22
+[gamestate.cpp:2203]: XGO is a 'lucky' nation.21
 [gamestate.cpp:2203]: YQU is a 'lucky' nation.21
-[gamestate.cpp:2203]: YGO is a 'lucky' nation.20
-[gamestate.cpp:2203]: YXU is a 'lucky' nation.20
-[gamestate.cpp:2203]: CHE is a 'lucky' nation.19
-[gamestate.cpp:2203]: XIY is a 'lucky' nation.19
-[messagehandler.h:261]: 1 正月, 1928 我们接受了任务攻击 箕氏. 
+[gamestate.cpp:2203]: BER is a 'lucky' nation.20
+[gamestate.cpp:2203]: DGG is a 'lucky' nation.20
+[gamestate.cpp:2203]: QIG is a 'lucky' nation.19
+[messagehandler.h:261]: 1 正月, 1928 我们接受了任务为国练军. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 令支  发生了"君主死亡"事件. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 冀  发生了"君主死亡"事件. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 黎  发生了"君主死亡"事件. 

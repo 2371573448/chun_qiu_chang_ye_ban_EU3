@@ -79,11 +79,11 @@ country_decisions = {
 		}
 		allow = { 
 			officials = 10
-			merchants = 10
+			merchants = 5
 		}
 		effect = { 
 			officials = -10
-			merchants = -10
+			merchants = -5
 			set_country_flag = tianfujueyiZGO
 			add_country_modifier = { 
 				name = "tianfujueyixiuzhengZGO"
@@ -162,7 +162,7 @@ country_decisions = {
 		potential = { 
 			tag = YQU
 			not = { 
-				has_country_flag = tianfujueyiCHU
+				has_country_flag = tianfujueyiYQU
 			}
 		}
 		allow = { 
@@ -176,6 +176,7 @@ country_decisions = {
 			}
 		}
 		effect = { 
+			set_country_flag = tianfujueyiYQU
 			beidijun = {
 				add_core = this
 			}
@@ -205,16 +206,17 @@ country_decisions = {
 			stability = 1
 		}
 		effect = { 
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
-			wuyue_infantry_8 = 447
+			set_country_flag = tianfujueyiWUG
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
+			wuyue_infantry_15 = 447
 		}
 		ai_will_do = { 
 			factor = 1

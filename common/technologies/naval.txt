@@ -14,8 +14,8 @@ technology = {	id = 12	average_year = 1990  	range = 44                         
 technology = {	id = 13	average_year = 2000  	range = 46   	   allowed_ideas = 5  }
 technology = {	id = 14	average_year = 2010  	range = 48   	    drydock = yes     }
 technology = {	id = 15	average_year = 2020  	range = 50   	}
-technology = {	id = 16	average_year = 2030  	range = 52  	}
-technology = {	id = 17	average_year = 2040  	range = 54  shipyard = yes 	}
+technology = {	id = 16	average_year = 2030  	range = 52  shipyard = yes	}
+technology = {	id = 17	average_year = 2040  	range = 54   	}
 technology = {	id = 18	average_year = 2050  	range = 56   	   allowed_ideas = 6  }
 technology = {	id = 19	average_year = 2060  	range = 58   	}
 technology = {	id = 20	average_year = 2070  	range = 60   	        }

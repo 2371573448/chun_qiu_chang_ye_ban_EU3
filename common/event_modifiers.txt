@@ -2775,7 +2775,7 @@ tianfujueyixiuzhengWEG = {
 	cultural_tradition = 0.03
 }
 tianfujueyixiuzhengZGO = {
-	merchants = 1
+	merchants = 0.5
 	spy_efficiency = 0.08
 }
 tianfujueyixiuzhengQIN = {
@@ -3524,10 +3524,10 @@ chushikeji = {
 }
 #初始传统
 chushichuantong_wenhua = {
-	cultural_tradition = 0.05
+	cultural_tradition = 0.03
 }
 chushichuantong_junshi = {
-	army_tradition = 0.03
+	army_tradition = 0.015
 }
 #初始恶名
 chushieming = {
