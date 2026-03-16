@@ -13,8 +13,11 @@ country_decisions = {
 					government_tech = 10
 				}
 			}
-			capital_scope = { 
-				has_building = shipyard
+			OR = {
+				capital_scope = { 
+					has_building = shipyard
+				}
+				tag = QIG
 			}
 			officials = 5
 			treasury = 300
