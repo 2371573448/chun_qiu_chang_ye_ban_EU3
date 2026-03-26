@@ -2645,6 +2645,262 @@ FAS_wenzheng20 = {
 	production_efficiency = 0.40
 	trade_efficiency = -0.20
 }
+FAS_mouding_zeng1 = {
+	stability_cost_modifier = 0.15
+	production_tech_investment = 1.5
+	naval_tech_investment = 1.5
+	land_tech_investment = 1.5
+	trade_tech_investment = 1.5
+	government_tech_investment = 1.5
+}
+FAS_mouding_zeng2 = {
+	stability_cost_modifier = 0.18
+	production_tech_investment = 3
+	naval_tech_investment = 3
+	land_tech_investment = 3
+	trade_tech_investment = 3
+	government_tech_investment = 3
+}
+FAS_mouding_zeng3 = {
+	stability_cost_modifier = 0.21
+	production_tech_investment = 4.5
+	naval_tech_investment = 4.5
+	land_tech_investment = 4.5
+	trade_tech_investment = 4.5
+	government_tech_investment = 4.5
+}
+FAS_mouding_zeng4 = {
+	stability_cost_modifier = 0.24
+	production_tech_investment = 6
+	naval_tech_investment = 6
+	land_tech_investment = 6
+	trade_tech_investment = 6
+	government_tech_investment = 6
+}
+FAS_mouding_zeng5 = {
+	stability_cost_modifier = 0.27
+	production_tech_investment = 7.5
+	naval_tech_investment = 7.5
+	land_tech_investment = 7.5
+	trade_tech_investment = 7.5
+	government_tech_investment = 7.5
+}
+FAS_mouding_zeng6 = {
+	stability_cost_modifier = 0.30
+	production_tech_investment = 9
+	naval_tech_investment = 9
+	land_tech_investment = 9
+	trade_tech_investment = 9
+	government_tech_investment = 9
+}
+FAS_mouding_zeng7 = {
+	stability_cost_modifier = 0.33
+	production_tech_investment = 10.5
+	naval_tech_investment = 10.5
+	land_tech_investment = 10.5
+	trade_tech_investment = 10.5
+	government_tech_investment = 10.5
+}
+FAS_mouding_zeng8 = {
+	stability_cost_modifier = 0.36
+	production_tech_investment = 12
+	naval_tech_investment = 12
+	land_tech_investment = 12
+	trade_tech_investment = 12
+	government_tech_investment = 12
+}
+FAS_mouding_zeng9 = {
+	stability_cost_modifier = 0.39
+	production_tech_investment = 13.5
+	naval_tech_investment = 13.5
+	land_tech_investment = 13.5
+	trade_tech_investment = 13.5
+	government_tech_investment = 13.5
+}
+FAS_mouding_zeng10 = {
+	stability_cost_modifier = 0.42
+	production_tech_investment = 15
+	naval_tech_investment = 15
+	land_tech_investment = 15
+	trade_tech_investment = 15
+	government_tech_investment = 15
+}
+FAS_mouding_zeng11 = {
+	stability_cost_modifier = 0.45
+	production_tech_investment = 15
+	naval_tech_investment = 15
+	land_tech_investment = 15
+	trade_tech_investment = 15
+	government_tech_investment = 15
+}
+FAS_mouding_jian1 = {
+	stability_cost_modifier = -0.15
+	production_tech_investment = -1.5
+	naval_tech_investment = -1.5
+	land_tech_investment = -1.5
+	trade_tech_investment = -1.5
+	government_tech_investment = -1.5
+}
+FAS_mouding_jian2 = {
+	stability_cost_modifier = -0.18
+	production_tech_investment = -3
+	naval_tech_investment = -3
+	land_tech_investment = -3
+	trade_tech_investment = -3
+	government_tech_investment = -3
+}
+FAS_mouding_jian3 = {
+	stability_cost_modifier = -0.21
+	production_tech_investment = -4.5
+	naval_tech_investment = -4.5
+	land_tech_investment = -4.5
+	trade_tech_investment = -4.5
+	government_tech_investment = -4.5
+}
+FAS_mouding_jian4 = {
+	stability_cost_modifier = -0.24
+	production_tech_investment = -6
+	naval_tech_investment = -6
+	land_tech_investment = -6
+	trade_tech_investment = -6
+	government_tech_investment = -6
+}
+FAS_mouding_jian5 = {
+	stability_cost_modifier = -0.27
+	production_tech_investment = -7.5
+	naval_tech_investment = -7.5
+	land_tech_investment = -7.5
+	trade_tech_investment = -7.5
+	government_tech_investment = -7.5
+}
+FAS_mouding_jian6 = {
+	stability_cost_modifier = -0.30
+	production_tech_investment = -9
+	naval_tech_investment = -9
+	land_tech_investment = -9
+	trade_tech_investment = -9
+	government_tech_investment = -9
+}
+FAS_mouding_jian7 = {
+	stability_cost_modifier = -0.33
+	production_tech_investment = -10.5
+	naval_tech_investment = -10.5
+	land_tech_investment = -10.5
+	trade_tech_investment = -10.5
+	government_tech_investment = -10.5
+}
+FAS_mouding_jian8 = {
+	stability_cost_modifier = -0.36
+	production_tech_investment = -12
+	naval_tech_investment = -12
+	land_tech_investment = -12
+	trade_tech_investment = -12
+	government_tech_investment = -12
+}
+FAS_mouding_jian9 = {
+	stability_cost_modifier = -0.39
+	production_tech_investment = -13.5
+	naval_tech_investment = -13.5
+	land_tech_investment = -13.5
+	trade_tech_investment = -13.5
+	government_tech_investment = -13.5
+}
+FAS_mouding_jian10 = {
+	stability_cost_modifier = -0.42
+	production_tech_investment = -15
+	naval_tech_investment = -15
+	land_tech_investment = -15
+	trade_tech_investment = -15
+	government_tech_investment = -15
+}
+FAS_mouding_jian11 = {
+	stability_cost_modifier = -0.45
+	production_tech_investment = -16.5
+	naval_tech_investment = -16.5
+	land_tech_investment = -16.5
+	trade_tech_investment = -16.5
+	government_tech_investment = -16.5
+}
+FAS_mouding_jian12 = {
+	stability_cost_modifier = -0.48
+	production_tech_investment = -18
+	naval_tech_investment = -18
+	land_tech_investment = -18
+	trade_tech_investment = -18
+	government_tech_investment = -18
+}
+FAS_mouding_jian13 = {
+	stability_cost_modifier = -0.51
+	production_tech_investment = -19.5
+	naval_tech_investment = -19.5
+	land_tech_investment = -19.5
+	trade_tech_investment = -19.5
+	government_tech_investment = -19.5
+}
+FAS_mouding_jian14 = {
+	stability_cost_modifier = -0.54
+	production_tech_investment = -21
+	naval_tech_investment = -21
+	land_tech_investment = -21
+	trade_tech_investment = -21
+	government_tech_investment = -21
+}
+FAS_mouding_jian15 = {
+	stability_cost_modifier = -0.57
+	production_tech_investment = -22.5
+	naval_tech_investment = -22.5
+	land_tech_investment = -22.5
+	trade_tech_investment = -22.5
+	government_tech_investment = -22.5
+}
+FAS_mouding_jian16 = {
+	stability_cost_modifier = -0.60
+	production_tech_investment = -24
+	naval_tech_investment = -24
+	land_tech_investment = -24
+	trade_tech_investment = -24
+	government_tech_investment = -24
+}
+FAS_mouding_jian17 = {
+	stability_cost_modifier = -0.63
+	production_tech_investment = -25.5
+	naval_tech_investment = -25.5
+	land_tech_investment = -25.5
+	trade_tech_investment = -25.5
+	government_tech_investment = -25.5
+}
+FAS_mouding_jian18 = {
+	stability_cost_modifier = -0.66
+	production_tech_investment = -27
+	naval_tech_investment = -27
+	land_tech_investment = -27
+	trade_tech_investment = -27
+	government_tech_investment = -27
+}
+FAS_mouding_jian19 = {
+	stability_cost_modifier = -0.69
+	production_tech_investment = -28.5
+	naval_tech_investment = -28.5
+	land_tech_investment = -28.5
+	trade_tech_investment = -28.5
+	government_tech_investment = -28.5
+}
+FAS_mouding_jian20 = {
+	stability_cost_modifier = -0.72
+	production_tech_investment = -30
+	naval_tech_investment = -30
+	land_tech_investment = -30
+	trade_tech_investment = -30
+	government_tech_investment = -30
+}
+FAS_mouding_jian21 = {
+	stability_cost_modifier = -0.75
+	production_tech_investment = -31.5
+	naval_tech_investment = -31.5
+	land_tech_investment = -31.5
+	trade_tech_investment = -31.5
+	government_tech_investment = -31.5
+}
 CHE_shanrang = {
 	legitimacy = -0.02
 	icon = 7
