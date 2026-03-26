@@ -117,7 +117,7 @@ country_event = {
 		}
 		legitimacy = 0.90
 		num_of_cities = 40
-		naval_tech = 24
+		naval_tech = 14
 	}
 	mean_time_to_happen = { 
 		months = 1
@@ -874,8 +874,14 @@ country_event = {
 		NOT = { 
 			has_country_flag = jiangxianghe
 		}
-		has_global_flag = zhanguokaishi
-		has_country_modifier = chengwang
+		MIL = 7
+		ai = no
+		war = no
+		has_country_modifier = zhengzhaozhi
+		advisor = statesman
+		statesman = 4
+		advisor = commandant
+		commandant = 4
 	}
 	mean_time_to_happen = { 
 		months = 1
@@ -897,10 +903,10 @@ country_event = {
 			has_country_flag = gongqiangjianli
 		}
 		tag = HAN
-		land_tech = 42
-		production_tech = 42
-		has_country_modifier = shenbuhaibianfa
-		iron = 2
+		MIL = 7
+		ai = no
+		war = no
+		has_country_modifier = changbeizhi
 	}
 	mean_time_to_happen = { 
 		months = 1
@@ -5217,6 +5223,2222 @@ country_event = {
 					duration = 3650
 				}
 			}
+		}
+	}
+}
+country_event = {
+	id = 89514
+	trigger = {
+		tag = NPC
+		any_country = { 
+			tag = JSG
+			OR = {
+				and = {
+					has_country_modifier = JSG_buff2
+					any_owned_province = { 
+						or = {
+							not = { has_province_modifier = JSG_buff2_shengfen }
+							has_province_modifier = JSG_buff3_shengfen
+						}
+					}
+				}
+				and = {
+					has_country_modifier = JSG_buff3
+					any_owned_province = { 
+						or = {
+							not = { has_province_modifier = JSG_buff3_shengfen }
+							has_province_modifier = JSG_buff2_shengfen
+						}
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 0
+	}
+	title = "EVTNAME89514"
+	desc = "EVTDESC89514"
+	option = {
+		name = "EVTOPTA89514"
+		any_country = { 
+			limit = { 
+				tag = JSG
+				has_country_modifier = JSG_buff2
+			}
+			any_owned = { 
+				limit = { 
+					not = { has_province_modifier = JSG_buff2_shengfen }
+				}
+				add_province_modifier = { 
+					name = "JSG_buff2_shengfen"
+					duration = -1
+				}
+			}
+			any_owned = { 
+				limit = { 
+					has_province_modifier = JSG_buff3_shengfen
+				}
+				remove_province_modifier = JSG_buff3_shengfen
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = JSG
+				has_country_modifier = JSG_buff3
+			}
+			any_owned = { 
+				limit = { 
+					not = { has_province_modifier = JSG_buff3_shengfen }
+				}
+				add_province_modifier = { 
+					name = "JSG_buff3_shengfen"
+					duration = -1
+				}
+			}
+			any_owned = { 
+				limit = { 
+					has_province_modifier = JSG_buff2_shengfen
+				}
+				remove_province_modifier = JSG_buff2_shengfen
+			}
+		}
+	}
+}
+#晋国分裂
+country_event = {
+	id = 89515
+	trigger = {
+		tag = JIN
+		faction_in_power = bureaucrats
+		ai = no
+		NOT = {
+			hedong = {
+				NOT = { owned_by = THIS }
+			}
+		}
+		NOT = {
+			shangdang = {
+				NOT = { owned_by = THIS }
+			}
+		}
+		NOT = {
+			taiyuan = {
+				NOT = { owned_by = THIS }
+			}
+		}
+		NOT = {
+			handan = {
+				NOT = { owned_by = THIS }
+			}
+		}
+		not = { has_country_flag = jinguofenlieyichufa }
+	}
+	mean_time_to_happen = {
+		months = 0
+	}
+	title = "EVTNAME89515"
+	desc = "EVTDESC89515"
+	immediate = {
+		set_country_flag = jinguofenlieyichufa
+	}
+	option = {
+		name = "EVTOPTA89515"
+		country_event = 89516
+	}
+	option = {
+		name = "EVTOPTB89515"
+		country_event = 89517
+	}
+	option = {
+		name = "EVTOPTC89515"
+		country_event = 89518
+	}
+}
+#分裂三选项
+country_event = {
+	id = 89516
+	is_triggered_only = yes
+	title = "EVTNAME89516"
+	desc = "EVTDESC89516"
+	option = {
+		name = "EVTOPTA89516"
+		NPC = { country_event = 89519 }
+		NPC = {
+			country_event = 8752
+		}
+		set_country_flag = suijiqi_mubiao
+		set_country_flag = jinfenlie_WEI_ZHO_HAN
+		set_country_flag = JIN_gongpingjili
+		any_country = { 
+			limit = {
+				not = { has_country_flag = JIN_gongpingjili }
+				tag = this
+			}
+			add_country_modifier = { 
+				name = "JIN_buff4"
+				duration = 1825
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB89516"
+		NPC = { country_event = 89519 }
+		random_list = {
+			33 = {
+				country_event = 89521
+				set_country_flag = suiji_WEI
+			}
+			33 = {
+				country_event = 89522
+				set_country_flag = suiji_ZHO
+			}
+			33 = {
+				country_event = 89523
+				set_country_flag = suiji_HAN
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC89516"
+		NPC = { country_event = 89519 }
+		random_list = {
+			33 = {
+				country_event = 89522
+				set_country_flag = suiji_ZHO
+			}
+			33 = {
+				country_event = 89523
+				set_country_flag = suiji_HAN
+			}
+			33 = {
+				country_event = 89521
+				set_country_flag = suiji_WEI
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD89516"
+		NPC = { country_event = 89519 }
+		random_list = {
+			33 = {
+				country_event = 89523
+				set_country_flag = suiji_HAN
+			}
+			33 = {
+				country_event = 89521
+				set_country_flag = suiji_WEI
+			}
+			33 = {
+				country_event = 89522
+				set_country_flag = suiji_ZHO
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD89515"
+		country_event = 89515
+	}
+}
+country_event = {
+	id = 89517
+	is_triggered_only = yes
+	title = "EVTNAME89517"
+	desc = "EVTDESC89517"
+	option = {
+		name = "EVTOPTA89517"
+		NPC = { country_event = 89520 }
+		NPC = {
+			country_event = 8752
+		}
+		set_country_flag = suijiqi_mubiao
+		set_country_flag = jinfenlie_ZHI_ZXS_FAS
+		set_country_flag = JIN_gongpingjili
+		any_country = { 
+			limit = {
+				not = { has_country_flag = JIN_gongpingjili }
+				tag = this
+			}
+			add_country_modifier = { 
+				name = "JIN_buff4"
+				duration = 1825
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB89517"
+		NPC = { country_event = 89520 }
+		random_list = {
+			33 = {
+				country_event = 89524
+				set_country_flag = suiji_ZHI
+			}
+			33 = {
+				country_event = 89525
+				set_country_flag = suiji_ZXS
+			}
+			33 = {
+				country_event = 89526
+				set_country_flag = suiji_FAS
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC89517"
+		NPC = { country_event = 89520 }
+		random_list = {
+			33 = {
+				country_event = 89525
+				set_country_flag = suiji_ZXS
+			}
+			33 = {
+				country_event = 89526
+				set_country_flag = suiji_FAS
+			}
+			33 = {
+				country_event = 89524
+				set_country_flag = suiji_ZHI
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD89517"
+		NPC = { country_event = 89520 }
+		random_list = {
+			33 = {
+				country_event = 89526
+				set_country_flag = suiji_FAS
+			}
+			33 = {
+				country_event = 89524
+				set_country_flag = suiji_ZHI
+			}
+			33 = {
+				country_event = 89525
+				set_country_flag = suiji_ZXS
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD89515"
+		country_event = 89515
+	}
+}
+country_event = {
+	id = 89518
+	is_triggered_only = yes
+	title = "EVTNAME89518"
+	desc = "EVTDESC89518"
+	option = {
+		name = "EVTOPTA89518"
+		centralization_decentralization = -3
+		stability = -2
+		add_country_modifier = { 
+			name = "JIN_buff3"
+			duration = 7300
+		}
+		set_country_flag = JIN_zhuanshushiqing
+	}
+	option = {
+		name = "EVTOPTD89515"
+		country_event = 89515
+	}
+}#分裂事件
+country_event = {
+	id = 89519
+	is_triggered_only = yes
+	title = "EVTNAME89519"
+	desc = "EVTDESC89519"
+	option = {
+		name = "EVTOPTA89519"
+		#魏国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 62
+						province_id = 65
+						province_id = 66
+						province_id = 67
+						province_id = 74
+						province_id = 76
+						province_id = 77
+						province_id = 78
+						province_id = 79
+						province_id = 80
+						province_id = 118
+						province_id = 875
+						province_id = 876
+						province_id = 1046
+						province_id = 1047
+						province_id = 1048
+						province_id = 1049
+						province_id = 1050
+						province_id = 1051
+						province_id = 1052
+						province_id = 1053
+						province_id = 1054
+						province_id = 1055
+						province_id = 1056
+						province_id = 1057
+						province_id = 1094
+						province_id = 1095
+						province_id = 1097
+						province_id = 1101
+						province_id = 1257
+						province_id = 1270
+						province_id = 1271
+					}
+					is_capital = no
+				}
+				add_core = WEI
+				secede_province = WEI
+			}
+		}
+		WEI = {
+			capital = 79
+			define_ruler = { 
+				name = "驹"
+				dynasty = "魏"
+				adm = 6
+				dip = 6
+				mil = 9
+			}
+		}
+		#韩国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 68
+						province_id = 69
+						province_id = 70
+						province_id = 71
+						province_id = 81
+						province_id = 82
+						province_id = 83
+						province_id = 84
+						province_id = 85
+						province_id = 86
+						province_id = 87
+						province_id = 88
+						province_id = 89
+						province_id = 90
+						province_id = 1063
+						province_id = 1064
+						province_id = 1065
+						province_id = 1066
+						province_id = 1067
+						province_id = 1068
+						province_id = 1098
+						province_id = 1099
+						province_id = 1100
+						province_id = 1102
+						province_id = 1106
+						province_id = 1107
+						province_id = 1108
+						province_id = 1109
+						province_id = 1253
+						province_id = 1256
+						province_id = 1286
+					}
+					is_capital = no
+				}
+				add_core = HAN
+				secede_province = HAN
+			}
+		}
+		HAN = {
+			capital = 71
+			define_ruler = { 
+				name = "虎"
+				dynasty = "韩"
+				adm = 8
+				dip = 8
+				mil = 7
+			}
+		}
+		#赵国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 54
+						province_id = 55
+						province_id = 56
+						province_id = 57
+						province_id = 58
+						province_id = 59
+						province_id = 60
+						province_id = 61
+						province_id = 63
+						province_id = 64
+						province_id = 112
+						province_id = 113
+						province_id = 114
+						province_id = 115
+						province_id = 116
+						province_id = 117
+						province_id = 119
+						province_id = 120
+						province_id = 121
+						province_id = 123
+						province_id = 873
+						province_id = 874
+						province_id = 953
+						province_id = 980
+						province_id = 1091
+						province_id = 1092
+						province_id = 1093
+						province_id = 1096
+						province_id = 1103
+						province_id = 1104
+						province_id = 1105
+						province_id = 1263
+						province_id = 1280
+						province_id = 1282
+						province_id = 1283
+						province_id = 1284
+						province_id = 1285
+						province_id = 1287
+					}
+					is_capital = no
+				}
+				add_core = ZHO
+				secede_province = ZHO
+			}
+		}
+		ZHO = {
+			capital = 61
+			define_ruler = { 
+				name = "毋恤"
+				dynasty = "赵"
+				adm = 9
+				dip = 9
+				mil = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 89520
+	is_triggered_only = yes
+	title = "EVTNAME89520"
+	desc = "EVTDESC89520"
+	option = {
+		name = "EVTOPTA89520"
+		#魏国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 64
+						province_id = 65
+						province_id = 74
+						province_id = 77
+						province_id = 78
+						province_id = 79
+						province_id = 1046
+						province_id = 1047
+						province_id = 1048
+						province_id = 1049
+						province_id = 1050
+						province_id = 1052
+						province_id = 1053
+						province_id = 1054
+						province_id = 1055
+						province_id = 1056
+						province_id = 1057
+						province_id = 1097
+					}
+					is_capital = no
+				}
+				add_core = WEI
+				secede_province = WEI
+			}
+		}
+		WEI = {
+			capital = 79
+			define_ruler = { 
+				name = "驹"
+				dynasty = "魏"
+				adm = 6
+				dip = 6
+				mil = 9
+			}
+		}
+		#韩国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 68
+						province_id = 69
+						province_id = 70
+						province_id = 71
+						province_id = 86
+						province_id = 87
+						province_id = 88
+						province_id = 1063
+						province_id = 1064
+						province_id = 1065
+						province_id = 1066
+						province_id = 1067
+						province_id = 1068
+						province_id = 1098
+						province_id = 1102
+						province_id = 1253
+					}
+					is_capital = no
+				}
+				add_core = HAN
+				secede_province = HAN
+			}
+		}
+		HAN = {
+			capital = 71
+			define_ruler = { 
+				name = "虎"
+				dynasty = "韩"
+				adm = 8
+				dip = 8
+				mil = 7
+			}
+		}
+		#赵国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 54
+						province_id = 55
+						province_id = 56
+						province_id = 57
+						province_id = 58
+						province_id = 61
+						province_id = 112
+						province_id = 113
+						province_id = 114
+						province_id = 115
+						province_id = 116
+						province_id = 117
+						province_id = 118
+						province_id = 119
+						province_id = 120
+						province_id = 121
+						province_id = 123
+						province_id = 873
+						province_id = 874
+						province_id = 875
+						province_id = 876
+						province_id = 953
+						province_id = 980
+						province_id = 1096
+						province_id = 1104
+						province_id = 1105
+						province_id = 1263
+						province_id = 1280
+						province_id = 1282
+						province_id = 1283
+						province_id = 1284
+						province_id = 1285
+					}
+					is_capital = no
+				}
+				add_core = ZHO
+				secede_province = ZHO
+			}
+		}
+		ZHO = {
+			capital = 61
+			define_ruler = { 
+				name = "毋恤"
+				dynasty = "赵"
+				adm = 9
+				dip = 9
+				mil = 6
+			}
+		}
+		#范国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 62
+						province_id = 63
+						province_id = 80
+						province_id = 1091
+						province_id = 1092
+						province_id = 1093
+						province_id = 1094
+						province_id = 1095
+						province_id = 1101
+					}
+					is_capital = no
+				}
+				add_core = FAS
+				secede_province = FAS
+			}
+		}
+		FAS = {
+			capital = 1091
+			define_ruler = { 
+				name = "吉射"
+				dynasty = "范"
+				adm = 8
+				dip = 7
+				mil = 7
+			}
+		}
+		#智国
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 76
+						province_id = 81
+						province_id = 83
+						province_id = 89
+						province_id = 90
+						province_id = 1051
+						province_id = 1099
+						province_id = 1100
+						province_id = 1106
+						province_id = 1107
+						province_id = 1256
+						province_id = 1286
+					}
+					is_capital = no
+				}
+				add_core = ZHI
+				secede_province = ZHI
+			}
+		}
+		ZHI = {
+			capital = 89
+			define_ruler = { 
+				name = "瑶"
+				dynasty = "智"
+				adm = 9
+				dip = 9
+				mil = 9
+			}
+		}
+		#中行
+		any_country = { 
+			limit = { tag = JIN }
+			any_owned = {
+				limit = { 
+					or = {
+						province_id = 59
+						province_id = 60
+						province_id = 66
+						province_id = 67
+						province_id = 82
+						province_id = 84
+						province_id = 85
+						province_id = 1103
+						province_id = 1108
+						province_id = 1109
+						province_id = 1257
+						province_id = 1270
+						province_id = 1271
+						province_id = 1287
+					}
+					is_capital = no
+				}
+				add_core = ZXS
+				secede_province = ZXS
+			}
+		}
+		ZXS = {
+			capital = 84
+			define_ruler = { 
+				name = "寅"
+				dynasty = "中行"
+				adm = 7
+				dip = 7
+				mil = 7
+			}
+		}
+	}
+}
+#指示事件
+country_event = {
+	id = 89521
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			#tag = WEI		#魏国
+			tag = ZHO	#赵国
+			tag = HAN	#韩国
+			tag = ZHI		#智国
+			tag = ZXS		#中行
+			tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_WEI
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89521"
+	desc = "EVTDESC89521"
+	option = {
+		name = "EVTOPTA89521"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_WEI
+			set_country_flag = suiji_WEI_yincang
+		}
+	}
+}
+country_event = {
+	id = 89522
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			tag = WEI		#魏国
+			#tag = ZHO		#赵国
+			tag = HAN	#韩国
+			tag = ZHI		#智国
+			tag = ZXS		#中行
+			tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_ZHO
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89522"
+	desc = "EVTDESC89522"
+	option = {
+		name = "EVTOPTA89522"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_ZHO
+			set_country_flag = suiji_ZHO_yincang
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 89528
+		}
+	}
+}
+country_event = {
+	id = 89523
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			tag = WEI		#魏国
+			tag = ZHO	#赵国
+			#tag = HAN		#韩国
+			tag = ZHI		#智国
+			tag = ZXS		#中行
+			tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_HAN
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89523"
+	desc = "EVTDESC89523"
+	option = {
+		name = "EVTOPTA89523"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_HAN
+			set_country_flag = suiji_HAN_yincang
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 89528
+		}
+	}
+}
+country_event = {
+	id = 89524
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			tag = WEI		#魏国
+			tag = ZHO	#赵国
+			tag = HAN	#韩国
+			#tag = ZHI		#智国
+			tag = ZXS		#中行
+			tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_ZHI
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89524"
+	desc = "EVTDESC89524"
+	option = {
+		name = "EVTOPTA89524"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_ZHI
+			set_country_flag = suiji_ZHI_yincang
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 89528
+		}
+	}
+}
+country_event = {
+	id = 89525
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			tag = WEI		#魏国
+			tag = ZHO	#赵国
+			tag = HAN	#韩国
+			tag = ZHI		#智国
+			#tag = ZXS		#中行
+			tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_ZXS
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89525"
+	desc = "EVTDESC89525"
+	option = {
+		name = "EVTOPTA89525"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_ZXS
+			set_country_flag = suiji_ZXS_yincang
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 89528
+		}
+	}
+}
+country_event = {
+	id = 89526
+	major = yes
+	trigger = {
+		or = {
+			tag = JIN		#晋国
+			tag = WEI		#魏国
+			tag = ZHO	#赵国
+			tag = HAN	#韩国
+			tag = ZHI		#智国
+			tag = ZXS		#中行
+			#tag = FAS		#范国
+		}
+		any_country = { 
+			tag = JIN
+			has_country_flag = suiji_FAS
+		}
+		ai = no
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89526"
+	desc = "EVTDESC89526"
+	option = {
+		name = "EVTOPTA89526"
+	}
+	option = {
+		name = "EVTOPTC89528"
+		JIN = {
+			clr_country_flag = suiji_FAS
+			set_country_flag = suiji_FAS_yincang
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 89528
+		}
+	}
+}
+country_event = {
+	id = 89527
+	major = yes
+	trigger = {
+		or= {
+			has_country_flag = jinfenlie_WEI_ZHO_HAN
+			has_country_flag = jinfenlie_ZHI_ZXS_FAS
+		}
+		or = {
+			has_country_flag = suijiqi_jieguo_1
+			has_country_flag = suijiqi_jieguo_2
+			has_country_flag = suijiqi_jieguo_3
+		}
+	}
+	mean_time_to_happen = {
+		days = 0
+	}
+	title = "EVTNAME89527"
+	desc = "EVTDESC89527"
+	option = {
+		name = "EVTOPTA89527"
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_WEI_ZHO_HAN
+				has_country_flag = suijiqi_jieguo_1
+			}
+			clr_country_flag = jinfenlie_WEI_ZHO_HAN
+			clr_country_flag = suijiqi_jieguo_1
+			country_event = 89521
+			set_country_flag = suiji_WEI
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_WEI_ZHO_HAN
+				has_country_flag = suijiqi_jieguo_2
+			}
+			clr_country_flag = jinfenlie_WEI_ZHO_HAN
+			clr_country_flag = suijiqi_jieguo_2
+			country_event = 89522
+			set_country_flag = suiji_ZHO
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_WEI_ZHO_HAN
+				has_country_flag = suijiqi_jieguo_3
+			}
+			clr_country_flag = jinfenlie_WEI_ZHO_HAN
+			clr_country_flag = suijiqi_jieguo_3
+			country_event = 89523
+			set_country_flag = suiji_HAN
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_ZHI_ZXS_FAS
+				has_country_flag = suijiqi_jieguo_1
+			}
+			clr_country_flag = jinfenlie_ZHI_ZXS_FAS
+			clr_country_flag = suijiqi_jieguo_1
+			country_event = 89524
+			set_country_flag = suiji_ZHI
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_ZHI_ZXS_FAS
+				has_country_flag = suijiqi_jieguo_2
+			}
+			clr_country_flag = jinfenlie_ZHI_ZXS_FAS
+			clr_country_flag = suijiqi_jieguo_2
+			country_event = 89525
+			set_country_flag = suiji_ZXS
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				has_country_flag = jinfenlie_ZHI_ZXS_FAS
+				has_country_flag = suijiqi_jieguo_3
+			}
+			clr_country_flag = jinfenlie_ZHI_ZXS_FAS
+			clr_country_flag = suijiqi_jieguo_3
+			country_event = 89526
+			set_country_flag = suiji_FAS
+		}
+	}
+}
+country_event = {
+	id = 89528
+	major = yes
+	is_triggered_only = yes
+	title = "EVTNAME89528"
+	desc = "EVTDESC89528"
+	option = {
+		name = "EVTOPTA89528"
+	}
+	option = {
+		name = "EVTOPTB89528"
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_WEI_yincang
+			}
+			set_country_flag = suiji_WEI
+		}
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_HAN_yincang
+			}
+			set_country_flag = suiji_HAN
+		}
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_ZHO_yincang
+			}
+			set_country_flag = suiji_ZHO
+		}
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_ZHI_yincang
+			}
+			set_country_flag = suiji_ZHI
+		}
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_ZXS_yincang
+			}
+			set_country_flag = suiji_ZXS
+		}
+		any_country = { 
+			limit = { 
+				tag = JIN
+				has_country_flag = suiji_FAS_yincang
+			}
+			set_country_flag = suiji_FAS
+		}
+	}
+}
+country_event = {
+	id = 89529
+	#法政兴国
+	trigger = { 
+		tag = WEI
+		stability = 3
+		treasury = 500
+		war = no
+		advisor = rear_admiral
+		rear_admiral = 5
+		not = { has_country_flag = WEI_fazhengxingguo }
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89529"
+	desc = "EVTDESC89529"
+	option = {
+		name = "EVTOPTA89529"
+		set_country_flag = WEI_fazhengxingguo
+	}
+}
+country_event = {
+	id = 89530
+	#法武同轨
+	trigger = { 
+		tag = WEI
+		religion = fajia
+		has_country_modifier = mubingzhi
+		war = no
+		MIL = 7
+		not = { has_country_flag = WEI_fawutonggui }
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89530"
+	desc = "EVTDESC89530"
+	option = {
+		name = "EVTOPTA89530"
+		set_country_flag = WEI_fawutonggui
+		capital_scope = {
+			add_province_modifier = { 
+				name = "fawutonggui_shengfen"
+				duration = -1
+			}
+		}
+	}
+}country_event = {
+	id = 89531
+	#稳政叠律
+	trigger = { 
+		or = {
+			and = {
+				tag = FAS
+				stability = 3
+				not = { has_country_flag = FAS_wenzhengdielv }
+			}
+			and = {
+				tag = NPC
+				FAS = {
+					has_country_flag = FAS_wenzhengdielv
+					or = {
+						not = { has_country_flag = FAS_wenzhengdielv_jishi }
+						had_country_flag = { 
+							flag = FAS_wenzhengdielv_jishi
+							days = 365
+						}
+					}
+					or = {
+						and = {
+							stability = 3
+							not = { has_country_modifier = FAS_wenzheng20 }
+						}
+						and = {
+							not = { stability = 3 }
+							not = { has_country_flag = FAS_wenzhengdielv_0jibiaoji }
+						}
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89531"
+	desc = "EVTDESC89531"
+	option = {
+		name = "EVTOPTA89531"
+		any_country = { 
+			limit = { 
+				tag = FAS
+				not = { has_country_flag = FAS_wenzhengdielv }
+			}
+			set_country_flag = FAS_wenzhengdielv
+			set_country_flag = FAS_wenzhengdielv_0jibiaoji
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_flag = FAS_wenzhengdielv_0jibiaoji
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			clr_country_flag = FAS_wenzhengdielv_0jibiaoji
+			add_country_modifier = { 
+				name = "FAS_wenzheng1"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng1
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng1
+			add_country_modifier = { 
+				name = "FAS_wenzheng2"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng2
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng2
+			add_country_modifier = { 
+				name = "FAS_wenzheng3"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng3
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng3
+			add_country_modifier = { 
+				name = "FAS_wenzheng4"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng4
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng4
+			add_country_modifier = { 
+				name = "FAS_wenzheng5"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng5
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng5
+			add_country_modifier = { 
+				name = "FAS_wenzheng6"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng6
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng6
+			add_country_modifier = { 
+				name = "FAS_wenzheng7"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng7
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng7
+			add_country_modifier = { 
+				name = "FAS_wenzheng8"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng8
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng8
+			add_country_modifier = { 
+				name = "FAS_wenzheng9"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng9
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng9
+			add_country_modifier = { 
+				name = "FAS_wenzheng10"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 10
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng10
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng10
+			add_country_modifier = { 
+				name = "FAS_wenzheng11"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 20
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng11
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng11
+			add_country_modifier = { 
+				name = "FAS_wenzheng12"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 30
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng12
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng12
+			add_country_modifier = { 
+				name = "FAS_wenzheng13"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 40
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng13
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng13
+			add_country_modifier = { 
+				name = "FAS_wenzheng14"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 50
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng14
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng14
+			add_country_modifier = { 
+				name = "FAS_wenzheng15"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 60
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng15
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng15
+			add_country_modifier = { 
+				name = "FAS_wenzheng16"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 70
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng16
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng16
+			add_country_modifier = { 
+				name = "FAS_wenzheng17"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 80
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng17
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng17
+			add_country_modifier = { 
+				name = "FAS_wenzheng18"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 90
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng18
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng18
+			add_country_modifier = { 
+				name = "FAS_wenzheng19"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				stability = 3
+				government_tech = 100
+				or = {
+					not = { has_country_flag = FAS_wenzhengdielv_jishi }
+					had_country_flag = { 
+						flag = FAS_wenzhengdielv_jishi
+						days = 365
+					}
+				}
+				has_country_modifier = FAS_wenzheng19
+			}
+			set_country_flag = FAS_wenzhengdielv_jishi
+			remove_country_modifier = FAS_wenzheng19
+			add_country_modifier = { 
+				name = "FAS_wenzheng20"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				not = { stability = 3 }
+			}
+			clr_country_flag = FAS_wenzhengdielv_jishi
+			set_country_flag = FAS_wenzhengdielv_0jibiaoji
+			remove_country_modifier = FAS_wenzheng1
+			remove_country_modifier = FAS_wenzheng2
+			remove_country_modifier = FAS_wenzheng3
+			remove_country_modifier = FAS_wenzheng4
+			remove_country_modifier = FAS_wenzheng5
+			remove_country_modifier = FAS_wenzheng6
+			remove_country_modifier = FAS_wenzheng7
+			remove_country_modifier = FAS_wenzheng8
+			remove_country_modifier = FAS_wenzheng9
+			remove_country_modifier = FAS_wenzheng10
+			remove_country_modifier = FAS_wenzheng11
+			remove_country_modifier = FAS_wenzheng12
+			remove_country_modifier = FAS_wenzheng13
+			remove_country_modifier = FAS_wenzheng14
+			remove_country_modifier = FAS_wenzheng15
+			remove_country_modifier = FAS_wenzheng16
+			remove_country_modifier = FAS_wenzheng17
+			remove_country_modifier = FAS_wenzheng18
+			remove_country_modifier = FAS_wenzheng19
+			remove_country_modifier = FAS_wenzheng20
+		}
+	}
+}
+country_event = {
+	id = 89532
+	#谋定山河
+	trigger = { 
+		or = {
+			and = {
+				tag = FAS
+				advisor = colonial_governor
+				colonial_governor = 5
+				stability = 3
+				government_tech = 20
+				not = { has_country_flag = FAS_moudingshanhe }
+			}
+			and = {
+				tag = NPC
+				FAS = {
+					has_country_flag = FAS_moudingshanhe
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 1
+	}
+	title = "EVTNAME89532"
+	desc = "EVTDESC89532"
+	option = {
+		name = "EVTOPTA89532"
+		set_country_flag = FAS_moudingshanhe
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_flag = FAS_wenzhengdielv_0jibiaoji
+			}
+			remove_country_modifier = FAS_mouding_zeng2
+			remove_country_modifier = FAS_mouding_zeng3
+			remove_country_modifier = FAS_mouding_zeng4
+			remove_country_modifier = FAS_mouding_zeng5
+			remove_country_modifier = FAS_mouding_zeng6
+			remove_country_modifier = FAS_mouding_zeng7
+			remove_country_modifier = FAS_mouding_zeng8
+			remove_country_modifier = FAS_mouding_zeng9
+			remove_country_modifier = FAS_mouding_zeng10
+			remove_country_modifier = FAS_mouding_zeng11
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng1"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng1
+			}
+			remove_country_modifier = FAS_mouding_zeng1
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng2"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng2
+			}
+			remove_country_modifier = FAS_mouding_zeng2
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng3"
+				duration = -1
+			}
+		}		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng3
+			}
+			remove_country_modifier = FAS_mouding_zeng3
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng4"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng4
+			}
+			remove_country_modifier = FAS_mouding_zeng4
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng5"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng5
+			}
+			remove_country_modifier = FAS_mouding_zeng5
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng6"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng6
+			}
+			remove_country_modifier = FAS_mouding_zeng6
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng7"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng7
+			}
+			remove_country_modifier = FAS_mouding_zeng7
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng8"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng8
+			}
+			remove_country_modifier = FAS_mouding_zeng8
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng9"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng9
+			}
+			remove_country_modifier = FAS_mouding_zeng9
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng10"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = yes
+				has_country_modifier = FAS_wenzheng10
+			}
+			remove_country_modifier = FAS_mouding_zeng10
+			add_country_modifier = { 
+				name = "FAS_mouding_zeng11"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = FAS
+				war = no
+				or = {
+					has_country_modifier = FAS_mouding_zeng1
+					has_country_modifier = FAS_mouding_zeng2
+					has_country_modifier = FAS_mouding_zeng3
+					has_country_modifier = FAS_mouding_zeng4
+					has_country_modifier = FAS_mouding_zeng5
+					has_country_modifier = FAS_mouding_zeng6
+					has_country_modifier = FAS_mouding_zeng7
+					has_country_modifier = FAS_mouding_zeng8
+					has_country_modifier = FAS_mouding_zeng9
+					has_country_modifier = FAS_mouding_zeng10
+					has_country_modifier = FAS_mouding_zeng11
+				}
+			}
+			remove_country_modifier = FAS_mouding_zeng1
+			remove_country_modifier = FAS_mouding_zeng2
+			remove_country_modifier = FAS_mouding_zeng3
+			remove_country_modifier = FAS_mouding_zeng4
+			remove_country_modifier = FAS_mouding_zeng5
+			remove_country_modifier = FAS_mouding_zeng6
+			remove_country_modifier = FAS_mouding_zeng7
+			remove_country_modifier = FAS_mouding_zeng8
+			remove_country_modifier = FAS_mouding_zeng9
+			remove_country_modifier = FAS_mouding_zeng10
+			remove_country_modifier = FAS_mouding_zeng11
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_flag = FAS_wenzhengdielv_0jibiaoji
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian2
+			remove_country_modifier = FAS_mouding_jian3
+			remove_country_modifier = FAS_mouding_jian4
+			remove_country_modifier = FAS_mouding_jian5
+			remove_country_modifier = FAS_mouding_jian6
+			remove_country_modifier = FAS_mouding_jian7
+			remove_country_modifier = FAS_mouding_jian8
+			remove_country_modifier = FAS_mouding_jian9
+			remove_country_modifier = FAS_mouding_jian10
+			remove_country_modifier = FAS_mouding_jian11
+			remove_country_modifier = FAS_mouding_jian12
+			remove_country_modifier = FAS_mouding_jian13
+			remove_country_modifier = FAS_mouding_jian14
+			remove_country_modifier = FAS_mouding_jian15
+			remove_country_modifier = FAS_mouding_jian16
+			remove_country_modifier = FAS_mouding_jian17
+			remove_country_modifier = FAS_mouding_jian18
+			remove_country_modifier = FAS_mouding_jian19
+			remove_country_modifier = FAS_mouding_jian20
+			remove_country_modifier = FAS_mouding_jian21
+			add_country_modifier = { 
+				name = "FAS_mouding_jian1"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng1
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian1
+			add_country_modifier = { 
+				name = "FAS_mouding_jian2"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng2
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian2
+			add_country_modifier = { 
+				name = "FAS_mouding_jian3"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng3
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian3
+			add_country_modifier = { 
+				name = "FAS_mouding_jian4"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng4
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian4
+			add_country_modifier = { 
+				name = "FAS_mouding_jian5"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng5
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian5
+			add_country_modifier = { 
+				name = "FAS_mouding_jian6"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng6
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian6
+			add_country_modifier = { 
+				name = "FAS_mouding_jian7"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng7
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian7
+			add_country_modifier = { 
+				name = "FAS_mouding_jian8"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng8
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian8
+			add_country_modifier = { 
+				name = "FAS_mouding_jian9"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng9
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian9
+			add_country_modifier = { 
+				name = "FAS_mouding_jian10"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng10
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian10
+			add_country_modifier = { 
+				name = "FAS_mouding_jian11"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng11
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian11
+			add_country_modifier = { 
+				name = "FAS_mouding_jian12"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng12
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian12
+			add_country_modifier = { 
+				name = "FAS_mouding_jian13"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng13
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian13
+			add_country_modifier = { 
+				name = "FAS_mouding_jian14"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng14
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian14
+			add_country_modifier = { 
+				name = "FAS_mouding_jian15"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng15
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian15
+			add_country_modifier = { 
+				name = "FAS_mouding_jian16"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng16
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian16
+			add_country_modifier = { 
+				name = "FAS_mouding_jian17"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng17
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian17
+			add_country_modifier = { 
+				name = "FAS_mouding_jian18"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng18
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian18
+			add_country_modifier = { 
+				name = "FAS_mouding_jian19"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng19
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian19
+			add_country_modifier = { 
+				name = "FAS_mouding_jian20"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				war_with = FAS
+				FAS = {
+					has_country_modifier = FAS_wenzheng20
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian20
+			add_country_modifier = { 
+				name = "FAS_mouding_jian21"
+				duration = -1
+			}
+		}
+		any_country = { 
+			limit = { 
+				not = { war_with = FAS }
+				or = {
+					has_country_modifier = FAS_mouding_jian1
+					has_country_modifier = FAS_mouding_jian2
+					has_country_modifier = FAS_mouding_jian3
+					has_country_modifier = FAS_mouding_jian4
+					has_country_modifier = FAS_mouding_jian5
+					has_country_modifier = FAS_mouding_jian6
+					has_country_modifier = FAS_mouding_jian7
+					has_country_modifier = FAS_mouding_jian8
+					has_country_modifier = FAS_mouding_jian9
+					has_country_modifier = FAS_mouding_jian10
+					has_country_modifier = FAS_mouding_jian11
+					has_country_modifier = FAS_mouding_jian12
+					has_country_modifier = FAS_mouding_jian13
+					has_country_modifier = FAS_mouding_jian14
+					has_country_modifier = FAS_mouding_jian15
+					has_country_modifier = FAS_mouding_jian16
+					has_country_modifier = FAS_mouding_jian17
+					has_country_modifier = FAS_mouding_jian18
+					has_country_modifier = FAS_mouding_jian19
+					has_country_modifier = FAS_mouding_jian20
+					has_country_modifier = FAS_mouding_jian21
+				}
+			}
+			remove_country_modifier = FAS_mouding_jian1
+			remove_country_modifier = FAS_mouding_jian2
+			remove_country_modifier = FAS_mouding_jian3
+			remove_country_modifier = FAS_mouding_jian4
+			remove_country_modifier = FAS_mouding_jian5
+			remove_country_modifier = FAS_mouding_jian6
+			remove_country_modifier = FAS_mouding_jian7
+			remove_country_modifier = FAS_mouding_jian8
+			remove_country_modifier = FAS_mouding_jian9
+			remove_country_modifier = FAS_mouding_jian10
+			remove_country_modifier = FAS_mouding_jian11
+			remove_country_modifier = FAS_mouding_jian12
+			remove_country_modifier = FAS_mouding_jian13
+			remove_country_modifier = FAS_mouding_jian14
+			remove_country_modifier = FAS_mouding_jian15
+			remove_country_modifier = FAS_mouding_jian16
+			remove_country_modifier = FAS_mouding_jian17
+			remove_country_modifier = FAS_mouding_jian18
+			remove_country_modifier = FAS_mouding_jian19
+			remove_country_modifier = FAS_mouding_jian20
+			remove_country_modifier = FAS_mouding_jian21
 		}
 	}
 }

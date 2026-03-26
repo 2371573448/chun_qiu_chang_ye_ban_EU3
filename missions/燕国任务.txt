@@ -2,6 +2,7 @@
 zhengfuzhuman = {
 	type = country
 	allow = {
+		not = { tag = YAN }
 		tag = YAN
 		NOT = { has_country_flag = zhengfuzhuman }
 	}
@@ -83,22 +84,21 @@ YAN_annex_WUZ = {
 	type = country
 
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
 		num_of_cities = 12
 		is_lesser_in_union = no
 		is_subject = no
 		or = {
 		  	NOT = { owns = 17 }
-		 	NOT = { owns = 22 }
 			NOT = { owns = 21 }
+		 	NOT = { owns = 22 }
 		}
 		exists = WUZ
 		WUZ = {
 			neighbour = this
 			not = { vassal_of = YAN }
 		}
-		year = 1930
+		year = 1928
 	}
 	abort = {
 		or = {
@@ -113,34 +113,31 @@ YAN_annex_WUZ = {
 		}
 	}
 	success = {
-		WUZ = { 
-			capital_scope = { 
-				controlled_by = THIS
-			}
-		}
+		owns = 17
+		owns = 21
+		owns = 22
 	}
 	chance = {
-		factor = 500
+		factor = 100
+		modifier = {
+			factor = 5
+			has_country_flag = dajishanrong
+		}
 	}
 	immediate = {
 	  	add_temp_claim = 17
-	  	add_temp_claim = 22
 		add_temp_claim = 21
+	  	add_temp_claim = 22
 	}
 	abort_effect = {
 	  	remove_temp_claim = 17
-		remove_temp_claim = 22
 	  	remove_temp_claim = 21
+		remove_temp_claim = 22
 	}
 	effect = {
+	 	add_core = 17
 	 	add_core = 21
 		add_core = 22
-	 	add_core = 17
-	 	add_core = 26
-	 	add_core = 19
-	 	add_core = 20
-		inherit = WUZ
-		WUZ = { white_peace = THIS }
 	}
 }
 
@@ -150,7 +147,6 @@ blow_shanron = {
 	type = country
 
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
 		any_neighbor_country = { 
 			or = { 
@@ -165,10 +161,12 @@ blow_shanron = {
 	abort = {	
 	}
 	success = {
-		NOT = { exists = WUZ }
-		NOT = { exists = GUZ }
-		NOT = { exists = LZG }
-		NOT = { exists = TUH }
+		OR = {
+			war_with = WUZ
+			war_with = GUZ
+			war_with = LZG
+			war_with = TUH
+		}
 	}
 	chance = {
 		factor = 5000
@@ -196,7 +194,6 @@ YAN_annex_GUZ = {
 	type = country
 
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
 		is_lesser_in_union = no
 		is_subject = no
@@ -224,14 +221,17 @@ YAN_annex_GUZ = {
 		}
 	}
 	success = {
-		GUZ = { 
-			capital_scope = { 
-				controlled_by = THIS
-			}
-		}
+		owns = 11
+		owns = 13
+		owns = 15
+		owns = 1157
 	}
 	chance = {
-		factor = 500
+		factor = 100
+		modifier = {
+			factor = 5
+			own = 12
+		}
 	}
 	immediate = {
 	  	add_temp_claim = 11
@@ -246,15 +246,10 @@ YAN_annex_GUZ = {
 	  	remove_temp_claim = 1157
 	}
 	effect = {
-	  	prestige = 0.05
 	 	add_core = 11
 	 	add_core = 13
 	 	add_core = 15
 	 	add_core = 1157
-	 	add_core = 1158
-		inherit = GUZ
-		GUZ = { white_peace = THIS }
-		badboy = 10
 	}
 }
 
@@ -264,7 +259,6 @@ YAN_annex_LZG = {
 	type = country
 
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
 		is_lesser_in_union = no
 		is_subject = no
@@ -278,7 +272,7 @@ YAN_annex_LZG = {
 			neighbour = this
 			not = { vassal_of = YAN }
 		}
-		year = 1930
+		year = 1929
 	}
 	abort = {
 		or = {
@@ -293,14 +287,17 @@ YAN_annex_LZG = {
 		}
 	}
 	success = {
-		LZG = { 
-			capital_scope = { 
-				controlled_by = THIS
-			}
-		}
+		owns = 12
+		owns = 16
+		owns = 18
+		owns = 1157
 	}
 	chance = {
-		factor = 500
+		factor = 100
+		modifier = {
+			factor = 5
+			own = 17
+		}
 	}
 	immediate = {
 	  	add_temp_claim = 12
@@ -332,7 +329,6 @@ YAN_annex_TUH = {
 	type = country
 
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
 		is_lesser_in_union = no
 		is_subject = no
@@ -346,7 +342,7 @@ YAN_annex_TUH = {
 			neighbour = this
 			not = { vassal_of = YAN }
 		}
-		year = 1930
+		year = 1931
 	}
 	abort = {
 		or = {
@@ -361,23 +357,30 @@ YAN_annex_TUH = {
 		}
 	}
 	success = {
-		TUH = { 
-			capital_scope = { 
-				controlled_by = THIS
-			}
-		}
+		own = 7
+		own = 8
+		own = 9
+		own = 1130
+		own = 1131
+		own = 1132
+		own = 1133
+		own = 1134
 	}
 	chance = {
-		factor = 500
+		factor = 100
+		modifier = {
+			factor = 5
+			own = 11
+		}
 	}
 	immediate = {
 	  	add_temp_claim = 7
 	  	add_temp_claim = 8
 	  	add_temp_claim = 9
-	  	add_temp_claim = 1133
-	  	add_temp_claim = 1131
 	  	add_temp_claim = 1130
+	  	add_temp_claim = 1131
 	  	add_temp_claim = 1132
+	  	add_temp_claim = 1133
 	  	add_temp_claim = 1134
 	}
 	abort_effect = {
@@ -391,7 +394,6 @@ YAN_annex_TUH = {
 	  	remove_temp_claim = 1134
 	}
 	effect = {
-	  	prestige = 0.05
 	 	add_core = 7
 	 	add_core = 8
 	 	add_core = 9
@@ -401,10 +403,7 @@ YAN_annex_TUH = {
 	 	add_core = 1132
 	 	add_core = 1133
 	 	add_core = 1134
-	 	add_core = 1159
-		inherit = TUH
-		TUH = { white_peace = THIS }
-		badboy = 10
+		set_country_flag = zhengfuzhuman
 	}
 }
 

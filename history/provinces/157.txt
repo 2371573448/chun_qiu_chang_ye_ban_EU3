@@ -10,7 +10,8 @@ trade_goods = fur
 hre = no
 base_tax = 4
 manpower = 0
-citysize = 6000
+citysize = 10000
+fort1 = yes
 1928.1.1 = { 
 	discovered_by = DAI
 }

@@ -45,61 +45,47 @@ country_decisions = {
 
 country_decisions = { 
 	#如火如荼
-	ruhuorutu = { 
+	ruhuorutu_chunqiu = { 
 		potential = { 
 			owns = 434
 			NOT = { 
 				has_country_flag = ruhuorutu
-                                                                                has_global_flag = zhanguokaishi
+			}
+			NOT = {
+				has_global_flag = zhanguokaishi
 			}
 			tag = WUG
 		}
 		allow = { 
 			stability = 1
-					
+			has_country_flag = wuyuanbenwu
+			has_country_flag = sunzibingfa	
 		}
 		effect = { 
-			wuyue_infantry_29 = 434
-			wuyue_infantry_29 = 434
-			wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434 
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434        
-                                                            wuyue_infantry_29 = 434 
-                                                            wuyue_infantry_29 = 434 
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_cavalry_33 = 434
-                                                            wuyue_cavalry_33 = 434        
-                                                            wuyue_cavalry_33 = 434 
-                                                            wuyue_cavalry_33 = 434 
-                                                            wuyue_cavalry_33 = 434
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434        
-                                                            chariot_34 = 434 
-                                                            chariot_34 = 434 
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434        
-                                                            wuyue_infantry_29 = 434 
-                                                            wuyue_infantry_29 = 434 
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434
-                                                            wuyue_infantry_29 = 434        
-                                                            wuyue_infantry_29 = 434                                                     
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			chariot_34 = 434
+			chariot_34 = 434
+			chariot_34 = 434
+			chariot_34 = 434
 			set_country_flag = ruhuorutu
 		}
 		ai_will_do = { 
 			factor = 1
 		}
 	}
-}
-
-country_decisions = { 
 	#如火如荼
-	ruhuorutu = { 
+	ruhuorutu_zhanguo = { 
 		potential = { 
 			owns = 434
                                                             has_global_flag = zhanguokaishi
@@ -117,33 +103,19 @@ country_decisions = {
 			wuyue_infantry_35 = 434
 			wuyue_infantry_35 = 434
 			wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434 
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434        
-                                                            wuyue_infantry_35 = 434 
-                                                            wuyue_infantry_35 = 434 
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434        
-                                                            wuyue_infantry_35 = 434 
-                                                            wuyue_infantry_35 = 434 
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_infantry_35 = 434
-                                                            wuyue_cavalry_33 = 434
-                                                            wuyue_cavalry_33 = 434        
-                                                            wuyue_cavalry_33 = 434 
-                                                            wuyue_cavalry_33 = 434 
-                                                            wuyue_cavalry_33 = 434
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434        
-                                                            chariot_34 = 434 
-                                                            chariot_34 = 434 
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434
-                                                            chariot_34 = 434                                                     
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			wuyue_infantry_35 = 434
+			chariot_34 = 434
+			chariot_34 = 434
+			chariot_34 = 434
+			chariot_34 = 434
 			set_country_flag = ruhuorutu
 		}
 		ai_will_do = { 

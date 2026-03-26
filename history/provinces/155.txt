@@ -9,7 +9,8 @@ capital = "½üÈû"
 trade_goods = spices
 hre = no
 base_tax = 1
-citysize = 5000
+citysize = 10000
+fort1 = yes
 1928.1.1 = { 
 	discovered_by = DAI
 }

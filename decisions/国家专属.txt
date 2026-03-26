@@ -222,6 +222,39 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	tianfujueyiYGO = { 
+		potential = { 
+			tag = YGO
+			not = { 
+				has_country_flag = tianfujueyiYGO
+			}
+		}
+		allow = {
+			ai = no
+			neighbour = WUG
+		}
+		effect = { 
+			set_country_flag = tianfujueyiYGO
+			wuyue_infantry_35 = 438
+			wuyue_infantry_35 = 438
+			wuyue_infantry_35 = 438
+			define_general = {
+				name = "¹´¼ù"
+				shock = 6
+				fire = 6
+				siege = 6
+				manuever = 6
+				rank = 6
+			}
+			add_country_modifier = { 
+				name = "YGO_buff3"
+				duration = 7300
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 }
 cultural_decisions = {
 	tianfujueyiCHI1 = { 
@@ -474,6 +507,55 @@ cultural_decisions = {
 					}
 				}
 			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiWEI = { 
+		potential = { 
+			tag = WEI
+			not = { 
+				has_country_flag = tianfujueyiWEI
+			}
+			has_country_flag = WEI_fazhengxingguo
+		}
+		allow = { 
+		}
+		effect = { 
+			set_country_flag = tianfujueyiWEI
+			religion = fajia
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiWEI_ZHO_HAN = { 
+		potential = { 
+			or = {
+				tag = WEI
+				tag = ZHO
+				tag = HAN
+			}
+			not = { 
+				has_country_flag = tianfujueyiWEI_ZHO_HAN
+			}
+		}
+		allow = { 
+		}
+		effect = { 
+			set_country_flag = tianfujueyiWEI_ZHO_HAN
+			any_country = { 
+				limit = { 
+					or = {
+						tag = WEI
+						tag = ZHO
+						tag = HAN
+					}
+				}
+				create_alliance = this
+			}
+			stability = 1
 		}
 		ai_will_do = { 
 			factor = 1
@@ -838,6 +920,355 @@ province_decisions = {
 						has_province_flag = tianfujueyiCHI2_shenfenbiaoji
 					}
 					citysize = 2000
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiWEI_2 = { 
+		potential = { 
+			owner = {
+				tag = WEI
+				has_country_flag = WEI_fawutonggui
+			}
+			has_province_modifier = fawutonggui_shengfen
+		}
+		allow = { 
+			owner = { 
+				tag = WEI
+				has_country_flag = WEI_fawutonggui
+				or = {
+					and = {
+						unit_type = chinese
+						or = {
+							and = {
+								not = { land_tech = 1 }
+								not = { zhongyuan_infantry_1 = 50 }
+							}
+							and = {
+								land_tech = 1
+								not = { land_tech = 7 }
+								not = { zhongyuan_infantry_7 = 50 }
+							}
+							and = {
+								land_tech = 7
+								not = { land_tech = 12 }
+								not = { zhongyuan_infantry_12 = 50 }
+							}
+							and = {
+								land_tech = 12
+								not = { land_tech = 18 }
+								not = { zhongyuan_infantry_18 = 50 }
+							}
+							and = {
+								land_tech = 18
+								not = { land_tech = 24 }
+								not = { zhongyuan_infantry_24 = 50 }
+							}
+							and = {
+								land_tech = 24
+								not = { land_tech = 30 }
+								not = { zhongyuan_infantry_30 = 50 }
+							}
+							and = {
+								land_tech = 30
+								not = { land_tech = 38 }
+								not = { zhongyuan_infantry_38 = 50 }
+							}
+							and = {
+								land_tech = 38
+								not = { land_tech = 46 }
+								not = { zhongyuan_infantry_46 = 50 }
+							}
+							and = {
+								land_tech = 46
+								not = { land_tech = 52 }
+								not = { zhongyuan_infantry_52 = 50 }
+							}
+							and = {
+								land_tech = 52
+								not = { land_tech = 61 }
+								not = { zhongyuan_infantry_61 = 50 }
+							}
+							and = {
+								land_tech = 61
+								not = { land_tech = 68 }
+								not = { zhongyuan_infantry_68 = 50 }
+							}
+						}
+					}
+					and = {
+						unit_type = weiguo
+						or = {
+							and = {
+								not = { land_tech = 39 }
+								not = { weiguo_infantry_39 = 50 }
+							}
+							and = {
+								land_tech = 39
+								not = { land_tech = 45 }
+								not = { weiguo_infantry_45 = 50 }
+							}
+							and = {
+								land_tech = 45
+								not = { land_tech = 49 }
+								not = { weiguo_infantry_49 = 50 }
+							}
+							and = {
+								land_tech = 49
+								not = { land_tech = 53 }
+								not = { weiguo_infantry_53 = 50 }
+							}
+							and = {
+								land_tech = 53
+								not = { land_tech = 58 }
+								not = { weiguo_infantry_58 = 50 }
+							}
+							and = {
+								land_tech = 58
+								not = { land_tech = 63 }
+								not = { weiguo_infantry_63 = 50 }
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = { 
+			owner = { 
+				treasury = -20
+			}
+			any_country = { 
+				limit = { 
+					has_country_flag = WEI_fawutonggui
+					unit_type = chinese
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						not = { land_tech = 1 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_1 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 1
+						not = { land_tech = 7 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_7 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 7
+						not = { land_tech = 12 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_12 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 12
+						not = { land_tech = 18 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_18 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 18
+						not = { land_tech = 24 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_24 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 24
+						not = { land_tech = 30 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_30 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 30
+						not = { land_tech = 38 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_38 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 38
+						not = { land_tech = 46 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_46 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 46
+						not = { land_tech = 52 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_52 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 52
+						not = { land_tech = 61 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_61 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 61
+						not = { land_tech = 68 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						zhongyuan_infantry_68 = current
+					}
+				}
+			}
+			any_country = { 
+				limit = { 
+					has_country_flag = WEI_fawutonggui
+					unit_type = weiguo
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						not = { land_tech = 39 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_39 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 39
+						not = { land_tech = 45 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_45 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 45
+						not = { land_tech = 49 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_49 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 49
+						not = { land_tech = 53 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_53 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 53
+						not = { land_tech = 58 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_58 = current
+					}
+				}
+				any_country = { 
+					limit = { 
+						has_country_flag = WEI_fawutonggui
+						land_tech = 58
+						not = { land_tech = 63 }
+					}
+					any_owned = {
+						limit = { 
+							is_capital = yes
+						}
+						weiguo_infantry_63 = current
+					}
 				}
 			}
 		}

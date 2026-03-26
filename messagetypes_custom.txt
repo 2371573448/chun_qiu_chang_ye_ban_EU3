@@ -303,7 +303,7 @@ popup=yes
 idle=no
 option=yes
 pausepopup=no
-icon=yes
+icon=no
 categories="cat_event"
 }
 DISCOVERY_SPREAD=
@@ -2366,12 +2366,12 @@ categories="cat_combat"
 SIEGEOVER=
 {
 log=yes
-onmap=no
+onmap=yes
 popup=no
 idle=no
 option=yes
 pausepopup=no
-icon=no
+icon=yes
 categories="cat_combat"
 }
 NAVALBATTLEOVER=

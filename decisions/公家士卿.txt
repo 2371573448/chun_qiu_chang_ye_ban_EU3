@@ -244,6 +244,7 @@ province_decisions = {
 			}
 			OR = { 
 				has_province_modifier = vassal_territory
+				has_province_modifier = JIN_vassal_territory
 				has_province_modifier = noble_territory
 			}
 		}
@@ -273,6 +274,7 @@ province_decisions = {
 				badboy = 0.5
 			}
 			remove_province_modifier = vassal_territory
+			remove_province_modifier = JIN_vassal_territory
 			remove_province_modifier = noble_territory
 			add_province_modifier = { 
 				name = "monarch_territory"
@@ -291,6 +293,7 @@ province_decisions = {
 			}
 			OR = { 
 				has_province_modifier = vassal_territory
+				has_province_modifier = JIN_vassal_territory
 				has_province_modifier = noble_territory
 			}
 		}
@@ -313,6 +316,7 @@ province_decisions = {
 				badboy = 0.5
 			}
 			remove_province_modifier = vassal_territory
+			remove_province_modifier = JIN_vassal_territory
 			remove_province_modifier = noble_territory
 			add_province_modifier = { 
 				name = "monarch_territory"
@@ -354,7 +358,10 @@ province_decisions = {
 				has_country_flag = fengjunzhidu
 				idea = shrewd_commerce_practise
 			}
-			has_province_modifier = vassal_territory
+			or = {
+				has_province_modifier = vassal_territory
+				has_province_modifier = JIN_vassal_territory
+			}
 		}
 		allow = { 
 			owner = { 
@@ -367,6 +374,7 @@ province_decisions = {
 				prestige = -0.05
 			}
 			remove_province_modifier = vassal_territory
+			remove_province_modifier = JIN_vassal_territory
 			add_province_modifier = { 
 				name = "noble_territory"
 				duration = -1

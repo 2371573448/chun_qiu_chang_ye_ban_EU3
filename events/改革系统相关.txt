@@ -139,6 +139,10 @@ country_event = {
 			factor = 1.5
 			tag = WEI
 		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
+		}
 	}
 	title = "EVTNAME1601"
 	desc = "EVTDESC1601"
@@ -308,6 +312,10 @@ country_event = {
 			factor = 1.5
 			tag = WEI
 		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
+		}
 	}
 	title = "EVTNAME1603"
 	desc = "EVTDESC1603"
@@ -476,6 +484,10 @@ country_event = {
 		modifier = { 
 			factor = 1.5
 			tag = WEI
+		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
 		}
 	}
 	title = "EVTNAME1605"
@@ -718,6 +730,10 @@ country_event = {
 			factor = 1.5
 			tag = WEI
 		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
+		}
 	}
 	title = "EVTNAME1608"
 	desc = "EVTDESC1608"
@@ -887,6 +903,10 @@ country_event = {
 			factor = 1.5
 			tag = WEI
 		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
+		}
 	}
 	title = "EVTNAME1610"
 	desc = "EVTDESC1610"
@@ -1055,6 +1075,10 @@ country_event = {
 		modifier = { 
 			factor = 1.5
 			tag = WEI
+		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
 		}
 	}
 	title = "EVTNAME1612"
@@ -1226,6 +1250,10 @@ country_event = {
 			factor = 1.5
 			tag = WEI
 		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
+		}
 	}
 	title = "EVTNAME1614"
 	desc = "EVTDESC1614"
@@ -1395,6 +1423,10 @@ country_event = {
 		modifier = { 
 			factor = 1.5
 			tag = WEI
+		}
+		modifier = { 
+			factor = 2
+			has_country_flag = tianfujueyiWEI
 		}
 	}
 	title = "EVTNAME1616"

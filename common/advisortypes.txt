@@ -53,7 +53,7 @@ naval_reformer = {
 ######################################################
 #新军领袖
 army_reformer = { 
-	land_tech_investment = 2.85
+	land_tech_investment = 2.5
 	land_morale = 0.05
 	land_tech_cost_modifier = -0.02
 	army_tradition_cost = 0.08
@@ -164,7 +164,7 @@ master_of_mint = {
 #经济之才
 banker = {
 	global_trade_income_modifier = 0.02
-	global_tax_modifier = -0.05
+	global_tax_modifier = -0.025
 	interest = -0.01
 	cultural_tradition_cost = 0.2
 }
@@ -239,7 +239,7 @@ privateer = {
 ######################################################
 #兵法名家
 sergeant_major_general = {
-	army_tradition = 0.01
+	army_tradition = 0.008
 	army_tradition_cost = 0.05
 	cultural_tradition_cost = 0.15
 	
@@ -248,7 +248,7 @@ sergeant_major_general = {
 ######################################################
 #三军先锋
 grand_captain = {
-	leader_shock = 0.5
+	leader_shock = 0.25
 	army_tradition = -0.002
 	land_morale = 0.1
 	army_tradition_cost = 0.1
@@ -258,7 +258,7 @@ grand_captain = {
 ######################################################
 #军事统帅
 army_organiser = {
-	leader_fire = 0.5
+	leader_fire = 0.25
 	army_tradition = -0.002
 	land_forcelimit_modifier = 0.03
 	discipline = 0.02
@@ -278,7 +278,7 @@ commandant = {
 ######################################################
 #军需官员
 quartermaster = {
-	leader_naval_manuever = 0.5
+	leader_naval_manuever = 0.25
 	army_tradition = -0.002
 	infantry_cost = -0.015
 	army_tradition_cost = 0.1

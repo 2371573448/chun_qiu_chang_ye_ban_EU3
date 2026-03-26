@@ -753,115 +753,56 @@ cultural_decisions = {
 	}
 	junzhi_changbeizhi = {
 		potential = { 
-			capital_scope = { hre = yes }
 			has_country_flag = mil_reform2
-			idea = military_drill
 			not = { idea = napoleonic_warfare }
 			not = { has_country_modifier = changbeizhi }
 		}
 		allow = { 
 			stability = 1
-			treasury = 200
-			OR = {
-				not = {
-					has_country_flag = junzhizhuanbian
-				}
-				had_country_flag = { 
-					flag = junzhizhuanbian
-					days = 1825
-				}
-			}
+			MIL = 5
 		}
 		effect = { 
-			stability = -2
-			treasury = -200
+			stability = -1
 			add_country_modifier = { 
 				name = "changbeizhi"
 				duration = -1
 			}
-			remove_country_modifier = mubingzhi
-			remove_country_modifier = zhengzhaozhi
 		}
 	}
 	junzhi_mubingzhi = {
 		potential = { 
-			capital_scope = { hre = yes }
 			has_country_flag = mil_reform2
-			idea = military_drill
 			not = { idea = napoleonic_warfare }
 			not = { has_country_modifier = mubingzhi }
 		}
 		allow = { 
-			stability = 2
-			treasury = 300
-			OR = {
-				not = {
-					has_country_flag = junzhizhuanbian
-				}
-				had_country_flag = { 
-					flag = junzhizhuanbian
-					days = 1825
-				}
-			}
+			stability = 1
+			MIL = 5
 		}
 		effect = { 
-			stability = -2
-			treasury = -300
+			stability = -1
 			add_country_modifier = { 
 				name = "mubingzhi"
 				duration = -1
 			}
-			remove_country_modifier = changbeizhi
-			remove_country_modifier = zhengzhaozhi
 		}
 	}
 	junzhi_zhengzhaozhi = {
 		potential = { 
-			capital_scope = { hre = yes }
 			has_country_flag = mil_reform2
-			idea = military_drill
 			not = { idea = napoleonic_warfare }
 			not = { has_country_modifier = zhengzhaozhi }
 		}
 		allow = { 
 			stability = 1
-			treasury = 100
-			OR = {
-				not = {
-					has_country_flag = junzhizhuanbian
-				}
-				had_country_flag = { 
-					flag = junzhizhuanbian
-					days = 1825
-				}
-			}
+			MIL = 5
 		}
 		effect = { 
-			set_country_flag = junzhizhuanbian
 			stability = -1
-			treasury = -100
 			add_country_modifier = { 
 				name = "zhengzhaozhi"
 				duration = -1
 			}
-			remove_country_modifier = changbeizhi
-			remove_country_modifier = mubingzhi
-		}
-	}
-	junzhi_quxiao = {
-		potential = { 
-			or = {
-				has_country_modifier = changbeizhi
-				has_country_modifier = mubingzhi
-				has_country_modifier = zhengzhaozhi
-			}
-		}
-		allow = { 
-		}
-		effect = { 
-			remove_country_modifier = changbeizhi
-			remove_country_modifier = mubingzhi
-			remove_country_modifier = zhengzhaozhi
 		}
 	}
 }

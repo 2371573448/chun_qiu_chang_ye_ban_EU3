@@ -634,16 +634,6 @@ country_decisions = {
 					duration = 1825
 				}
 			}
-			any_country = { 
-				limit = { 
-					tag = THIS
-					tag = FAS
-					has_country_modifier = chengwenfa
-				}
-				badboy = -2
-				stability = 2
-				remove_country_modifier = shoujiushili7
-			}
 		}
 		ai_will_do = { 
 			factor = 1
@@ -692,16 +682,6 @@ country_decisions = {
 					name = "shoujiushili7"
 					duration = 1825
 				}
-			}
-			any_country = { 
-				limit = { 
-					tag = THIS
-					tag = FAS
-					has_country_modifier = chengwenfa
-				}
-				badboy = -1
-				stability = 2
-				remove_country_modifier = shoujiushili7
 			}
 		}
 		ai_will_do = { 

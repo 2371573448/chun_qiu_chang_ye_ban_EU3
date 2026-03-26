@@ -2256,3 +2256,27 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = 4293
+	trigger = {
+		tag = NPC
+		1143 = {
+			NOT = { has_province_modifier = "liaohaiweijin" } 
+		}
+	}
+	mean_time_to_happen = {
+		months = 0
+	}
+	title = "EVTNAME4293"
+	desc = "EVTDESC4293"
+	option = {
+		name = "EVTOPTA4293"
+		1143 = {
+			add_province_modifier = {
+				name = "liaohaiweijin"
+				duration = -1
+			}
+		}
+	}
+}

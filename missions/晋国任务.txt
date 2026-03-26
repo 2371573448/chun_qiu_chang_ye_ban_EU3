@@ -274,6 +274,7 @@ annex_DAR = {
 	success = {
 		owns = 66
 		owns = 67
+		owns = 1257
 	}
 	chance = {
 		factor = 500
@@ -281,15 +282,18 @@ annex_DAR = {
 	immediate = {
 		add_temp_claim = 66
 		add_temp_claim = 67
+		add_temp_claim = 1257
 	}
 	abort_effect = {
 		remove_temp_claim = 66
 		remove_temp_claim = 67
+		remove_temp_claim = 1257
 	}
 	effect = {
 		prestige = 0.1
 		add_core = 66
 		add_core = 67
+		add_core = 1257
 		badboy = -2
 	}
 }
@@ -601,7 +605,7 @@ Dominate_the_central_plains_jin = {
 		trade_tech = 0.99
 		production_tech = 0.99
 		government_tech = 0.99
-		add_imperial_influence = 40
+		add_imperial_influence = 15
 	}
 }
 
@@ -1108,32 +1112,40 @@ annex_GAL = {
 		}
 	}
 	success = {
-	                    owns = 69
+		owns = 69
+		owns = 80
 		owns = 1098
-	                    owns = 1099
-                                        owns = 1100
+		owns = 1099
+		owns = 1100
+		owns = 1101
 	}
 	chance = {
 		factor = 400
 	}
 	immediate = {
 		add_temp_claim = 69
+		add_temp_claim = 80
 		add_temp_claim = 1098
 		add_temp_claim = 1099
-                                        add_temp_claim = 1100
+		add_temp_claim = 1100
+		add_temp_claim = 1101
 	}
 	abort_effect = {
 		remove_temp_claim = 69
+		remove_temp_claim = 80
 		remove_temp_claim = 1098
 		remove_temp_claim = 1099
-                                        remove_temp_claim = 1100
+		remove_temp_claim = 1100
+		remove_temp_claim = 1101
 	}
 	effect = {
 		prestige = 0.1
 		add_core = 69
+		add_core = 80
 		add_core = 1098
 		add_core = 1099
-                                        add_core = 1100
+		add_core = 1100
+		add_core = 1101
 		badboy = -2
 	}
 }

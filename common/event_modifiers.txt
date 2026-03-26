@@ -304,10 +304,31 @@ vassal_territory = {
 	population_growth = 0.016
 	icon = 16
 }
-JIN_buff2 = { 
-	# 卿士封邑
-	local_tax_modifier = 0.12
-	local_manpower_modifier = 0.15
+JIN_vassal_territory = { 
+	# 晋卿士封邑
+	local_trade_income_modifier = 0.15
+	local_revolt_risk = 1
+	direct_tax_percentage = -0.15
+	stability_cost = -10
+	population_growth = 0.016
+	discipline = 0.0015
+	icon = 16
+}
+JIN_buff3 = { 
+	# 庭倾气弱
+	global_revolt_risk = 3
+	stability_cost_modifier = 0.1
+	global_tax_modifier = -0.2
+	discipline = -0.05
+	land_morale = -0.5
+	icon = 16
+}
+JIN_buff4 = { 
+	# 以公平定乱，以公心兴邦
+	discipline = 0.02
+	land_morale = 0.2
+	prestige = 0.01
+	legitimacy = 0.05
 	icon = 16
 }
 noble_discontent = { 
@@ -432,19 +453,21 @@ total_war = {
 }
 changbeizhi = {
 	global_tax_modifier = -0.15
-	land_morale = 0.50
-	global_manpower_modifier = 0.35
+	land_morale = 0.40
+	land_maintenance_modifier = 0.05
+	global_manpower_modifier = 0.30
 }
 mubingzhi = {
-	global_manpower_modifier = -0.40
-	merc_maintenance_modifier = -0.5
-	mercenary_cost = -0.4
-	army_tradition = 0.007
+	land_morale = 0.6
+	global_manpower_modifier = -0.50
+	merc_maintenance_modifier = -0.33
+	mercenary_cost = -0.2
+	army_tradition = 0.005
 	discipline = 0.08
 }
 zhengzhaozhi = {
-	land_morale = -0.4
-	land_maintenance_modifier = -0.25
+	land_morale = -0.5
+	land_maintenance_modifier = -0.30
 }
 ##################################################################################################
 # 霸主决议
@@ -813,6 +836,14 @@ great_wall = {
 	local_defensiveness = 0.2
 	fort_level = 1
 	icon = 7
+}
+
+#辽海危津
+liaohaiweijin = {
+	supply_limit = -0.5
+	attrition = 10
+	max_attrition = 10
+	local_movement_speed = -0.8
 }
 ##########################################
 # 省份通用决议
@@ -1404,7 +1435,7 @@ guoshi = {
 #收容周朝遗民
 zhouchaoyimin = {
 	cultural_tradition = 0.02
-	badboy = -0.15
+	badboy = -0.30
 	production_tech_investment = 10
 	government_tech_investment = 10
 	trade_tech_investment = 10
@@ -2280,6 +2311,11 @@ YGO_buff2 = {
 	local_colonial_growth = 0.25
 	icon = 5
 }
+YGO_buff3 = {
+	discipline = 0.10
+	land_morale = 1
+	icon = 5
+}
 QIG_buff1 = {
 	officials = 1
 	army_tradition = -0.03
@@ -2394,6 +2430,13 @@ bianfatuqiang_buff = {
 	officials = 0.3
 	icon = 1
 }
+#朝鲜
+JSG_buff2_shengfen = {
+	population_growth = 0.03
+}
+JSG_buff3_shengfen = {
+	population_growth = -0.01
+}
 #内政顾问
 YAN_ad1 = {
 	war_exhaustion = -0.02
@@ -2495,6 +2538,112 @@ shangjunzhushu = {
 	land_morale = 0.25
 	production_efficiency = 0.03
 	icon = 3
+}
+#魏国天赋
+fawutonggui_shengfen = {
+	local_regiment_cost = 1
+	icon = 3
+}
+#范氏天赋
+FAS_wenzheng1 = {
+	global_tax_modifier = 0.05
+	production_efficiency = 0.02
+	trade_efficiency = -0.01
+}
+FAS_wenzheng2 = {
+	global_tax_modifier = 0.10
+	production_efficiency = 0.04
+	trade_efficiency = -0.02
+}
+FAS_wenzheng3 = {
+	global_tax_modifier = 0.15
+	production_efficiency = 0.06
+	trade_efficiency = -0.03
+}
+FAS_wenzheng4 = {
+	global_tax_modifier = 0.20
+	production_efficiency = 0.08
+	trade_efficiency = -0.04
+}
+FAS_wenzheng5 = {
+	global_tax_modifier = 0.25
+	production_efficiency = 0.10
+	trade_efficiency = -0.05
+}
+FAS_wenzheng6 = {
+	global_tax_modifier = 0.30
+	production_efficiency = 0.12
+	trade_efficiency = -0.06
+}
+FAS_wenzheng7 = {
+	global_tax_modifier = 0.35
+	production_efficiency = 0.14
+	trade_efficiency = -0.07
+}
+FAS_wenzheng8 = {
+	global_tax_modifier = 0.40
+	production_efficiency = 0.16
+	trade_efficiency = -0.08
+}
+FAS_wenzheng9 = {
+	global_tax_modifier = 0.45
+	production_efficiency = 0.18
+	trade_efficiency = -0.09
+}
+FAS_wenzheng10 = {
+	global_tax_modifier = 0.50
+	production_efficiency = 0.20
+	trade_efficiency = -0.10
+}
+FAS_wenzheng11 = {
+	global_tax_modifier = 0.55
+	production_efficiency = 0.22
+	trade_efficiency = -0.11
+}
+FAS_wenzheng12 = {
+	global_tax_modifier = 0.60
+	production_efficiency = 0.24
+	trade_efficiency = -0.12
+}
+FAS_wenzheng13 = {
+	global_tax_modifier = 0.65
+	production_efficiency = 0.26
+	trade_efficiency = -0.13
+}
+FAS_wenzheng14 = {
+	global_tax_modifier = 0.70
+	production_efficiency = 0.28
+	trade_efficiency = -0.14
+}
+FAS_wenzheng15 = {
+	global_tax_modifier = 0.75
+	production_efficiency = 0.30
+	trade_efficiency = -0.15
+}
+FAS_wenzheng16 = {
+	global_tax_modifier = 0.80
+	production_efficiency = 0.32
+	trade_efficiency = -0.16
+}
+FAS_wenzheng17 = {
+	global_tax_modifier = 0.85
+	production_efficiency = 0.34
+	trade_efficiency = -0.17
+}
+FAS_wenzheng18 = {
+	global_tax_modifier = 0.90
+	production_efficiency = 0.36
+	trade_efficiency = -0.18
+}
+FAS_wenzheng19 = {
+	global_tax_modifier = 0.95
+	production_efficiency = 0.38
+	trade_efficiency = -0.19
+}
+FAS_wenzheng20 = {
+	global_tax_modifier = 1.00
+	production_efficiency = 0.40
+	trade_efficiency = -0.20
 }
 CHE_shanrang = {
 	legitimacy = -0.02
@@ -2782,7 +2931,7 @@ tianfujueyixiuzhengQIN = {
 	leader_shock = 1
 }
 tianfujueyixiuzhengCHU = {
-	badboy = 0.25
+	#badboy = 0.25
 	badboy_limit = 4
 	diplomatic_skill = -2
 }
@@ -3531,5 +3680,18 @@ chushichuantong_junshi = {
 }
 #初始恶名
 chushieming = {
-	badboy = -0.2
+	badboy = -0.3
+}
+#初始税兵
+chushishuibing1 = {
+	global_tax_modifier = 0.5
+	global_manpower = 1
+}
+chushishuibing2 = {
+	global_tax_modifier = 0.2
+	global_manpower = 1
+}
+chushishuibing3 = {
+	global_tax_modifier = 0.3
+	global_manpower = 1
 }

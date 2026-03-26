@@ -31,9 +31,12 @@ country_decisions = {
 			add_core = 115
 			add_core = 120
 			add_core = 122
-		}
+			}
 			prestige = 0.05 
 			change_tag = CHI
+			stability = 3
+			manpower = 0.9
+			manpower = 10
 		}
 		ai_will_do = {
 			factor = 1
@@ -60,7 +63,6 @@ country_decisions = {
 	 		owns = 1107
 	 		owns = 1108
 	 		owns = 1109
-	 		owns = 1255
 	 		owns = 1256
 	 		owns = 1286
 		}
@@ -68,6 +70,9 @@ country_decisions = {
 			change_tag = CHI
 			shangdang = { add_core = CHI }
 			add_core = 1286
+			stability = 3
+			manpower = 0.9
+			manpower = 10
 		}
 		ai_will_do = {
 			factor = 1

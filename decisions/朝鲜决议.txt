@@ -3,7 +3,7 @@ country_decisions = {
 	bianshen_chaoxian = { 
 		potential = { 
 			tag = JSG
-                                                            not = { 
+			not = { 
 				has_global_flag = chaoxianguo
 			}
 		}
@@ -16,40 +16,29 @@ country_decisions = {
 				add_core = JSG
 			}
 			technology_group = chinese
-			religion = daojia
+			#religion = daojia
 			prestige = 0.50
-                                                            set_global_flag = chaoxianguo
+			set_global_flag = chaoxianguo
 		}
 		ai_will_do = { 
 			factor = 1
 		}
 	}
-	chaoxianguotu = { 
+	shanglikaihua = { 
 		potential = { 
 			tag = JSG
-			owns = 842
-			OR = {
-				not = { 
-					owns = 1153
-				}
-				not = { 
-					owns = 843
-				}
+			has_global_flag = chaoxianguo
+			not = { 
+				has_global_flag = shanglikaihua
 			}
 		}
 		allow = { 
-			diplomats = 2
+			religion = animism
+			war = no
 		}
 		effect = { 
-			diplomats = -2
-			1153 = {
-				secede_province = JSG
-				culture = THIS
-			}
-			843 = {
-				secede_province = JSG
-				culture = THIS
-			}
+			diplomats = -1
+			set_global_flag = shanglikaihua
 		}
 		ai_will_do = { 
 			factor = 1

@@ -147,24 +147,24 @@ country_event = {
 		set_global_flag = zhongyuanjiesan
 	}
 }
-#开局行动
+#开局行动_全局
 country_event = { 
 	id = 88301
 	major = yes
 	trigger = { 
 		tag = NPC
 		not = { 
-			has_global_flag = chongzhimaoyizhongxin
+			has_global_flag = kaijuxingdong_quanju
 		}
 	}
 	mean_time_to_happen = { 
 		months = 0
 	}
-	title = "EVTNAME88300"
-	desc = "EVTDESC88300"
+	title = "EVTNAME88301"
+	desc = "EVTDESC88301"
 	option = { 
 		name = "EVTOPTA88300"
-		set_global_flag = chongzhimaoyizhongxin
+		set_global_flag = kaijuxingdong_quanju
 		#开局科技
 		any_country = {
 			add_country_modifier = { 
@@ -196,6 +196,25 @@ country_event = {
 			add_country_modifier = { 
 				name = "chushieming"
 				duration = 7300
+			}
+		}
+		#开局税兵
+		any_country = {
+			add_country_modifier = { 
+				name = "chushishuibing1"
+				duration = 7300
+			}
+		}
+		any_country = {
+			add_country_modifier = { 
+				name = "chushishuibing2"
+				duration = 14600
+			}
+		}
+		any_country = {
+			add_country_modifier = { 
+				name = "chushishuibing3"
+				duration = 21900
 			}
 		}
 		#开局重置贸易中心
@@ -270,14 +289,14 @@ country_event = {
 		}
 	}
 }
-#开局属性修正
+#开局行动_局部
 country_event = { 
 	id = 88302
 	major = yes
 	trigger = { 
 		tag = NPC
 		not = { 
-			has_global_flag = kaijushuxing
+			has_global_flag = kaijuxingdong_jubu
 		}
 	}
 	mean_time_to_happen = { 
@@ -287,12 +306,24 @@ country_event = {
 	desc = "EVTDESC88302"
 	option = { 
 		name = "EVTOPTA88302"
-		set_global_flag = kaijushuxing
+		set_global_flag = kaijuxingdong_jubu
 		any_country = {
 			limit = {
 				tag = YGO
 			}
 			colonists = 10
+		}
+		any_country = {
+			limit = {
+				tag = BAG
+			}
+			colonists = 5
+		}
+		any_country = {
+			limit = {
+				tag = SGU
+			}
+			colonists = 5
 		}
 	}
 }

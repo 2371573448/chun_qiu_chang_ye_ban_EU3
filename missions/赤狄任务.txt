@@ -99,26 +99,28 @@ chidi_client_LIO = {
 	  	}
 	}
 	success = {
-		overlord_of = LIO
+		owns = 83
+		owns = 116
+		owns = 1263
 	}
 	chance = {
 		factor = 50
 	}
 	immediate = {
-	 	casus_belli = {
-			type = cb_vassalize_mission
-			months = 120
-			target = LIO
-		}
+		add_temp_claim = 83
+		add_temp_claim = 116
+		add_temp_claim = 1263
 	}
 	abort_effect = {
-	 	remove_casus_belli = {
-			type = cb_vassalize_mission
-			target = LIO
-		}
-	  	 prestige = -0.05
+		remove_temp_claim = 83
+		remove_temp_claim = 116
+		remove_temp_claim = 1263
+		prestige = -0.05
 	}
 	effect = {
+		add_core = 83
+		add_core = 116
+		add_core = 1263
 		prestige = 0.1
 	}
 }
@@ -175,13 +177,38 @@ chidi_eastern_conquest = {
 	}
 	effect = {
 		prestige = 0.3
-		treasury = 50
+		treasury = 450
 		add_core = 116
 		add_core = 118
 		add_core = 130
 		add_core = 131
 		add_core = 875
 		add_core = 877
+		#科技两级
+		land_tech = 0.999
+		naval_tech = 0.999
+		trade_tech = 0.999
+		production_tech = 0.999
+		government_tech = 0.999
+		land_tech = 0.999
+		naval_tech = 0.999
+		trade_tech = 0.999
+		production_tech = 0.999
+		government_tech = 0.999
+		#后备全满
+		manpower = 0.9
+		manpower = 10
+		#10k兵
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
+		rongdi_infantry_13 = 116
 	}
 }
 
@@ -226,6 +253,7 @@ poxingcanwei = {
 	effect = {
 		stability = 1
 		prestige = 0.5
+		treasury = 400
 		add_core = 113
 		add_core = 124
 		add_core = 872

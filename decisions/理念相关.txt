@@ -56,7 +56,10 @@ country_decisions = {
 		effect = { 
 			any_owned = { 
 				limit = { 
-					has_province_modifier = vassal_territory
+					or = {
+						has_province_modifier = vassal_territory
+						has_province_modifier = JIN_vassal_territory
+					}
 				}
 				add_province_modifier = {
 					name = "rebel_sentiment"
@@ -196,11 +199,17 @@ country_decisions = {
 			war = yes
 		}
 		effect = {
-			centralization_decentralization = 1
-			prestige = -0.15
 			add_country_modifier = { 
 				name = "simubuduidongyuan"
 				duration = 3650
+			}
+			any_country = { 
+				limit = { 
+					tag = this
+					not = { has_country_modifier = zhengzhaozhi }
+				}
+				centralization_decentralization = 1
+				prestige = -0.15
 			}
 			any_owned = { 
 				limit = { 
@@ -226,7 +235,10 @@ country_decisions = {
 			}
 			any_owned = { 
 				limit = { 
-					has_province_modifier = vassal_territory
+					or = {
+						has_province_modifier = vassal_territory
+						has_province_modifier = JIN_vassal_territory
+					}
 					citysize = 15000
 				}
 				random_list = { 

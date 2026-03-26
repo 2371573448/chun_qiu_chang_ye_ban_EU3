@@ -9,7 +9,6 @@ country_event = {
 		tag = WUG
 		controls = 434
 		controls = 438
-
 		NOT = { has_global_flag = destoryYGU }
 	}
 	mean_time_to_happen = {
@@ -27,8 +26,8 @@ country_event = {
 		set_global_flag = destoryYGU
 		prestige = 0.10
 		kuaiji = {
-                    add_core = WUG
-                    secede_province = WUG
+			add_core = WUG
+			secede_province = WUG
 		 }
 	}
 }
@@ -39,12 +38,13 @@ country_event = {
 	major = yes
 
 	trigger = {
-		year = 2246
 		tag = YGO
-		not = { tag = YGO }
-		controls = 434
-		controls = 438
-
+		has_country_modifier = YGO_buff3
+		WUG = { 
+			capital_scope = { 
+				controlled_by = THIS
+			}
+		}
 		NOT = { has_global_flag = destoryWUG }
 	}
 	mean_time_to_happen = {
@@ -57,12 +57,11 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA11999"
-	
 		set_global_flag = destoryWUG
 		prestige = 0.10
 		kuaiji = {
-                    add_core = YGO
-                    secede_province = YGO
+			add_core = YGO
+			secede_province = YGO
 		 }
 	}
 }

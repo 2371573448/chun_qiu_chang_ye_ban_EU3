@@ -1,0 +1,151 @@
+#三随机公平随机
+country_event = {
+	id = 8752
+	is_triggered_only = yes
+	trigger = { 
+		tag = NPC
+	}
+	title = "EVTNAME8752"
+	desc = "EVTDESC8752"
+	option = {
+		name = "EVTOPTA8752"
+		clr_country_flag = suijiqi_1_shou
+		clr_country_flag = suijiqi_2_shou
+		clr_country_flag = suijiqi_3_shou
+		clr_country_flag = suijiqi_1
+		clr_country_flag = suijiqi_2
+		clr_country_flag = suijiqi_3
+		random_list = {
+			3333 = {
+				set_country_flag = suijiqi_1_shou
+			}
+			3333 = {
+				set_country_flag = suijiqi_2_shou
+			}
+			3333 = {
+				set_country_flag = suijiqi_3_shou
+			}
+		}
+		country_event = 8753
+	}
+}
+country_event = {
+	id = 8753
+	is_triggered_only = yes
+	title = "EVTNAME8753"
+	desc = "EVTDESC8753"
+	option = {
+		name = "EVTOPTA8753"
+		random_list = {
+			3333 = {
+				set_country_flag = suijiqi_1
+			}
+			3333 = {
+				set_country_flag = suijiqi_2
+			}
+			3333 = {
+				set_country_flag = suijiqi_3
+			}
+		}
+		country_event = 8754
+	}
+}
+country_event = {
+	id = 8754
+	is_triggered_only = yes
+	title = "EVTNAME8754"
+	desc = "EVTDESC8754"
+	option = {
+		name = "EVTOPTA8754"
+		random_list = {
+			3333 = {
+				set_country_flag = suijiqi_1
+			}
+			3333 = {
+				set_country_flag = suijiqi_2
+			}
+			3333 = {
+				set_country_flag = suijiqi_3
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = NPC
+				has_country_flag = suijiqi_1_shou
+				has_country_flag = suijiqi_2
+				has_country_flag = suijiqi_3
+			}
+			any_country = { 
+				limit = { 
+					has_country_flag = suijiqi_mubiao
+				}
+				set_country_flag = suijiqi_jieguo_1
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = NPC
+				has_country_flag = suijiqi_1
+				has_country_flag = suijiqi_2_shou
+				has_country_flag = suijiqi_3
+			}
+			any_country = { 
+				limit = { 
+					has_country_flag = suijiqi_mubiao
+				}
+				set_country_flag = suijiqi_jieguo_2
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = NPC
+				has_country_flag = suijiqi_1
+				has_country_flag = suijiqi_2
+				has_country_flag = suijiqi_3_shou
+			}
+			any_country = { 
+				limit = { 
+					has_country_flag = suijiqi_mubiao
+				}
+				set_country_flag = suijiqi_jieguo_3
+			}
+		}
+		any_country = { 
+			limit = { 
+				tag = NPC
+				not = { 
+					or = {
+						and = {
+							has_country_flag = suijiqi_1_shou
+							has_country_flag = suijiqi_2
+							has_country_flag = suijiqi_3
+						}
+						and = {
+							has_country_flag = suijiqi_1
+							has_country_flag = suijiqi_2_shou
+							has_country_flag = suijiqi_3
+						}
+						and = {
+							has_country_flag = suijiqi_1
+							has_country_flag = suijiqi_2
+							has_country_flag = suijiqi_3_shou
+						}
+					}
+				}
+			}
+			country_event = 8752
+		}
+	}
+}
+#测试用
+country_event = {
+	id = 8755
+	is_triggered_only = yes
+	title = "EVTNAME8755"
+	desc = "EVTDESC8755"
+	option = {
+		name = "EVTOPTA8755"
+		set_country_flag = suijiqi_mubiao
+		NPC = { country_event = 8752 }
+	}
+}

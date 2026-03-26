@@ -522,7 +522,10 @@ province_event = {
 		months = 960
 		modifier = { 
 			factor = 0.15
-			has_province_modifier = vassal_territory
+			or = {
+				has_province_modifier = vassal_territory
+				has_province_modifier = JIN_vassal_territory
+			}
 		}
 		modifier = { 
 			factor = 0.2

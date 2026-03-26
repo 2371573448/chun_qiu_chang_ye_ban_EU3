@@ -500,7 +500,7 @@ monopoly = {
 }
 
 war = {
-	diplomats = 0.5					#1 diplomat yearly if at war.
+	#diplomats = 0.5					#1 diplomat yearly if at war.
 	max_war_exhaustion = 20				#base max at war.
 	war_exhaustion = 0.03
 	merchants = -1					#1 less merchant if at war.
@@ -670,7 +670,7 @@ badboy = {
 	papal_influence = -0.01
 	mercenary_cost = 0.02
 	legitimacy = -0.002
-	diplomats = 0.05
+	#diplomats = 0.05
 }
 
 prestige = {

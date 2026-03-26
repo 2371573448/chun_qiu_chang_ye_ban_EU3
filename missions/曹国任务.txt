@@ -74,6 +74,10 @@ CAO_annex_NYA = {
 			neighbour = this
 			not = { vassal_of = CAO }
 		}
+		OR = {
+			not = { owns = 866 }
+			not = { owns = 867 }
+		}
 	}
 	abort = {
 		or = {

@@ -533,7 +533,7 @@ Dominate_the_central_plains_QIG = {
 		trade_tech = 0.99
 		production_tech = 0.99
 		government_tech = 0.99
-		add_imperial_influence = 40
+		add_imperial_influence = 15
 	}
 }
 
