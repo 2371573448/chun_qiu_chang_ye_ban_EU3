@@ -1,15 +1,14 @@
 country_decisions = { 
 	wushangjiyuan = { 
 		potential = { 
-			tag = WUG
 			not = { 
-				has_country_modifier = wushangjiyuan
+				has_country_flag = wushangjiyuan
 			}
 		}
 		allow = { 
 		}
 		effect = { 
-			set_country_modifier = wushangjiyuan
+			set_country_flag = wushangjiyuan
 			inflation = -2
 			treasury = 200
 		}
