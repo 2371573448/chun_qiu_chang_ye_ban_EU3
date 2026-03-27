@@ -1,83 +1,50 @@
-#征服诸蛮
-zhengfuzhuman = {
+#打击山戎
+blow_shanron = {
+	
 	type = country
+
 	allow = {
-		not = { tag = YAN }
 		tag = YAN
-		NOT = { has_country_flag = zhengfuzhuman }
+		any_neighbor_country = { 
+			or = { 
+				tag = WUZ
+				tag = GUZ
+				tag = LZG
+				tag = TUH
+			}
+		}
+		NOT = { has_country_flag = dajishanrong }
 	}
-	abort = {
+	abort = {	
 	}
 	success = {
-		owns = 7
-		owns = 8
-		owns = 9
-		owns = 11
-		owns = 12
-		owns = 13
-		owns = 15
-		owns = 16
-		owns = 17
-		owns = 18
-		owns = 21
-		owns = 22
-		owns = 1130
-		owns = 1131
-		owns = 1132
-		owns = 1133
-		owns = 1134
-		owns = 1157
-		owns = 1158
+		OR = {
+			war_with = WUZ
+			war_with = GUZ
+			war_with = LZG
+			war_with = TUH
+		}
 	}
 	chance = {
 		factor = 5000
+		modifier = {
+			factor = 0.2
+			not = { num_of_cities = 10 }
+		}
 	}
 	immediate = {
-		add_temp_claim = 7
-		add_temp_claim = 8
-		add_temp_claim = 9
-		add_temp_claim = 11
-		add_temp_claim = 12
-		add_temp_claim = 13
-		add_temp_claim = 15
-		add_temp_claim = 16
-		add_temp_claim = 17
-		add_temp_claim = 18
-		add_temp_claim = 21
-		add_temp_claim = 22
-		add_temp_claim = 1130
-		add_temp_claim = 1131
-		add_temp_claim = 1132
-		add_temp_claim = 1133
-		add_temp_claim = 1134
-		add_temp_claim = 1157
-		add_temp_claim = 1158
+		set_country_flag = dajishanrongchidi
 	}
 	abort_effect = {
+	  	clr_country_flag = dajishanrongchidi
 	}
 	effect = {
-		add_core = 7
-		add_core = 8
-		add_core = 9
-		add_core = 11
-		add_core = 12
-		add_core = 13
-		add_core = 15
-		add_core = 16
-		add_core = 17
-		add_core = 18
-		add_core = 21
-		add_core = 22
-		add_core = 1130
-		add_core = 1131
-		add_core = 1132
-		add_core = 1133
-		add_core = 1134
-		add_core = 1157
-		add_core = 1158
-		set_country_flag = zhengfuzhuman
+		prestige = 0.10
+		set_country_flag = dajishanrong
+	  	clr_country_flag = dajishanrongchidi
 	}
 }
+
 #征服无终
 YAN_annex_WUZ = {
 	
@@ -141,119 +108,6 @@ YAN_annex_WUZ = {
 	}
 }
 
-#打击山戎
-blow_shanron = {
-	
-	type = country
-
-	allow = {
-		tag = YAN
-		any_neighbor_country = { 
-			or = { 
-				tag = WUZ
-				tag = GUZ
-				tag = LZG
-				tag = TUH
-			}
-		}
-		NOT = { has_country_flag = dajishanrong }
-	}
-	abort = {	
-	}
-	success = {
-		OR = {
-			war_with = WUZ
-			war_with = GUZ
-			war_with = LZG
-			war_with = TUH
-		}
-	}
-	chance = {
-		factor = 5000
-		modifier = {
-			factor = 0.2
-			not = { num_of_cities = 10 }
-		}
-	}
-	immediate = {
-		set_country_flag = dajishanrongchidi
-	}
-	abort_effect = {
-	  	clr_country_flag = dajishanrongchidi
-	}
-	effect = {
-		prestige = 0.10
-		set_country_flag = dajishanrong
-	  	clr_country_flag = dajishanrongchidi
-	}
-}
-
-#征服孤竹
-YAN_annex_GUZ = {
-	
-	type = country
-
-	allow = {
-		tag = YAN
-		is_lesser_in_union = no
-		is_subject = no
-		or = {
-		  	NOT = { owns = 11 }
-		 	NOT = { owns = 13 }
-			NOT = { owns = 15 }
-		}
-		exists = GUZ
-		GUZ = {
-			neighbour = this
-			not = { vassal_of = YAN }
-		}
-		year = 1930
-	}
-	abort = {
-		or = {
-			and = {
-				not = { exists = GUZ }
-				not = { owns = 13 }
-				not = { owns = 15 }
-			}
-			is_lesser_in_union = yes
-			is_subject = yes
-		}
-	}
-	success = {
-		owns = 11
-		owns = 13
-		owns = 15
-		owns = 1157
-	}
-	chance = {
-		factor = 100
-		modifier = {
-			factor = 10
-			own = 12
-		}
-	}
-	immediate = {
-	  	add_temp_claim = 11
-	  	add_temp_claim = 13
-	  	add_temp_claim = 15
-	  	add_temp_claim = 1157
-	}
-	abort_effect = {
-	  	remove_temp_claim = 11
-	  	remove_temp_claim = 13
-	  	remove_temp_claim = 15
-	  	remove_temp_claim = 1157
-	}
-	effect = {
-		treasury = 200
-	 	add_core = 11
-	 	add_core = 13
-	 	add_core = 15
-	 	add_core = 1157
-	}
-}
-
 #征服令支
 YAN_annex_LZG = {
 	
@@ -297,7 +151,7 @@ YAN_annex_LZG = {
 		factor = 100
 		modifier = {
 			factor = 10
-			own = 17
+			owns = 17
 		}
 	}
 	immediate = {
@@ -319,6 +173,72 @@ YAN_annex_LZG = {
 	 	add_core = 16
 	 	add_core = 18
 	 	add_core = 1157
+	}
+}
+
+#征服孤竹
+YAN_annex_GUZ = {
+	
+	type = country
+
+	allow = {
+		tag = YAN
+		is_lesser_in_union = no
+		is_subject = no
+		or = {
+		  	NOT = { owns = 11 }
+		 	NOT = { owns = 13 }
+			NOT = { owns = 15 }
+		}
+		exists = GUZ
+		GUZ = {
+			neighbour = this
+			not = { vassal_of = YAN }
+		}
+		year = 1930
+	}
+	abort = {
+		or = {
+			and = {
+				not = { exists = GUZ }
+				not = { owns = 13 }
+				not = { owns = 15 }
+			}
+			is_lesser_in_union = yes
+			is_subject = yes
+		}
+	}
+	success = {
+		owns = 11
+		owns = 13
+		owns = 15
+		owns = 1158
+	}
+	chance = {
+		factor = 100
+		modifier = {
+			factor = 10
+			owns = 12
+		}
+	}
+	immediate = {
+	  	add_temp_claim = 11
+	  	add_temp_claim = 13
+	  	add_temp_claim = 15
+	  	add_temp_claim = 1158
+	}
+	abort_effect = {
+	  	remove_temp_claim = 11
+	  	remove_temp_claim = 13
+	  	remove_temp_claim = 15
+	  	remove_temp_claim = 1158
+	}
+	effect = {
+		treasury = 200
+	 	add_core = 11
+	 	add_core = 13
+	 	add_core = 15
+	 	add_core = 1158
 	}
 }
 
@@ -346,7 +266,7 @@ YAN_annex_TUH = {
 	abort = {
 		or = {
 			and = {
-				not = { exists = TUH}
+				not = { exists = TUH }
 				not = { owns = 12 }
 				not = { owns = 16 }
 				not = { owns = 18 }
@@ -356,20 +276,20 @@ YAN_annex_TUH = {
 		}
 	}
 	success = {
-		own = 7
-		own = 8
-		own = 9
-		own = 1130
-		own = 1131
-		own = 1132
-		own = 1133
-		own = 1134
+		owns = 7
+		owns = 8
+		owns = 9
+		owns = 1130
+		owns = 1131
+		owns = 1132
+		owns = 1133
+		owns = 1134
 	}
 	chance = {
 		factor = 100
 		modifier = {
 			factor = 10
-			own = 11
+			owns = 11
 		}
 	}
 	immediate = {
@@ -406,9 +326,6 @@ YAN_annex_TUH = {
 		set_country_flag = zhengfuzhuman
 	}
 }
-
-
-
 
 #开拓辽东
 kaituoliaodong = {
@@ -637,5 +554,85 @@ YAN_annex_daijun = {
 	 	add_core = 45
 		add_core = 46
 	 	add_core = 51
+	}
+}
+#征服诸蛮
+zhengfuzhuman = {
+	type = country
+	allow = {
+		not = { tag = YAN }
+		tag = YAN
+		NOT = { has_country_flag = zhengfuzhuman }
+	}
+	abort = {
+	}
+	success = {
+		owns = 7
+		owns = 8
+		owns = 9
+		owns = 11
+		owns = 12
+		owns = 13
+		owns = 15
+		owns = 16
+		owns = 17
+		owns = 18
+		owns = 21
+		owns = 22
+		owns = 1130
+		owns = 1131
+		owns = 1132
+		owns = 1133
+		owns = 1134
+		owns = 1157
+		owns = 1158
+	}
+	chance = {
+		factor = 5000
+	}
+	immediate = {
+		add_temp_claim = 7
+		add_temp_claim = 8
+		add_temp_claim = 9
+		add_temp_claim = 11
+		add_temp_claim = 12
+		add_temp_claim = 13
+		add_temp_claim = 15
+		add_temp_claim = 16
+		add_temp_claim = 17
+		add_temp_claim = 18
+		add_temp_claim = 21
+		add_temp_claim = 22
+		add_temp_claim = 1130
+		add_temp_claim = 1131
+		add_temp_claim = 1132
+		add_temp_claim = 1133
+		add_temp_claim = 1134
+		add_temp_claim = 1157
+		add_temp_claim = 1158
+	}
+	abort_effect = {
+	}
+	effect = {
+		add_core = 7
+		add_core = 8
+		add_core = 9
+		add_core = 11
+		add_core = 12
+		add_core = 13
+		add_core = 15
+		add_core = 16
+		add_core = 17
+		add_core = 18
+		add_core = 21
+		add_core = 22
+		add_core = 1130
+		add_core = 1131
+		add_core = 1132
+		add_core = 1133
+		add_core = 1134
+		add_core = 1157
+		add_core = 1158
+		set_country_flag = zhengfuzhuman
 	}
 }

@@ -8814,7 +8814,7 @@ ZXS_buff1 = {
                                         not = { owns = 367 }
 	}
 	army_tradition = 0.01
-	land_morale = 1
+	land_morale = 0.8
 }
 
 ZXS_buff1 = {

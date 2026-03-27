@@ -756,6 +756,8 @@ cultural_decisions = {
 			has_country_flag = mil_reform2
 			not = { idea = napoleonic_warfare }
 			not = { has_country_modifier = changbeizhi }
+			not = { has_country_modifier = mubingzhi }
+			not = { has_country_modifier = zhengzhaozhi }
 		}
 		allow = { 
 			stability = 1
@@ -773,7 +775,9 @@ cultural_decisions = {
 		potential = { 
 			has_country_flag = mil_reform2
 			not = { idea = napoleonic_warfare }
+			not = { has_country_modifier = changbeizhi }
 			not = { has_country_modifier = mubingzhi }
+			not = { has_country_modifier = zhengzhaozhi }
 		}
 		allow = { 
 			stability = 1
@@ -791,6 +795,8 @@ cultural_decisions = {
 		potential = { 
 			has_country_flag = mil_reform2
 			not = { idea = napoleonic_warfare }
+			not = { has_country_modifier = changbeizhi }
+			not = { has_country_modifier = mubingzhi }
 			not = { has_country_modifier = zhengzhaozhi }
 		}
 		allow = { 

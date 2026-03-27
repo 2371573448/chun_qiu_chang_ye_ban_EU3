@@ -1363,7 +1363,7 @@ blow_LIY = {
 	success = {
 		owns = 81
 		owns = 82
-		owns = 85
+		owns = 1109
 	}
 	chance = {
 		factor = 100
@@ -1371,17 +1371,17 @@ blow_LIY = {
 	immediate = {
 		add_temp_claim = 81
 		add_temp_claim = 82
-		add_temp_claim = 85
+		add_temp_claim = 1109
 	}
 	abort_effect = {
 		remove_temp_claim = 81
 		remove_temp_claim = 82
-		remove_temp_claim = 85
+		remove_temp_claim = 1109
 	}
 	effect = {
 		add_core = 81
 		add_core = 82
-                                        add_core = 85
+                                        add_core = 1109
 	}
 }
 #´ò»÷ÂºÊÏ

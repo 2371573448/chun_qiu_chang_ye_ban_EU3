@@ -255,6 +255,56 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	tianfujueyiWEI = { 
+		potential = { 
+			tag = WEI
+			not = { 
+				has_country_flag = tianfujueyiWEI
+			}
+			has_country_flag = WEI_fazhengxingguo
+		}
+		allow = { 
+		}
+		effect = { 
+			set_country_flag = tianfujueyiWEI
+			religion = fajia
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	tianfujueyiWEI_ZHO_HAN = { 
+		potential = { 
+			or = {
+				tag = WEI
+				tag = ZHO
+				tag = HAN
+			}
+			not = { 
+				has_country_flag = tianfujueyiWEI_ZHO_HAN
+			}
+			ai = no
+		}
+		allow = { 
+		}
+		effect = { 
+			set_country_flag = tianfujueyiWEI_ZHO_HAN
+			any_country = { 
+				limit = { 
+					or = {
+						tag = WEI
+						tag = ZHO
+						tag = HAN
+					}
+				}
+				create_alliance = this
+			}
+			stability = 1
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
 }
 cultural_decisions = {
 	tianfujueyiCHI1 = { 
@@ -507,55 +557,6 @@ cultural_decisions = {
 					}
 				}
 			}
-		}
-		ai_will_do = { 
-			factor = 1
-		}
-	}
-	tianfujueyiWEI = { 
-		potential = { 
-			tag = WEI
-			not = { 
-				has_country_flag = tianfujueyiWEI
-			}
-			has_country_flag = WEI_fazhengxingguo
-		}
-		allow = { 
-		}
-		effect = { 
-			set_country_flag = tianfujueyiWEI
-			religion = fajia
-		}
-		ai_will_do = { 
-			factor = 1
-		}
-	}
-	tianfujueyiWEI_ZHO_HAN = { 
-		potential = { 
-			or = {
-				tag = WEI
-				tag = ZHO
-				tag = HAN
-			}
-			not = { 
-				has_country_flag = tianfujueyiWEI_ZHO_HAN
-			}
-		}
-		allow = { 
-		}
-		effect = { 
-			set_country_flag = tianfujueyiWEI_ZHO_HAN
-			any_country = { 
-				limit = { 
-					or = {
-						tag = WEI
-						tag = ZHO
-						tag = HAN
-					}
-				}
-				create_alliance = this
-			}
-			stability = 1
 		}
 		ai_will_do = { 
 			factor = 1

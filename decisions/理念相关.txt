@@ -191,6 +191,7 @@ country_decisions = {
 			NOT = { 
 				religion_group = pagan
 			}
+			not = { has_country_modifier = mubingzhi }
 		}
 		allow = { 
 			NOT = { 
