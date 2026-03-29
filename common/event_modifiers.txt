@@ -273,12 +273,12 @@ shanlinrenkou6 = {
 monarch_territory = { 
 	# 君主直辖
 	officials = 0.03
-	stability_investment = -2
-	production_tech_investment = 0.5
-	naval_tech_investment = 0.5
-	land_tech_investment = 0.5
-	trade_tech_investment = 0.5
-	government_tech_investment = 0.5
+	stability_investment = -0.5
+	#production_tech_investment = 0.5
+	#naval_tech_investment = 0.5
+	#land_tech_investment = 0.5
+	#trade_tech_investment = 0.5
+	#government_tech_investment = 0.5
 	tax_income = 2
 	local_production_efficiency = 0.20
 	icon = 15
@@ -3239,7 +3239,7 @@ CHA_buff = {
 	technology_cost = -1
 }
 CHA_buff2 = {
-	army_tradition = 0.05
+	army_tradition = 0.03
 }
 CHA_buff3 = {
 	leader_shock = 3
@@ -3346,7 +3346,7 @@ weiwangrenwu = {
 	prestige = 0.1
 }
 baohushoudu = {
-	land_morale = 1
+	land_morale = 0.5
 }
 #道家流民
 daojialiumin1 = {
@@ -3940,14 +3940,29 @@ chushieming = {
 }
 #初始税兵
 chushishuibing1 = {
-	global_tax_modifier = 0.5
-	global_manpower = 1
+	global_tax_modifier = 0.25
+	global_manpower = 0.5
 }
 chushishuibing2 = {
-	global_tax_modifier = 0.2
-	global_manpower = 1
+	global_tax_modifier = 0.1
+	global_manpower = 0.5
 }
 chushishuibing3 = {
-	global_tax_modifier = 0.3
-	global_manpower = 1
+	global_tax_modifier = 0.15
+	global_manpower = 0.5
+}
+#新手保护
+changye_zhufu = {
+	land_morale = 1
+	discipline = 0.3
+	land_attrition = -0.9
+	land_maintenance_modifier = -0.5
+}
+changye_jianzheng = {
+	land_morale = 3
+	discipline = 0.5
+}
+changye_xingxuan = {
+	land_morale = 0.3
+	discipline = 0.05
 }

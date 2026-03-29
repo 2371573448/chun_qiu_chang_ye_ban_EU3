@@ -369,7 +369,67 @@ annex_LSS = {
 		add_core = 207
 	}
 }
+#Õ÷·þÂ½»ëÈÖ
+annex_LHR = {
+	
+	type = country
 
+	allow = {
+		tag = LHR
+		or = {
+			not = { owns = 194 }
+			not = { owns = 201 }
+			not = { owns = 1090 }
+		}
+		exists = LSS
+		LSS = {
+			or = {
+				owns = 194
+				owns = 201
+				owns = 1090
+			}
+			neighbour = this
+			not = { vassal_of = LHR }
+		}
+		year = 1894
+		
+	}
+	abort = {
+	  	or = {
+		  	is_subject = yes
+		  	is_lesser_in_union = yes
+			and = {
+				not = { exists = LSS }
+				not = { owns = 194 }
+				not = { owns = 201 }
+				not = { owns = 1090 }
+			}
+		}
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	 	add_temp_claim = 194
+	 	add_temp_claim = 201
+		add_temp_claim = 1090
+	}
+	abort_effect = {
+		remove_temp_claim = 194
+	 	remove_temp_claim = 201
+		remove_temp_claim = 1090
+	}
+	success = {
+		owns = 194
+		owns = 201
+		owns = 1090
+	}
+	effect = {
+		add_core = 194
+		add_core = 201
+		add_core = 1090
+	}
+}
 #Õ÷·þÁº¹ú
 annex_LNG = {
 	

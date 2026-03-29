@@ -182,7 +182,7 @@ xiangronggongsheng1 = {
 		stability = 2
 	}
 	global_revolt_risk = -2
-	technology_cost = -0.10
+	technology_cost = -0.20
 	land_tech_cost_modifier = 0.10
 }
 
@@ -205,8 +205,8 @@ xiangronggongsheng2 = {
 		NOT = { stability = 2 }
 	}
 	global_revolt_risk = -5
-	technology_cost = -0.08
-	land_tech_cost_modifier = 0.08
+	technology_cost = -0.18
+	land_tech_cost_modifier = 0.12
 }
 
 xiangronggongsheng3 = {
@@ -228,8 +228,8 @@ xiangronggongsheng3 = {
 		NOT = { stability = 0 }
 	}
 	global_revolt_risk = -8
-	technology_cost = -0.02
-	land_tech_cost_modifier = 0.05
+	technology_cost = -0.15
+	land_tech_cost_modifier = 0.15
 }
 
 xiangronggongsheng4 = {
@@ -250,7 +250,7 @@ xiangronggongsheng4 = {
 	}
 	global_revolt_risk = -10
 	technology_cost = 0.10
-	land_tech_cost_modifier = 0.3
+	land_tech_cost_modifier = 0.2
 }
 ###############################################
 #物产开发#
@@ -1250,8 +1250,8 @@ chunqiu_mil_1 = {
 			tag = PAP
 		}
 	}
-	land_forcelimit_modifier = -0.35
-	land_maintenance_modifier = -0.05
+	land_forcelimit_modifier = -0.25
+	#land_maintenance_modifier = -0.05
 	icon = 8
 }
 ###################################
@@ -2818,9 +2818,9 @@ chinese_hre = {
 		is_emperor = no
 	}
 	technology_cost = -0.03
-	global_revolt_risk = -0.5
-	cultural_tradition = 0.0025
-	badboy_limit = -4
+	global_revolt_risk = -1.0
+	cultural_tradition = 0.01
+	badboy_limit = -2
 	icon = 3
 }
 ############################################
@@ -6129,6 +6129,34 @@ guwen_jingjizhicai_6 = {
 	global_trade_income_modifier = 0.06
 	global_tax_modifier = 0.12
 }
+#军需官员
+guwen_junxuguanyuan = {
+	potential = {
+		idea = national_conscripts
+		advisor = quartermaster
+		quartermaster = 4
+	}
+	trigger = { 
+		idea = national_conscripts
+		advisor = quartermaster
+		quartermaster = 4
+	}
+	land_tech_investment = 5
+}
+#军事统帅
+guwen_junshitongshuai = {
+	potential = {
+		idea = engineer_corps
+		advisor = army_organiser
+		army_organiser = 5
+	}
+	trigger = { 
+		idea = engineer_corps
+		advisor = army_organiser
+		army_organiser = 5
+	}
+	land_morale = 0.5
+}
 ####################################
 #时代修正
 ####################################
@@ -9270,6 +9298,7 @@ XGO_buff1 = {
 			OR = { 
 				government = tribal_federation
 				government = tribal_despotism
+				government = buluoxuanju
 			}
 			war_with = XGO
 		}
@@ -9277,6 +9306,7 @@ XGO_buff1 = {
 	land_attrition = -0.10
 	land_morale = 0.50
 	global_manpower_modifier = 0.20
+	global_manpower = 1
 	defensiveness = 0.3
 }
 ####獫狁天赋#####

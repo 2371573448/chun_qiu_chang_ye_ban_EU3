@@ -384,50 +384,61 @@ yiminbeijing = {
 		tag = YAN
 		has_country_flag = zhengfuzhuman
 		or = {
-			not = { owns = 26 }
-			not = { owns = 19 }
-			not = { owns = 14 }
-			not = { owns = 20 }
-			not = { owns = 1159 }
 			not = { owns = 10 }
+			not = { owns = 14 }
+			not = { owns = 19 }
+			not = { owns = 20 }
+			not = { owns = 26 }
+			not = { owns = 27 }
+			not = { owns = 28 }
+			not = { owns = 30 }
+			not = { owns = 31 }
+			not = { owns = 1159 }
 		}
 	}
 	abort = {
 	}
 	success = {
-		owns = 26
-		owns = 19
-		owns = 14
-		owns = 20
-		owns = 1159
 		owns = 10
+		owns = 14
+		owns = 19
+		owns = 20
+		owns = 26
+		owns = 27
+		owns = 28
+		owns = 30
+		owns = 31
+		owns = 1159
 	}
 	chance = {
 		factor = 500
 	}
 	immediate = {
-		add_temp_claim = 26
-		add_temp_claim = 19
-		add_temp_claim = 14
-		add_temp_claim = 20
-		add_temp_claim = 1159
 		add_temp_claim = 10
+		add_temp_claim = 14
+		add_temp_claim = 19
+		add_temp_claim = 20
+		add_temp_claim = 26
+		add_temp_claim = 27
+		add_temp_claim = 28
+		add_temp_claim = 30
+		add_temp_claim = 31
+		add_temp_claim = 1159
 	}
 	abort_effect = {
-		remove_temp_claim = 26
-		remove_temp_claim = 19
-		remove_temp_claim = 14
-		remove_temp_claim = 20
-		remove_temp_claim = 1159
 		remove_temp_claim = 10
+		remove_temp_claim = 14
+		remove_temp_claim = 19
+		remove_temp_claim = 20
+		remove_temp_claim = 26
+		remove_temp_claim = 27
+		remove_temp_claim = 28
+		remove_temp_claim = 30
+		remove_temp_claim = 31
+		remove_temp_claim = 1159
 	}
 	effect = {
-		26 = { 
-			base_tax = 1
-			add_building = fort1
-			add_core = YAN
-		}
-		19 = { 
+		10 = { 
 			base_tax = 1
 			add_building = fort1
 			add_core = YAN
@@ -437,17 +448,42 @@ yiminbeijing = {
 			add_building = fort1
 			add_core = YAN
 		}
+		19 = { 
+			base_tax = 1
+			add_building = fort1
+			add_core = YAN
+		}
 		20 = { 
 			base_tax = 1
 			add_building = fort1
 			add_core = YAN
 		}
-		1159 = { 
+		26 = { 
 			base_tax = 1
 			add_building = fort1
 			add_core = YAN
 		}
-		10 = { 
+		27 = { 
+			base_tax = 1
+			add_building = fort1
+			add_core = YAN
+		}
+		28 = { 
+			base_tax = 1
+			add_building = fort1
+			add_core = YAN
+		}
+		30 = { 
+			base_tax = 1
+			add_building = fort1
+			add_core = YAN
+		}
+		31 = { 
+			base_tax = 1
+			add_building = fort1
+			add_core = YAN
+		}
+		1159 = { 
 			base_tax = 1
 			add_building = fort1
 			add_core = YAN

@@ -1,0 +1,210 @@
+country_event = {
+	id = 87530
+	is_triggered_only = yes
+	title = "EVTNAME87530"
+	desc = "EVTDESC87530"
+	option = {
+		name = "EVTOPTA87530"
+		any_owned = {
+			limit = { 
+				is_capital = yes
+			}
+			zhongyuan_infantry_52 = current
+		}
+		infantry = this
+		infantry = this
+		infantry = this
+		infantry = this
+		infantry = this
+		infantry = this
+		infantry = this
+		infantry = this
+		treasury = 100
+	}
+	option = {
+		name = "EVTOPTB87530"
+		inflation = -1
+	}
+	option = {
+		name = "EVTOPTC87530"
+		badboy = -5
+	}
+	option = {
+		name = "EVTOPTD87530"
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 87531
+		}
+	}
+}
+country_event = {
+	id = 87531
+	is_triggered_only = yes
+	title = "EVTNAME87531"
+	desc = "EVTDESC87531"
+	option = {
+		name = "EVTOPTA87531"
+	}
+}
+country_event = {
+	id = 87532
+	trigger = { 
+		number_of_loans = 3
+		not = { war_score = -90 }
+		not = { year = 1950 }
+		ai = no
+		war = yes
+		war_exhaustion = 9
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME87532"
+	desc = "EVTDESC87532"
+	option = {
+		name = "EVTOPTA87532"
+		treasury = 5000
+		stability = 5
+		inflation = -10
+		prestige = 1.5
+		add_country_modifier = { 
+			name = "changye_zhufu"
+			duration = 365
+		}
+		define_general = {
+			name = "游人"
+			shock = 5
+			fire = 5
+			siege = 5
+			manuever = 5
+			rank = 5
+		}
+		define_general = {
+			name = "工厂"
+			shock = 5
+			fire = 5
+			siege = 5
+			manuever = 5
+			rank = 5
+		}
+		random_owned = {
+			limit = {
+				or = {
+					controlled_by = owned
+					is_capital = yes
+				}
+			}
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+			youren_cavalry_2222 = current
+
+			youren_artillery_2222 = current
+			youren_artillery_2222 = current
+			youren_artillery_2222 = current
+			youren_artillery_2222 = current
+			youren_artillery_2222 = current
+			youren_artillery_2222 = current
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 87533
+		}
+	}
+	option = {
+		name = "EVTOPTB87532"
+		treasury = 500
+		stability = 3
+		inflation = -2
+		add_country_modifier = { 
+			name = "changye_jianzheng"
+			duration = 365
+		}
+		define_general = {
+			name = "菜呵呵"
+			shock = 6
+			fire = 6
+			siege = 6
+			manuever = 6
+			rank = 6
+		}
+		random_owned = {
+			limit = {
+				or = {
+					controlled_by = owned
+					is_capital = yes
+				}
+			}
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+			youren_infantry_5555 = current
+		}
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+			}
+			country_event = 87534
+		}
+	}
+}
+country_event = {
+	id = 87533
+	is_triggered_only = yes
+	title = "EVTNAME87533"
+	desc = "EVTDESC87533"
+	option = {
+		name = "EVTOPTA87533"
+		treasury = 100
+	}
+	option = {
+		name = "EVTOPTB87533"
+		add_country_modifier = { 
+			name = "changye_xingxuan"
+			duration = 365
+		}
+	}
+}
+country_event = {
+	id = 87534
+	is_triggered_only = yes
+	title = "EVTNAME87534"
+	desc = "EVTDESC87534"
+	option = {
+		name = "EVTOPTA87534"
+		from = { relation = { who = THIS value = 500 } }
+	}
+}

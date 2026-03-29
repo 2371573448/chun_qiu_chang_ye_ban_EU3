@@ -190,6 +190,12 @@ country_decisions = {
 				citysize = 15000
 			}
 			government = buluoxuanju
+			badboy = -5
+			land_tech = 0.999
+			naval_tech = 0.999
+			trade_tech = 0.999
+			production_tech = 0.999
+			government_tech = 0.999
 		}
 		ai_will_do = { 
 			factor = 1

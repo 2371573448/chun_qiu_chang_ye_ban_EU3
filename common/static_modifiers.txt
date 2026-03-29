@@ -459,26 +459,26 @@ bank_loan = {
 }
 
 inflation = {
-	build_cost = 0.01			#1% for each inflation step.
-	stability_cost_modifier = 0.01		#1% for each inflation step.
-	merchant_cost = 0.01		#1% for each inflation step
-	colonist_cost = 0.01			#1% for each inflation step
-	missionary_cost = 0.01		#1% for each inflation step
-	infantry_cost = 0.01			#1% for each inflation step
-	cavalry_cost = 0.01			#1% for each inflation step
-	artillery_cost = 0.01			#1% for each inflation step
-	bigship_cost = 0.01			#1% for each inflation step
-	lightship_cost = 0.01			#1% for each inflation step
-	galley_cost = 0.01			#1% for each inflation step
-	transport_cost = 0.01		#1% for each inflation step
-	land_tech_cost_modifier = 0.01		#1% for each inflation step
-	trade_tech_cost_modifier = 0.01	#1% for each inflation step
-	naval_tech_cost_modifier = 0.01	#1% for each inflation step
-	government_tech_cost_modifier = 0.01	#1% for each inflation step
-	production_tech_cost_modifier = 0.01	#1% for each inflation step
-	advisor_cost = 0.01			#1% for each inflation step
-	spies_cost = 0.01			#1% for each inflation step
-	mercenary_cost = 0.01			#1% for each inflation step
+	build_cost = 0.02			#1% for each inflation step.
+	stability_cost_modifier = 0.02		#1% for each inflation step.
+	merchant_cost = 0.02		#1% for each inflation step
+	colonist_cost = 0.02			#1% for each inflation step
+	missionary_cost = 0.02		#1% for each inflation step
+	infantry_cost = 0.02			#1% for each inflation step
+	cavalry_cost = 0.02			#1% for each inflation step
+	artillery_cost = 0.02			#1% for each inflation step
+	bigship_cost = 0.02			#1% for each inflation step
+	lightship_cost = 0.02			#1% for each inflation step
+	galley_cost = 0.02			#1% for each inflation step
+	transport_cost = 0.02		#1% for each inflation step
+	land_tech_cost_modifier = 0.02		#1% for each inflation step
+	trade_tech_cost_modifier = 0.02	#1% for each inflation step
+	naval_tech_cost_modifier = 0.02	#1% for each inflation step
+	government_tech_cost_modifier = 0.02	#1% for each inflation step
+	production_tech_cost_modifier = 0.02	#1% for each inflation step
+	advisor_cost = 0.02			#1% for each inflation step
+	spies_cost = 0.02			#1% for each inflation step
+	mercenary_cost = 0.02			#1% for each inflation step
 }
 
 bankruptcy = {

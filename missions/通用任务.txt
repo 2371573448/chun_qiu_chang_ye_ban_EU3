@@ -865,18 +865,18 @@ get_control_of_copper = {
 		}
 	}
 	immediate = {
-		add_country_modifier = { 
-			name = "duoqutongkuang"
-			duration = 365
-		}
-		manpower = 10
+		#add_country_modifier = { 
+			#name = "duoqutongkuang"
+			#duration = 365
+		#}
+		#manpower = 10
 	}
 	abort_effect = {
-		stability = -3
+		stability = -1
 	}
 	effect = {
 		prestige = 0.10
-		years_of_income = 10
+		years_of_income = 2.5
 		set_country_flag = duoqutongkuangxianliang
 	}
 }

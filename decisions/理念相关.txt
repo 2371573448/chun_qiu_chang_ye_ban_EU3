@@ -776,6 +776,10 @@ province_decisions = {
 	mofeiwangtu = {
 		potential = { 
 			idea = naval_glory
+			not = { is_core = this }
+			any_neighbor_province = {
+				is_core = this
+			}
 		}
 		allow = { 
 			owner = {
@@ -798,7 +802,14 @@ province_decisions = {
 				treasury = -100
 				officials = 1
 			}
-			add_core = this
+			random_list = { 
+				50 = { 
+					add_core = this
+				}
+				50 = { 
+					nationalism = -10
+				}
+			}
 		}
 	}
 }

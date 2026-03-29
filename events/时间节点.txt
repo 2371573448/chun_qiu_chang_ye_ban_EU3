@@ -202,19 +202,19 @@ country_event = {
 		any_country = {
 			add_country_modifier = { 
 				name = "chushishuibing1"
-				duration = 7300
+				duration = 3650
 			}
 		}
 		any_country = {
 			add_country_modifier = { 
 				name = "chushishuibing2"
-				duration = 14600
+				duration = 5475
 			}
 		}
 		any_country = {
 			add_country_modifier = { 
 				name = "chushishuibing3"
-				duration = 21900
+				duration = 7300
 			}
 		}
 		#开局重置贸易中心

@@ -177,7 +177,7 @@ chidi_eastern_conquest = {
 	}
 	effect = {
 		prestige = 0.3
-		treasury = 450
+		treasury = 400
 		add_core = 116
 		add_core = 118
 		add_core = 130

@@ -9,8 +9,7 @@ country_decisions = {
 		}
 		effect = { 
 			set_country_flag = wushangjiyuan
-			inflation = -2
-			treasury = 200
+			country_event = 87530
 		}
 	}
 }

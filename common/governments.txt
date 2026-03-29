@@ -218,7 +218,7 @@ tribal_federation = {
 	#bonus
 	land_forcelimit_modifier = 0.50
 	badboy = 0.2
-	technology_cost = 0.10
+	technology_cost = 0.25
 	land_maintenance_modifier = -0.05
 	stability_cost_modifier = 0.20
 
@@ -249,7 +249,7 @@ tribal_despotism = {
 	#bonus
 	badboy_limit = 4
 	global_manpower_modifier = 0.75
-	technology_cost = 0.08
+	technology_cost = 0.20
 	
 	#malus
 	global_revolt_risk = 2
@@ -273,13 +273,14 @@ buluoxuanju = {
 	}
 	
 	#bonus
-	land_morale = 0.4
+	land_morale = 0.3
 	land_forcelimit_modifier = 0.40
 	global_manpower_modifier = 0.40
-	badboy = 0.5
-	technology_cost = 0.05
-	land_maintenance_modifier = 0.10
-	stability_cost_modifier = 0.30
+	badboy = 0.25
+	badboy_limit = 5
+	technology_cost = 0.10
+	land_maintenance_modifier = 0.05
+	stability_cost_modifier = 0.10
 
 	#malus
 }

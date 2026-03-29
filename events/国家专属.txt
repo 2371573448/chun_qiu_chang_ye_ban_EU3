@@ -4899,7 +4899,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA89508"
 		set_country_flag = CHAtianfu
-		army_tradition = 0.30
+		army_tradition = 0.20
 		add_country_modifier = { 
 			name = "CHA_buff2"
 			duration = 1825
@@ -5075,6 +5075,7 @@ country_event = {
 		MIL = 7
 		land_tech = 15
 		not = { has_country_modifier = CHA_buff3 }
+		ai = no
 	}
 
 	mean_time_to_happen = {

@@ -73,7 +73,7 @@ military_drill = {
 #军功授爵
 engineer_corps = {
 	army_tradition = 0.01
-	land_morale = 1
+	land_morale = 0.5
 	}
 #私募制度
 battlefield_commisions = {
@@ -93,8 +93,8 @@ glorious_arms = {
 national_conscripts = {
 	trigger = { land_tech = 11 }
 	land_attrition = -0.15
-	land_tech_cost_modifier = -0.10
-	land_tech_investment = 18
+	land_tech_cost_modifier = -0.08
+	land_tech_investment = 10
 	}
 #革化战阵
 regimental_system = {
@@ -150,7 +150,7 @@ quest_for_the_new_world = {
 scientific_revolution = {
 	global_revolt_risk = -1
 	trade_efficiency = 0.05
-	stability_investment = 15
+	stability_investment = 10
 	inflation_reduction = 0.06
 	global_tax_modifier = -0.05
 	}
