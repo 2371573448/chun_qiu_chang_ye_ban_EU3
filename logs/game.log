@@ -5,17 +5,567 @@
 
 		[[ Launching SINGLEPLAYER-game ]]
 	Start-date: 1928.1.1
-	Country: 莱
+	Country: 陈
 
 
-[gamestate.cpp:2203]: ZGO is a 'lucky' nation.37
-[gamestate.cpp:2203]: CHU is a 'lucky' nation.23
-[gamestate.cpp:2203]: WUG is a 'lucky' nation.23
-[gamestate.cpp:2203]: CHE is a 'lucky' nation.22
-[gamestate.cpp:2203]: CAI is a 'lucky' nation.21
-[gamestate.cpp:2203]: SHE is a 'lucky' nation.21
-[gamestate.cpp:2203]: JIG is a 'lucky' nation.20
+[gamestate.cpp:2203]: CAO is a 'lucky' nation.21
+[gamestate.cpp:2203]: ZGO is a 'lucky' nation.20
+[gamestate.cpp:2203]: DAI is a 'lucky' nation.20
 [gamestate.cpp:2203]: YQU is a 'lucky' nation.20
+[gamestate.cpp:2203]: PAP is a 'lucky' nation.19
+[gamestate.cpp:2203]: WUG is a 'lucky' nation.19
+[gamestate.cpp:2203]: YAN is a 'lucky' nation.19
+[gamestate.cpp:2203]: JUG is a 'lucky' nation.19
+[messagehandler.h:261]: 1 正月, 1928 我们接受了任务收复失地. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 令支  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 黎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 魏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 铎辰  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 皋落氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 廧咎如氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 郜  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牟  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 遂  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 滕  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 向  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 荡社氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 梁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 乌氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 骊山氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 彭戏氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅津戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 共  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 西不羹  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 应  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 榖  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 卢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 州  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 蒋  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 巢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邗  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邛  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 笮  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 夜郎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牂牁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 伊洛之戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 匈奴  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 朐衍  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 昔阝  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 平周  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 玩家通过决议:
+tianfujueyiQG_title. 
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  1953.1.1
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[frontend.cpp:648]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1953.1.1
+	Country: 陈
+
+
+[gamestate.cpp:2203]: PAP is a 'lucky' nation.26
+[gamestate.cpp:2203]: CHU is a 'lucky' nation.25
+[gamestate.cpp:2203]: CHA is a 'lucky' nation.21
+[gamestate.cpp:2203]: LUG is a 'lucky' nation.20
+[gamestate.cpp:2203]: DAI is a 'lucky' nation.20
+[gamestate.cpp:2203]: XGO is a 'lucky' nation.20
+[gamestate.cpp:2203]: SHE is a 'lucky' nation.20
+[gamestate.cpp:2203]: YXU is a 'lucky' nation.20
+[messagehandler.h:261]: 1 正月, 1953 我们接受了任务收复失地. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 冀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 黎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 魏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 铎辰  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 皋落氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 廧咎如氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 茅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 牟  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 遂  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 滕  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 向  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 鄅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 荡社氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 冀戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 梁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 乌氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 骊山氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 彭戏氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 茅津戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 共  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 西不羹  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 应  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 榖  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 卢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 鄀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 州  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 蒋  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 巢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 邗  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 邛  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 笮  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 夜郎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 牂牁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 伊洛之戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 匈奴  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 朐衍  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 昔阝  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 事件: 平周  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1953 玩家通过决议:
+tianfujueyiQG_title. 
+[messagehandler.h:261]: 2 正月, 1953  铎辰 完成了联盟长狄. 
+[messagehandler.h:261]: 2 正月, 1953 铎辰与长狄结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953  皋落氏 完成了联盟长狄. 
+[messagehandler.h:261]: 2 正月, 1953 皋落氏与长狄结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953  留吁 完成了联盟长狄. 
+[messagehandler.h:261]: 2 正月, 1953 留吁与长狄结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953  潞氏 完成了联盟长狄. 
+[messagehandler.h:261]: 2 正月, 1953 潞氏与长狄结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953  廧咎如氏 完成了联盟长狄. 
+[messagehandler.h:261]: 2 正月, 1953 廧咎如氏与长狄结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953 在 楚 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在  晋  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在  周王  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 齐对谭发动齐“奉辞伐罪”征谭之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 齐 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  秦 对小虢发动秦“收复故地”复杜阳之战. 
+[messagehandler.h:261]: 2 正月, 1953 在  秦  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 吴 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  燕对无终发动燕“开疆辟土”侵无终之战. 
+[messagehandler.h:261]: 2 正月, 1953 在  燕 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 越 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 蔡 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  鲁 对邿发动鲁“附庸臣属”征邿之战. 
+[messagehandler.h:261]: 2 正月, 1953 在  鲁  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在  宋  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 郑 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 代 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在  卫  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 邢对鼓发动邢“开疆辟土”侵鼓国之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 邢 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 北戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 长狄 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 肥 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鼓 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 孤竹 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 令支 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 屠何 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 无终 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鲜虞 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 霍 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 冀 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  冀  将盐铁专卖设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 黎保证舒鸠的独立
+[messagehandler.h:261]: 2 正月, 1953 在 黎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 曲沃 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 魏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 郇 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 杨 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 虞 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 铎辰 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 大戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 皋落氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 骊戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 留吁对黎发动留吁“开疆辟土”侵黎之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 留吁 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 潞氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 廧咎如氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 逼阳 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 郕 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 须句 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 费 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 极 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 纪 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 茅对鄣发出侮辱
+[messagehandler.h:261]: 2 正月, 1953 在 茅 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 牟 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 杞 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 遂 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 邿 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 谭 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  谭  将军功授爵设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 在 滕 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 向 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 小邾 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 阳 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鄅 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鄣 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 邾 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鄫 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 莱 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 夷 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 介 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 莒对牟发动莒寇牟之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 莒 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 其 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 郯 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 薛 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 韩 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 芮 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 小虢 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 在 白狄 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 荡社氏 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 邽对绵诸戎发动邽“开疆辟土”侵绵诸戎之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 邽 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 豲 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 贾 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 冀戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 陆浑戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 梁对白狄发动梁“开疆辟土”侵白狄之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 梁 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 绵诸戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 羌 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 乌氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 义渠 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  义渠  将奖励耕战设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 在 骊山氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 彭戏氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 茅津戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 曹 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 戴 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 东不羹 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 共 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 虢 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 滑 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 蓼 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 楚  发生了"水军裁员"事件. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 冀  发生了"政改不利"事件. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 谭  发生了"广开贸易"事件. 
+[messagehandler.h:261]: 2 正月, 1953 燮 祝 已到达 谭. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 义渠  发生了"水军裁员"事件. 
+[messagehandler.h:261]: 2 正月, 1953 在 南燕 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 沈 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 温 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 西不羹 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 萧 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 项 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 在 许 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 应 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 原 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 雍 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 唐 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 邓 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  邓  将军功授爵设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 在 贰 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 房 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 榖 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 轸对州发出侮辱
+[messagehandler.h:261]: 2 正月, 1953 在 轸 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 黄 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 在 胡 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 江 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 绞 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 麇 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 夔对权发出侮辱
+[messagehandler.h:261]: 2 正月, 1953 在 夔 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在  蓼  通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 厉 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 卢 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 罗 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 权 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 鄀 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 申 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 随 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 庸 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 郧 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 州 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 顿 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 顿已成为我们的一部分
+[messagehandler.h:261]: 2 正月, 1953 我国稳定度下降
+[messagehandler.h:261]: 2 正月, 1953 在 蒋 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 六 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 在 舒 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 舒鸠 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 舒廖 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 舒庸撕毁了与舒的盟约
+[messagehandler.h:261]: 2 正月, 1953 在 舒庸 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 弦 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 息 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 养 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  养  将千乘之国设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 在 养 通过决议:
+政治改革：确立宗法制度. 
+[messagehandler.h:261]: 2 正月, 1953 在 英 通过决议:
+海纳百川. 
+[messagehandler.h:261]: 2 正月, 1953 在 巢 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 邗 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 淮夷 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 徐对钟离发动徐“收复故地”复当涂之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 徐 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 钟离 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 钟吾 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 向与钟吾结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953 郯与钟吾结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953 在 州来 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 巴 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 褒 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 滇 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 蜀 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 邛 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 笮 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 夜郎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 牂牁 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 骆越对西瓯发动骆越“开疆辟土”侵西瓯之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 骆越 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 闽越 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 瓯越 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 西瓯保证牂牁的独立
+[messagehandler.h:261]: 2 正月, 1953 在 西瓯 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 扬越对西瓯发动扬越“开疆辟土”侵西瓯之战. 
+[messagehandler.h:261]: 2 正月, 1953 在 扬越 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 东胡 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 林胡 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 楼烦 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 北戎与楼烦结成了军事同盟
+[messagehandler.h:261]: 2 正月, 1953 在 河宗氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 休溷 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 伊洛之戎 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  伊洛之戎  将奖励耕战设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 伊洛之戎拒绝了铎辰的军事同盟提议
+[messagehandler.h:261]: 2 正月, 1953 在 箕氏 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 匈奴 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 管 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 系统国家 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 仙境 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 朐衍对乌氏发出侮辱
+[messagehandler.h:261]: 2 正月, 1953 在 朐衍 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 奄 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953  奄  将奖励耕战设为国家理念. 
+[messagehandler.h:261]: 2 正月, 1953 在 鱼 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 在 昔阝 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 平周保证滇的独立
+[messagehandler.h:261]: 2 正月, 1953 在 平周 通过决议:
+罢黜百家. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 邓  发生了"水军裁员"事件. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 养  发生了"水军裁员"事件. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 伊洛之戎  发生了"政治危机"事件. 
+[messagehandler.h:261]: 2 正月, 1953 事件: 奄  发生了"水军裁员"事件. 
+[messagehandler.h:261]: 2 正月, 1953 我国发生了"统一陈"事件. 
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  1928.1.2
+[history.cpp:283]: Executing History from 1928.1.2 to  1928.1.1
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[history.cpp:283]: Executing History from 1928.1.1 to  1928.1.2
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  1928.1.2
+[history.cpp:283]: Executing History from 1928.1.2 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  1928.1.2
+[history.cpp:283]: Executing History from 1928.1.2 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  1928.1.2
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[history.cpp:283]: Executing History from 1928.1.2 to  1928.1.1
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[controlcommands.cpp:41]: Human MrHuman unset as primary local
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[frontend.cpp:648]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1928.1.1
+	Country: 庸
+
+
+[gamestate.cpp:2203]: CHU is a 'lucky' nation.21
+[gamestate.cpp:2203]: CAI is a 'lucky' nation.21
+[gamestate.cpp:2203]: CHE is a 'lucky' nation.21
+[gamestate.cpp:2203]: KUA is a 'lucky' nation.21
+[gamestate.cpp:2203]: XGO is a 'lucky' nation.20
+[gamestate.cpp:2203]: DGG is a 'lucky' nation.20
+[gamestate.cpp:2203]: LAI is a 'lucky' nation.19
+[gamestate.cpp:2203]: YXU is a 'lucky' nation.19
 [messagehandler.h:261]: 1 正月, 1928 我们接受了任务交好霸主. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 令支  发生了"君主死亡"事件. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 冀  发生了"君主死亡"事件. 
@@ -57,3 +607,108 @@
 [messagehandler.h:261]: 1 正月, 1928 事件: 朐衍  发生了"君主死亡"事件. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 昔阝  发生了"君主死亡"事件. 
 [messagehandler.h:261]: 1 正月, 1928 事件: 平周  发生了"君主死亡"事件. 
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[frontend.cpp:648]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 1928.1.1
+	Country: 越
+
+
+[gamestate.cpp:2203]: PAP is a 'lucky' nation.34
+[gamestate.cpp:2203]: ZGO is a 'lucky' nation.30
+[gamestate.cpp:2203]: JIN is a 'lucky' nation.22
+[gamestate.cpp:2203]: CAI is a 'lucky' nation.21
+[gamestate.cpp:2203]: JUG is a 'lucky' nation.21
+[gamestate.cpp:2203]: QIN is a 'lucky' nation.20
+[gamestate.cpp:2203]: ZWG is a 'lucky' nation.18
+[gamestate.cpp:2203]: XUN is a 'lucky' nation.17
+[messagehandler.h:261]: 1 正月, 1928 我们接受了任务开拓浙西. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 令支  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 黎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 魏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 铎辰  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 皋落氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 廧咎如氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 郜  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牟  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 遂  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 滕  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 向  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 荡社氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 冀戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 梁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 乌氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 骊山氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 彭戏氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 茅津戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 共  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 西不羹  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 应  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 榖  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 卢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 鄀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 州  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 蒋  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 巢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邗  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 邛  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 笮  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 夜郎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 牂牁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 伊洛之戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 匈奴  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 朐衍  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 昔阝  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 1 正月, 1928 事件: 平周  发生了"君主死亡"事件. 
+[history.cpp:283]: Executing History from -1.1.1 to  2.1.1
+[history.cpp:283]: Executing History from 2.1.1 to  1928.1.1
+[history.cpp:283]: Executing History from 1928.1.1 to  2246.1.2
+[controlcommands.cpp:80]: Human MrHuman set as primary local
+[frontend.cpp:648]: 
+
+		[[ Launching SINGLEPLAYER-game ]]
+	Start-date: 2246.1.2
+	Country: 越
+
+
+[gamestate.cpp:2203]: SGU is a 'lucky' nation.29
+[gamestate.cpp:2203]: WEI is a 'lucky' nation.27
+[gamestate.cpp:2203]: BAG is a 'lucky' nation.27
+[gamestate.cpp:2203]: LUG is a 'lucky' nation.26
+[gamestate.cpp:2203]: CHE is a 'lucky' nation.25
+[gamestate.cpp:2203]: YAN is a 'lucky' nation.23
+[gamestate.cpp:2203]: ZHS is a 'lucky' nation.23
+[gamestate.cpp:2203]: QIG is a 'lucky' nation.22
+[messagehandler.h:261]: 2 正月, 2246 我们接受了任务征服丹阳. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 郜  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 茅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 牟  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 遂  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 向  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 鄅  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 荡社氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 乌氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 骊山氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 彭戏氏  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 西不羹  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 应  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 榖  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 卢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 鄀  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 州  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 蒋  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 巢  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 邗  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 邛  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 笮  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 夜郎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 牂牁  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 伊洛之戎  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 九江  发生了"君主死亡"事件. 
+[messagehandler.h:261]: 2 正月, 2246 事件: 朐衍  发生了"君主死亡"事件. 

@@ -2,61 +2,70 @@ chenguo1 = {
 	type = country
 	allow = { 
 		tag = CHE
-		exists = DUN
-		year = 2246
-		CHE = { ai = no }
+		or = {
+		  	NOT = { owns = 393 }
+			NOT = { owns = 998 }
+		}
 	}
 	abort = { 
 	}
 	success = { 
-		not = { 
-			exists = DUN
-		}
+		  owns = 393
+		  owns = 998
 	}
 	chance = { 
 		factor = 1000
 	}
 	immediate = { 
+	  	add_temp_claim = 393
+	  	add_temp_claim = 998
 	}
 	abort_effect = { 
 		prestige = -0.05
+	  	remove_temp_claim = 393
+	  	remove_temp_claim = 998
 	}
 	effect = { 
 		set_country_flag = chenguo1
-		centralization_decentralization = -4
-		set_country_flag = zongfazhidu
-		manpower = 10
+	 	add_core = 393
+	 	add_core = 998
+		prestige = 0.1
 	}
 }
+
 chenguo2 = { 
 	type = country
 	allow = { 
 		tag = CHE
-		exists = XNC
-		year = 2246
-		CHE = { ai = no }
 		has_country_flag = chenguo1
+		or = {
+		  	NOT = { owns = 394 }
+			NOT = { owns = 1001 }
+		}
 	}
 	abort = { 
 	}
 	success = { 
-		not = { 
-			exists = XNC
-		}
+		  owns = 394
+		  owns = 1001
 	}
 	chance = { 
 		factor = 1000
 	}
 	immediate = { 
+	  	add_temp_claim = 394
+	  	add_temp_claim = 1001
 	}
 	abort_effect = { 
 		prestige = -0.05
+	  	remove_temp_claim = 394
+	  	remove_temp_claim = 1001
 	}
 	effect = { 
 		set_country_flag = chenguo2
-		serfdom_freesubjects = 4
-		set_country_flag = shiguanzhidu
-		manpower = 10
+	 	add_core = 394
+	 	add_core = 1001
+		prestige = 0.1
 	}
 }
 
@@ -64,93 +73,127 @@ chenguo3 = {
 	type = country
 	allow = { 
 		tag = CHE
-		exists = YAG
-		year = 2246
-		CHE = { ai = no }
 		has_country_flag = chenguo2
+		or = {
+		  	NOT = { owns = 396 }
+			NOT = { owns = 1002 }
+			NOT = { owns = 1003 }
+		}
 	}
 	abort = { 
 	}
 	success = { 
-		not = { 
-			exists = YAG
-		}
+		  owns = 396
+		  owns = 1002
+		  owns = 1003
 	}
 	chance = { 
 		factor = 1000
 	}
 	immediate = { 
+	  	add_temp_claim = 396
+	  	add_temp_claim = 1002
+	  	add_temp_claim = 1003
 	}
 	abort_effect = { 
 		prestige = -0.05
+	  	remove_temp_claim = 396
+	  	remove_temp_claim = 1002
+	  	remove_temp_claim = 1003
 	}
 	effect = { 
 		set_country_flag = chenguo3
-		offensive_defensive = -5
-		set_country_flag = falvzhidu
-		manpower = 10
+	 	add_core = 396
+	 	add_core = 1002
+	 	add_core = 1003
+		prestige = 0.1
 	}
 }
+
 chenguo4 = { 
 	type = country
 	allow = { 
 		tag = CHE
-		exists = SHN
-		year = 2246
-		CHE = { ai = no }
 		has_country_flag = chenguo3
+		or = {
+		  	NOT = { owns = 397 }
+			NOT = { owns = 1004 }
+		}
 	}
 	abort = { 
 	}
 	success = { 
-		not = { 
-			exists = SHN
-		}
+		  owns = 397
+		  owns = 1004
 	}
 	chance = { 
 		factor = 1000
 	}
 	immediate = { 
+	  	add_temp_claim = 397
+	  	add_temp_claim = 1004
 	}
 	abort_effect = { 
 		prestige = -0.05
+	  	remove_temp_claim = 397
+	  	remove_temp_claim = 1004
 	}
 	effect = { 
 		set_country_flag = chenguo4
-		land_naval = -5
-		set_country_flag = dubizhidu
-		manpower = 10
+	 	add_core = 397
+	 	add_core = 1004
+		prestige = 0.1
 	}
 }
+
 chenguo5 = { 
 	type = country
 	allow = { 
 		tag = CHE
-		exists = HUG
-		year = 2246
-		CHE = { ai = no }
 		has_country_flag = chenguo4
+		or = {
+		  	NOT = { owns = 341 }
+			NOT = { owns = 403 }
+			NOT = { owns = 420 }
+			NOT = { owns = 1018 }
+			NOT = { owns = 1211 }
+		}
 	}
 	abort = { 
 	}
 	success = { 
-		not = { 
-			exists = HUG
-		}
+		  owns = 341
+		  owns = 403
+		  owns = 420
+		  owns = 1018
+		  owns = 1211
 	}
 	chance = { 
 		factor = 1000
 	}
 	immediate = { 
+	  	add_temp_claim = 341
+	  	add_temp_claim = 403
+	  	add_temp_claim = 420
+	  	add_temp_claim = 1018
+	  	add_temp_claim = 1211
 	}
 	abort_effect = { 
 		prestige = -0.05
+	  	remove_temp_claim = 341
+	  	remove_temp_claim = 403
+	  	remove_temp_claim = 420
+	  	remove_temp_claim = 1018
+	  	remove_temp_claim = 1211
 	}
 	effect = { 
 		set_country_flag = chenguo5
-		quality_quantity = -5
-		set_country_flag = tianfuzhidu
-		manpower = 10
+	 	add_core = 341
+	 	add_core = 403
+	 	add_core = 420
+	 	add_core = 1018
+	 	add_core = 1211
+		prestige = 0.1
 	}
 }
 zhengfuchenjun = {

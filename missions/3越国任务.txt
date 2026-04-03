@@ -1,0 +1,412 @@
+#开拓浙江
+kaituozhejiang1 = {
+	type = country
+	allow = {
+		tag = YGO
+		or = {
+			437 = { empty = yes }
+			452 = { empty = yes }
+		}
+		or = {
+			437 = { any_neighbor_province = { owned_by = this } }
+			452 = { any_neighbor_province = { owned_by = this } }
+		}
+	}
+	abort = {
+		437 = { empty = no }
+		not = { owns = 437 }
+		452 = { empty = no }
+		not = { owns = 452 }
+	}
+	success = {
+		437 = { owned_by = this }
+		452 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		treasury = 100
+		437 = {
+			add_core = this
+			citysize = 5000
+		}
+		452 = {
+			add_core = this
+			citysize = 5000
+		}
+	}
+}
+
+kaituozhejiang2 = {
+	type = country
+	allow = {
+		tag = YGO
+		or = {
+			436 = { empty = yes }
+			453 = { empty = yes }
+		}
+		or = {
+			436 = { any_neighbor_province = { owned_by = this } }
+			453 = { any_neighbor_province = { owned_by = this } }
+		}
+	}
+	abort = {
+		436 = { empty = no }
+		not = { owns = 436 }
+		453 = { empty = no }
+		not = { owns = 453 }
+	}
+	success = {
+		436 = { owned_by = this }
+		453 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		treasury = 100
+		436 = {
+			add_core = this
+			citysize = 5000
+		}
+		453 = {
+			add_core = this
+			citysize = 5000
+		}
+	}
+}
+
+kaituozhejiang3 = {
+	type = country
+	allow = {
+		tag = YGO
+		or = {
+			444 = { empty = yes }
+			1174 = { empty = yes }
+		}
+		or = {
+			444 = { any_neighbor_province = { owned_by = this } }
+			1174 = { any_neighbor_province = { owned_by = this } }
+		}
+	}
+	abort = {
+		444 = { empty = no }
+		not = { owns = 444 }
+		1174 = { empty = no }
+		not = { owns = 1174 }
+	}
+	success = {
+		444 = { owned_by = this }
+		1174 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		treasury = 100
+		444 = {
+			add_core = this
+			citysize = 5000
+		}
+		1174 = {
+			add_core = this
+			citysize = 5000
+		}
+	}
+}
+
+kaituozhejiang4 = {
+	type = country
+	allow = {
+		tag = YGO
+		or = {
+			446 = { empty = yes }
+			455 = { empty = yes }
+			1166 = { empty = yes }
+		}
+		or = {
+			446 = { any_neighbor_province = { owned_by = this } }
+			455 = { any_neighbor_province = { owned_by = this } }
+			1166 = { any_neighbor_province = { owned_by = this } }
+		}
+	}
+	abort = {
+		446 = { empty = no }
+		not = { owns = 446 }
+		455 = { empty = no }
+		not = { owns = 455 }
+		1166 = { empty = no }
+		not = { owns = 1166 }
+	}
+	success = {
+		446 = { owned_by = this }
+		455 = { owned_by = this }
+		1166 = { owned_by = this }
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		treasury = 100
+		446 = {
+			add_core = this
+			citysize = 5000
+		}
+		455 = {
+			add_core = this
+			citysize = 5000
+		}
+		1166 = {
+			add_core = this
+			citysize = 5000
+		}
+	}
+}
+zhengfugusu = { 
+	type = country
+	allow = { 
+		tag = YON
+		or = {
+		  	NOT = { owns = 433 }
+			NOT = { owns = 434 }
+			NOT = { owns = 435 }
+			NOT = { owns = 1167 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 433
+		  owns = 434
+		  owns = 435
+		  owns = 1167
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 433
+	  	add_temp_claim = 434
+	  	add_temp_claim = 435
+	  	add_temp_claim = 1167
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 433
+	  	remove_temp_claim = 434
+	  	remove_temp_claim = 435
+	  	remove_temp_claim = 1167
+	}
+	effect = { 
+	 	add_core = 433
+	 	add_core = 434
+	 	add_core = 435
+	 	add_core = 1167
+		prestige = 0.1
+	}
+}
+#附庸瓯越
+YGO_client_OUY = {
+	
+	type = country
+
+	allow = {
+		is_subject = no
+		is_lesser_in_union = no
+	  	OUY = { 
+	    		is_subject = no
+	    		is_lesser_in_union = no
+	    		not = { num_of_cities = this }
+	    		any_neighbor_country = { tag = this }
+	   	}
+	  	exists = OUY
+	  	tag = YGO
+	}
+	abort = {
+	  	or = {
+		  	is_lesser_in_union = yes
+  			is_subject = yes
+	    		OUY = { is_subject = yes }
+	    		OUY = { is_lesser_in_union = yes }
+	    		NOT = { exists = OUY }
+	  	}
+	}
+	success = {
+		overlord_of = OUY
+	}
+	chance = {
+		factor = 50
+	}
+	immediate = {
+	 	casus_belli = {
+			type = cb_vassalize_mission
+			months = 120
+			target = YGO
+		}
+	}
+	abort_effect = {
+	 	remove_casus_belli = {
+			type = cb_vassalize_mission
+			target = OUY
+		}
+	  	 prestige = -0.05
+	}
+	effect = {
+		prestige = 0.1
+	}
+}
+
+#征服吴地
+YGO_annex_WUG = {
+	
+	type = country
+
+	allow = {
+		tag = YGO
+		or = {
+			not = { owns = 434 }
+			not = { owns = 449 }
+			not = { owns = 431 }
+			not = { owns = 432 }
+			not = { owns = 430 }
+		}
+		any_neighbor_country = { tag = WUG }
+	}
+	abort = {
+	}
+	success = {
+		owns = 434
+		owns = 449
+		owns = 431
+		owns = 432
+		owns = 430
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+		add_temp_claim = 434
+		add_temp_claim = 449
+		add_temp_claim = 431
+		add_temp_claim = 432
+		add_temp_claim = 430
+	}
+	abort_effect = {
+		remove_temp_claim = 434
+		remove_temp_claim = 449
+		remove_temp_claim = 431
+		remove_temp_claim = 432
+		remove_temp_claim = 430
+	}
+	effect = {
+		add_core = 434
+		add_core = 449
+		add_core = 431
+		add_core = 432
+		add_core = 430
+	}
+}
+
+#争霸中原
+
+Dominate_the_central_plains_YGO = {
+	
+	type = country
+
+	allow = {
+		is_subject = no
+		is_lesser_in_union = no
+		tag = YGO
+		is_emperor = no
+		any_country = { 
+			is_emperor = yes
+		}
+	}
+	abort = {
+	  	or = {
+			is_lesser_in_union = yes
+			is_subject = yes
+	  	}
+	}
+	success = {
+		is_emperor = yes
+	}
+	chance = {
+		factor = 3
+	}
+	immediate = {
+	}
+	abort_effect = {
+	}
+	effect = {
+		prestige = 0.20
+		relation = { who = PAP value = 100 }
+	}
+}
+
+#征服淮上
+YGO_annex_huaishang = {
+	
+	type = country
+
+	allow = {
+		tag = YGO
+		owns = 405
+		owns = 333
+		owns = 408
+		owns = 294
+		or = {
+			not = { owns = 405 }
+			not = { owns = 333 }
+			not = { owns = 408 }
+			not = { owns = 294 }
+		}
+		year = 2200
+	}
+	abort = {
+	}
+	success = {
+		owns = 405
+		owns = 333
+		owns = 408
+		owns = 294
+	}
+	chance = {
+		factor = 100
+	}
+	immediate = {
+		add_temp_claim = 405
+		add_temp_claim = 333
+		add_temp_claim = 408
+		add_temp_claim = 294
+	}
+	abort_effect = {
+		remove_temp_claim = 405
+		remove_temp_claim = 333
+		remove_temp_claim = 408
+		remove_temp_claim = 294
+	}
+	effect = {
+		add_core = 405
+		add_core = 333
+		add_core = 408
+		add_core = 294
+	}
+}

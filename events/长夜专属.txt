@@ -9,16 +9,15 @@ country_event = {
 			limit = { 
 				is_capital = yes
 			}
-			zhongyuan_infantry_52 = current
+			infantry = current
+			infantry = current
+			infantry = current
+			infantry = current
+			infantry = current
+			infantry = current
+			infantry = current
+			infantry = current
 		}
-		infantry = this
-		infantry = this
-		infantry = this
-		infantry = this
-		infantry = this
-		infantry = this
-		infantry = this
-		infantry = this
 		treasury = 100
 	}
 	option = {
@@ -58,12 +57,16 @@ country_event = {
 		ai = no
 		war = yes
 		war_exhaustion = 9
+		not = { has_country_flag = xinshoubaohu_yichufa }
 	}
 	mean_time_to_happen = { 
 		months = 0
 	}
 	title = "EVTNAME87532"
 	desc = "EVTDESC87532"
+	immediate = { 
+		set_country_flag = xinshoubaohu_yichufa
+	}
 	option = {
 		name = "EVTOPTA87532"
 		treasury = 5000

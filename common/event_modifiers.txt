@@ -2313,7 +2313,7 @@ YGO_buff2 = {
 }
 YGO_buff3 = {
 	discipline = 0.10
-	land_morale = 1
+	land_morale = 0.5
 	icon = 5
 }
 QIG_buff1 = {

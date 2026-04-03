@@ -188,12 +188,12 @@ pagan = {
 	animism = {
 		color = { 0.5 0.0 0.0 }
 		province = {
-			#local_manpower = 0.010
-			#land_forcelimit = 1
+			local_manpower = 0.010
+			land_forcelimit = 0.5
 			stability_cost = 10
 		}
 		country = {
-			global_manpower_modifier = 0.10
+			#global_manpower_modifier = 0.10
 			tolerance_heretic = -1
 			colonist_placement_chance = 0.10
 			missionary_placement_chance = 0.06

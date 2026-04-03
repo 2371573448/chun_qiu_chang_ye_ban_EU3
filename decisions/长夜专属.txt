@@ -4,6 +4,7 @@ country_decisions = {
 			not = { 
 				has_country_flag = wushangjiyuan
 			}
+			ai = no
 		}
 		allow = { 
 		}

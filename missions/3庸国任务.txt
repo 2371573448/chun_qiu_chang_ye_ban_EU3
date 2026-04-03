@@ -1,0 +1,188 @@
+yongguo1 = { 
+	type = country
+	allow = { 
+		tag = YON
+		or = {
+		  	NOT = { owns = 228 }
+			NOT = { owns = 1119 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 228
+		  owns = 1119
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 228
+	  	add_temp_claim = 1119
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 228
+	  	remove_temp_claim = 1119
+	}
+	effect = { 
+		set_country_flag = yongguo1
+	 	add_core = 228
+	 	add_core = 1119
+		prestige = 0.1
+	}
+}
+
+yongguo2 = { 
+	type = country
+	allow = { 
+		tag = YON
+		has_country_flag = yongguo1
+		or = {
+		  	NOT = { owns = 226 }
+			NOT = { owns = 1264 }
+			NOT = { owns = 1265 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 226
+		  owns = 1264
+		  owns = 1265
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 226
+	  	add_temp_claim = 1264
+	  	add_temp_claim = 1265
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 226
+	  	remove_temp_claim = 1264
+	  	remove_temp_claim = 1265
+	}
+	effect = { 
+		set_country_flag = yongguo2
+	 	add_core = 226
+	 	add_core = 1264
+	 	add_core = 1265
+		prestige = 0.1
+	}
+}
+
+yongguo3 = { 
+	type = country
+	allow = { 
+		tag = YON
+		has_country_flag = yongguo2
+		or = {
+		  	NOT = { owns = 459 }
+			NOT = { owns = 460 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 459
+		  owns = 460
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 459
+	  	add_temp_claim = 460
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 459
+	  	remove_temp_claim = 460
+	}
+	effect = { 
+		set_country_flag = yongguo3
+	 	add_core = 459
+	 	add_core = 460
+		prestige = 0.1
+	}
+}
+
+yongguo4 = { 
+	type = country
+	allow = { 
+		tag = YON
+		has_country_flag = yongguo3
+		or = {
+		  	NOT = { owns = 371 }
+			NOT = { owns = 381 }
+			NOT = { owns = 1269 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 371
+		  owns = 381
+		  owns = 1269
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 371
+	  	add_temp_claim = 381
+	  	add_temp_claim = 1269
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 371
+	  	remove_temp_claim = 381
+	  	remove_temp_claim = 1269
+	}
+	effect = { 
+		set_country_flag = yongguo4
+	 	add_core = 371
+	 	add_core = 381
+	 	add_core = 1269
+		prestige = 0.1
+	}
+}
+
+yongguo5 = { 
+	type = country
+	allow = { 
+		tag = YON
+		has_country_flag = yongguo4
+		or = {
+		  	NOT = { owns = 208 }
+			NOT = { owns = 217 }
+		}
+	}
+	abort = { 
+	}
+	success = { 
+		  owns = 208
+		  owns = 217
+	}
+	chance = { 
+		factor = 1000
+	}
+	immediate = { 
+	  	add_temp_claim = 208
+	  	add_temp_claim = 217
+	}
+	abort_effect = { 
+		prestige = -0.05
+	  	remove_temp_claim = 208
+	  	remove_temp_claim = 217
+	}
+	effect = { 
+		set_country_flag = yongguo5
+	 	add_core = 208
+	 	add_core = 217
+		prestige = 0.1
+	}
+}

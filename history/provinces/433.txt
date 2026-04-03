@@ -12,6 +12,7 @@ base_tax = 10
 manpower = 0
 citysize = 20000
 cot = no
+fort1 = yes
 
 1827.1.1 = { discovered_by = WUG }
 2100.1.1 = { discovered_by = CHU }
