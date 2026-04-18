@@ -182,7 +182,7 @@ kaituozhejiang4 = {
 zhengfugusu = { 
 	type = country
 	allow = { 
-		tag = YON
+		tag = YGO
 		or = {
 		  	NOT = { owns = 433 }
 			NOT = { owns = 434 }
