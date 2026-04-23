@@ -808,3 +808,53 @@ cb_tianxiazhiba = {
 	prov_desc = ALL_PROVS
 	war_name = IMPERIAL_WAR_NAME
 }
+
+
+##############
+#事件专属理由
+##############
+cb_baohuhuaxia = {#保护华夏
+
+	is_triggered_only = yes
+	mutual = yes
+	nomad = no
+	
+	months = 120
+
+	badboy_factor = 0.3
+	prestige_factor = 1.25
+	peace_cost_factor = 0.8
+
+	allowed_provinces = { 
+		always = yes
+	}
+	po_annex = yes
+	po_demand_provinces = yes
+	po_release_vassals = yes
+	po_release_annexed = yes
+	po_reduce_sphere = yes
+	war_name = baohuhuaxia_WAR_NAME
+}
+
+cb_duirongjiuyan = {#对山戎，救燕国
+
+	is_triggered_only = yes
+	mutual = yes
+	nomad = no
+	
+	months = 120
+
+	badboy_factor = 0.3
+	prestige_factor = 1.25
+	peace_cost_factor = 0.8
+
+	allowed_provinces = { 
+		always = yes
+	}
+	po_annex = yes
+	po_demand_provinces = yes
+	po_release_vassals = yes
+	po_release_annexed = yes
+	po_reduce_sphere = yes
+	war_name = duirongjiuyan_WAR_NAME
+}

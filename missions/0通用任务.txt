@@ -2617,13 +2617,6 @@ improve_economical_mismanagement = {
 	}
 	effect = { 
 		inflation = -1
-		any_country = { 
-			limit = {
-				tag = this
-				not = { year = 2000 }
-			}
-			inflation = -0.5
-		}
 	}
 }
 

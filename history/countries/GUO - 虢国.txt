@@ -21,7 +21,9 @@ capital = 348
 		mil = 5
 	}
 }
-1928.1.1 = { elector = yes }
+1928.1.1 = { 
+	elector = yes
+}
 1948.1.1 = {
 	monarch = {
 		name = "¼É¸¸"

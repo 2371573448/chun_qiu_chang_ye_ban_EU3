@@ -4,6 +4,7 @@ trade_goods = fish
 hre = no
 base_tax = 3
 manpower = 0
-native_size = 45
+native_size = 2
 native_ferocity = 6
 native_hostileness = 10
+

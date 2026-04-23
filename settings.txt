@@ -35,8 +35,8 @@ text_height=300.000000
 sea_text_alpha=120
 counter_distance=200.000000
 }
-lastplayer="寤生"
-lasthost="192.168.2.50"
+lastplayer="请输入文本2"
+lasthost="192.168.2.1"
 serveradress="diplomacy.valkyrienet.com"
 autosave="YEARLY"
 outliner=

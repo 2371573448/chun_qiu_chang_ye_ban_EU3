@@ -271,7 +271,7 @@ lianmengchangdi_title;联盟长狄;;;;;;;;;;X
 lianmengchangdi_desc;彼长狄，我之种类也。今周室不协，正是我等用武之机也，请盟长狄，共击周邦。;;;;;;;;;;X
 yishuliuyu_title;役属留吁;;;;;;;;;;X
 yishuliuyu_desc;留吁氏我之旧属，趁我内乱，竟反臣职。今渠帅已重理我邦之军政，当复役属留吁，重振国威。;;;;;;;;;;X
-chidi_client_LIO_title;附庸黎国;;;;;;;;;;;X
+chidi_client_LIO_title;征服黎国;;;;;;;;;;;X
 chidi_client_LIO_desc;黎国，大邑商之旧邦也。自文王戡黎，黎侯世世服属周邦。今周邦已乱，黎孤弱无依，此乃天时，不可失也。;;;;;;;;;;X
 chidi_eastern_conquest_title;东出太行;;;;;;;;;;X
 chidi_eastern_conquest_desc;晋国日强，我邦日窘。而太行山东之邦国孱弱，民不知兵。此计，唯有东出太行，另寻生路矣。;;;;;;;;;;X
@@ -443,7 +443,8 @@ nanmanwangshijian1;开拓岭南大功告成;;;;;;;;;;X
 nanmanwangshijian2;岭南之地尽入我楚之掌控，伟大的楚王，请决定我大楚今后做什么;;;;;;;;;;X
 nanmanwangshijian3;华夏已死，南蛮当立;;;;;;;;;;X
 zhengfuchenguo_title;征服陈国;;;;;;;;;;X
-zhengfuchenguo_desc;征服陈国，兼弱并昧;;;;;;;;;;Xchenguo1_title;征服厉国;;;;;;;;;;X
+zhengfuchenguo_desc;征服陈国，兼弱并昧;;;;;;;;;;X
+chenguo1_title;征服厉国;;;;;;;;;;X
 chenguo1_desc;征服厉国;;;;;;;;;;X
 chenguo2_title;征服顿国;;;;;;;;;;X
 chenguo2_desc;征服顿国;;;;;;;;;;X
@@ -486,3 +487,5 @@ EVTDESC89509;朝歌已破;;;;;;;;;;X
 EVTOPTA89509;迁都！;;;;;;;;;;X
 shixiangshuyun_title;氐羌蜀韵;;;;;;;;;;X
 shixiangshuyun_desc;氐羌蜀韵;;;;;;;;;;X
+SGU_annex_BAG_title;吞并巴;;;;;;;;;;X
+SGU_annex_BAG_desc;吞并巴;;;;;;;;;;X

@@ -11,7 +11,6 @@ base_tax = 5
 manpower = 0
 citysize = 16000
 fort1 = yes
-add_core = CHI
 add_core = LIY
 cot = no
 

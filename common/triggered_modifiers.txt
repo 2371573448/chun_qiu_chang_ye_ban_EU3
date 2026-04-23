@@ -253,6 +253,207 @@ xiangronggongsheng4 = {
 	land_tech_cost_modifier = 0.2
 }
 ###############################################
+#国策#
+###############################################
+qianjunwanma_jiangling_1 = {
+	potential = { 
+		quality_quantity = 1
+		not = { general = 2 }
+	}
+	trigger = { 
+		quality_quantity = 1
+		general = 1
+	}
+	discipline = 0.01
+}
+qianjunwanma_jiangling_2 = {
+	potential = { 
+		quality_quantity = 1
+		general = 1
+		not = { general = 3 }
+	}
+	trigger = { 
+		quality_quantity = 1
+		general = 2
+	}
+	discipline = 0.02
+}
+qianjunwanma_jiangling_3 = {
+	potential = { 
+		quality_quantity = 1
+		general = 2
+		not = {
+			and = {
+				general = 4
+				quality_quantity = 2
+			}
+		}
+	}
+	trigger = { 
+		quality_quantity = 1
+		general = 3
+	}
+	discipline = 0.03
+}
+qianjunwanma_jiangling_4 = {
+	potential = { 
+		quality_quantity = 2
+		general = 3
+		not = { general = 5 }
+	}
+	trigger = { 
+		quality_quantity = 2
+		general = 4
+	}
+	discipline = 0.04
+}
+qianjunwanma_jiangling_5 = {
+	potential = { 
+		quality_quantity = 2
+		general = 4
+		not = { general = 6 }
+	}
+	trigger = { 
+		quality_quantity = 2
+		general = 5
+	}
+	discipline = 0.05
+}
+qianjunwanma_jiangling_6 = {
+	potential = { 
+		quality_quantity = 2
+		general = 5
+		not = {
+			and = {
+				general = 7
+				quality_quantity = 3
+			}
+		}
+	}
+	trigger = { 
+		quality_quantity = 2
+		general = 6
+	}
+	discipline = 0.06
+}
+qianjunwanma_jiangling_7 = {
+	potential = { 
+		quality_quantity = 3
+		general = 6
+		not = { general = 8 }
+	}
+	trigger = { 
+		quality_quantity = 3
+		general = 7
+	}
+	discipline = 0.07
+}
+qianjunwanma_jiangling_8 = {
+	potential = { 
+		quality_quantity = 3
+		general = 7
+		not = { general = 9 }
+	}
+	trigger = { 
+		quality_quantity = 3
+		general = 8
+	}
+	discipline = 0.08
+}
+qianjunwanma_jiangling_9 = {
+	potential = { 
+		quality_quantity = 3
+		general = 8
+		not = {
+			and = {
+				general = 10
+				quality_quantity = 4
+			}
+		}
+	}
+	trigger = { 
+		quality_quantity = 3
+		general = 9
+	}
+	discipline = 0.09
+}
+qianjunwanma_jiangling_10 = {
+	potential = { 
+		quality_quantity = 4
+		general = 9
+		not = { general = 11 }
+	}
+	trigger = { 
+		quality_quantity = 4
+		general = 10
+	}
+	discipline = 0.10
+}
+qianjunwanma_jiangling_11 = {
+	potential = { 
+		quality_quantity = 4
+		general = 10
+		not = { general = 12 }
+	}
+	trigger = { 
+		quality_quantity = 4
+		general = 11
+	}
+	discipline = 0.11
+}
+qianjunwanma_jiangling_12 = {
+	potential = { 
+		quality_quantity = 4
+		general = 11
+		not = {
+			and = {
+				general = 13
+				quality_quantity = 5
+			}
+		}
+	}
+	trigger = { 
+		quality_quantity = 4
+		general = 12
+	}
+	discipline = 0.12
+}
+qianjunwanma_jiangling_13 = {
+	potential = { 
+		quality_quantity = 5
+		general = 12
+		not = { general = 14 }
+	}
+	trigger = { 
+		quality_quantity = 5
+		general = 13
+	}
+	discipline = 0.13
+}
+qianjunwanma_jiangling_14 = {
+	potential = { 
+		quality_quantity = 5
+		general = 13
+		not = { general = 15 }
+	}
+	trigger = { 
+		quality_quantity = 5
+		general = 14
+	}
+	discipline = 0.14
+}
+qianjunwanma_jiangling_15 = {
+	potential = { 
+		quality_quantity = 5
+		general = 14
+	}
+	trigger = { 
+		quality_quantity = 5
+		general = 15
+	}
+	discipline = 0.15
+}
+###############################################
 #物产开发#
 ###############################################
 ####
@@ -6748,7 +6949,7 @@ SGU_buff = {
 	trigger = { 
 		has_country_flag = shanchuanxianyao
 	}
-	land_attrition = -0.05
+	land_attrition = -0.15
 	icon = 7
 }
 ZHI_buff2 = {
@@ -9325,6 +9526,7 @@ XAY_buff1 = {
 	land_morale = 0.5
 	discipline = 0.05
 }
+#大军维护费
 junduiweihufei121 = { 
 	potential = { 
 		army = 200
@@ -9382,6 +9584,7 @@ junduiweihufei121 = {
 	}
                     land_maintenance_modifier = +0.30
 }
+#冗兵
 jiaobing1 = {
 	potential = { 
 		army_size_percentage = 1.1
@@ -9424,6 +9627,7 @@ jiaobing3 = {
 	land_maintenance_modifier = 0.30
 	land_tech_cost_modifier = 0.05
 }
+#舟师
 zhoushi = {
 	potential = { 
 		navy_size_percentage = 0.5
@@ -9441,6 +9645,29 @@ dazhoushi = {
 		navy_size_percentage = 1
 	}
 	range = 0.2
+}
+#贸易收入debuff
+shangshengjunpi_1 = {
+	potential = { 
+		trade_income_percentage = 0.5
+	}
+	trigger = { 
+		trade_income_percentage = 0.5
+	}
+	land_forcelimit_modifier = -0.25
+	global_manpower_modifier = -0.25
+	stability = 0.2
+}
+shangshengjunpi_2 = {
+	potential = { 
+		trade_income_percentage = 0.75
+	}
+	trigger = { 
+		trade_income_percentage = 0.75
+	}
+	land_forcelimit_modifier = -0.5
+	global_manpower_modifier = -0.5
+	stability = 0.5
 }
 ###西北文化###
 youmudiguo = {

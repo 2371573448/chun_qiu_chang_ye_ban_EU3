@@ -11,9 +11,6 @@ technology_group = chinese
 religion = liyuejiaohua 
 primary_culture = zhongyuan
 capital = 382
-1928.1.1 = { 
-	elector = yes
-}
 1917.1.1={monarch={name="¹ã" dynasty="½ª" adm=5 dip=3 mil=3}}
 1943.1.1={monarch={name="ÁÒ" dynasty="½ª" adm=3 dip=6 mil=3}}
 1968.1.1={monarch={name="æï" dynasty="½ª" adm=6 dip=6 mil=3}}

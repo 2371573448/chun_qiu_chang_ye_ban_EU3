@@ -1,9 +1,10 @@
 culture = dahe
 religion = animism
-trade_goods = fish
+trade_goods = grain
 hre = no
 base_tax = 4
 manpower = 0
-native_size = 220
+native_size = 2
 native_ferocity = 5
 native_hostileness = 9
+

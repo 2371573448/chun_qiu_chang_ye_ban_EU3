@@ -45,9 +45,8 @@ treasurer = {
 ######################################################
 #²¼ÒÂÃÅ¿Í
 naval_reformer = { 
-	missionaries = 0.1
-	naval_tech_investment = 2
-	naval_tech_cost_modifier = -0.02
+	naval_tech_investment = 1
+	naval_tech_cost_modifier = -0.01
 	cultural_tradition_cost = 0.2
 }
 ######################################################
@@ -64,7 +63,7 @@ army_reformer = {
 trader = { 
 	merchant_compete_chance = 0.02
 	trade_efficiency = 0.02
-	production_efficiency = -0.01
+	production_efficiency = -0.025
 	interest = -0.01
 	cultural_tradition_cost = 0.2
 }
@@ -127,7 +126,7 @@ high_judge = {
 alderman = {
 	build_cost = -0.02
 	production_efficiency = 0.02
-	trade_efficiency = -0.01
+	trade_efficiency = -0.025
 	production_tech_investment = 1.75
 	cultural_tradition_cost = 0.2
 }

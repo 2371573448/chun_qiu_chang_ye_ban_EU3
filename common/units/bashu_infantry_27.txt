@@ -1,0 +1,12 @@
+﻿#开明神卫
+
+type = infantry
+unit_type = bashu
+
+maneuver = 2
+offensive_fire = 3
+defensive_fire = 4
+offensive_shock = 4
+defensive_shock = 4
+offensive_morale = 4
+defensive_morale = 4

@@ -15,66 +15,7 @@ country_event = {
 				}
 			}
 			any_owned_province = { 
-				OR = { 
-					province_id = 154
-					province_id = 155
-					province_id = 159
-					province_id = 160
-					province_id = 161
-					province_id = 162
-					province_id = 163
-					province_id = 169
-					province_id = 525
-					province_id = 526
-					province_id = 541
-					province_id = 542
-					province_id = 547
-					province_id = 548
-					province_id = 549
-					province_id = 550
-					province_id = 551
-					province_id = 552
-					province_id = 558
-					province_id = 559
-					province_id = 560
-					province_id = 561
-					province_id = 562
-					province_id = 563
-					province_id = 564
-					province_id = 565
-					province_id = 566
-					province_id = 567
-					province_id = 568
-					province_id = 569
-					province_id = 570
-					province_id = 750
-					province_id = 751
-					province_id = 774
-					province_id = 775
-					province_id = 776
-					province_id = 777
-					province_id = 778
-					province_id = 779
-					province_id = 780
-					province_id = 781
-					province_id = 782
-					province_id = 783
-					province_id = 784
-					province_id = 785
-					province_id = 786
-					province_id = 787
-					province_id = 788
-					province_id = 789
-					province_id = 790
-					province_id = 791
-					province_id = 792
-					province_id = 793
-					province_id = 794
-					province_id = 795
-					province_id = 796
-					province_id = 797
-					province_id = 798
-				}
+				region = huangman
 				not = { 
 					has_province_modifier = huangmannanzhi
 				}
@@ -115,65 +56,9 @@ country_event = {
 			}
 			any_owned = { 
 				limit = { 
-					OR = { 
-						province_id = 154
-						province_id = 155
-						province_id = 159
-						province_id = 160
-						province_id = 161
-						province_id = 162
-						province_id = 163
-						province_id = 169
-						province_id = 525
-						province_id = 526
-						province_id = 541
-						province_id = 542
-						province_id = 547
-						province_id = 548
-						province_id = 549
-						province_id = 550
-						province_id = 551
-						province_id = 552
-						province_id = 558
-						province_id = 559
-						province_id = 560
-						province_id = 561
-						province_id = 562
-						province_id = 563
-						province_id = 564
-						province_id = 565
-						province_id = 566
-						province_id = 567
-						province_id = 568
-						province_id = 569
-						province_id = 570
-						province_id = 750
-						province_id = 751					
-						province_id = 774
-						province_id = 775
-						province_id = 776
-						province_id = 777
-						province_id = 778
-						province_id = 779
-						province_id = 780
-						province_id = 781
-						province_id = 782
-						province_id = 783
-						province_id = 784
-						province_id = 785
-						province_id = 786
-						province_id = 787
-						province_id = 788
-						province_id = 789
-						province_id = 790
-						province_id = 791
-						province_id = 792
-						province_id = 793
-						province_id = 794
-						province_id = 795
-						province_id = 796
-						province_id = 797
-						province_id = 798
+					region = huangman
+					not = { 
+						has_province_modifier = huangmannanzhi
 					}
 					not = { 
 						has_province_flag = developed_region
@@ -382,13 +267,28 @@ country_event = {
 	trigger = { 
 		tag = NPC
 		any_country = { 
-			OR = { 
-				government = tribal_federation
-				government = tribal_despotism
-				government = steppe_horde
-				government = republican_dictatorship
-			}
-			any_owned_province = { 
+			any_owned_province = {
+				or = {
+					owner = {
+						OR = { 
+							government = tribal_federation
+							government = tribal_despotism
+							government = steppe_horde
+							government = republican_dictatorship
+						}
+					}
+					not = { region = huangman }
+					has_province_flag = developed_region
+					AND = { 
+						NOT = { 
+							owner = { 
+								culture_group = huaxia
+							}
+						}
+						has_owner_culture = yes
+						is_core = yes
+					}
+				}
 				has_province_modifier = huangmannanzhi
 			}
 		}
@@ -402,14 +302,56 @@ country_event = {
 		name = "EVTOPTA886"
 		any_country = { 
 			limit = { 
-				OR = { 
-					government = tribal_federation
-					government = tribal_despotism
-					government = steppe_horde
-					government = republican_dictatorship
+				any_owned_province = {
+					or = {
+						owner = {
+							OR = { 
+								government = tribal_federation
+								government = tribal_despotism
+								government = steppe_horde
+								government = republican_dictatorship
+							}
+						}
+						not = { region = huangman }
+						has_province_flag = developed_region
+						AND = { 
+							NOT = { 
+								owner = { 
+									culture_group = huaxia
+									}
+							}
+						has_owner_culture = yes
+							is_core = yes
+						}
+					}
+					has_province_modifier = huangmannanzhi
 				}
 			}
 			any_owned = { 
+				limit = { 
+					or = {
+						owner = {
+							OR = { 
+								government = tribal_federation
+								government = tribal_despotism
+								government = steppe_horde
+								government = republican_dictatorship
+							}
+						}
+						not = { region = huangman }
+						has_province_flag = developed_region
+						AND = { 
+							NOT = { 
+								owner = { 
+									culture_group = huaxia
+									}
+							}
+						has_owner_culture = yes
+							is_core = yes
+						}
+					}
+					has_province_modifier = huangmannanzhi
+				}
 				remove_province_modifier = huangmannanzhi
 			}
 		}
@@ -543,61 +485,429 @@ country_event = {
 province_event = { 
 	id = 897
 	trigger = { 
-		has_province_modifier = huangmankaifa
+		owner = {
+			not = { has_country_flag = zidongkaifa }
+		}
+		NOT = { has_province_modifier = huangmankaifa }
+		has_province_flag = kaifabiaoji
 	}
 	mean_time_to_happen = { 
-		months = 900
-		modifier = { 
-			factor = 0.6
-			owner = { idea = vice_roys }
-		}
-		modifier = { 
-			factor = 0.8
-			owner = { land_naval = 2 }
-		}
-		modifier = { 
-			factor = 0.8
-			owner = { land_naval = 3 }
-		}
-		modifier = { 
-			factor = 0.8
-			owner = { land_naval = 4 }
-		}
-		modifier = { 
-			factor = 0.8
-			owner = { land_naval = 5 }
-		}
-		modifier = { 
-			factor = 0.75
-			owner = { advisor = pioneer }
-		}
-		modifier = { 
-			factor = 0.5
-			and = {
-				advisor = pioneer
-				pioneer = 5
-			}
-		}
-		modifier = { 
-			factor = 0.5
-			and = {
-				advisor = pioneer
-				pioneer = 6
-			}
-		}
-		modifier = { 
-			factor = 0.3
-			owner = { has_country_flag = shanchuanxianyao }
-		}
+		months = 0
 	}
 	title = "EVTNAME897"
 	desc = "EVTDESC897"
 	option = { 
 		name = "EVTOPTA897"
-		base_tax = 2
-		citysize = 10000
-		remove_province_modifier = huangmannanzhi
-		remove_province_modifier = huangmankaifa
-		set_province_flag = developed_region
+		owner = {
+			# 第一步完成：没有任何 huangmankaifa_X 修正
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					NOT = { has_province_modifier = huangmankaifa_1 }
+					NOT = { has_province_modifier = huangmankaifa_2 }
+					NOT = { has_province_modifier = huangmankaifa_3 }
+					NOT = { has_province_modifier = huangmankaifa_4 }
+					NOT = { has_province_modifier = huangmankaifa_5 }
+				}
+				clr_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa_1"
+					duration = -1
+				}
+			}
+			# 第二步完成：有 huangmankaifa_1，没有 huangmankaifa_2
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_1
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_1
+				add_province_modifier = {
+					name = "huangmankaifa_2"
+					duration = -1
+				}
+			}
+			# 第三步完成：有 huangmankaifa_2，没有 huangmankaifa_3
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_2
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_2
+				add_province_modifier = {
+					name = "huangmankaifa_3"
+					duration = -1
+				}
+			}
+			# 第四步完成：有 huangmankaifa_3，没有 huangmankaifa_4
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_3
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_3
+				add_province_modifier = {
+					name = "huangmankaifa_4"
+					duration = -1
+				}
+			}
+			# 第五步完成：有 huangmankaifa_4，没有 huangmankaifa_5
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_4
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_4
+				add_province_modifier = {
+					name = "huangmankaifa_5"
+					duration = -1
+				}
+			}
+			# 第六步完成：有 huangmankaifa_5（并且没有进行中的计时器）
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					has_province_modifier = huangmankaifa_5
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmannanzhi
+				remove_province_modifier = huangmankaifa_5
+				set_province_flag = developed_region
+			}
+		}
+	}
+}
+country_event = { 
+	id = 898
+	trigger = { 
+		tag = NPC
+		any_country = {
+			has_country_flag = zidongkaifa
+			any_owned_province = {
+				or = {
+					# 第一步：启草莱
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						NOT = { has_province_modifier = huangmankaifa_1 }
+						NOT = { has_province_modifier = huangmankaifa_2 }
+						NOT = { has_province_modifier = huangmankaifa_3 }
+						NOT = { has_province_modifier = huangmankaifa_4 }
+						NOT = { has_province_modifier = huangmankaifa_5 }
+						owner = {
+							has_idea = vice_roys
+							colonists = 1
+						}
+					}
+					# 第二步：定邑落
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_modifier = huangmankaifa_1
+						owner = {
+							has_idea = vice_roys
+							colonists = 1
+						}
+					}
+					# 第三步：通水利
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_modifier = huangmankaifa_2
+						owner = {
+							has_idea = vice_roys
+							colonists = 1
+							treasury = 50
+						}
+					}
+					# 第四步：敷王化
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_modifier = huangmankaifa_3
+						owner = {
+							has_idea = vice_roys
+							missionaries = 1
+						}
+					}
+					# 第五步：成郡县
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_modifier = huangmankaifa_4
+						owner = {
+							has_idea = vice_roys
+							officials = 3
+						}
+					}
+					# 第六步：定荒蛮
+					and = {
+						has_province_modifier = huangmannanzhi
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_modifier = huangmankaifa_5
+						owner = {
+							has_idea = vice_roys
+							has_advisor = pioneer
+						}
+					}
+					# 计时器结束且存在标记的省份
+					and = {
+						NOT = { has_province_modifier = huangmankaifa }
+						has_province_flag = kaifabiaoji
+					}
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME898"
+	desc = "EVTDESC898"
+	option = { 
+		name = "EVTOPTA897"
+		any_country = {
+			limit = { 
+				has_country_flag = zidongkaifa
+			}
+			# 第一步完成：没有任何 huangmankaifa_X 修正
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					NOT = { has_province_modifier = huangmankaifa_1 }
+					NOT = { has_province_modifier = huangmankaifa_2 }
+					NOT = { has_province_modifier = huangmankaifa_3 }
+					NOT = { has_province_modifier = huangmankaifa_4 }
+					NOT = { has_province_modifier = huangmankaifa_5 }
+				}
+				clr_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa_1"
+					duration = -1
+				}
+			}
+			# 第二步完成：有 huangmankaifa_1，没有 huangmankaifa_2
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_1
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_1
+				add_province_modifier = {
+					name = "huangmankaifa_2"
+					duration = -1
+				}
+			}
+			# 第三步完成：有 huangmankaifa_2，没有 huangmankaifa_3
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_2
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_2
+				add_province_modifier = {
+					name = "huangmankaifa_3"
+					duration = -1
+				}
+			}
+			# 第四步完成：有 huangmankaifa_3，没有 huangmankaifa_4
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_3
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_3
+				add_province_modifier = {
+					name = "huangmankaifa_4"
+					duration = -1
+				}
+			}
+			# 第五步完成：有 huangmankaifa_4，没有 huangmankaifa_5
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					NOT = { has_province_modifier = huangmankaifa }
+					has_province_modifier = huangmankaifa_4
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa_4
+				add_province_modifier = {
+					name = "huangmankaifa_5"
+					duration = -1
+				}
+			}
+			# 第六步完成：有 huangmankaifa_5（并且没有进行中的计时器）
+			any_owned = { 
+				limit = { 
+					has_province_flag = kaifabiaoji
+					has_province_modifier = huangmankaifa_5
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmannanzhi
+				remove_province_modifier = huangmankaifa_5
+				set_province_flag = developed_region
+			}
+			
+			# 自动开发：第一步（启草莱）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					NOT = { has_province_modifier = huangmankaifa_1 }
+					NOT = { has_province_modifier = huangmankaifa_2 }
+					NOT = { has_province_modifier = huangmankaifa_3 }
+					NOT = { has_province_modifier = huangmankaifa_4 }
+					NOT = { has_province_modifier = huangmankaifa_5 }
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						colonists = 1
+					}
+				}
+				owner = { colonists = -1 }
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 912
+				}
+			}
+			# 自动开发：第二步（定邑落）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					has_province_modifier = huangmankaifa_1
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						colonists = 1
+					}
+				}
+				owner = { colonists = -1 }
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 912
+				}
+			}
+			# 自动开发：第三步（通水利）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					has_province_modifier = huangmankaifa_2
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						colonists = 1
+						treasury = 50
+					}
+				}
+				owner = {
+					colonists = -1
+					treasury = -50
+				}
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 912
+				}
+			}
+			# 自动开发：第四步（敷王化）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					has_province_modifier = huangmankaifa_3
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						missionaries = 1
+					}
+				}
+				owner = { missionaries = -1 }
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 912
+				}
+			}
+			# 自动开发：第五步（成郡县）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					has_province_modifier = huangmankaifa_4
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						officials = 3
+					}
+				}
+				owner = { officials = -3 }
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 912
+				}
+			}
+			# 自动开发：第六步（定荒蛮）
+			random_owned = { 
+				limit = { 
+					has_province_modifier = huangmannanzhi
+					has_province_modifier = huangmankaifa_5
+					NOT = { has_province_modifier = huangmankaifa }
+					owner = {
+						has_idea = vice_roys
+						has_advisor = pioneer
+					}
+				}
+				set_province_flag = kaifabiaoji
+				add_province_modifier = {
+					name = "huangmankaifa"
+					duration = 4562
+				}
+			}
+		}
+	}
+}
+province_event = { 
+	id = 899
+	trigger = { 
+		owner = {
+			not = { has_advisor = pioneer }
+		}
+		has_province_modifier = huangmankaifa_5
+		has_province_modifier = huangmankaifa
+		has_province_flag = kaifabiaoji
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME899"
+	desc = "EVTDESC899"
+	option = { 
+		owner = {
+			any_owned = { 
+				limit = { 
+					has_province_modifier = huangmankaifa_5
+					has_province_modifier = huangmankaifa
+					has_province_flag = kaifabiaoji
+				}
+				clr_province_flag = kaifabiaoji
+				remove_province_modifier = huangmankaifa
+			}
+		}
 	}
 }

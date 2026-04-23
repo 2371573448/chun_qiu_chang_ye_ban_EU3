@@ -47,7 +47,7 @@ christian = {
 			}
 		province = {
 			local_manpower_modifier = 0.10
-			land_forcelimit = 1.5
+			land_forcelimit = 1
 			stability_cost = 15
 		}
 		country = {

@@ -20,7 +20,7 @@ grand_navy = {
 #广结诸侯
 sea_hawks = {
 	diplomatic_skill = 2
-	diplomats = 0.5
+	diplomats = 1.5
 	badboy = -0.3
 	}
 #天命所归
@@ -174,6 +174,7 @@ vetting = {
 	}
 #门客制度
 bureaucracy = {
+	diplomats = 0.5
 	spy_efficiency = 0.08
 	global_spy_defence = 0.10
 	}
@@ -218,7 +219,7 @@ liberty_egalite_fraternity = {
 culture_ideas = {
 #设立官学
 ecumenism = {
-	cultural_tradition = 0.06
+	cultural_tradition = 0.05
 	army_tradition = 0.01
 	navy_tradition = 0.02
 	}

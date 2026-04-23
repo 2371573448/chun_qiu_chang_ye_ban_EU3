@@ -1177,6 +1177,37 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	zidongkaifamanhuang = { 
+		potential = { 
+			any_owned_province = {
+				has_province_modifier = huangmannanzhi
+			}
+		}
+		allow = { 
+		}
+		effect = { 
+			set_country_flag = zidongkaifa_biaoji
+			any_country = {
+				limit = { 
+					has_country_flag = zidongkaifa
+					has_country_flag = zidongkaifa_biaoji
+				}
+				clr_country_flag = zidongkaifa_biaoji
+				clr_country_flag = zidongkaifa
+			}
+			any_country = {
+				limit = { 
+					not = { has_country_flag = zidongkaifa }
+					has_country_flag = zidongkaifa_biaoji
+				}
+				clr_country_flag = zidongkaifa_biaoji
+				set_country_flag = zidongkaifa
+			}
+		}
+		ai_will_do = { 
+			factor = 0
+		}
+	}
 }
 
 #相关决议
@@ -1473,38 +1504,155 @@ province_decisions = {
 		}
 	}
 	#开发荒蛮
-	kaifahuangman = {
+
+	# 第一步：启草莱
+	kaifahuangman_step1 = {
 		potential = {
-			owner = {
-				has_country_flag = sitianzhidu
-			}
 			has_province_modifier = huangmannanzhi
-			NOT= {
-				has_province_modifier = huangmankaifa
-			}
+			NOT = { has_province_modifier = huangmankaifa_1 }
+			NOT = { has_province_modifier = huangmankaifa_2 }
+			NOT = { has_province_modifier = huangmankaifa_3 }
+			NOT = { has_province_modifier = huangmankaifa_4 }
+			NOT = { has_province_modifier = huangmankaifa_5 }
+			NOT = { has_province_modifier = huangmankaifa }      # 无进行中的开发
 		}
 		allow = {
 			owner = {
-				or = { 
-					idea = vice_roys
-					land_naval = 1
-				}
-				officials = 1
+				has_idea = vice_roys
+				colonists = 1
+			}
+		}
+		effect = {
+			owner = { colonists = -1 }
+			set_province_flag = kaifabiaoji
+			add_province_modifier = {
+				name = "huangmankaifa"
+				duration = 365
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# 第二步：定邑落
+	kaifahuangman_step2 = {
+		potential = {
+			has_province_modifier = huangmannanzhi
+			has_province_modifier = huangmankaifa_1          # 已完成第一步
+			NOT = { has_province_modifier = huangmankaifa }  # 无进行中的开发
+		}
+		allow = {
+			owner = {
+				has_idea = vice_roys
+				colonists = 1
+			}
+		}
+		effect = {
+			owner = { colonists = -1 }
+			set_province_flag = kaifabiaoji
+			add_province_modifier = {
+				name = "huangmankaifa"
+				duration = 365
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# 第三步：通水利
+	kaifahuangman_step3 = {
+		potential = {
+			has_province_modifier = huangmannanzhi
+			has_province_modifier = huangmankaifa_2          # 已完成第二步
+			NOT = { has_province_modifier = huangmankaifa }
+		}
+		allow = {
+			owner = {
+				has_idea = vice_roys
+				colonists = 1
 				treasury = 50
 			}
 		}
 		effect = {
 			owner = {
-				officials = -1
+				colonists = -1
 				treasury = -50
 			}
+			set_province_flag = kaifabiaoji
 			add_province_modifier = {
 				name = "huangmankaifa"
-				duration = -1
+				duration = 365
 			}
 		}
-		ai_will_do = {
-			factor = 0
+		ai_will_do = { factor = 1 }
+	}
+
+	# 第四步：敷王化
+	kaifahuangman_step4 = {
+		potential = {
+			has_province_modifier = huangmannanzhi
+			has_province_modifier = huangmankaifa_3          # 已完成第三步
+			NOT = { has_province_modifier = huangmankaifa }
 		}
+		allow = {
+			owner = {
+				has_idea = vice_roys
+				missionaries = 1
+			}
+		}
+		effect = {
+			owner = { missionaries = -1 }
+			set_province_flag = kaifabiaoji
+			add_province_modifier = {
+				name = "huangmankaifa"
+				duration = 365
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# 第五步：成郡县
+	kaifahuangman_step5 = {
+		potential = {
+			has_province_modifier = huangmannanzhi
+			has_province_modifier = huangmankaifa_4          # 已完成第四步
+			NOT = { has_province_modifier = huangmankaifa }
+		}
+		allow = {
+			owner = {
+				has_idea = vice_roys
+				officials = 3
+			}
+		}
+		effect = {
+			owner = { officials = -3 }
+			set_province_flag = kaifabiaoji
+			add_province_modifier = {
+				name = "huangmankaifa"
+				duration = 365
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# 第六步：定荒蛮
+	kaifahuangman_step6 = {
+		potential = {
+			has_province_modifier = huangmannanzhi
+			has_province_modifier = huangmankaifa_5          # 已完成第五步
+			NOT = { has_province_modifier = huangmankaifa }
+		}
+		allow = {
+			owner = {
+				has_idea = vice_roys
+				has_advisor = pioneer
+			}
+		}
+		effect = {
+			set_province_flag = kaifabiaoji
+			add_province_modifier = {
+				name = "huangmankaifa"
+				duration = 1825
+			}
+		}
+		ai_will_do = { factor = 1 }
 	}
 }

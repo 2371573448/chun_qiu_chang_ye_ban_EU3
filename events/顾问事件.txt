@@ -1248,3 +1248,121 @@ country_event = {
 		}
 	}
 }
+country_event = { 
+	id = 38926
+	trigger = { 
+		idea = bureaucracy
+		advisor = naval_reformer
+		OR = {
+			not = {
+				has_country_flag = xiannengzhijishiqi
+			}
+			had_country_flag = { 
+				flag = xiannengzhijishiqi
+				days = 365
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME38926"
+	desc = "EVTDESC38926"
+	option = {
+		name = "EVTOPTA38926"
+		set_country_flag = xiannengzhijishiqi
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 2
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 3
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 4
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 5
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+		any_country = {
+			limit = {
+				tag = this
+				naval_reformer = 6
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = 0.5
+			}
+		}
+	}
+}
+country_event = { 
+	id = 38927
+	trigger = { 
+		or = {
+			not = { idea = bureaucracy }
+			not = { advisor = naval_reformer }
+		}
+		has_country_flag = xiannengzhijishiqi
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME38927"
+	desc = "EVTDESC38927"
+	option = {
+		name = "EVTOPTA38927"
+		clr_country_flag = xiannengzhijishiqi
+		set_variable = {
+			which = xiannengzhi
+			value = 0
+		}
+		set_variable = {
+			which = xiannengmenke
+			value = 0
+		}
+		romove_country_modifier = xiannengmenke_1
+		romove_country_modifier = xiannengmenke_2
+		romove_country_modifier = xiannengmenke_3
+		romove_country_modifier = xiannengmenke_4
+		romove_country_modifier = xiannengmenke_5
+		romove_country_modifier = xiannengmenke_6
+	}
+}

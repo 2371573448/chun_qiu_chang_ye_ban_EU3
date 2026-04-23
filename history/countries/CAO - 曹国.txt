@@ -13,9 +13,6 @@ primary_culture = dongtu
 capital = 302
 
 1903.1.1={monarch={name="ïô" dynasty="¼§" adm=6 dip=6 mil=6}}
-1928.1.1 = { 
-	elector = yes
-}
 1938.1.1={monarch={name="Ê¯¸¸" dynasty="¼§" adm=6 dip=6 mil=2}}
 1939.1.1={monarch={name="Îä" dynasty="¼§" adm=5 dip=5 mil=2}}
 1942.1.1={monarch={name="ÖÕÉú" dynasty="¼§" adm=3 dip=3 mil=4}}

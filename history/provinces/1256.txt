@@ -10,7 +10,6 @@ base_tax = 3
 manpower = 0
 citysize = 10000
 fort1 = yes
-add_core = CHI
 add_core = DOC
 cot = no
 

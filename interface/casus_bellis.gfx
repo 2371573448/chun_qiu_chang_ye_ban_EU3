@@ -331,4 +331,18 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.fx"
   }
+	 spriteType = {
+		name = "GFX_cb_baohuhuaxia"
+		texturefile = "gfx/interface/httt_interface/casus_bellis/cb_baohuhuaxia.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.fx"
+  }
+	 spriteType = {
+		name = "GFX_cb_duirongjiuyan"
+		texturefile = "gfx/interface/httt_interface/casus_bellis/cb_duirongjiuyan.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.fx"
+  }
 }

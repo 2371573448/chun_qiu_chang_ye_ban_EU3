@@ -6974,7 +6974,8 @@ country_event = {
 				name = "FAS_mouding_zeng3"
 				duration = -1
 			}
-		}		any_country = { 
+		}
+		any_country = { 
 			limit = { 
 				tag = FAS
 				war = yes
@@ -7440,6 +7441,235 @@ country_event = {
 			remove_country_modifier = FAS_mouding_jian19
 			remove_country_modifier = FAS_mouding_jian20
 			remove_country_modifier = FAS_mouding_jian21
+		}
+	}
+}
+country_event = {
+	id = 89533
+	trigger = { 
+		tag = YAN
+		any_owned_province = { 
+			province_id = 32
+			controller = {
+				primary_culture = shanrong
+			}
+		}
+		not = { 
+			has_country_flag = jiuyancunwei_chufa
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89533"
+	desc = "EVTDESC89533"
+	immediate = {
+		set_country_flag = jiuyancunwei_chufa
+	}
+	option = {
+		name = "EVTOPTA89533"
+		QIG = { country_event = 89534 }
+		add_country_modifier = { 
+			name = "YAN_jiuyancunwei_1"
+			duration = 3650
+		}
+		add_country_modifier = { 
+			name = "YAN_jiuyancunwei_2"
+			duration = 1095
+		}
+		add_country_modifier = { 
+			name = "YAN_jiuyancunwei_3"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB89533"
+		stability = -1
+		any_country = { 
+			limit = { 
+				primary_culture = shanrong
+			}
+			relation = { who = THIS value = 200 }
+		}
+		QIG = { relation = { who = THIS value = -200 } }
+	}
+	option = {
+		name = "EVTOPTC89533"
+		stability = 1
+		QIG = {
+			vassalize = THIS
+			relation = { who = THIS value = 200 }
+		}
+		any_country = { 
+			limit = { 
+				primary_culture = shanrong
+			}
+			add_casus_belli = {
+				type = cb_baohuhuaxia
+				months = 120
+				target = QIG
+			}
+		}
+	}
+}
+country_event = {
+	id = 89534
+	is_triggered_only = yes
+	title = "EVTNAME89534"
+	desc = "EVTDESC89534"
+	option = {
+		name = "EVTOPTA89534"
+		stability = 1
+		prestige = 1
+		any_country = { 
+			limit = { 
+				capital_scope = { 
+					hre = yes
+				}
+				not = { tag = QIG }
+				not = { tag = YAN }
+			}
+			country_event = 89535
+		}
+		add_country_modifier = { 
+			name = "YAN_jiuyancunwei_4"
+			duration = 1825
+		}
+		YAN = { relation = { who = THIS value = 200 } }
+		any_country = { 
+			limit = { 
+				primary_culture = shanrong
+			}
+			add_casus_belli = {
+				type = cb_duirongjiuyan
+				months = 120
+				target = QIG
+			}
+		}
+		YAN = {
+			capital_scope = { 
+				shijian_infantry_4444 = current
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB89534"
+		stability = -1
+		prestige = -0.5
+		badboy = 3
+		any_country = { 
+			limit = { 
+				capital_scope = { 
+					hre = yes
+				}
+			}
+			relation = { who = THIS value = -20 }
+		}
+		YAN = { relation = { who = THIS value = -60 } }
+	}
+}
+country_event = {
+	id = 89535
+	is_triggered_only = yes
+	title = "EVTNAME89535"
+	desc = "EVTDESC89535"
+	option = {
+		name = "EVTOPTA89535"
+		QIG = { relation = { who = THIS value = 50 } }
+		YAN = {
+			capital_scope = { 
+				shijian_infantry_2222 = current
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB89535"
+		QIG = { relation = { who = THIS value = -50 } }
+	}
+}
+country_event = {
+	id = 89536
+	trigger = { 
+		tag = YAN
+		not = { exists = WUZ }
+		not = { exists = LZG }
+		not = { exists = GUZ }
+		has_country_flag = jiuyancunwei_chufa
+		not = {
+			has_country_flag = jiuyancunwei_houxu
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89536"
+	desc = "EVTDESC89536"
+	option = {
+		name = "EVTOPTA89536"
+		set_country_flag = jiuyancunwei_houxu
+		QIG = { country_event = 89537 }
+	}
+}
+country_event = {
+	id = 89537
+	is_triggered_only = yes
+	title = "EVTNAME89537"
+	desc = "EVTDESC89537"
+	option = {
+		name = "EVTOPTA89537"
+		badboy = -5
+		YAN = { elector = yes }
+		109 = {
+			secede_province = YAN
+			colonists = 700
+			add_core = YAN
+		}
+		110 = {
+			secede_province = YAN
+			colonists = 700
+			add_core = YAN
+		}
+		947 = {
+			secede_province = YAN
+			colonists = 700
+			add_core = YAN
+		}
+		948 = {
+			secede_province = YAN
+			colonists = 700
+			add_core = YAN
+		}
+		any_country = { 
+			limit = { 
+				tag = this
+				is_emperor = yes
+			}
+			add_imperial_influence = 20
+		}
+	}
+}
+country_event = {
+	id = 89538
+	trigger = { 
+		has_country_flag = jiuyancunwei_houxu
+		not = {
+			preferred_emperor = QIG
+		}
+		not = {
+			has_country_flag = jiuyancunwei_eming
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME89538"
+	desc = "EVTDESC89538"
+	option = {
+		name = "EVTOPTA89538"
+		set_country_flag = jiuyancunwei_eming
+		add_country_modifier = { 
+			name = "YAN_jiuyancunwei_5"
+			duration = 3650
 		}
 	}
 }

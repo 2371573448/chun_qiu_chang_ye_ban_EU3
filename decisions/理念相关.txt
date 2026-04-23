@@ -813,3 +813,227 @@ province_decisions = {
 		}
 	}
 }
+cultural_decisions = {
+	# 版本1 - 消耗3贤能值
+	xiannengmenke_1 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 3
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_1"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -3
+			}
+		}
+	}
+	# 版本2 - 消耗4贤能值
+	xiannengmenke_2 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 4
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_2"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -4
+			}
+		}
+	}
+	# 版本3 - 消耗5贤能值
+	xiannengmenke_3 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 5
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_3"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -5
+			}
+		}
+	}
+	# 版本4 - 消耗6贤能值
+	xiannengmenke_4 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 6
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_4"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -6
+			}
+		}
+	}
+	# 版本5 - 消耗7贤能值
+	xiannengmenke_5 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 7
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_5"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -7
+			}
+		}
+	}
+	# 版本6 - 消耗8贤能值
+	xiannengmenke_6 = {
+		potential = { 
+			idea = bureaucracy
+			advisor = naval_reformer
+			not = {
+				check_variable = {
+					which = xiannengmenke
+					value = 2
+				}
+			}
+		}
+		allow = { 
+			stability = 1
+			treasury = 50
+			check_variable = {
+				which = xiannengzhi
+				value = 8
+			}
+		}
+		effect = { 
+			stability = -1
+			treasury = -50
+			add_country_modifier = { 
+				name = "xiannengmenke_6"
+				duration = -1
+			}
+			change_variable = {
+				which = xiannengmenke
+				value = 1
+			}
+			change_variable = {
+				which = xiannengzhi
+				value = -8
+			}
+		}
+	}
+}

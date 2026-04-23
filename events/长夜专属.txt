@@ -30,6 +30,7 @@ country_event = {
 	}
 	option = {
 		name = "EVTOPTD87530"
+		set_country_flag = dashenguo
 		any_country = { 
 			limit = { 
 				ai = no
@@ -46,6 +47,14 @@ country_event = {
 	desc = "EVTDESC87531"
 	option = {
 		name = "EVTOPTA87531"
+		any_country = { 
+			limit = { 
+				ai = no
+				not = { tag = this }
+				has_country_flag = dashenguo
+			}
+			prestige = 0.01
+		}
 	}
 }
 country_event = {
@@ -100,6 +109,21 @@ country_event = {
 					is_capital = yes
 				}
 			}
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
+			youren_infantry_2222 = current
 			youren_infantry_2222 = current
 			youren_infantry_2222 = current
 			youren_infantry_2222 = current

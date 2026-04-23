@@ -20,9 +20,6 @@ capital = 278
 		mil = 7
 	}
 }
-1928.1.1 = { 
-	elector = yes
-}
 1995.1.1 = { 
 	monarch = { 
 		name = "¾¸"

@@ -1,9 +1,10 @@
 culture = chuyu
 religion = animism
-trade_goods = fish
+trade_goods = grain
 hre = no
 base_tax = 6
 manpower = 0
-native_size = 182
+native_size = 2
 native_ferocity = 7
 native_hostileness = 8
+

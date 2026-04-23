@@ -397,6 +397,34 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB877A"
+		random_owned = { 
+			limit = { 
+				has_province_flag = fuyongguoshengfenbiaoji
+			}
+			add_core = this
+			clr_province_flag = fuyongguoshengfenbiaoji
+		}
+		random_owned = { 
+			limit = { 
+				has_province_flag = fuyongguoshengfenbiaoji
+			}
+			add_core = this
+			clr_province_flag = fuyongguoshengfenbiaoji
+		}
+		random_owned = { 
+			limit = { 
+				has_province_flag = fuyongguoshengfenbiaoji
+			}
+			add_core = this
+			clr_province_flag = fuyongguoshengfenbiaoji
+		}
+		random_owned = { 
+			limit = { 
+				has_province_flag = fuyongguoshengfenbiaoji
+			}
+			add_core = this
+			clr_province_flag = fuyongguoshengfenbiaoji
+		}
 	}
 }
 

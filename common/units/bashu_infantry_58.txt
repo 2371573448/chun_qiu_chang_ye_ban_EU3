@@ -1,0 +1,12 @@
+﻿#玄崖隐锋
+
+type = infantry
+unit_type = bashu
+
+maneuver = 2
+offensive_fire = 5
+defensive_fire = 8
+offensive_shock = 7
+defensive_shock = 6
+offensive_morale = 6
+defensive_morale = 7

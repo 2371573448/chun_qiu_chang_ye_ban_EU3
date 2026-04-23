@@ -193,3 +193,51 @@ shixiangshuyun = {
 		treasury = 300
 	}
 }
+SGU_annex_BAG = {
+	
+	type = country
+
+	allow = {
+		tag = SGU
+		exists = BAG
+		BAG = {
+			neighbour = this
+		}
+	}
+	abort = {
+	}
+	chance = {
+		factor = 1000
+	}
+	immediate = {
+		any_province = {
+			limit = {
+				owner = { tag = BAG }
+			}
+			add_temp_claim = current
+		}
+	}
+	abort_effect = {
+		any_province = {
+			limit = {
+				owner = { tag = BAG }
+			}
+			romove_temp_claim = current
+		}
+	}
+	success = {
+		not = { exists = BAG }
+	}
+	effect = {
+		any_province = {
+			limit = {
+				any_core = { 
+					exists = no
+					tag = BAG
+				}
+			}
+			add_core = SGU
+			}
+		}
+	}
+}

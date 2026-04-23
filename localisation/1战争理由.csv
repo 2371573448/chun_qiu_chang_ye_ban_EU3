@@ -42,7 +42,11 @@ cb_insult_zb_desc;中原霸业非尔所独有;;;;;;;;;;X
 cb_insult_mbng;讨伐不庭;;;;;;;;;;X
 cb_insult_mbng_desc;讨伐不庭;;;;;;;;;;X
 cb_tianxiazhiba;天下制霸;;;;;;;;;;X
-cb_tianxiazhiba_desc;天下制霸;;;;;;;;;;X
+cb_tianxiazhiba_desc;威服诸侯，一统天下，号令列国莫敢不从;;;;;;;;;;X
+cb_baohuhuaxia;保护华夏;;;;;;;;;;X
+cb_baohuhuaxia_desc;攘除外夷，安定诸夏，守护华夏宗祀与疆土;;;;;;;;;;X
+cb_duirongjiuyan;伐戎救燕;;;;;;;;;;X
+cb_duirongjiuyan_desc;出兵讨伐山戎，解救燕国于危亡之中;;;;;;;;;;X
 ALL_COUNTRIES;所有的中原国家和蛮夷国家;;;;;;;;;;X
 ALL_PROVS;所有省份;;;;;;;;;;X
 TXZB_COUNTRIES;所有蛮夷濮越国家;;;;;;;;;;X
@@ -80,3 +84,5 @@ VASSAL_MISSION_WAR_NAME;$ORDER$$FIRST$“附庸臣属”征$SECOND_NAME$之战;;;;;;;;;;X
 NORMAL_WAR_NAME;$ORDER$$FIRST$寇$SECOND$之战;;;;;;;;;;X
 AGRESSION_WAR_NAME;$ORDER$$FIRST$寇$SECOND$之战;;;;;;;;;;X
 REVOLUTION_WAR_NAME;$ORDER$$FIRST$“揭竿而起”反$SECOND$之战;;;;;;;;;;X
+baohuhuaxia_WAR_NAME;镇护华夏诛夷之战;;;;;;;;;;X
+duirongjiuyan_WAR_NAME;横扫山戎救燕天征;;;;;;;;;;X

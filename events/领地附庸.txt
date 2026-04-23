@@ -9484,6 +9484,63 @@ province_event = {
 		}
 	}
 }
+#附庸领地标记
+country_event = { 
+	id = 1525
+	trigger = { 
+		tag = NPC
+		or = {
+			any_country = {
+				is_subject = yes
+				any_owned_province = { 
+					not = { has_province_flag = fuyongguoshengfenbiaoji }
+				}
+			}
+			any_country = {
+				is_subject = no
+				any_owned_province = { 
+					has_province_flag = fuyongguoshengfenbiaoji
+				}
+			}
+		}
+	}
+	mean_time_to_happen = { 
+		months = 0
+	}
+	title = "EVTNAME1525"
+	desc = "EVTDESC1525"
+	option = { 
+		name = "EVTOPTA1525"
+		any_country = { 
+			limit = { 
+				is_subject = yes
+				any_owned_province = { 
+					not = { has_province_flag = fuyongguoshengfenbiaoji }
+				}
+			}
+			any_owned = { 
+				limit = { 
+					not = { has_province_flag = fuyongguoshengfenbiaoji }
+				}
+				set_province_flag = fuyongguoshengfenbiaoji
+			}
+		}
+		any_country = { 
+			limit = { 
+				is_subject = no
+				any_owned_province = { 
+					has_province_flag = fuyongguoshengfenbiaoji
+				}
+			}
+			any_owned = { 
+				limit = { 
+					has_province_flag = fuyongguoshengfenbiaoji
+				}
+				clr_province_flag = fuyongguoshengfenbiaoji
+			}
+		}
+	}
+}
 ###########################
 #历史幸运
 ###########################

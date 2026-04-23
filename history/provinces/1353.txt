@@ -1,9 +1,10 @@
 culture = zhuzi
 religion = animism
-trade_goods = fish
+trade_goods = chinaware
 hre = no
 base_tax = 5
 manpower = 0
-native_size = 197
+native_size = 2
 native_ferocity = 8
 native_hostileness = 8
+
